@@ -1,0 +1,10 @@
+spatial.log
+spatialos_worker_packages.json
+build/
+logs/
+workers/unity/external-default-unityclient.log
+workers/unity/Assets/Plugins/Improbable/Editor/
+workers/unity/Assets/Plugins/Improbable/Editor.meta
+workers/unity/Assets/Plugins/Improbable/Generated/
+workers/unity/Assets/Plugins/Improbable/Generated.meta
+workers/unity/Assets/Plugins/Improbable/Sdk/Dll/Generated.Code.*
