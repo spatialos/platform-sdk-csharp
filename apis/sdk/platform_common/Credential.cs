@@ -3,10 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Auth.OAuth2.Responses;
-using System.Runtime.InteropServices;
 
 namespace Improbable.SpatialOS.Platform.Common {
     /// <inheritdoc />
@@ -94,22 +94,21 @@ namespace Improbable.SpatialOS.Platform.Common {
         /// </exception>
         public static PlatformRefreshTokenCredential AutoDetected => AutoDetectedLazy.Value;
 
-        private static PlatformRefreshTokenCredential GetTokenCredentialAutomatically() {
+        private static PlatformRefreshTokenCredential GetTokenCredentialAutomatically()
+        {
+            var possibleTokenFiles = new[]
+            {
+                Path.Combine(Environment.GetEnvironmentVariable("HOME") ?? "", ".improbable/oauth2/oauth2_refresh_token"),
+                Path.Combine(Environment.ExpandEnvironmentVariables("%LOCALAPPDATA%"), ".improbable/oauth2/oauth2_refresh_token")
+            };
             try {
-                var refreshTokenFilePath = Environment.GetEnvironmentVariable(DefaultTokenFileEnvVar) ??
-                                           GetRefreshTokenFilePathFromWellKnownLocations();
-                var refreshToken = File.ReadAllText(refreshTokenFilePath);
+                var refreshToken = File.ReadAllText(possibleTokenFiles.FirstOrDefault(File.Exists));
                 return new PlatformRefreshTokenCredential(refreshToken);
             }
             catch (IOException) {
                 throw new NoRefreshTokenFoundException(
                     $"Please check if environment variable {DefaultTokenFileEnvVar} is set to the correct path or try running `spatial init` to fetch and store a new refresh token locally.");
             }
-        }
-
-        private static string GetRefreshTokenFilePathFromWellKnownLocations() {
-            var homeDirectory = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? Environment.ExpandEnvironmentVariables("%LOCALAPPDATA%") : Environment.GetEnvironmentVariable("HOME");
-            return Path.Combine(homeDirectory, ".improbable/oauth2/oauth2_refresh_token");
         }
     }
 }
