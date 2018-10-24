@@ -50,6 +50,8 @@ out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+artefacts/
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
