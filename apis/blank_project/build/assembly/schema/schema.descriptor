@@ -1,0 +1,312 @@
+
+à
+improbable/core/Rotation.protoschema.improbable.coreimprobable/entity_state.proto"E
+RotationData5
+field1_rotation (BÂórotationRfield1Rotation"©
+Rotation
+Events
+
+Commands2v
+component_extension.schema.improbable.EntityStateè (2$.schema.improbable.core.RotationDataRcomponentExtension2q
+event_extension.schema.improbable.EntityEventè (2'.schema.improbable.core.Rotation.EventsReventExtension2y
+command_extension .schema.improbable.EntityCommandè (2).schema.improbable.core.Rotation.CommandsRcommandExtension:!Âó
+improbable.core.RotationèBBRotationOuterClass
+ø
+!improbable/standard_library.protoschema.improbableimprobable/entity_state.proto"N
+WorkerAttributeSet8
+field1_attribute (	BÂó	attributeRfield1Attribute"‚
+WorkerRequirementSetj
+field1_attribute_set (2%.schema.improbable.WorkerAttributeSetBÂóattribute_setRfield1AttributeSet"s
+Coordinates 
+field1_x (BÂóxRfield1X 
+field2_y (BÂóyRfield2Y 
+field3_z (BÂózRfield3Z"’
+EntityAclData]
+field1_read_acl (2'.schema.improbable.WorkerRequirementSetBÂóread_aclRfield1ReadAcl—
+field2_component_write_acl (2A.schema.improbable.EntityAclData.component_write_acl_KeyValuePairBÂócomponent_write_aclRfield2ComponentWriteAcl‡
+ component_write_acl_KeyValuePair
+key (BÂókeyRkeyH
+value (2'.schema.improbable.WorkerRequirementSetB	ÂóvalueRvalue"M
+MetadataData=
+field1_entity_type (	BÂóentity_typeRfield1EntityType"_
+PositionDataO
+field1_coords (2.schema.improbable.CoordinatesB
+ÂócoordsRfield1Coords"
+PersistenceData"–
+	EntityAcl
+Events
+
+Commands2q
+component_extension.schema.improbable.EntityState2 (2 .schema.improbable.EntityAclDataRcomponentExtension2l
+event_extension.schema.improbable.EntityEvent2 (2#.schema.improbable.EntityAcl.EventsReventExtension2t
+command_extension .schema.improbable.EntityCommand2 (2%.schema.improbable.EntityAcl.CommandsRcommandExtension:Âó
+improbable.EntityAcl2"‘
+Metadata
+Events
+
+Commands2p
+component_extension.schema.improbable.EntityState5 (2.schema.improbable.MetadataDataRcomponentExtension2k
+event_extension.schema.improbable.EntityEvent5 (2".schema.improbable.Metadata.EventsReventExtension2s
+command_extension .schema.improbable.EntityCommand5 (2$.schema.improbable.Metadata.CommandsRcommandExtension:Âó
+improbable.Metadata5"‘
+Position
+Events
+
+Commands2p
+component_extension.schema.improbable.EntityState6 (2.schema.improbable.PositionDataRcomponentExtension2k
+event_extension.schema.improbable.EntityEvent6 (2".schema.improbable.Position.EventsReventExtension2s
+command_extension .schema.improbable.EntityCommand6 (2$.schema.improbable.Position.CommandsRcommandExtension:Âó
+improbable.Position6" 
+Persistence
+Events
+
+Commands2s
+component_extension.schema.improbable.EntityState7 (2".schema.improbable.PersistenceDataRcomponentExtension2n
+event_extension.schema.improbable.EntityEvent7 (2%.schema.improbable.Persistence.EventsReventExtension2v
+command_extension .schema.improbable.EntityCommand7 (2'.schema.improbable.Persistence.CommandsRcommandExtension:Âó
+improbable.Persistence7BBStandardLibraryOuterClass
+Å
+improbable/vector3.protoschema.improbableimprobable/entity_state.proto"p
+Vector3f 
+field1_x (BÂóxRfield1X 
+field2_y (BÂóyRfield2Y 
+field3_z (BÂózRfield3Z"p
+Vector3d 
+field1_x (BÂóxRfield1X 
+field2_y (BÂóyRfield2Y 
+field3_z (BÂózRfield3ZBBVector3OuterClass
+‡4
+ google/protobuf/descriptor.protogoogle.protobuf"M
+FileDescriptorSet8
+file (2$.google.protobuf.FileDescriptorProtoRfile"ä
+FileDescriptorProto
+name (	Rname
+package (	Rpackage
+
+dependency (	R
+dependency+
+public_dependency
+ (RpublicDependency'
+weak_dependency (RweakDependencyC
+message_type (2 .google.protobuf.DescriptorProtoRmessageTypeA
+	enum_type (2$.google.protobuf.EnumDescriptorProtoRenumTypeA
+service (2'.google.protobuf.ServiceDescriptorProtoRserviceC
+	extension (2%.google.protobuf.FieldDescriptorProtoR	extension6
+options (2.google.protobuf.FileOptionsRoptionsI
+source_code_info	 (2.google.protobuf.SourceCodeInfoRsourceCodeInfo
+syntax (	Rsyntax"÷
+DescriptorProto
+name (	Rname;
+field (2%.google.protobuf.FieldDescriptorProtoRfieldC
+	extension (2%.google.protobuf.FieldDescriptorProtoR	extensionA
+nested_type (2 .google.protobuf.DescriptorProtoR
+nestedTypeA
+	enum_type (2$.google.protobuf.EnumDescriptorProtoRenumTypeX
+extension_range (2/.google.protobuf.DescriptorProto.ExtensionRangeRextensionRangeD
+
+oneof_decl (2%.google.protobuf.OneofDescriptorProtoR	oneofDecl9
+options (2.google.protobuf.MessageOptionsRoptionsU
+reserved_range	 (2..google.protobuf.DescriptorProto.ReservedRangeRreservedRange#
+reserved_name
+ (	RreservedName8
+ExtensionRange
+start (Rstart
+end (Rend7
+ReservedRange
+start (Rstart
+end (Rend"˜
+FieldDescriptorProto
+name (	Rname
+number (RnumberA
+label (2+.google.protobuf.FieldDescriptorProto.LabelRlabel>
+type (2*.google.protobuf.FieldDescriptorProto.TypeRtype
+	type_name (	RtypeName
+extendee (	Rextendee#
+default_value (	RdefaultValue
+oneof_index	 (R
+oneofIndex
+	json_name
+ (	RjsonName7
+options (2.google.protobuf.FieldOptionsRoptions"¶
+Type
+TYPE_DOUBLE
+
+TYPE_FLOAT
+
+TYPE_INT64
+TYPE_UINT64
+
+TYPE_INT32
+TYPE_FIXED64
+TYPE_FIXED32
+	TYPE_BOOL
+TYPE_STRING	
+
+TYPE_GROUP
+
+TYPE_MESSAGE
+
+TYPE_BYTES
+TYPE_UINT32
+	TYPE_ENUM
+TYPE_SFIXED32
+TYPE_SFIXED64
+TYPE_SINT32
+TYPE_SINT64"C
+Label
+LABEL_OPTIONAL
+LABEL_REQUIRED
+LABEL_REPEATED"c
+OneofDescriptorProto
+name (	Rname7
+options (2.google.protobuf.OneofOptionsRoptions"¢
+EnumDescriptorProto
+name (	Rname?
+value (2).google.protobuf.EnumValueDescriptorProtoRvalue6
+options (2.google.protobuf.EnumOptionsRoptions"ƒ
+EnumValueDescriptorProto
+name (	Rname
+number (Rnumber;
+options (2!.google.protobuf.EnumValueOptionsRoptions"§
+ServiceDescriptorProto
+name (	Rname>
+method (2&.google.protobuf.MethodDescriptorProtoRmethod9
+options (2.google.protobuf.ServiceOptionsRoptions"‰
+MethodDescriptorProto
+name (	Rname
+
+input_type (	R	inputType
+output_type (	R
+outputType8
+options (2.google.protobuf.MethodOptionsRoptions0
+client_streaming (:falseRclientStreaming0
+server_streaming (:falseRserverStreaming"‘
+FileOptions!
+java_package (	RjavaPackage0
+java_outer_classname (	RjavaOuterClassname5
+java_multiple_files
+ (:falseRjavaMultipleFilesG
+java_generate_equals_and_hash (:falseRjavaGenerateEqualsAndHash:
+java_string_check_utf8 (:falseRjavaStringCheckUtf8S
+optimize_for	 (2).google.protobuf.FileOptions.OptimizeMode:SPEEDRoptimizeFor
+
+go_package (	R	goPackage5
+cc_generic_services (:falseRccGenericServices9
+java_generic_services (:falseRjavaGenericServices5
+py_generic_services (:falseRpyGenericServices%
+
+deprecated (:falseR
+deprecated/
+cc_enable_arenas (:falseRccEnableArenas*
+objc_class_prefix$ (	RobjcClassPrefix)
+csharp_namespace% (	RcsharpNamespaceX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption":
+OptimizeMode	
+SPEED
+	CODE_SIZE
+LITE_RUNTIME*	è€€€€J&'"Å
+MessageOptions<
+message_set_wire_format (:falseRmessageSetWireFormatL
+no_standard_descriptor_accessor (:falseRnoStandardDescriptorAccessor%
+
+deprecated (:falseR
+deprecated
+	map_entry (RmapEntryX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"Ü
+FieldOptionsA
+ctype (2#.google.protobuf.FieldOptions.CType:STRINGRctype
+packed (RpackedG
+jstype (2$.google.protobuf.FieldOptions.JSType:	JS_NORMALRjstype
+lazy (:falseRlazy%
+
+deprecated (:falseR
+deprecated
+weak
+ (:falseRweakX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption"/
+CType
+
+STRING 
+CORD
+STRING_PIECE"5
+JSType
+	JS_NORMAL 
+	JS_STRING
+	JS_NUMBER*	è€€€€"s
+OneofOptionsX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"º
+EnumOptions
+allow_alias (R
+allowAlias%
+
+deprecated (:falseR
+deprecatedX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"ž
+EnumValueOptions%
+
+deprecated (:falseR
+deprecatedX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"œ
+ServiceOptions%
+
+deprecated! (:falseR
+deprecatedX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"›
+MethodOptions%
+
+deprecated! (:falseR
+deprecatedX
+uninterpreted_optionç (2$.google.protobuf.UninterpretedOptionRuninterpretedOption*	è€€€€"š
+UninterpretedOptionA
+name (2-.google.protobuf.UninterpretedOption.NamePartRname)
+identifier_value (	RidentifierValue,
+positive_int_value (RpositiveIntValue,
+negative_int_value (RnegativeIntValue!
+double_value (RdoubleValue!
+string_value (RstringValue'
+aggregate_value (	RaggregateValueJ
+NamePart
+	name_part (	RnamePart!
+is_extension (RisExtension"§
+SourceCodeInfoD
+location (2(.google.protobuf.SourceCodeInfo.LocationRlocationÎ
+Location
+path (BRpath
+span (BRspan)
+leading_comments (	RleadingComments+
+trailing_comments (	RtrailingComments:
+leading_detached_comments (	RleadingDetachedComments"Ñ
+GeneratedCodeInfoM
+
+annotation (2-.google.protobuf.GeneratedCodeInfo.AnnotationR
+annotationm
+
+Annotation
+path (BRpath
+source_file (	R
+sourceFile
+begin (Rbegin
+end (RendB[
+com.google.protobufBDescriptorProtosHZ
+descriptor ¢GPBªGoogle.Protobuf.Reflection
+Œ	
+improbable/entity_state.protoschema.improbable google/protobuf/descriptor.proto"
+EntityState*2€€€€J"
+EntityEvent*2€€€€"
+EntityCommand*2€€€€"Å
+EntityComponentUpdate&
+fields_to_clear (RfieldsToClearA
+entity_state (2.schema.improbable.EntityStateRentityStateA
+entity_event (2.schema.improbable.EntityEventRentityEvent"e
+ComponentInfo%
+component_name (	RcomponentName!
+component_id (RcomponentIdJJ:S
+schemalang_field_name.google.protobuf.FieldOptions¸Ž (	RschemalangFieldName:`
+schemalang_enum_value_name!.google.protobuf.EnumValueOptions¸Ž (	RschemalangEnumValueName:j
+component_info.google.protobuf.MessageOptions¸Ž (2 .schema.improbable.ComponentInfoRcomponentInfo:>
+option.google.protobuf.FieldOptions¼Ž (:falseRoption:C
+	entity_id.google.protobuf.FieldOptions½Ž (:falseRentityId:J
+entity_id_key.google.protobuf.FieldOptions¾Ž (:falseRentityIdKey:N
+entity_id_value.google.protobuf.FieldOptions¿Ž (:falseRentityIdValue:O
+transient_field.google.protobuf.FieldOptionsÀŽ (:falseRtransientFieldBBEntityStateProtosZ
+improbable

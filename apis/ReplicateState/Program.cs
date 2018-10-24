@@ -27,7 +27,7 @@ namespace ReplicateState
         ///     PlEASE REPLACE ME.
         ///     The path to a valid launch configuration json file.
         /// </summary>
-        private const string LaunchConfigFilePath = "../../blank_project/default_launch.json";
+        private const string LaunchConfigFilePath = "../blank_project/default_launch.json";
 
         /// <summary>
         ///     PlEASE REPLACE ME.
