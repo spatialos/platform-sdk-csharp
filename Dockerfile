@@ -22,17 +22,15 @@ RUN curl -L https://console.improbable.io/toolbelt/download/latest/linux -o /usr
 RUN chmod +x /usr/bin/spatial
 RUN spatial update
 
-ARG IMPROBABLE_REFRESH_TOKEN
-ENV IMPROBABLE_REFRESH_TOKEN=$IMPROBABLE_REFRESH_TOKEN
-RUN mkdir -p $HOME/.improbable/oauth2 && echo $IMPROBABLE_REFRESH_TOKEN >> $HOME/.improbable/oauth2/oauth2_refresh_token
-
 WORKDIR /workspace
 COPY apis apis
 COPY scripts scripts
 
-ARG SDK_VERSION
 RUN nuget restore apis/apis.sln
+
+ARG SDK_VERSION
 RUN msbuild apis/apis.sln /p:Configuration=Release /p:Version=$SDK_VERSION /t:Clean,Build -verbosity:minimal
 
-RUN mono --version
-RUN dotnet --version
+ARG IMPROBABLE_REFRESH_TOKEN
+ENV IMPROBABLE_REFRESH_TOKEN=$IMPROBABLE_REFRESH_TOKEN
+RUN mkdir -p $HOME/.improbable/oauth2 && echo $IMPROBABLE_REFRESH_TOKEN >> $HOME/.improbable/oauth2/oauth2_refresh_token
