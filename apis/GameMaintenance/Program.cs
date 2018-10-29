@@ -35,13 +35,13 @@ namespace GameMaintenance
         ///     PlEASE REPLACE ME.
         ///     The path to a valid snapshot for the target assembly.
         /// </summary>
-        private const string SnapshotFilePath = "../../blank_project/snapshots/default.snapshot";
+        private const string SnapshotFilePath =  "../blank_project/snapshots/default.snapshot" ;
 
         /// <summary>
         ///     PlEASE REPLACE ME.
         ///     The path to a valid launch configuration json file.
         /// </summary>
-        private const string LaunchConfigFilePath = "../../blank_project/default_launch.json";
+        private const string LaunchConfigFilePath = "../blank_project/default_launch.json";
 
         private static readonly PlatformRefreshTokenCredential CredentialWithProvidedToken =
             new PlatformRefreshTokenCredential(RefreshToken);
