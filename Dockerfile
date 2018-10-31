@@ -24,12 +24,13 @@ RUN spatial update
 
 WORKDIR /workspace
 COPY apis apis
+COPY examples examples
 COPY scripts scripts
 
-RUN nuget restore apis/apis.sln
+RUN nuget restore examples/examples.sln
 
 ARG SDK_VERSION
-RUN msbuild apis/apis.sln /p:Configuration=Release /p:Version=$SDK_VERSION /t:Clean,Build -verbosity:minimal
+RUN msbuild examples/examples.sln /p:Configuration=Release /p:Version=$SDK_VERSION /t:Clean,Build -verbosity:minimal
 
 ARG IMPROBABLE_REFRESH_TOKEN
 ENV IMPROBABLE_REFRESH_TOKEN=$IMPROBABLE_REFRESH_TOKEN

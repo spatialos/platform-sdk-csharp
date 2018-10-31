@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\apis\apis.csproj" />
     <ProjectReference Include="..\Utils\Utils.csproj" />
-    <ProjectReference Include="..\sdk\sdk.csproj" />
   </ItemGroup>
 </Project>
