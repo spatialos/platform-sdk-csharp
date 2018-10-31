@@ -14,7 +14,8 @@ SDK_VERSION_PREMERGE=888.8.8-PREMERGE
 DOCKER_IMAGE=platform-sdk/csharp:$SDK_VERSION_PREMERGE
 
 echo "--- regenerating APIs"
-$REPO_ROOT/scripts/generateapis.sh
+echo "skipping until bazel is available on the agent"
+# $REPO_ROOT/scripts/generateapis.sh
 
 echo "--- Preparing docker image for premerge"
 docker build --build-arg IMPROBABLE_REFRESH_TOKEN=$IMPROBABLE_REFRESH_TOKEN --build-arg SDK_VERSION=$SDK_VERSION_PREMERGE -t $DOCKER_IMAGE $REPO_ROOT
