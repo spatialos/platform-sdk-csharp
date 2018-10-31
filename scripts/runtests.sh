@@ -10,8 +10,8 @@ fi
 DOCKER_IMAGE=$1
 
 echo "--- Running Game Maintenance Scenario"
-docker run $DOCKER_IMAGE /bin/bash -c "cd apis/GameMaintenance && dotnet run --no-build --configuration Release"
-# docker run $DOCKER_IMAGE /bin/bash -c "cd apis/ServiceAccountMaintenance && dotnet run --no-build --configuration Release" // service account cannot manage service accounts
+docker run $DOCKER_IMAGE /bin/bash -c "cd examples/GameMaintenance && dotnet run --no-build --configuration Release"
+# docker run $DOCKER_IMAGE /bin/bash -c "cd examples/ServiceAccountMaintenance && dotnet run --no-build --configuration Release" // service account cannot manage service accounts
 
 echo "--- Running Replicate State Scenario"
-docker run $DOCKER_IMAGE /bin/bash -c "cd apis && spatial service start --main_config=blank_project/spatialos.json && cd ReplicateState && dotnet run --no-build --configuration Release"
+docker run $DOCKER_IMAGE /bin/bash -c "cd examples && spatial service start --main_config=blank_project/spatialos.json && cd ReplicateState && dotnet run --no-build --configuration Release"

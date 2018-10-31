@@ -1,6 +1,0 @@
-package improbable.core;
-
-component Rotation {
-    id = 1000;
-    float rotation = 1;
-}

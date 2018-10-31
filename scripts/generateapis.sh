@@ -7,7 +7,7 @@ REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 generate_api() {
     NAME=$1
     VERSION=$2
-    PACKAGE=apis/sdk/${NAME}_${VERSION}
+    PACKAGE=apis/${NAME}_${VERSION}
 
     bazel build //$PACKAGE:gapic
     bazel build //$PACKAGE:grpc

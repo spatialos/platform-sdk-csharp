@@ -18,7 +18,7 @@ fi
 REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 DOCKER_IMAGE=platform-sdk/csharp
 ARTEFACT_DIR=$REPO_ROOT/artefacts
-OUTPUT_DIR=$REPO_ROOT/apis/sdk/bin/Release
+OUTPUT_DIR=$REPO_ROOT/apis/bin/Release
 
 echo "--- Clearing artefacts from previous runs"
 mkdir -p $ARTEFACT_DIR
