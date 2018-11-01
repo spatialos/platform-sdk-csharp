@@ -8,7 +8,7 @@
 You can build and run the C# solution in an IDE, or using the .NET Core CLI.
 
 ### Using an IDE
-1. Open [csharp.sln](csharp.sln) in your preferred IDE, configured to use the .NET Core Runtime.
+1. Open [examples.sln](examples.sln) in your preferred IDE, configured to use the .NET Core Runtime.
 2. Run any of the projects in the solution.
 
 ### Using the .NET Core CLI
