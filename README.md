@@ -12,7 +12,7 @@ The design of the SDK is driven by scenarios we want to enable for our users. It
 
 ## Targeted framework
 
-The C# SDK is currently built targeting .NET Framework 4.5.1 and .NET Standard 1.5. As a result, it will work on all supported platform.
+The C# SDK is currently built targeting .NET Framework 4.5.1 and .NET Standard 1.5. As a result, it will work on all supported platforms.
 
 ## Contributing
 
