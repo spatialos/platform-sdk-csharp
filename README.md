@@ -8,7 +8,7 @@ This repository contains both the source code of the Platform SDK C# and a colle
 
 ## Example scenarios
 
-The design of the SDK is driven by scenarios we want to enable for our users. It makes sense to showcase how to implement those scenarios in the SDK. For detailed implementation, please visit [the examples directory](examples). You can also use it as a quick way to experiment with the SDK.
+The design of the SDK is driven by scenarios we want to enable for our users. For detailed implementations of these scenarios, please visit [the examples directory](examples). You can use the scenarios as a quick way to experiment with the SDK.
 
 ## Targeted framework
 
