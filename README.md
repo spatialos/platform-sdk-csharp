@@ -16,7 +16,7 @@ The C# SDK is currently built targeting .NET Framework 4.5.1 and .NET Standard 1
 
 ## Contributing
 
-We are currently not accepting external contributions. If you have any suggestions for improvements, please raise a GitHub issue and we will respond to it.
+We are currently not accepting external contributions. However, we're keen to hear what you think, so if you have any suggestions for improvements, please raise a GitHub issue and we will respond to it.
 
 ## Licensing
 
