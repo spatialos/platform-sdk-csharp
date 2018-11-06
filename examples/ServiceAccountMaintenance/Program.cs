@@ -113,7 +113,7 @@ namespace ServiceAccountMaintenance
             ServiceAccountIds = new List<long>();
             var perm = new Permission
             {
-                Parts = {new RepeatedField<string> {"prj", ProjectName}},
+                Parts = {new RepeatedField<string> {"prj", ProjectName, "*"}},
                 Verbs =
                 {
                     new RepeatedField<Permission.Types.Verb>
