@@ -25,7 +25,7 @@ mkdir -p $ARTEFACT_DIR
 rm -rf $ARTEFACT_DIR/*
 
 echo "--- Preparing artefacts for release"
-msbuild $REPO_ROOT/apis/sdk/sdk.csproj /p:Configuration=Release /p:Version=${SDK_VERSION} /t:Clean,Build -verbosity:minimal
+msbuild $REPO_ROOT/apis/apis.csproj /p:Configuration=Release /p:Version=${SDK_VERSION} /t:Clean,Build -verbosity:minimal
 zip -r ${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip ${OUTPUT_DIR}/net451
 cp ${OUTPUT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg ${ARTEFACT_DIR}
 
