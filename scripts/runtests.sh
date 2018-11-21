@@ -17,3 +17,6 @@ docker run $DOCKER_IMAGE /bin/bash -c "cd examples/ServiceAccountMaintenance && 
 
 echo "--- Running Replicate State Scenario"
 docker run $DOCKER_IMAGE /bin/bash -c "cd examples && spatial service start --main_config=blank_project/spatialos.json && cd ReplicateState && dotnet run --no-build --configuration Release"
+
+echo "--- Running BYO Auth Scenario"
+docker run $DOCKER_IMAGE /bin/bash -c "cd examples && cd BYOAuthFlow && dotnet run --no-build --configuration Release"
