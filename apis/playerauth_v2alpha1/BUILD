@@ -13,28 +13,6 @@ gapic_generator_codegen(
     service_yaml = "@improbable_platform//proto/improbable/spatialos/playerauth:playerauth_service.yaml",
 )
 
-# load("@org_pubref_rules_protobuf//protobuf:rules.bzl", "proto_compile")
-# proto_compile(
-#     name = "grpc",
-#     imports = [
-#         "external/com_github_googleapis_googleapis/",
-#         "external/com_github_mwitkow_go_proto_validators_proto/src/",
-#         "external/protobuf/src/",
-#     ],
-#     inputs = [
-#         "@com_google_protobuf//:well_known_protos",
-#         "@com_github_googleapis_googleapis//:important_protos",
-#         "@com_github_mwitkow_go_proto_validators_proto//:proto",
-#     ],
-#     langs = [
-#         "//:csharp",
-#     ],
-#     protos = [
-#         "@improbable_platform//proto/improbable/spatialos/deployment:protos",
-#     ],
-#     with_grpc = True,
-# )
-
 load("@org_pubref_rules_protobuf//csharp:rules.bzl", "csharp_proto_compile")
 csharp_proto_compile(
     name = "grpc",

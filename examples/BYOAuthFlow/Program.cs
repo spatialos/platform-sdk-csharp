@@ -18,7 +18,7 @@ namespace BYOAuthFlow
     ///     This contains the implementation of the "integrate your own authentication provider" scenario.
     ///     1. Start a cloud deployment.
     ///     2. Create a PlayerIdentityToken.
-    ///     3. List deployments.
+    ///     3. Choose a deployment that is ready for login.
     ///     4. Create a LoginToken for a selected deployment.
     ///     5. Connect to the deployment using the PlayerIdentityToken and the LoginToken.
     /// </summary>
@@ -27,7 +27,7 @@ namespace BYOAuthFlow
         /// <summary>
         ///     PLEASE REPLACE ME.
         ///     Your SpatialOS project name.
-        ///     It should be the same as the name specified in the local spatialos.json file used to start local API service.
+        ///     It should be the same as the name specified in the local spatialos.json file used to start the local API services.
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
@@ -94,7 +94,7 @@ namespace BYOAuthFlow
 
         protected override void Run()
         {
-            Console.WriteLine("Create a PlayerIdentityToken");
+            Console.WriteLine("Creating a PlayerIdentityToken");
             var playerIdentityTokenResponse = _playerAuthServiceClient.CreatePlayerIdentityToken(
                 new CreatePlayerIdentityTokenRequest
                 {
@@ -106,10 +106,11 @@ namespace BYOAuthFlow
             Console.WriteLine("Choosing a deployment");
             var suitableDeployment = _deploymentServiceClient.ListDeployments(new ListDeploymentsRequest
             {
-                ProjectName = ProjectName
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName
             }).First(d => d.Tag.Contains(ScenarioDeploymentTag));
 
-            Console.WriteLine("Create a LoginToken for the selected deployment");
+            Console.WriteLine("Creating a LoginToken for the selected deployment");
             var createLoginTokenResponse = _playerAuthServiceClient.CreateLoginToken(
                 new CreateLoginTokenRequest
                 {
@@ -119,15 +120,14 @@ namespace BYOAuthFlow
                     WorkerType = ScenarioWorkerType
                 });
 
-            Console.WriteLine("Connect to the deployment using the LoginToken and PlayerIdentityToken");
+            Console.WriteLine("Connecting to the deployment using the LoginToken and PlayerIdentityToken");
             var locatorParameters = new LocatorParameters
             {
                 PlayerIdentity = new PlayerIdentityCredentials
                 {
                     PlayerIdentityToken = playerIdentityTokenResponse.PlayerIdentityToken,
                     LoginToken = createLoginTokenResponse.LoginToken
-                },
-                UseInsecureConnection = false
+                }
             };
             var locator = new Locator(LocatorServerAddress, LocatorServerPort, locatorParameters);
             using (var connectionFuture = locator.ConnectAsync(new ConnectionParameters
@@ -136,9 +136,9 @@ namespace BYOAuthFlow
                 Network = {ConnectionType = NetworkConnectionType.Tcp, UseExternalIp = true}
             }))
             {
-                var connectionOption = connectionFuture.Get(5000 /* Using milliseconds */);
-                if (!connectionOption.HasValue) throw new Exception("Connection returned nothing");
-                Console.WriteLine($"Assigned worker ID: {connectionOption.Value.GetWorkerId()}");
+                var connFuture = connectionFuture.Get(Convert.ToUInt32(Defaults.ConnectionTimeoutMillis));
+                if (!connFuture.HasValue || !connFuture.Value.IsConnected) throw new Exception("No connection or connection not established");
+                Console.WriteLine($"Assigned worker ID: {connFuture.Value.GetWorkerId()}");
             }
         }
 
