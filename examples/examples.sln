@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYOAuthFlow", "BYOAuthFlow\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerSDKWrapper", "WorkerSDKWrapper\WorkerSDKWrapper.csproj", "{5850AA6F-0CFE-4AB8-B8F4-EB32C032A47A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapacityLimit", "CapacityLimit\CapacityLimit.csproj", "{62B604B5-0203-4F6B-8BB7-208D5ED3E66C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{B2AD04AA-FC39-4E09-91AB-24B2AC21CA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2AD04AA-FC39-4E09-91AB-24B2AC21CA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2AD04AA-FC39-4E09-91AB-24B2AC21CA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B604B5-0203-4F6B-8BB7-208D5ED3E66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B604B5-0203-4F6B-8BB7-208D5ED3E66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B604B5-0203-4F6B-8BB7-208D5ED3E66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B604B5-0203-4F6B-8BB7-208D5ED3E66C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5610AA5-193A-4CAF-9C3A-E3BAE78A1086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5610AA5-193A-4CAF-9C3A-E3BAE78A1086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5610AA5-193A-4CAF-9C3A-E3BAE78A1086}.Release|Any CPU.ActiveCfg = Release|Any CPU

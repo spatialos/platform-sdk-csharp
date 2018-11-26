@@ -50,22 +50,70 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
             "CgxkaXNwbGF5X25hbWUYBSABKAlSAmRuEhQKCG1ldGFkYXRhGAYgASgMUgJt",
             "ZBI3Cg5pc3N1ZWRfYXRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXBSA2lhdBI0CgtleHBpcnlfdGltZRgIIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBSA2V4cDKjBAoRUGxheWVyQXV0aFNlcnZpY2US",
-            "mwEKEENyZWF0ZUxvZ2luVG9rZW4SQS5pbXByb2JhYmxlLnNwYXRpYWxvcy5w",
-            "bGF5ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZUxvZ2luVG9rZW5SZXF1ZXN0GkIu",
-            "aW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5DcmVh",
-            "dGVMb2dpblRva2VuUmVzcG9uc2UiABK2AQoZQ3JlYXRlUGxheWVySWRlbnRp",
-            "dHlUb2tlbhJKLmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJh",
-            "bHBoYTEuQ3JlYXRlUGxheWVySWRlbnRpdHlUb2tlblJlcXVlc3QaSy5pbXBy",
-            "b2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZVBs",
-            "YXllcklkZW50aXR5VG9rZW5SZXNwb25zZSIAErYBChlEZWNvZGVQbGF5ZXJJ",
-            "ZGVudGl0eVRva2VuEkouaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0",
-            "aC52MmFscGhhMS5EZWNvZGVQbGF5ZXJJZGVudGl0eVRva2VuUmVxdWVzdBpL",
-            "LmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRGVj",
-            "b2RlUGxheWVySWRlbnRpdHlUb2tlblJlc3BvbnNlIgBCYFozaW1wcm9iYWJs",
-            "ZS9zcGF0aWFsb3MvcGxheWVyYXV0aC92MmFscGhhMTtwbGF5ZXJhdXRoqgIo",
-            "SW1wcm9iYWJsZS5TcGF0aWFsT1MuUGxheWVyQXV0aC5WMkFscGhhMWIGcHJv",
-            "dG8z"));
+            "cm90b2J1Zi5UaW1lc3RhbXBSA2V4cCLjAQoeRGV2ZWxvcG1lbnRBdXRoZW50",
+            "aWNhdGlvblRva2VuEgoKAmlkGAEgASgJEjAKDHByb2plY3RfbmFtZRgCIAEo",
+            "CUIa4t8fFgoUXlthLXpBLVowLTlfXXszLDMyfSQSGwoLZGVzY3JpcHRpb24Y",
+            "AyABKAlCBuLfHwJYARIxCg1jcmVhdGlvbl90aW1lGAQgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIzCg9leHBpcmF0aW9uX3RpbWUYBSABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIqsBCitDcmVhdGVEZXZlbG9w",
+            "bWVudEF1dGhlbnRpY2F0aW9uVG9rZW5SZXF1ZXN0EjIKDHByb2plY3RfbmFt",
+            "ZRgBIAEoCUIc4t8fGAoUXlthLXpBLVowLTlfXXszLDMyfSQgARIbCgtkZXNj",
+            "cmlwdGlvbhgCIAEoCUIG4t8fAlgBEisKCGxpZmV0aW1lGAMgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uIqIBCixDcmVhdGVEZXZlbG9wbWVudEF1",
+            "dGhlbnRpY2F0aW9uVG9rZW5SZXNwb25zZRJyCiBkZXZlbG9wbWVudF9hdXRo",
+            "ZW50aWNhdGlvbl90b2tlbhgBIAEoCzJILmltcHJvYmFibGUuc3BhdGlhbG9z",
+            "LnBsYXllcmF1dGgudjJhbHBoYTEuRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlv",
+            "blRva2VuIrMBCipMaXN0RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2Vu",
+            "c1JlcXVlc3QSMgoMcHJvamVjdF9uYW1lGAEgASgJQhzi3x8YChReW2EtekEt",
+            "WjAtOV9dezMsMzJ9JCABEhcKD2luY2x1ZGVfZXhwaXJlZBgCIAEoCBIkCglw",
+            "YWdlX3NpemUYAyABKAVCEeLfHw0Q////////////ARgzEhIKCnBhZ2VfdG9r",
+            "ZW4YBCABKAkiuwEKK0xpc3REZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9r",
+            "ZW5zUmVzcG9uc2UScwohZGV2ZWxvcG1lbnRfYXV0aGVudGljYXRpb25fdG9r",
+            "ZW5zGAEgAygLMkguaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52",
+            "MmFscGhhMS5EZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW4SFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJIoMBCitVcGRhdGVEZXZlbG9wbWVudEF1dGhl",
+            "bnRpY2F0aW9uVG9rZW5SZXF1ZXN0EgoKAmlkGAEgASgJEhMKC2Rlc2NyaXB0",
+            "aW9uGAIgASgJEjMKEHVwZGF0ZWRfbGlmZXRpbWUYAyABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24iogEKLFVwZGF0ZURldmVsb3BtZW50QXV0aGVu",
+            "dGljYXRpb25Ub2tlblJlc3BvbnNlEnIKIGRldmVsb3BtZW50X2F1dGhlbnRp",
+            "Y2F0aW9uX3Rva2VuGAEgASgLMkguaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxh",
+            "eWVyYXV0aC52MmFscGhhMS5EZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9r",
+            "ZW4iOQorRXhwaXJlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVx",
+            "dWVzdBIKCgJpZBgBIAEoCSIuCixFeHBpcmVEZXZlbG9wbWVudEF1dGhlbnRp",
+            "Y2F0aW9uVG9rZW5SZXNwb25zZTL6CgoRUGxheWVyQXV0aFNlcnZpY2USmQEK",
+            "EENyZWF0ZUxvZ2luVG9rZW4SQS5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5",
+            "ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZUxvZ2luVG9rZW5SZXF1ZXN0GkIuaW1w",
+            "cm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5DcmVhdGVM",
+            "b2dpblRva2VuUmVzcG9uc2UStAEKGUNyZWF0ZVBsYXllcklkZW50aXR5VG9r",
+            "ZW4SSi5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGEx",
+            "LkNyZWF0ZVBsYXllcklkZW50aXR5VG9rZW5SZXF1ZXN0GksuaW1wcm9iYWJs",
+            "ZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5DcmVhdGVQbGF5ZXJJ",
+            "ZGVudGl0eVRva2VuUmVzcG9uc2UStAEKGURlY29kZVBsYXllcklkZW50aXR5",
+            "VG9rZW4SSi5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxw",
+            "aGExLkRlY29kZVBsYXllcklkZW50aXR5VG9rZW5SZXF1ZXN0GksuaW1wcm9i",
+            "YWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5EZWNvZGVQbGF5",
+            "ZXJJZGVudGl0eVRva2VuUmVzcG9uc2US1QEKJENyZWF0ZURldmVsb3BtZW50",
+            "QXV0aGVudGljYXRpb25Ub2tlbhJVLmltcHJvYmFibGUuc3BhdGlhbG9zLnBs",
+            "YXllcmF1dGgudjJhbHBoYTEuQ3JlYXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNh",
+            "dGlvblRva2VuUmVxdWVzdBpWLmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXll",
+            "cmF1dGgudjJhbHBoYTEuQ3JlYXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlv",
+            "blRva2VuUmVzcG9uc2US0gEKI0xpc3REZXZlbG9wbWVudEF1dGhlbnRpY2F0",
+            "aW9uVG9rZW5zElQuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52",
+            "MmFscGhhMS5MaXN0RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2Vuc1Jl",
+            "cXVlc3QaVS5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxw",
+            "aGExLkxpc3REZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5zUmVzcG9u",
+            "c2US1QEKJFVwZGF0ZURldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbhJV",
+            "LmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuVXBk",
+            "YXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBpWLmlt",
+            "cHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuVXBkYXRl",
+            "RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2US1QEKJEV4",
+            "cGlyZURldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbhJVLmltcHJvYmFi",
+            "bGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRXhwaXJlRGV2ZWxv",
+            "cG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBpWLmltcHJvYmFibGUu",
+            "c3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRXhwaXJlRGV2ZWxvcG1l",
+            "bnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2VCYFozaW1wcm9iYWJsZS9z",
+            "cGF0aWFsb3MvcGxheWVyYXV0aC92MmFscGhhMTtwbGF5ZXJhdXRoqgIoSW1w",
+            "cm9iYWJsZS5TcGF0aWFsT1MuUGxheWVyQXV0aC5WMkFscGhhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,7 +123,16 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreatePlayerIdentityTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreatePlayerIdentityTokenResponse.Parser, new[]{ "PlayerIdentityToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest.Parser, new[]{ "PlayerIdentityToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse.Parser, new[]{ "PlayerIdentityToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken.Parser, new[]{ "Provider", "PlayerIdentifier", "ProjectName", "DisplayName", "Metadata", "IssuedAtTime", "ExpiryTime" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken.Parser, new[]{ "Provider", "PlayerIdentifier", "ProjectName", "DisplayName", "Metadata", "IssuedAtTime", "ExpiryTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken.Parser, new[]{ "Id", "ProjectName", "Description", "CreationTime", "ExpirationTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest.Parser, new[]{ "ProjectName", "Description", "Lifetime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse.Parser, new[]{ "DevelopmentAuthenticationToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest.Parser, new[]{ "ProjectName", "IncludeExpired", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse.Parser, new[]{ "DevelopmentAuthenticationTokens", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest.Parser, new[]{ "Id", "Description", "UpdatedLifetime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse.Parser, new[]{ "DevelopmentAuthenticationToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -88,8 +145,8 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
   /// - `deployment_id`
   ///
   /// The remaining fields are optional:
-  ///  - `lifetime_duration`. If provided, this must be a positive duration. If omitted,
-  ///    the default value of 15 minutes is used.
+  ///  - `lifetime_duration`. If provided, this must be a positive duration. If unset,
+  ///    it defaults to 15 minutes.
   /// </summary>
   public sealed partial class CreateLoginTokenRequest : pb::IMessage<CreateLoginTokenRequest> {
     private static readonly pb::MessageParser<CreateLoginTokenRequest> _parser = new pb::MessageParser<CreateLoginTokenRequest>(() => new CreateLoginTokenRequest());
@@ -130,7 +187,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int PlayerIdentityTokenFieldNumber = 1;
     private string playerIdentityToken_ = "";
     /// <summary>
-    /// The player_identity_token is the JWT token returned by the PlayerIdentityTokenService.CreatePlayerIdentityToken RPC
+    /// The player_identity_token is the JWT returned by the `PlayerIdentityTokenService.CreatePlayerIdentityToken` RPC
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerIdentityToken {
@@ -144,7 +201,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int DeploymentIdFieldNumber = 2;
     private string deploymentId_ = "";
     /// <summary>
-    /// The UUID of the deployment that the user will get access to.
+    /// The UUID of the deployment that the user gets access to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DeploymentId {
@@ -158,9 +215,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int LifetimeDurationFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration lifetimeDuration_;
     /// <summary>
-    /// Specifies how long the LT will be valid for.
+    /// Specifies how long the LT is valid for.
     ///
-    /// This field is optional. When unspecified, this will default to 15 minutes (maximum value is 30 minutes).
+    /// This field is optional. If unset, it defaults to 15 minutes. The maximum value is 30 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration LifetimeDuration {
@@ -174,11 +231,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int WorkerTypeFieldNumber = 4;
     private string workerType_ = "";
     /// <summary>
-    /// The worker type that the user will be allowed to connect to the deployment as.
+    /// The worker type you can use to connect to the deployment.
     ///
-    /// This field is optional - empty string is allowed by validator. If not specified, the worker type provided by
-    /// Worker SDK when connecting to the deployment will be used. This regular expression needs to be kept compatible with
-    /// the regex located on the worker_type field in proto/improbable/ext/cli/project/project_configuration.proto.
+    /// This field is optional. Leave empty to allow all types of worker. If provided, it must conform to the regex `^$|^[a-zA-Z0-9_-]{3,128}$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string WorkerType {
@@ -352,15 +407,15 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int LoginTokenFieldNumber = 1;
     private string loginToken_ = "";
     /// <summary>
-    /// The login_token is a short lived token (up to 15 minutes), allowing the user to log in to a deployment with the specified name.
+    /// The login_token is a short-lived token (up to 15 minutes), allowing the user to log in to a deployment with the specified name.
     /// It is a signed JWT with the following claims:
-    /// sub:     provider-scoped unique user ID. Corresponds to the player_identifier supplied in CreatePlayerIdentityTokenRequest.
-    /// prvdr:   describes system used to authenticate the user. Corresponds to provider in CreatePlayerIdentityTokenRequest.
+    /// sub:     provider-scoped unique user ID. Corresponds to `player_identifier` supplied in `CreatePlayerIdentityTokenRequest`.
+    /// prvdr:   describes system used to authenticate the user. Corresponds to `provider` supplied in `CreatePlayerIdentityTokenRequest`.
     /// prj:     project that the token is scoped to.
     /// dpl:     deployment UUID that the token gives access to.
-    /// iat:     issued at time is the time at which the token was issued This is the time since epoch in seconds in UTC.
+    /// iat:     issued at time. This is the time since epoch in seconds in UTC.
     /// exp:     expiry time. This is the time since epoch in seconds in UTC.
-    /// wkt:     worker type: This is the worker type that the user will be allowed to connect to the deployment as.
+    /// wkt:     worker type: This is the worker type you can use to connect to the deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LoginToken {
@@ -447,12 +502,13 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
   /// <summary>
   /// The following fields are mandatory:
   /// - `provider`
-  /// - `player_identifier`
+  /// - `player_identifier`. The maximum length is 64 characters.
   /// - `project_name`
   ///
   /// The remaining fields are optional:
   /// - `lifetime_duration`. If provided, this must be a positive duration,
   ///   less than or equal to 24.
+  /// - `display_name`. If provided, the maximum length is 64 characters.
   /// - `metadata`. If provided, this must be less than or equal to 256 bytes.
   /// </summary>
   public sealed partial class CreatePlayerIdentityTokenRequest : pb::IMessage<CreatePlayerIdentityTokenRequest> {
@@ -496,8 +552,8 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int ProviderFieldNumber = 1;
     private string provider_ = "";
     /// <summary>
-    /// The system used to authenticate the player with e.g. Steam, Google
-    /// A provider name containing 'improbable' (case insensitive) will not be accepted as this is reserved for internal use.
+    /// The system used to authenticate the player with (for example) Steam or Google. This field must not be empty.
+    /// The provider name cannot contain 'improbable' (case insensitive) as this is reserved for internal use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Provider {
@@ -511,9 +567,10 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int PlayerIdentifierFieldNumber = 2;
     private string playerIdentifier_ = "";
     /// <summary>
-    /// The ID of the player for which we are generating a PIT.
+    /// The ID of the player for whom who you are generating a PIT.
     ///
     /// This should uniquely identify a user in the specified provider.
+    /// The maximum length is 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerIdentifier {
@@ -542,9 +599,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int LifetimeDurationFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration lifetimeDuration_;
     /// <summary>
-    /// The duration for which the issued PIT will be valid.
+    /// The duration for which the issued PIT is valid.
     ///
-    /// It must be set to less than 24 hours.
+    /// It must be set to less than or equal to 24 hours.
     ///
     /// This field is optional. If unset or 0, it defaults to 24 hours.
     /// </summary>
@@ -563,6 +620,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// The player's display name. This field is optional.
     ///
     /// The display name is controlled by the caller and may contain personal information. It should not be stored or logged.
+    /// The maximum length is 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -579,9 +637,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// Additional metadata that is stored within the PIT.
     ///
     /// You can use this to securely attach extra attributes on the PIT in a format you choose.
-    /// eg: JSON payload: bytes("{ 'userType': 'PREMIUM', 'region': 'EU' }")
+    /// For example: JSON payload: bytes("{ 'userType': 'PREMIUM', 'region': 'EU' }")
     /// It must use less than or equal to 256 bytes.
-    /// Exceeding this limitation will result in an `InvalidArgument` error.
+    /// Exceeding this limitation results in an `InvalidArgument` error.
     ///
     /// This field is optional.
     /// </summary>
@@ -789,16 +847,16 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int PlayerIdentityTokenFieldNumber = 1;
     private string playerIdentityToken_ = "";
     /// <summary>
-    /// The player_identity_token is a long lived token (up to 24h) which guarantees a user's identity in the context of a project
+    /// The `player_identity_token` is a long-lived token (up to 24h) which guarantees a user's identity in the context of a project.
     ///
     /// It is a signed JWT with the following payload:
-    /// sub:     provider-scoped unique user ID. Corresponds to the player_identifier supplied in CreatePlayerIdentityTokenRequest.
-    /// prvdr:   describes system used to authenticate the user. Corresponds to provider in CreatePlayerIdentityTokenRequest.
+    /// sub:     provider-scoped unique user ID. Corresponds to `player_identifier` supplied in `CreatePlayerIdentityTokenRequest`.
+    /// prvdr:   describes system used to authenticate the user. Corresponds to `provider` supplied in `CreatePlayerIdentityTokenRequest`.
     /// prj:     project that the PIT is scoped to.
-    /// md:      metadata. Corresponds to md in CreatePlayerIdentityTokenRequest.
+    /// md:      metadata. Corresponds to `md` supplied in `CreatePlayerIdentityTokenRequest`.
     /// iat:     issued at time. This is the time since epoch in seconds in UTC.
     /// exp:     expiry time. This is the time since epoch in seconds in UTC.
-    /// dn:      display name. This is an optional user provided string, corresponding to display name in the CreatePlayerIdentityRequest
+    /// dn:      display name. This is an optional user-provided string, corresponding to `dn` supplied in `CreatePlayerIdentityRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerIdentityToken {
@@ -1174,7 +1232,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int ProviderFieldNumber = 1;
     private string provider_ = "";
     /// <summary>
-    /// The system that was used to authenticate the player with. e.g. Steam, Google
+    /// The system that was used to authenticate the player with, for example Steam or Google.
     ///
     /// This corresponds to the `prvdr` claim in the JWT.
     /// </summary>
@@ -1459,6 +1517,1485 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
             input.ReadMessage(expiryTime_);
             break;
           }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// You can exchange a `DevelopmentAuthenticationToken` (DAT) for an anonymous `PlayerIdentityToken` (PIT)
+  /// using the `DevelopmentAuthenticationService` (DAS) to join a deployment anonymously.
+  /// DATs are intended to be used during the early stage of game development and can be hardcoded into game clients.
+  /// </summary>
+  public sealed partial class DevelopmentAuthenticationToken : pb::IMessage<DevelopmentAuthenticationToken> {
+    private static readonly pb::MessageParser<DevelopmentAuthenticationToken> _parser = new pb::MessageParser<DevelopmentAuthenticationToken>(() => new DevelopmentAuthenticationToken());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DevelopmentAuthenticationToken> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DevelopmentAuthenticationToken() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DevelopmentAuthenticationToken(DevelopmentAuthenticationToken other) : this() {
+      id_ = other.id_;
+      projectName_ = other.projectName_;
+      description_ = other.description_;
+      CreationTime = other.creationTime_ != null ? other.CreationTime.Clone() : null;
+      ExpirationTime = other.expirationTime_ != null ? other.ExpirationTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DevelopmentAuthenticationToken Clone() {
+      return new DevelopmentAuthenticationToken(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// The ID of a DAT. Pass this into requests to a DAS to exchange your DAT for an anonymous PIT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project_name" field.</summary>
+    public const int ProjectNameFieldNumber = 2;
+    private string projectName_ = "";
+    /// <summary>
+    /// The project that the DAT is scoped to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectName {
+      get { return projectName_; }
+      set {
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// A user-specified description for the DAT.
+    ///
+    /// The maximum length is 200 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "creation_time" field.</summary>
+    public const int CreationTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp creationTime_;
+    /// <summary>
+    /// Creation time of the DAT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreationTime {
+      get { return creationTime_; }
+      set {
+        creationTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expiration_time" field.</summary>
+    public const int ExpirationTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expirationTime_;
+    /// <summary>
+    /// Expiration time of the DAT.
+    ///
+    /// The expiration time can be extended using the `UpdateDevelopmentAuthenticationToken` endpoint.
+    /// Expired DATs are permanently deleted after one week.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationTime {
+      get { return expirationTime_; }
+      set {
+        expirationTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DevelopmentAuthenticationToken);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DevelopmentAuthenticationToken other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (ProjectName != other.ProjectName) return false;
+      if (Description != other.Description) return false;
+      if (!object.Equals(CreationTime, other.CreationTime)) return false;
+      if (!object.Equals(ExpirationTime, other.ExpirationTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (creationTime_ != null) hash ^= CreationTime.GetHashCode();
+      if (expirationTime_ != null) hash ^= ExpirationTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (ProjectName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ProjectName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (creationTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreationTime);
+      }
+      if (expirationTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ExpirationTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (ProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (creationTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreationTime);
+      }
+      if (expirationTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpirationTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DevelopmentAuthenticationToken other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.ProjectName.Length != 0) {
+        ProjectName = other.ProjectName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.creationTime_ != null) {
+        if (creationTime_ == null) {
+          creationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreationTime.MergeFrom(other.CreationTime);
+      }
+      if (other.expirationTime_ != null) {
+        if (expirationTime_ == null) {
+          expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpirationTime.MergeFrom(other.ExpirationTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            ProjectName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (creationTime_ == null) {
+              creationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(creationTime_);
+            break;
+          }
+          case 42: {
+            if (expirationTime_ == null) {
+              expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(expirationTime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CreateDevelopmentAuthenticationTokenRequest : pb::IMessage<CreateDevelopmentAuthenticationTokenRequest> {
+    private static readonly pb::MessageParser<CreateDevelopmentAuthenticationTokenRequest> _parser = new pb::MessageParser<CreateDevelopmentAuthenticationTokenRequest>(() => new CreateDevelopmentAuthenticationTokenRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateDevelopmentAuthenticationTokenRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenRequest(CreateDevelopmentAuthenticationTokenRequest other) : this() {
+      projectName_ = other.projectName_;
+      description_ = other.description_;
+      Lifetime = other.lifetime_ != null ? other.Lifetime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenRequest Clone() {
+      return new CreateDevelopmentAuthenticationTokenRequest(this);
+    }
+
+    /// <summary>Field number for the "project_name" field.</summary>
+    public const int ProjectNameFieldNumber = 1;
+    private string projectName_ = "";
+    /// <summary>
+    /// The project that the DAT is scoped to. You must have access to this project.
+    ///
+    /// This should be between 3 and 32 characters and made up of lower case letters, numbers and underscores only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectName {
+      get { return projectName_; }
+      set {
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// A description for the DAT.
+    ///
+    /// The maximum length is 200 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lifetime" field.</summary>
+    public const int LifetimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration lifetime_;
+    /// <summary>
+    /// The validity period of the DAT starting from the time of this request. This field is optional.
+    ///
+    /// The maximum value is 90 days. If unset, this field defaults to 30 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration Lifetime {
+      get { return lifetime_; }
+      set {
+        lifetime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateDevelopmentAuthenticationTokenRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateDevelopmentAuthenticationTokenRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectName != other.ProjectName) return false;
+      if (Description != other.Description) return false;
+      if (!object.Equals(Lifetime, other.Lifetime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (lifetime_ != null) hash ^= Lifetime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (lifetime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Lifetime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (lifetime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lifetime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateDevelopmentAuthenticationTokenRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectName.Length != 0) {
+        ProjectName = other.ProjectName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.lifetime_ != null) {
+        if (lifetime_ == null) {
+          lifetime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Lifetime.MergeFrom(other.Lifetime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            ProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (lifetime_ == null) {
+              lifetime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(lifetime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CreateDevelopmentAuthenticationTokenResponse : pb::IMessage<CreateDevelopmentAuthenticationTokenResponse> {
+    private static readonly pb::MessageParser<CreateDevelopmentAuthenticationTokenResponse> _parser = new pb::MessageParser<CreateDevelopmentAuthenticationTokenResponse>(() => new CreateDevelopmentAuthenticationTokenResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateDevelopmentAuthenticationTokenResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenResponse(CreateDevelopmentAuthenticationTokenResponse other) : this() {
+      DevelopmentAuthenticationToken = other.developmentAuthenticationToken_ != null ? other.DevelopmentAuthenticationToken.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDevelopmentAuthenticationTokenResponse Clone() {
+      return new CreateDevelopmentAuthenticationTokenResponse(this);
+    }
+
+    /// <summary>Field number for the "development_authentication_token" field.</summary>
+    public const int DevelopmentAuthenticationTokenFieldNumber = 1;
+    private global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken developmentAuthenticationToken_;
+    /// <summary>
+    /// The newly created DAT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken DevelopmentAuthenticationToken {
+      get { return developmentAuthenticationToken_; }
+      set {
+        developmentAuthenticationToken_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateDevelopmentAuthenticationTokenResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateDevelopmentAuthenticationTokenResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DevelopmentAuthenticationToken, other.DevelopmentAuthenticationToken)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (developmentAuthenticationToken_ != null) hash ^= DevelopmentAuthenticationToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (developmentAuthenticationToken_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DevelopmentAuthenticationToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (developmentAuthenticationToken_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DevelopmentAuthenticationToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateDevelopmentAuthenticationTokenResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.developmentAuthenticationToken_ != null) {
+        if (developmentAuthenticationToken_ == null) {
+          developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
+        }
+        DevelopmentAuthenticationToken.MergeFrom(other.DevelopmentAuthenticationToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (developmentAuthenticationToken_ == null) {
+              developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
+            }
+            input.ReadMessage(developmentAuthenticationToken_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ListDevelopmentAuthenticationTokensRequest : pb::IMessage<ListDevelopmentAuthenticationTokensRequest> {
+    private static readonly pb::MessageParser<ListDevelopmentAuthenticationTokensRequest> _parser = new pb::MessageParser<ListDevelopmentAuthenticationTokensRequest>(() => new ListDevelopmentAuthenticationTokensRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListDevelopmentAuthenticationTokensRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensRequest(ListDevelopmentAuthenticationTokensRequest other) : this() {
+      projectName_ = other.projectName_;
+      includeExpired_ = other.includeExpired_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensRequest Clone() {
+      return new ListDevelopmentAuthenticationTokensRequest(this);
+    }
+
+    /// <summary>Field number for the "project_name" field.</summary>
+    public const int ProjectNameFieldNumber = 1;
+    private string projectName_ = "";
+    /// <summary>
+    /// The project that the queried DATs are scoped to. You must have access to this project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectName {
+      get { return projectName_; }
+      set {
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "include_expired" field.</summary>
+    public const int IncludeExpiredFieldNumber = 2;
+    private bool includeExpired_;
+    /// <summary>
+    /// Specifies whether the response will include expired DATs. This field is optional.
+    ///
+    /// If unset, this field defaults to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeExpired {
+      get { return includeExpired_; }
+      set {
+        includeExpired_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of DATs to return in the response. This field is optional.
+    ///
+    /// The maximum value is 50 results per page. If unset, this field defaults to 20 results per page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The token to identify the starting point of the request. This field is optional.
+    ///
+    /// An empty or invalid token defaults to listing from the start.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListDevelopmentAuthenticationTokensRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListDevelopmentAuthenticationTokensRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectName != other.ProjectName) return false;
+      if (IncludeExpired != other.IncludeExpired) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (IncludeExpired != false) hash ^= IncludeExpired.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectName);
+      }
+      if (IncludeExpired != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludeExpired);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      }
+      if (IncludeExpired != false) {
+        size += 1 + 1;
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListDevelopmentAuthenticationTokensRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectName.Length != 0) {
+        ProjectName = other.ProjectName;
+      }
+      if (other.IncludeExpired != false) {
+        IncludeExpired = other.IncludeExpired;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            ProjectName = input.ReadString();
+            break;
+          }
+          case 16: {
+            IncludeExpired = input.ReadBool();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ListDevelopmentAuthenticationTokensResponse : pb::IMessage<ListDevelopmentAuthenticationTokensResponse> {
+    private static readonly pb::MessageParser<ListDevelopmentAuthenticationTokensResponse> _parser = new pb::MessageParser<ListDevelopmentAuthenticationTokensResponse>(() => new ListDevelopmentAuthenticationTokensResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListDevelopmentAuthenticationTokensResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensResponse(ListDevelopmentAuthenticationTokensResponse other) : this() {
+      developmentAuthenticationTokens_ = other.developmentAuthenticationTokens_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDevelopmentAuthenticationTokensResponse Clone() {
+      return new ListDevelopmentAuthenticationTokensResponse(this);
+    }
+
+    /// <summary>Field number for the "development_authentication_tokens" field.</summary>
+    public const int DevelopmentAuthenticationTokensFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken> _repeated_developmentAuthenticationTokens_codec
+        = pb::FieldCodec.ForMessage(10, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken.Parser);
+    private readonly pbc::RepeatedField<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken> developmentAuthenticationTokens_ = new pbc::RepeatedField<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken>();
+    /// <summary>
+    /// The DATs corresponding to your query.
+    ///
+    /// The DATs are listed in descending order sorted by creation time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken> DevelopmentAuthenticationTokens {
+      get { return developmentAuthenticationTokens_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token you can supply to the `ListDeployments` RPC to retrieve the next page of
+    /// paginated results. This field is optional.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListDevelopmentAuthenticationTokensResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListDevelopmentAuthenticationTokensResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!developmentAuthenticationTokens_.Equals(other.developmentAuthenticationTokens_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= developmentAuthenticationTokens_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      developmentAuthenticationTokens_.WriteTo(output, _repeated_developmentAuthenticationTokens_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += developmentAuthenticationTokens_.CalculateSize(_repeated_developmentAuthenticationTokens_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListDevelopmentAuthenticationTokensResponse other) {
+      if (other == null) {
+        return;
+      }
+      developmentAuthenticationTokens_.Add(other.developmentAuthenticationTokens_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            developmentAuthenticationTokens_.AddEntriesFrom(input, _repeated_developmentAuthenticationTokens_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateDevelopmentAuthenticationTokenRequest : pb::IMessage<UpdateDevelopmentAuthenticationTokenRequest> {
+    private static readonly pb::MessageParser<UpdateDevelopmentAuthenticationTokenRequest> _parser = new pb::MessageParser<UpdateDevelopmentAuthenticationTokenRequest>(() => new UpdateDevelopmentAuthenticationTokenRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateDevelopmentAuthenticationTokenRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenRequest(UpdateDevelopmentAuthenticationTokenRequest other) : this() {
+      id_ = other.id_;
+      description_ = other.description_;
+      UpdatedLifetime = other.updatedLifetime_ != null ? other.UpdatedLifetime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenRequest Clone() {
+      return new UpdateDevelopmentAuthenticationTokenRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// The ID of the DAT to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// An updated description for the DAT. This field is optional.
+    ///
+    /// The maximum length is 200 characters. If unset, the description of the DAT remains unchanged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "updated_lifetime" field.</summary>
+    public const int UpdatedLifetimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration updatedLifetime_;
+    /// <summary>
+    /// The updated validity period of the DAT starting from the time of this request. This field is optional.
+    ///
+    /// Set this field to update and potentially extend the validity period of the DAT.
+    /// The maximum value is 90 days. If unset, the validity period of the DAT remains unchanged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration UpdatedLifetime {
+      get { return updatedLifetime_; }
+      set {
+        updatedLifetime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateDevelopmentAuthenticationTokenRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateDevelopmentAuthenticationTokenRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Description != other.Description) return false;
+      if (!object.Equals(UpdatedLifetime, other.UpdatedLifetime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (updatedLifetime_ != null) hash ^= UpdatedLifetime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (updatedLifetime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdatedLifetime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (updatedLifetime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedLifetime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateDevelopmentAuthenticationTokenRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.updatedLifetime_ != null) {
+        if (updatedLifetime_ == null) {
+          updatedLifetime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        UpdatedLifetime.MergeFrom(other.UpdatedLifetime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (updatedLifetime_ == null) {
+              updatedLifetime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(updatedLifetime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateDevelopmentAuthenticationTokenResponse : pb::IMessage<UpdateDevelopmentAuthenticationTokenResponse> {
+    private static readonly pb::MessageParser<UpdateDevelopmentAuthenticationTokenResponse> _parser = new pb::MessageParser<UpdateDevelopmentAuthenticationTokenResponse>(() => new UpdateDevelopmentAuthenticationTokenResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateDevelopmentAuthenticationTokenResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenResponse(UpdateDevelopmentAuthenticationTokenResponse other) : this() {
+      DevelopmentAuthenticationToken = other.developmentAuthenticationToken_ != null ? other.DevelopmentAuthenticationToken.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDevelopmentAuthenticationTokenResponse Clone() {
+      return new UpdateDevelopmentAuthenticationTokenResponse(this);
+    }
+
+    /// <summary>Field number for the "development_authentication_token" field.</summary>
+    public const int DevelopmentAuthenticationTokenFieldNumber = 1;
+    private global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken developmentAuthenticationToken_;
+    /// <summary>
+    /// The updated DAT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken DevelopmentAuthenticationToken {
+      get { return developmentAuthenticationToken_; }
+      set {
+        developmentAuthenticationToken_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateDevelopmentAuthenticationTokenResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateDevelopmentAuthenticationTokenResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DevelopmentAuthenticationToken, other.DevelopmentAuthenticationToken)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (developmentAuthenticationToken_ != null) hash ^= DevelopmentAuthenticationToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (developmentAuthenticationToken_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DevelopmentAuthenticationToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (developmentAuthenticationToken_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DevelopmentAuthenticationToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateDevelopmentAuthenticationTokenResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.developmentAuthenticationToken_ != null) {
+        if (developmentAuthenticationToken_ == null) {
+          developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
+        }
+        DevelopmentAuthenticationToken.MergeFrom(other.DevelopmentAuthenticationToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (developmentAuthenticationToken_ == null) {
+              developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
+            }
+            input.ReadMessage(developmentAuthenticationToken_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ExpireDevelopmentAuthenticationTokenRequest : pb::IMessage<ExpireDevelopmentAuthenticationTokenRequest> {
+    private static readonly pb::MessageParser<ExpireDevelopmentAuthenticationTokenRequest> _parser = new pb::MessageParser<ExpireDevelopmentAuthenticationTokenRequest>(() => new ExpireDevelopmentAuthenticationTokenRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExpireDevelopmentAuthenticationTokenRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenRequest(ExpireDevelopmentAuthenticationTokenRequest other) : this() {
+      id_ = other.id_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenRequest Clone() {
+      return new ExpireDevelopmentAuthenticationTokenRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// The ID of the DAT to expire.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExpireDevelopmentAuthenticationTokenRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExpireDevelopmentAuthenticationTokenRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExpireDevelopmentAuthenticationTokenRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ExpireDevelopmentAuthenticationTokenResponse : pb::IMessage<ExpireDevelopmentAuthenticationTokenResponse> {
+    private static readonly pb::MessageParser<ExpireDevelopmentAuthenticationTokenResponse> _parser = new pb::MessageParser<ExpireDevelopmentAuthenticationTokenResponse>(() => new ExpireDevelopmentAuthenticationTokenResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExpireDevelopmentAuthenticationTokenResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerAuthReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenResponse(ExpireDevelopmentAuthenticationTokenResponse other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpireDevelopmentAuthenticationTokenResponse Clone() {
+      return new ExpireDevelopmentAuthenticationTokenResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExpireDevelopmentAuthenticationTokenResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExpireDevelopmentAuthenticationTokenResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExpireDevelopmentAuthenticationTokenResponse other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
         }
       }
     }

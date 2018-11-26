@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
+  /// <summary>
+  /// The PlayerAuthService provides methods for creating and managing
+  /// `PlayerIdentityTokens` (PITs), `LoginTokens` (LTs) and `DevelopmentAuthenticationTokens` (DATs).
+  /// </summary>
   public static partial class PlayerAuthService
   {
     static readonly string __ServiceName = "improbable.spatialos.playerauth.v2alpha1.PlayerAuthService";
@@ -19,6 +23,14 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreatePlayerIdentityTokenResponse> __Marshaller_CreatePlayerIdentityTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreatePlayerIdentityTokenResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest> __Marshaller_DecodePlayerIdentityTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse> __Marshaller_DecodePlayerIdentityTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest> __Marshaller_CreateDevelopmentAuthenticationTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse> __Marshaller_CreateDevelopmentAuthenticationTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest> __Marshaller_ListDevelopmentAuthenticationTokensRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse> __Marshaller_ListDevelopmentAuthenticationTokensResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest> __Marshaller_UpdateDevelopmentAuthenticationTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse> __Marshaller_UpdateDevelopmentAuthenticationTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest> __Marshaller_ExpireDevelopmentAuthenticationTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse> __Marshaller_ExpireDevelopmentAuthenticationTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateLoginTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateLoginTokenResponse> __Method_CreateLoginToken = new grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateLoginTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateLoginTokenResponse>(
         grpc::MethodType.Unary,
@@ -41,6 +53,34 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         __Marshaller_DecodePlayerIdentityTokenRequest,
         __Marshaller_DecodePlayerIdentityTokenResponse);
 
+    static readonly grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse> __Method_CreateDevelopmentAuthenticationToken = new grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDevelopmentAuthenticationToken",
+        __Marshaller_CreateDevelopmentAuthenticationTokenRequest,
+        __Marshaller_CreateDevelopmentAuthenticationTokenResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse> __Method_ListDevelopmentAuthenticationTokens = new grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDevelopmentAuthenticationTokens",
+        __Marshaller_ListDevelopmentAuthenticationTokensRequest,
+        __Marshaller_ListDevelopmentAuthenticationTokensResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse> __Method_UpdateDevelopmentAuthenticationToken = new grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDevelopmentAuthenticationToken",
+        __Marshaller_UpdateDevelopmentAuthenticationTokenRequest,
+        __Marshaller_UpdateDevelopmentAuthenticationTokenResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse> __Method_ExpireDevelopmentAuthenticationToken = new grpc::Method<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest, global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExpireDevelopmentAuthenticationToken",
+        __Marshaller_ExpireDevelopmentAuthenticationTokenRequest,
+        __Marshaller_ExpireDevelopmentAuthenticationTokenResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -51,7 +91,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public abstract partial class PlayerAuthServiceBase
     {
       /// <summary>
-      /// Creates a LoginToken (LT) for a given user, project and deployment.
+      /// Creates a `LoginToken` (LT) for a given user, project and deployment.
       ///
       /// This grants the user access to a given deployment.
       /// </summary>
@@ -64,11 +104,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       }
 
       /// <summary>
-      /// Creates a PlayerIdentityToken (PIT) for a given user and project.
+      /// Creates a `PlayerIdentityToken` (PIT) for a given user and project.
       ///
-      /// This guarantees player identity in the context of a project.
+      /// This identifies players in the context of a project and provider.
       ///
-      /// Invalid fields will result in an `InvalidArgument` error.
+      /// Invalid fields result in an `InvalidArgument` error. See the `CreatePlayerIdentityTokenRequest` message for details of what is valid for each field.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -79,14 +119,63 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       }
 
       /// <summary>
-      /// Decodes a PlayerIdentityToken (PIT).
+      /// Decodes a `PlayerIdentityToken` (PIT).
       ///
-      /// Tokens that cannot be verified will result in an `InvalidArgument` error.
+      /// Tokens that cannot be verified result in an `InvalidArgument` error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse> DecodePlayerIdentityToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `DevelopmentAuthenticationToken` (DAT) for a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DATs associated with a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse> ListDevelopmentAuthenticationTokens(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the description and the validity period of a DAT.
+      ///
+      /// You can use this endpoint to both extend the validity period of valid DATs and renew expired DATs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Immediately expires a DAT thereby revoking its validity.
+      ///
+      /// You can undo this operation by extending the lifetime of an expired DAT using the `UpdateDevelopmentAuthenticationToken` endpoint.
+      /// Expired DATs are permanently deleted after one week.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -117,7 +206,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       }
 
       /// <summary>
-      /// Creates a LoginToken (LT) for a given user, project and deployment.
+      /// Creates a `LoginToken` (LT) for a given user, project and deployment.
       ///
       /// This grants the user access to a given deployment.
       /// </summary>
@@ -131,7 +220,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CreateLoginToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a LoginToken (LT) for a given user, project and deployment.
+      /// Creates a `LoginToken` (LT) for a given user, project and deployment.
       ///
       /// This grants the user access to a given deployment.
       /// </summary>
@@ -143,7 +232,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateLoginToken, null, options, request);
       }
       /// <summary>
-      /// Creates a LoginToken (LT) for a given user, project and deployment.
+      /// Creates a `LoginToken` (LT) for a given user, project and deployment.
       ///
       /// This grants the user access to a given deployment.
       /// </summary>
@@ -157,7 +246,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CreateLoginTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a LoginToken (LT) for a given user, project and deployment.
+      /// Creates a `LoginToken` (LT) for a given user, project and deployment.
       ///
       /// This grants the user access to a given deployment.
       /// </summary>
@@ -169,11 +258,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateLoginToken, null, options, request);
       }
       /// <summary>
-      /// Creates a PlayerIdentityToken (PIT) for a given user and project.
+      /// Creates a `PlayerIdentityToken` (PIT) for a given user and project.
       ///
-      /// This guarantees player identity in the context of a project.
+      /// This identifies players in the context of a project and provider.
       ///
-      /// Invalid fields will result in an `InvalidArgument` error.
+      /// Invalid fields result in an `InvalidArgument` error. See the `CreatePlayerIdentityTokenRequest` message for details of what is valid for each field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -185,11 +274,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CreatePlayerIdentityToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a PlayerIdentityToken (PIT) for a given user and project.
+      /// Creates a `PlayerIdentityToken` (PIT) for a given user and project.
       ///
-      /// This guarantees player identity in the context of a project.
+      /// This identifies players in the context of a project and provider.
       ///
-      /// Invalid fields will result in an `InvalidArgument` error.
+      /// Invalid fields result in an `InvalidArgument` error. See the `CreatePlayerIdentityTokenRequest` message for details of what is valid for each field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -199,11 +288,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePlayerIdentityToken, null, options, request);
       }
       /// <summary>
-      /// Creates a PlayerIdentityToken (PIT) for a given user and project.
+      /// Creates a `PlayerIdentityToken` (PIT) for a given user and project.
       ///
-      /// This guarantees player identity in the context of a project.
+      /// This identifies players in the context of a project and provider.
       ///
-      /// Invalid fields will result in an `InvalidArgument` error.
+      /// Invalid fields result in an `InvalidArgument` error. See the `CreatePlayerIdentityTokenRequest` message for details of what is valid for each field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -215,11 +304,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CreatePlayerIdentityTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a PlayerIdentityToken (PIT) for a given user and project.
+      /// Creates a `PlayerIdentityToken` (PIT) for a given user and project.
       ///
-      /// This guarantees player identity in the context of a project.
+      /// This identifies players in the context of a project and provider.
       ///
-      /// Invalid fields will result in an `InvalidArgument` error.
+      /// Invalid fields result in an `InvalidArgument` error. See the `CreatePlayerIdentityTokenRequest` message for details of what is valid for each field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -229,9 +318,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePlayerIdentityToken, null, options, request);
       }
       /// <summary>
-      /// Decodes a PlayerIdentityToken (PIT).
+      /// Decodes a `PlayerIdentityToken` (PIT).
       ///
-      /// Tokens that cannot be verified will result in an `InvalidArgument` error.
+      /// Tokens that cannot be verified result in an `InvalidArgument` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -243,9 +332,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return DecodePlayerIdentityToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Decodes a PlayerIdentityToken (PIT).
+      /// Decodes a `PlayerIdentityToken` (PIT).
       ///
-      /// Tokens that cannot be verified will result in an `InvalidArgument` error.
+      /// Tokens that cannot be verified result in an `InvalidArgument` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -255,9 +344,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_DecodePlayerIdentityToken, null, options, request);
       }
       /// <summary>
-      /// Decodes a PlayerIdentityToken (PIT).
+      /// Decodes a `PlayerIdentityToken` (PIT).
       ///
-      /// Tokens that cannot be verified will result in an `InvalidArgument` error.
+      /// Tokens that cannot be verified result in an `InvalidArgument` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -269,9 +358,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return DecodePlayerIdentityTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Decodes a PlayerIdentityToken (PIT).
+      /// Decodes a `PlayerIdentityToken` (PIT).
       ///
-      /// Tokens that cannot be verified will result in an `InvalidArgument` error.
+      /// Tokens that cannot be verified result in an `InvalidArgument` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -279,6 +368,202 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenResponse> DecodePlayerIdentityTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DecodePlayerIdentityTokenRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DecodePlayerIdentityToken, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `DevelopmentAuthenticationToken` (DAT) for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse CreateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateDevelopmentAuthenticationToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `DevelopmentAuthenticationToken` (DAT) for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse CreateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDevelopmentAuthenticationToken, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `DevelopmentAuthenticationToken` (DAT) for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateDevelopmentAuthenticationTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `DevelopmentAuthenticationToken` (DAT) for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDevelopmentAuthenticationToken, null, options, request);
+      }
+      /// <summary>
+      /// Lists DATs associated with a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse ListDevelopmentAuthenticationTokens(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListDevelopmentAuthenticationTokens(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DATs associated with a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse ListDevelopmentAuthenticationTokens(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDevelopmentAuthenticationTokens, null, options, request);
+      }
+      /// <summary>
+      /// Lists DATs associated with a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse> ListDevelopmentAuthenticationTokensAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListDevelopmentAuthenticationTokensAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DATs associated with a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensResponse> ListDevelopmentAuthenticationTokensAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDevelopmentAuthenticationTokens, null, options, request);
+      }
+      /// <summary>
+      /// Updates the description and the validity period of a DAT.
+      ///
+      /// You can use this endpoint to both extend the validity period of valid DATs and renew expired DATs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse UpdateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateDevelopmentAuthenticationToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the description and the validity period of a DAT.
+      ///
+      /// You can use this endpoint to both extend the validity period of valid DATs and renew expired DATs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse UpdateDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDevelopmentAuthenticationToken, null, options, request);
+      }
+      /// <summary>
+      /// Updates the description and the validity period of a DAT.
+      ///
+      /// You can use this endpoint to both extend the validity period of valid DATs and renew expired DATs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateDevelopmentAuthenticationTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the description and the validity period of a DAT.
+      ///
+      /// You can use this endpoint to both extend the validity period of valid DATs and renew expired DATs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.UpdateDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDevelopmentAuthenticationToken, null, options, request);
+      }
+      /// <summary>
+      /// Immediately expires a DAT thereby revoking its validity.
+      ///
+      /// You can undo this operation by extending the lifetime of an expired DAT using the `UpdateDevelopmentAuthenticationToken` endpoint.
+      /// Expired DATs are permanently deleted after one week.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse ExpireDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ExpireDevelopmentAuthenticationToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Immediately expires a DAT thereby revoking its validity.
+      ///
+      /// You can undo this operation by extending the lifetime of an expired DAT using the `UpdateDevelopmentAuthenticationToken` endpoint.
+      /// Expired DATs are permanently deleted after one week.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse ExpireDevelopmentAuthenticationToken(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExpireDevelopmentAuthenticationToken, null, options, request);
+      }
+      /// <summary>
+      /// Immediately expires a DAT thereby revoking its validity.
+      ///
+      /// You can undo this operation by extending the lifetime of an expired DAT using the `UpdateDevelopmentAuthenticationToken` endpoint.
+      /// Expired DATs are permanently deleted after one week.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ExpireDevelopmentAuthenticationTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Immediately expires a DAT thereby revoking its validity.
+      ///
+      /// You can undo this operation by extending the lifetime of an expired DAT using the `UpdateDevelopmentAuthenticationToken` endpoint.
+      /// Expired DATs are permanently deleted after one week.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationTokenAsync(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ExpireDevelopmentAuthenticationTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExpireDevelopmentAuthenticationToken, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PlayerAuthServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -294,7 +579,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateLoginToken, serviceImpl.CreateLoginToken)
           .AddMethod(__Method_CreatePlayerIdentityToken, serviceImpl.CreatePlayerIdentityToken)
-          .AddMethod(__Method_DecodePlayerIdentityToken, serviceImpl.DecodePlayerIdentityToken).Build();
+          .AddMethod(__Method_DecodePlayerIdentityToken, serviceImpl.DecodePlayerIdentityToken)
+          .AddMethod(__Method_CreateDevelopmentAuthenticationToken, serviceImpl.CreateDevelopmentAuthenticationToken)
+          .AddMethod(__Method_ListDevelopmentAuthenticationTokens, serviceImpl.ListDevelopmentAuthenticationTokens)
+          .AddMethod(__Method_UpdateDevelopmentAuthenticationToken, serviceImpl.UpdateDevelopmentAuthenticationToken)
+          .AddMethod(__Method_ExpireDevelopmentAuthenticationToken, serviceImpl.ExpireDevelopmentAuthenticationToken).Build();
     }
 
   }

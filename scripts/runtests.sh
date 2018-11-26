@@ -20,3 +20,6 @@ docker run $DOCKER_IMAGE /bin/bash -c "cd examples && spatial service start --ma
 
 echo "--- Running BYO Auth Scenario"
 docker run $DOCKER_IMAGE /bin/bash -c "cd examples && cd BYOAuthFlow && dotnet run --no-build --configuration Release"
+
+echo "--- Running Capacity Limit Scenario"
+docker run $DOCKER_IMAGE /bin/bash -c "cd examples/CapacityLimit && dotnet run --no-build --configuration Release"
