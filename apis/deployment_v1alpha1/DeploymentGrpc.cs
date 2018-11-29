@@ -114,6 +114,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// `cluster_code`
       /// `tag`
       ///
+      /// These fields are ignored:
+      /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
+      ///
+      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+      /// set their values in the launch configuration JSON file instead.
+      ///
       /// The returned operation result is of type `deployment`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -130,6 +138,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// Only these fields are mutable:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// The request ignores any immutable fields that you've changed.
       ///
@@ -141,6 +151,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// We only support these paths, as in the proto serialised way:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// This RPC adopts two FieldMask specifics:
       /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
@@ -307,6 +319,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// `cluster_code`
       /// `tag`
       ///
+      /// These fields are ignored:
+      /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
+      ///
+      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+      /// set their values in the launch configuration JSON file instead.
+      ///
       /// The returned operation result is of type `deployment`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -333,6 +353,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// `cluster_code`
       /// `tag`
       ///
+      /// These fields are ignored:
+      /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
+      ///
+      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+      /// set their values in the launch configuration JSON file instead.
+      ///
       /// The returned operation result is of type `deployment`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -356,6 +384,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// `region_code`
       /// `cluster_code`
       /// `tag`
+      ///
+      /// These fields are ignored:
+      /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
+      ///
+      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+      /// set their values in the launch configuration JSON file instead.
       ///
       /// The returned operation result is of type `deployment`.
       /// </summary>
@@ -383,6 +419,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// `cluster_code`
       /// `tag`
       ///
+      /// These fields are ignored:
+      /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
+      ///
+      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+      /// set their values in the launch configuration JSON file instead.
+      ///
       /// The returned operation result is of type `deployment`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -398,6 +442,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// Only these fields are mutable:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// The request ignores any immutable fields that you've changed.
       ///
@@ -409,6 +455,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// We only support these paths, as in the proto serialised way:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// This RPC adopts two FieldMask specifics:
       /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
@@ -431,6 +479,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// Only these fields are mutable:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// The request ignores any immutable fields that you've changed.
       ///
@@ -442,6 +492,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// We only support these paths, as in the proto serialised way:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// This RPC adopts two FieldMask specifics:
       /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
@@ -462,6 +514,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// Only these fields are mutable:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// The request ignores any immutable fields that you've changed.
       ///
@@ -473,6 +527,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// We only support these paths, as in the proto serialised way:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// This RPC adopts two FieldMask specifics:
       /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
@@ -495,6 +551,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// Only these fields are mutable:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// The request ignores any immutable fields that you've changed.
       ///
@@ -506,6 +564,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// We only support these paths, as in the proto serialised way:
       /// `tag`
       /// `worker_flags`
+      /// `worker_connection_capacities`
+      /// `worker_connection_rate_limits`
       ///
       /// This RPC adopts two FieldMask specifics:
       /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
