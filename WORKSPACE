@@ -61,7 +61,7 @@ git_repository(
 git_repository(
     name = "improbable_platform",
     remote = "git@github.com:improbable/platform.git",
-    commit = "b1942a8df7796684a56fe8c12ed701b5b6c7db81",
+    commit = "218df8168e448dfd9c2709ac8cf719ff2b3d7bf6",
     shallow_since = "2018-11-01",
 )
 
