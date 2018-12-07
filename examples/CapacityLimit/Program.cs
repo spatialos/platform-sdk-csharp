@@ -106,6 +106,15 @@ namespace CapacityLimit
                 .First(d => d.Status == Deployment.Types.Status.Running);
             Console.WriteLine($"Found deployment {_deployment.Id}");
 
+            Console.WriteLine("Setting capacity limit to 2");
+            _deployment.WorkerConnectionCapacities.Clear();
+            _deployment.WorkerConnectionCapacities.Add(new WorkerCapacity
+            {
+                WorkerType = ScenarioWorkerType,
+                MaxCapacity = 2
+            });
+            _deploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = _deployment});
+
             Console.WriteLine("Creating a PlayerIdentityToken");
             var playerIdentityTokenResponse = _playerAuthServiceClient.CreatePlayerIdentityToken(
                 new CreatePlayerIdentityTokenRequest
