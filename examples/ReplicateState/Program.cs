@@ -53,12 +53,17 @@ namespace ReplicateState
             SpatialDPort,
             true
         );
+        
+        private static readonly PlatformApiEndpoint mercuryEndpoint = new PlatformApiEndpoint(
+            "api-alpha-testing.improbable.io",
+            443
+        );
 
         private static readonly SnapshotServiceClient CloudSnapshotServiceClient =
             SnapshotServiceClient.Create(credentials: CredentialWithProvidedToken);
 
         private static readonly DeploymentServiceClient CloudDeploymentServiceClient =
-            DeploymentServiceClient.Create(credentials: CredentialWithProvidedToken);
+            DeploymentServiceClient.Create(mercuryEndpoint, credentials: CredentialWithProvidedToken);
 
         private static readonly SnapshotServiceClient LocalSnapshotServiceClient =
             SnapshotServiceClient.Create(SpatialdEndpoint);
