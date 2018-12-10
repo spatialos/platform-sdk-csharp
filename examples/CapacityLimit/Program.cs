@@ -163,7 +163,7 @@ namespace CapacityLimit
             _deploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = _deployment});
 
             Console.WriteLine("Connecting another worker");
-            if (TryConnectWorker(locator))
+            if (!TryConnectWorker(locator))
                 throw new Exception("Expected worker to be able to connect after capacity increase");
         }
 
