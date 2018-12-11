@@ -10,7 +10,7 @@ gapic_generator_codegen(
     descriptor_set = "//apis:platform_api_descriptor_set",
     gapic_yaml = "@improbable_platform//proto/improbable/spatialos/playerauth/v2alpha1:csharp_gapic",
     package_yaml = "//apis:package_yaml",
-    service_yaml = "@improbable_platform//proto/improbable/spatialos/playerauth:playerauth_service.yaml",
+    service_yaml = "@improbable_platform//proto/improbable/spatialos/playerauth:playerauth_v2alpha1.yaml",
 )
 
 load("@org_pubref_rules_protobuf//csharp:rules.bzl", "csharp_proto_compile")
