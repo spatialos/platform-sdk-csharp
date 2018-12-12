@@ -223,9 +223,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
     public abstract partial class PlayerAuthServiceClient
     {
         /// <summary>
-        /// The default endpoint for the PlayerAuthService service, which is a host of "platform.api.improbable.io" and a port of 443.
+        /// The default endpoint for the PlayerAuthService service, which is a host of "playerauth.api.improbable.io" and a port of 443.
         /// </summary>
-        public static ispc::PlatformApiEndpoint DefaultEndpoint { get; } = new ispc::PlatformApiEndpoint("platform.api.improbable.io", 443);
+        public static ispc::PlatformApiEndpoint DefaultEndpoint { get; } = new ispc::PlatformApiEndpoint("playerauth.api.improbable.io", 443);
 
         /// <summary>
         /// Synchronously creates a <see cref="PlayerAuthServiceClient"/>, applying defaults for all unspecified settings,
