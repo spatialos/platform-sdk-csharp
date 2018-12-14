@@ -53,6 +53,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
             CreateLoginTokenSettings = existing.CreateLoginTokenSettings;
             CreatePlayerIdentityTokenSettings = existing.CreatePlayerIdentityTokenSettings;
             DecodePlayerIdentityTokenSettings = existing.DecodePlayerIdentityTokenSettings;
+            CreateDevelopmentAuthenticationTokenSettings = existing.CreateDevelopmentAuthenticationTokenSettings;
+            GetDevelopmentAuthenticationTokenSettings = existing.GetDevelopmentAuthenticationTokenSettings;
+            ListDevelopmentAuthenticationTokensSettings = existing.ListDevelopmentAuthenticationTokensSettings;
+            UpdateDevelopmentAuthenticationTokenSettings = existing.UpdateDevelopmentAuthenticationTokenSettings;
+            ExpireDevelopmentAuthenticationTokenSettings = existing.ExpireDevelopmentAuthenticationTokenSettings;
             OnCopy(existing);
         }
 
@@ -208,6 +213,153 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlayerAuthServiceClient.CreateDevelopmentAuthenticationToken</c> and <c>PlayerAuthServiceClient.CreateDevelopmentAuthenticationTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PlayerAuthServiceClient.CreateDevelopmentAuthenticationToken</c> and
+        /// <c>PlayerAuthServiceClient.CreateDevelopmentAuthenticationTokenAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDevelopmentAuthenticationTokenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlayerAuthServiceClient.GetDevelopmentAuthenticationToken</c> and <c>PlayerAuthServiceClient.GetDevelopmentAuthenticationTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PlayerAuthServiceClient.GetDevelopmentAuthenticationToken</c> and
+        /// <c>PlayerAuthServiceClient.GetDevelopmentAuthenticationTokenAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDevelopmentAuthenticationTokenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlayerAuthServiceClient.ListDevelopmentAuthenticationTokens</c> and <c>PlayerAuthServiceClient.ListDevelopmentAuthenticationTokensAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PlayerAuthServiceClient.ListDevelopmentAuthenticationTokens</c> and
+        /// <c>PlayerAuthServiceClient.ListDevelopmentAuthenticationTokensAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDevelopmentAuthenticationTokensSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlayerAuthServiceClient.UpdateDevelopmentAuthenticationToken</c> and <c>PlayerAuthServiceClient.UpdateDevelopmentAuthenticationTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PlayerAuthServiceClient.UpdateDevelopmentAuthenticationToken</c> and
+        /// <c>PlayerAuthServiceClient.UpdateDevelopmentAuthenticationTokenAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDevelopmentAuthenticationTokenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlayerAuthServiceClient.ExpireDevelopmentAuthenticationToken</c> and <c>PlayerAuthServiceClient.ExpireDevelopmentAuthenticationTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PlayerAuthServiceClient.ExpireDevelopmentAuthenticationToken</c> and
+        /// <c>PlayerAuthServiceClient.ExpireDevelopmentAuthenticationTokenAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ExpireDevelopmentAuthenticationTokenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -433,6 +585,268 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationTokenAsync(
+            CreateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationTokenAsync(
+            CreateDevelopmentAuthenticationTokenRequest request,
+            st::CancellationToken cancellationToken) => CreateDevelopmentAuthenticationTokenAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CreateDevelopmentAuthenticationTokenResponse CreateDevelopmentAuthenticationToken(
+            CreateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDevelopmentAuthenticationTokenResponse> GetDevelopmentAuthenticationTokenAsync(
+            GetDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDevelopmentAuthenticationTokenResponse> GetDevelopmentAuthenticationTokenAsync(
+            GetDevelopmentAuthenticationTokenRequest request,
+            st::CancellationToken cancellationToken) => GetDevelopmentAuthenticationTokenAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetDevelopmentAuthenticationTokenResponse GetDevelopmentAuthenticationToken(
+            GetDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DevelopmentAuthenticationToken"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken> ListDevelopmentAuthenticationTokensAsync(
+            ListDevelopmentAuthenticationTokensRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="DevelopmentAuthenticationToken"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken> ListDevelopmentAuthenticationTokens(
+            ListDevelopmentAuthenticationTokensRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationTokenAsync(
+            UpdateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationTokenAsync(
+            UpdateDevelopmentAuthenticationTokenRequest request,
+            st::CancellationToken cancellationToken) => UpdateDevelopmentAuthenticationTokenAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual UpdateDevelopmentAuthenticationTokenResponse UpdateDevelopmentAuthenticationToken(
+            UpdateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationTokenAsync(
+            ExpireDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationTokenAsync(
+            ExpireDevelopmentAuthenticationTokenRequest request,
+            st::CancellationToken cancellationToken) => ExpireDevelopmentAuthenticationTokenAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ExpireDevelopmentAuthenticationTokenResponse ExpireDevelopmentAuthenticationToken(
+            ExpireDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -443,6 +857,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
         private readonly gaxgrpc::ApiCall<CreateLoginTokenRequest, CreateLoginTokenResponse> _callCreateLoginToken;
         private readonly gaxgrpc::ApiCall<CreatePlayerIdentityTokenRequest, CreatePlayerIdentityTokenResponse> _callCreatePlayerIdentityToken;
         private readonly gaxgrpc::ApiCall<DecodePlayerIdentityTokenRequest, DecodePlayerIdentityTokenResponse> _callDecodePlayerIdentityToken;
+        private readonly gaxgrpc::ApiCall<CreateDevelopmentAuthenticationTokenRequest, CreateDevelopmentAuthenticationTokenResponse> _callCreateDevelopmentAuthenticationToken;
+        private readonly gaxgrpc::ApiCall<GetDevelopmentAuthenticationTokenRequest, GetDevelopmentAuthenticationTokenResponse> _callGetDevelopmentAuthenticationToken;
+        private readonly gaxgrpc::ApiCall<ListDevelopmentAuthenticationTokensRequest, ListDevelopmentAuthenticationTokensResponse> _callListDevelopmentAuthenticationTokens;
+        private readonly gaxgrpc::ApiCall<UpdateDevelopmentAuthenticationTokenRequest, UpdateDevelopmentAuthenticationTokenResponse> _callUpdateDevelopmentAuthenticationToken;
+        private readonly gaxgrpc::ApiCall<ExpireDevelopmentAuthenticationTokenRequest, ExpireDevelopmentAuthenticationTokenResponse> _callExpireDevelopmentAuthenticationToken;
 
         /// <summary>
         /// Constructs a client wrapper for the PlayerAuthService service, with the specified gRPC client and settings.
@@ -460,12 +879,32 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
                 GrpcClient.CreatePlayerIdentityTokenAsync, GrpcClient.CreatePlayerIdentityToken, effectiveSettings.CreatePlayerIdentityTokenSettings);
             _callDecodePlayerIdentityToken = clientHelper.BuildApiCall<DecodePlayerIdentityTokenRequest, DecodePlayerIdentityTokenResponse>(
                 GrpcClient.DecodePlayerIdentityTokenAsync, GrpcClient.DecodePlayerIdentityToken, effectiveSettings.DecodePlayerIdentityTokenSettings);
+            _callCreateDevelopmentAuthenticationToken = clientHelper.BuildApiCall<CreateDevelopmentAuthenticationTokenRequest, CreateDevelopmentAuthenticationTokenResponse>(
+                GrpcClient.CreateDevelopmentAuthenticationTokenAsync, GrpcClient.CreateDevelopmentAuthenticationToken, effectiveSettings.CreateDevelopmentAuthenticationTokenSettings);
+            _callGetDevelopmentAuthenticationToken = clientHelper.BuildApiCall<GetDevelopmentAuthenticationTokenRequest, GetDevelopmentAuthenticationTokenResponse>(
+                GrpcClient.GetDevelopmentAuthenticationTokenAsync, GrpcClient.GetDevelopmentAuthenticationToken, effectiveSettings.GetDevelopmentAuthenticationTokenSettings);
+            _callListDevelopmentAuthenticationTokens = clientHelper.BuildApiCall<ListDevelopmentAuthenticationTokensRequest, ListDevelopmentAuthenticationTokensResponse>(
+                GrpcClient.ListDevelopmentAuthenticationTokensAsync, GrpcClient.ListDevelopmentAuthenticationTokens, effectiveSettings.ListDevelopmentAuthenticationTokensSettings);
+            _callUpdateDevelopmentAuthenticationToken = clientHelper.BuildApiCall<UpdateDevelopmentAuthenticationTokenRequest, UpdateDevelopmentAuthenticationTokenResponse>(
+                GrpcClient.UpdateDevelopmentAuthenticationTokenAsync, GrpcClient.UpdateDevelopmentAuthenticationToken, effectiveSettings.UpdateDevelopmentAuthenticationTokenSettings);
+            _callExpireDevelopmentAuthenticationToken = clientHelper.BuildApiCall<ExpireDevelopmentAuthenticationTokenRequest, ExpireDevelopmentAuthenticationTokenResponse>(
+                GrpcClient.ExpireDevelopmentAuthenticationTokenAsync, GrpcClient.ExpireDevelopmentAuthenticationToken, effectiveSettings.ExpireDevelopmentAuthenticationTokenSettings);
             Modify_ApiCall(ref _callCreateLoginToken);
             Modify_CreateLoginTokenApiCall(ref _callCreateLoginToken);
             Modify_ApiCall(ref _callCreatePlayerIdentityToken);
             Modify_CreatePlayerIdentityTokenApiCall(ref _callCreatePlayerIdentityToken);
             Modify_ApiCall(ref _callDecodePlayerIdentityToken);
             Modify_DecodePlayerIdentityTokenApiCall(ref _callDecodePlayerIdentityToken);
+            Modify_ApiCall(ref _callCreateDevelopmentAuthenticationToken);
+            Modify_CreateDevelopmentAuthenticationTokenApiCall(ref _callCreateDevelopmentAuthenticationToken);
+            Modify_ApiCall(ref _callGetDevelopmentAuthenticationToken);
+            Modify_GetDevelopmentAuthenticationTokenApiCall(ref _callGetDevelopmentAuthenticationToken);
+            Modify_ApiCall(ref _callListDevelopmentAuthenticationTokens);
+            Modify_ListDevelopmentAuthenticationTokensApiCall(ref _callListDevelopmentAuthenticationTokens);
+            Modify_ApiCall(ref _callUpdateDevelopmentAuthenticationToken);
+            Modify_UpdateDevelopmentAuthenticationTokenApiCall(ref _callUpdateDevelopmentAuthenticationToken);
+            Modify_ApiCall(ref _callExpireDevelopmentAuthenticationToken);
+            Modify_ExpireDevelopmentAuthenticationTokenApiCall(ref _callExpireDevelopmentAuthenticationToken);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -482,6 +921,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
         partial void Modify_CreateLoginTokenApiCall(ref gaxgrpc::ApiCall<CreateLoginTokenRequest, CreateLoginTokenResponse> call);
         partial void Modify_CreatePlayerIdentityTokenApiCall(ref gaxgrpc::ApiCall<CreatePlayerIdentityTokenRequest, CreatePlayerIdentityTokenResponse> call);
         partial void Modify_DecodePlayerIdentityTokenApiCall(ref gaxgrpc::ApiCall<DecodePlayerIdentityTokenRequest, DecodePlayerIdentityTokenResponse> call);
+        partial void Modify_CreateDevelopmentAuthenticationTokenApiCall(ref gaxgrpc::ApiCall<CreateDevelopmentAuthenticationTokenRequest, CreateDevelopmentAuthenticationTokenResponse> call);
+        partial void Modify_GetDevelopmentAuthenticationTokenApiCall(ref gaxgrpc::ApiCall<GetDevelopmentAuthenticationTokenRequest, GetDevelopmentAuthenticationTokenResponse> call);
+        partial void Modify_ListDevelopmentAuthenticationTokensApiCall(ref gaxgrpc::ApiCall<ListDevelopmentAuthenticationTokensRequest, ListDevelopmentAuthenticationTokensResponse> call);
+        partial void Modify_UpdateDevelopmentAuthenticationTokenApiCall(ref gaxgrpc::ApiCall<UpdateDevelopmentAuthenticationTokenRequest, UpdateDevelopmentAuthenticationTokenResponse> call);
+        partial void Modify_ExpireDevelopmentAuthenticationTokenApiCall(ref gaxgrpc::ApiCall<ExpireDevelopmentAuthenticationTokenRequest, ExpireDevelopmentAuthenticationTokenResponse> call);
         partial void OnConstruction(PlayerAuthService.PlayerAuthServiceClient grpcClient, PlayerAuthServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -495,6 +939,11 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
         partial void Modify_CreateLoginTokenRequest(ref CreateLoginTokenRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreatePlayerIdentityTokenRequest(ref CreatePlayerIdentityTokenRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DecodePlayerIdentityTokenRequest(ref DecodePlayerIdentityTokenRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateDevelopmentAuthenticationTokenRequest(ref CreateDevelopmentAuthenticationTokenRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetDevelopmentAuthenticationTokenRequest(ref GetDevelopmentAuthenticationTokenRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListDevelopmentAuthenticationTokensRequest(ref ListDevelopmentAuthenticationTokensRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateDevelopmentAuthenticationTokenRequest(ref UpdateDevelopmentAuthenticationTokenRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ExpireDevelopmentAuthenticationTokenRequest(ref ExpireDevelopmentAuthenticationTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         ///
@@ -616,9 +1065,221 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1
             return _callDecodePlayerIdentityToken.Sync(request, callSettings);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<CreateDevelopmentAuthenticationTokenResponse> CreateDevelopmentAuthenticationTokenAsync(
+            CreateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callCreateDevelopmentAuthenticationToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override CreateDevelopmentAuthenticationTokenResponse CreateDevelopmentAuthenticationToken(
+            CreateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callCreateDevelopmentAuthenticationToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<GetDevelopmentAuthenticationTokenResponse> GetDevelopmentAuthenticationTokenAsync(
+            GetDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callGetDevelopmentAuthenticationToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override GetDevelopmentAuthenticationTokenResponse GetDevelopmentAuthenticationToken(
+            GetDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callGetDevelopmentAuthenticationToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DevelopmentAuthenticationToken"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken> ListDevelopmentAuthenticationTokensAsync(
+            ListDevelopmentAuthenticationTokensRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDevelopmentAuthenticationTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDevelopmentAuthenticationTokensRequest, ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken>(_callListDevelopmentAuthenticationTokens, request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="DevelopmentAuthenticationToken"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken> ListDevelopmentAuthenticationTokens(
+            ListDevelopmentAuthenticationTokensRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDevelopmentAuthenticationTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDevelopmentAuthenticationTokensRequest, ListDevelopmentAuthenticationTokensResponse, DevelopmentAuthenticationToken>(_callListDevelopmentAuthenticationTokens, request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<UpdateDevelopmentAuthenticationTokenResponse> UpdateDevelopmentAuthenticationTokenAsync(
+            UpdateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callUpdateDevelopmentAuthenticationToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override UpdateDevelopmentAuthenticationTokenResponse UpdateDevelopmentAuthenticationToken(
+            UpdateDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callUpdateDevelopmentAuthenticationToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ExpireDevelopmentAuthenticationTokenResponse> ExpireDevelopmentAuthenticationTokenAsync(
+            ExpireDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExpireDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callExpireDevelopmentAuthenticationToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ExpireDevelopmentAuthenticationTokenResponse ExpireDevelopmentAuthenticationToken(
+            ExpireDevelopmentAuthenticationTokenRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExpireDevelopmentAuthenticationTokenRequest(ref request, ref callSettings);
+            return _callExpireDevelopmentAuthenticationToken.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
+
+    public partial class ListDevelopmentAuthenticationTokensRequest : gaxgrpc::IPageRequest { }
+    public partial class ListDevelopmentAuthenticationTokensResponse : gaxgrpc::IPageResponse<DevelopmentAuthenticationToken>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public scg::IEnumerator<DevelopmentAuthenticationToken> GetEnumerator() => DevelopmentAuthenticationTokens.GetEnumerator();
+
+        /// <inheritdoc/>
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
 
 
 }
