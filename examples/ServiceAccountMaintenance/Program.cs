@@ -132,7 +132,7 @@ namespace ServiceAccountMaintenance
                     Name = ServiceAccountName,
                     ProjectName = ProjectName,
                     Permissions = {new RepeatedField<Permission> {perm}},
-                    Lifetime = Duration.FromTimeSpan(new TimeSpan(1)) // Let this service account live for one day
+                    Lifetime = Duration.FromTimeSpan(new TimeSpan(1, 0, 0, 0)) // Let this service account live for one day
                 });
                 ServiceAccountIds.Add(resp.Id);
             }
