@@ -54,7 +54,7 @@ csharp_proto_repositories()
 
 git_repository(
   name = "gapic_generator",
-  commit = "08ee52ae36617ca071218f4596aa26230ee82b5b",
+  commit = "3a84ca02fca9617e76ed9d59d53aadc3db3826ed",
   remote = "git@github.com:improbable/sdk-platform-toolkit.git",
 )
 
