@@ -20,7 +20,7 @@ namespace CapacityLimit
         /// <summary>
         ///     PLEASE REPLACE.
         ///     Your SpatialOS project name.
-        ///     It should be the same as the name specified in the local `spatialos.json` file used to start the local API service ("spatiald").
+        ///     It should be the same as the name specified in the local project definition file (spatialos.json) used to start the local API service ("spatiald").
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
@@ -59,7 +59,7 @@ namespace CapacityLimit
 
         /// <summary>
         ///     PLEASE REPLACE.
-        ///     The SpatialOS Platform refresh token for a service account or a user account.
+        ///     The SpatialOS refresh token for a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
             Environment.GetEnvironmentVariable("IMPROBABLE_REFRESH_TOKEN") ?? "PLEASE_REPLACE_ME";
