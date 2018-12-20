@@ -11,7 +11,7 @@ namespace ServiceAccountMaintenance
     internal class Program
     {
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     Your SpatialOS project name.
         ///     This scenario will create a new service account with read and write access to this project.
         /// </summary>
@@ -33,7 +33,7 @@ namespace ServiceAccountMaintenance
         private const int NumberOfServiceAccountsToCreate = 10;
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The name given to service accounts created during setup.
         /// </summary>
         private const string ServiceAccountName = "sa_maintenance_scenario";
@@ -47,7 +47,7 @@ namespace ServiceAccountMaintenance
         private static List<long> ServiceAccountIds;
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The SpatialOS Platform refresh token of a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
@@ -55,7 +55,7 @@ namespace ServiceAccountMaintenance
 
 
         /// <summary>
-        ///     This contains the implementation of the "service account maintenance" scenario.
+        ///     This contains the implementation of the "Service account maintenance" scenario.
         ///     1. Iterate over the service accounts in your project.
         ///     2. If a service account has expired, or is close to expiry, prolong the expiry time to some point in the
         ///     future.

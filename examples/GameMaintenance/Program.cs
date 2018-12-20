@@ -13,33 +13,33 @@ namespace GameMaintenance
     internal class Program
     {
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     You SpatialOS project name.
-        ///     It should be the same as the name specified in the local spatialos.json file used to start spatiald.
+        ///     PLEASE REPLACE.
+        ///     Your SpatialOS project name.
+        ///     It should be the same as the name specified in the local `spatialos.json` file used to start the local API service ("spatiald").
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The name of the deployment.
         /// </summary>
         private static readonly string DeploymentName = $"game_maintenance_{StringUtils.Random(6)}";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The assembly you would want the cloud deployment to use.
+        ///     PLEASE REPLACE.
+        ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The path to a valid snapshot for the target assembly.
         /// </summary>
         private const string SnapshotFilePath =  "../blank_project/snapshots/default.snapshot" ;
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The path to a valid launch configuration json file.
+        ///     PLEASE REPLACE.
+        ///     The path to a valid launch configuration JSON file.
         /// </summary>
         private const string LaunchConfigFilePath = "../blank_project/default_launch.json";
 
@@ -53,14 +53,14 @@ namespace GameMaintenance
             SnapshotServiceClient.Create(credentials: CredentialWithProvidedToken);
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The SpatialOS Platform refresh token of a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
             Environment.GetEnvironmentVariable("IMPROBABLE_REFRESH_TOKEN") ?? "PLEASE_REPLACE_ME";
 
         /// <summary>
-        ///     This contains the implementation of the game maintenance scenario.
+        ///     This contains the implementation of the "Game maintenance" scenario.
         ///     1. Get the currently running cloud deployment that needs taking down for maintenance.
         ///     2. Lock down the deployment by removing the `live` tag and setting the worker flag.
         ///     3. Take a snapshot of the deployment.

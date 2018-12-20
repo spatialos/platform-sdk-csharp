@@ -15,7 +15,7 @@ using LocatorParameters = Improbable.Worker.Alpha.LocatorParameters;
 namespace BYOAuthFlow
 {
     /// <summary>
-    ///     This contains the implementation of the "integrate your own authentication provider" scenario.
+    ///     This contains the implementation of the "Player authentication" scenario.
     ///     1. Start a cloud deployment.
     ///     2. Create a PlayerIdentityToken.
     ///     3. Choose a deployment that is ready for login.
@@ -25,20 +25,20 @@ namespace BYOAuthFlow
     internal class BYOAuthScenario : ScenarioBase
     {
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     Your SpatialOS project name.
         ///     It should be the same as the name specified in the local spatialos.json file used to start the local API services.
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
-        ///     The path to a valid launch configuration json file.
+        ///     PLEASE REPLACE.
+        ///     The path to a valid launch configuration JSON file.
         /// </summary>
         private const string LaunchConfigFilePath = "../blank_project/default_launch.json";
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
@@ -49,7 +49,7 @@ namespace BYOAuthFlow
         private const string ScenarioWorkerType = "UnityClient";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The name of the deployment.
         /// </summary>
         private static readonly string DeploymentName = $"byoauth_{StringUtils.Random(6)}";
@@ -66,7 +66,7 @@ namespace BYOAuthFlow
         private Deployment _deployment;
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The SpatialOS refresh token of a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
