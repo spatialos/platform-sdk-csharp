@@ -2,17 +2,15 @@
 
 set -euo pipefail
 
-if [[ -z ${SDK_VERSION+x} ]]; 
-then 
-    echo "Pls provide SDK_VERSION."
-    exit 1
+if [[ -z ${SDK_VERSION+x} ]]; then
+  echo "Pls provide SDK_VERSION."
+  exit 1
 fi
 
-if [[ -z ${NUGET_API_KEY+x} ]]; 
-then 
-    echo "NUGET_API_KEY is unset."
-    # echo "Trying to retrieve from vaults."
-    # IMPROBABLE_REFRESH_TOKEN="$(imp-ci secrets read --environment=production --buildkite-org=improbable --secret-type=spatialos-service-account --secret-name=platform-sdk)"
+if [[ -z ${NUGET_API_KEY+x} ]]; then
+  echo "NUGET_API_KEY is unset."
+  # echo "Trying to retrieve from vaults."
+  # IMPROBABLE_REFRESH_TOKEN="$(imp-ci secrets read --environment=production --buildkite-org=improbable --secret-type=spatialos-service-account --secret-name=platform-sdk)"
 fi
 
 REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
@@ -26,7 +24,9 @@ rm -rf $ARTEFACT_DIR/*
 
 echo "--- Preparing artefacts for release"
 msbuild $REPO_ROOT/apis/apis.csproj /p:Configuration=Release /p:Version=${SDK_VERSION} /t:Clean,Build -verbosity:minimal
-zip -r ${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip ${OUTPUT_DIR}/net451
+pushd ${OUTPUT_DIR}/net451
+zip -r ${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip *
+popd
 cp ${OUTPUT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg ${ARTEFACT_DIR}
 
 echo "--- Publishing to NuGet"
