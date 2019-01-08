@@ -34,6 +34,7 @@ namespace Improbable.SpatialOS.Platform.Common {
         private const string DummyUserId = "dummy_user_id";
         private const string AuthorizationServerUrl = "https://auth.improbable.io/auth/v1/authcode";
         private const string TokenServerUrl = "https://auth.improbable.io/auth/v1/token";
+        private const string RefreshTokenNotFoundMessage = "Please check if environment variable "+DefaultTokenFileEnvVar+" is set to the correct path or try running `spatial init` to fetch and store a new refresh token locally.";
 
         private static readonly Lazy<PlatformRefreshTokenCredential> AutoDetectedLazy =
             new Lazy<PlatformRefreshTokenCredential>(GetTokenCredentialAutomatically);
@@ -101,13 +102,20 @@ namespace Improbable.SpatialOS.Platform.Common {
                 Path.Combine(Environment.GetEnvironmentVariable("HOME") ?? "", ".improbable/oauth2/oauth2_refresh_token"),
                 Path.Combine(Environment.ExpandEnvironmentVariables("%LOCALAPPDATA%"), ".improbable/oauth2/oauth2_refresh_token")
             };
+
+            var tokenFile = possibleTokenFiles.FirstOrDefault(File.Exists);
+            if (tokenFile == null)
+            {
+                // None of the possible token files exists
+                throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
+            }
+
             try {
-                var refreshToken = File.ReadAllText(possibleTokenFiles.FirstOrDefault(File.Exists));
+                var refreshToken = File.ReadAllText(tokenFile);
                 return new PlatformRefreshTokenCredential(refreshToken);
             }
             catch (IOException) {
-                throw new NoRefreshTokenFoundException(
-                    $"Please check if environment variable {DefaultTokenFileEnvVar} is set to the correct path or try running `spatial init` to fetch and store a new refresh token locally.");
+                throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
             }
         }
     }
