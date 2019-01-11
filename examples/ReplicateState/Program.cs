@@ -11,33 +11,33 @@ namespace ReplicateState
     internal class Program
     {
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     You SpatialOS project name.
-        ///     It should be the same as the name specified in the local spaitalos.json file used to start spatiald.
+        ///     PLEASE REPLACE.
+        ///     Your SpatialOS project name.
+        ///     It should be the same as the name specified in the local project definition file (spatialos.json) used to start the local API service.
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The name of the deployment.
         /// </summary>
         private static readonly string DeploymentName = $"snapshot_upload_{StringUtils.Random(6)}";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The path to a valid launch configuration json file.
+        ///     PLEASE REPLACE.
+        ///     The path to a valid launch configuration JSON file.
         /// </summary>
         private const string LaunchConfigFilePath = "../blank_project/default_launch.json";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The assembly you would want the cloud deployment to use.
+        ///     PLEASE REPLACE.
+        ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The port spatiald is running on.
+        ///     PLEASE REPLACE.
+        ///     The port that the local API service is running on.
         /// </summary>
         private const int SpatialDPort = 9876;
 
@@ -67,14 +67,14 @@ namespace ReplicateState
             DeploymentServiceClient.Create(SpatialdEndpoint);
 
         /// <summary>
-        ///     PlEASE REPLACE ME.
-        ///     The SpatialOS Platform refresh token of a service account or a user account.
+        ///     PLEASE REPLACE.
+        ///     The SpatialOS refresh token of a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
             Environment.GetEnvironmentVariable("IMPROBABLE_REFRESH_TOKEN") ?? "PLEASE_REPLACE_ME";
 
         /// <summary>
-        ///     This contains the implementation of the "replicate local state to cloud" scenario.
+        ///     This contains the implementation of the "Replicate local state to cloud" scenario.
         ///     1. Take a snapshot of a local deployment.
         ///     2. Download the local snapshot to a temporary address.
         ///     3. Upload the local snapshot to the cloud through in three steps:
@@ -159,15 +159,15 @@ namespace ReplicateState
         }
 
         /// <summary>
-        ///     This assumes you already have a running spatiald process at the specified port.
-        ///     For more information about how to start a spatiald process, please visit the accompanying documentation on
+        ///     This assumes you already have the local API service ("spatiald") running at the specified port.
+        ///     For more information about how to start the local API service, visit the accompanying documentation on
         ///     https://docs.improbable.io/reference/latest//platform-sdk/local-api.
         ///     This starts a local deployment using the blank SpatialOS project included in this repository.
         /// </summary>
         private static void Setup()
         {
             Console.WriteLine("Setting up for the scenario");
-            Console.WriteLine($"Assuming spatiald is running at localhost:{SpatialDPort}");
+            Console.WriteLine($"Assuming the local API service is running at localhost:{SpatialDPort}");
             Console.WriteLine("Starting a local deployment");
             var launchConfig = File.ReadAllText(LaunchConfigFilePath);
             _localDeployment = LocalDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
