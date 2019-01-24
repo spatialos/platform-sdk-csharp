@@ -75,23 +75,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     public abstract partial class SnapshotServiceBase
     {
       /// <summary>
-      /// List a deployment's snapshots.
-      ///
-      /// The following fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// The remaining fields are optional:
-      ///  - If provided, the `page_size` must be a positive integer. If omitted,
-      ///    the default value of 20 is used.
-      ///  - The `page_token` should be omitted in the first request. If the response
-      ///    contains a page token, this token should be included in the next request, and
-      ///    so on until a response is received with no page token.
-      ///
-      /// Snapshots are sorted by creation time, descending.
+      /// Lists snapshots under a deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -102,18 +86,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Get the details of a specific snapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `id` must be a 64-bit integer.
-      ///
-      /// Empty or invalid fields result in an `InvalidArgument` error.
+      /// Gets a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -124,25 +97,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Take a snapshot of a running deployment.
+      /// Takes a snapshot of a running deployment.
       ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set either of these will result in an `InvalidArgument` error.
-      ///
-      /// The returned operation result is of type `snapshot`.
+      /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -153,25 +110,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Upload a new snapshot (returns a URL to upload its contents to).
-      ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      /// - `checksum`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `checksum`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Allocates space and returns a URL to upload a snapshot to.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -182,19 +121,8 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Confirm the Snapshot has been POSTed to the URL obtain from UploadSnapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Confirms that a snapshot is uploaded to the URL allocated by the `UploadSnapshot` RPC and makes it available
+      /// for use in a deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -230,23 +158,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// List a deployment's snapshots.
-      ///
-      /// The following fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// The remaining fields are optional:
-      ///  - If provided, the `page_size` must be a positive integer. If omitted,
-      ///    the default value of 20 is used.
-      ///  - The `page_token` should be omitted in the first request. If the response
-      ///    contains a page token, this token should be included in the next request, and
-      ///    so on until a response is received with no page token.
-      ///
-      /// Snapshots are sorted by creation time, descending.
+      /// Lists snapshots under a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -258,23 +170,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List a deployment's snapshots.
-      ///
-      /// The following fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// The remaining fields are optional:
-      ///  - If provided, the `page_size` must be a positive integer. If omitted,
-      ///    the default value of 20 is used.
-      ///  - The `page_token` should be omitted in the first request. If the response
-      ///    contains a page token, this token should be included in the next request, and
-      ///    so on until a response is received with no page token.
-      ///
-      /// Snapshots are sorted by creation time, descending.
+      /// Lists snapshots under a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -284,23 +180,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// List a deployment's snapshots.
-      ///
-      /// The following fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// The remaining fields are optional:
-      ///  - If provided, the `page_size` must be a positive integer. If omitted,
-      ///    the default value of 20 is used.
-      ///  - The `page_token` should be omitted in the first request. If the response
-      ///    contains a page token, this token should be included in the next request, and
-      ///    so on until a response is received with no page token.
-      ///
-      /// Snapshots are sorted by creation time, descending.
+      /// Lists snapshots under a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -312,23 +192,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List a deployment's snapshots.
-      ///
-      /// The following fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// The remaining fields are optional:
-      ///  - If provided, the `page_size` must be a positive integer. If omitted,
-      ///    the default value of 20 is used.
-      ///  - The `page_token` should be omitted in the first request. If the response
-      ///    contains a page token, this token should be included in the next request, and
-      ///    so on until a response is received with no page token.
-      ///
-      /// Snapshots are sorted by creation time, descending.
+      /// Lists snapshots under a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -338,18 +202,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// Get the details of a specific snapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `id` must be a 64-bit integer.
-      ///
-      /// Empty or invalid fields result in an `InvalidArgument` error.
+      /// Gets a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -361,18 +214,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the details of a specific snapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `id` must be a 64-bit integer.
-      ///
-      /// Empty or invalid fields result in an `InvalidArgument` error.
+      /// Gets a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -382,18 +224,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
       }
       /// <summary>
-      /// Get the details of a specific snapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `id` must be a 64-bit integer.
-      ///
-      /// Empty or invalid fields result in an `InvalidArgument` error.
+      /// Gets a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,18 +236,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the details of a specific snapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `id` must be a 64-bit integer.
-      ///
-      /// Empty or invalid fields result in an `InvalidArgument` error.
+      /// Gets a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -426,25 +246,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
       }
       /// <summary>
-      /// Take a snapshot of a running deployment.
+      /// Takes a snapshot of a running deployment.
       ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set either of these will result in an `InvalidArgument` error.
-      ///
-      /// The returned operation result is of type `snapshot`.
+      /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -456,25 +260,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return TakeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Take a snapshot of a running deployment.
+      /// Takes a snapshot of a running deployment.
       ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set either of these will result in an `InvalidArgument` error.
-      ///
-      /// The returned operation result is of type `snapshot`.
+      /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,25 +272,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_TakeSnapshot, null, options, request);
       }
       /// <summary>
-      /// Take a snapshot of a running deployment.
+      /// Takes a snapshot of a running deployment.
       ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set either of these will result in an `InvalidArgument` error.
-      ///
-      /// The returned operation result is of type `snapshot`.
+      /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -514,25 +286,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return TakeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Take a snapshot of a running deployment.
+      /// Takes a snapshot of a running deployment.
       ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set either of these will result in an `InvalidArgument` error.
-      ///
-      /// The returned operation result is of type `snapshot`.
+      /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -542,25 +298,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_TakeSnapshot, null, options, request);
       }
       /// <summary>
-      /// Upload a new snapshot (returns a URL to upload its contents to).
-      ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      /// - `checksum`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `checksum`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Allocates space and returns a URL to upload a snapshot to.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -572,25 +310,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return UploadSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Upload a new snapshot (returns a URL to upload its contents to).
-      ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      /// - `checksum`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `checksum`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Allocates space and returns a URL to upload a snapshot to.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -600,25 +320,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_UploadSnapshot, null, options, request);
       }
       /// <summary>
-      /// Upload a new snapshot (returns a URL to upload its contents to).
-      ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      /// - `checksum`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `checksum`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Allocates space and returns a URL to upload a snapshot to.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -630,25 +332,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return UploadSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Upload a new snapshot (returns a URL to upload its contents to).
-      ///
-      /// Currently, you can only supply these fields:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `tags`
-      /// - `checksum`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// In addition, these fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `checksum`
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Allocates space and returns a URL to upload a snapshot to.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -658,19 +342,8 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_UploadSnapshot, null, options, request);
       }
       /// <summary>
-      /// Confirm the Snapshot has been POSTed to the URL obtain from UploadSnapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Confirms that a snapshot is uploaded to the URL allocated by the `UploadSnapshot` RPC and makes it available
+      /// for use in a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -682,19 +355,8 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ConfirmUpload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Confirm the Snapshot has been POSTed to the URL obtain from UploadSnapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Confirms that a snapshot is uploaded to the URL allocated by the `UploadSnapshot` RPC and makes it available
+      /// for use in a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -704,19 +366,8 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_ConfirmUpload, null, options, request);
       }
       /// <summary>
-      /// Confirm the Snapshot has been POSTed to the URL obtain from UploadSnapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Confirms that a snapshot is uploaded to the URL allocated by the `UploadSnapshot` RPC and makes it available
+      /// for use in a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -728,19 +379,8 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ConfirmUploadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Confirm the Snapshot has been POSTed to the URL obtain from UploadSnapshot.
-      ///
-      /// These fields are mandatory:
-      /// - `project_name`
-      /// - `deployment_name`
-      /// - `id`
-      ///
-      /// Other set values will be ignored.
-      ///
-      /// `project_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      /// `deployment_name` must conform to the regex: ^[a-z0-9_]{3,32}$
-      ///
-      /// Failure to set any of these will result in an `InvalidArgument` error.
+      /// Confirms that a snapshot is uploaded to the URL allocated by the `UploadSnapshot` RPC and makes it available
+      /// for use in a deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

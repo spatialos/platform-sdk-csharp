@@ -230,7 +230,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// <summary>
     /// Specifies how long the LT is valid for.
     ///
-    /// This field is optional. If unset, it defaults to 15 minutes. The maximum value is 30 minutes.
+    /// This field is optional. If unset or 0, it defaults to 15 minutes. The maximum value is 30 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration LifetimeDuration {
