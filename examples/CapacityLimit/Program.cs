@@ -18,20 +18,20 @@ namespace CapacityLimit
     internal class CapacityLimitScenario : ScenarioBase
     {
         /// <summary>
-        ///     PLEASE REPLACE ME.
-        ///     You SpatialOS project name.
-        ///     It should be the same as the name specified in the local `spatialos.json` file used to start the local API service.
+        ///     PLEASE REPLACE.
+        ///     Your SpatialOS project name.
+        ///     It should be the same as the name specified in the local project definition file (spatialos.json) used to start the local API service.
         /// </summary>
         private const string ProjectName = "platform_sdk_examples";
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The path to a valid launch configuration JSON file.
         /// </summary>
         private const string LaunchConfigFilePath = "../blank_project/capacity_launch.json";
@@ -41,7 +41,7 @@ namespace CapacityLimit
         private const int LocatorServerPort = 443;
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
+        ///     PLEASE REPLACE.
         ///     The name of the deployment.
         /// </summary>
         private static readonly string DeploymentName = $"capacity_limited_{StringUtils.Random(6)}";
@@ -58,8 +58,8 @@ namespace CapacityLimit
         private Deployment _deployment;
 
         /// <summary>
-        ///     PLEASE REPLACE ME.
-        ///     The SpatialOS Platform refresh token for a service account or a user account.
+        ///     PLEASE REPLACE.
+        ///     The SpatialOS refresh token for a service account or a user account.
         /// </summary>
         private static string RefreshToken =>
             Environment.GetEnvironmentVariable("IMPROBABLE_REFRESH_TOKEN") ?? "PLEASE_REPLACE_ME";
@@ -88,7 +88,7 @@ namespace CapacityLimit
         }
 
         /// <summary>
-        ///     This contains the implementation of the capacity limit scenario.
+        ///     This contains the implementation of the "Capacity limiting" scenario.
         ///     1. Gets the currently running cloud deployment that has a capacity limit.
         ///     2. Tests that connecting more clients than the capacity limit fails.
         ///     3. Updates the deployment to increase the capacity limit.
