@@ -40,8 +40,16 @@
             <InputAssemblies Include="Google.Api.Gax.dll" />
             <InputAssemblies Include="Google.Api.CommonProtos.dll" />
         </ItemGroup>
+
+        <!-- These DLLs are not internalised because they contains types that are user-facing. Internalising would mess up the namespace. -->
+        <ItemGroup>
+            <InternalizeExcludeAssemblies Include="^Google.Api.Gax" />
+            <InternalizeExcludeAssemblies Include="^Google.Protobuf.WellKnownTypes" />
+            <InternalizeExcludeAssemblies Include="^Grpc.Core" />
+            <InternalizeExcludeAssemblies Include="^Google.LongRunning" />
+        </ItemGroup>
         
-        <ILRepack Parallel="true" OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="$(AssemblyName).dll" InputAssemblies="@(InputAssemblies)" Internalize="false" WorkingDirectory="$(WorkingDirectory)" />
+        <ILRepack Parallel="true" OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="$(AssemblyName).dll" InputAssemblies="@(InputAssemblies)"  InternalizeExcludeAssemblies="@(InternalizeExcludeAssemblies)" Internalize="true" WorkingDirectory="$(WorkingDirectory)" />
 
         <ItemGroup>
             <AssembliesToDelete Include="$(WorkingDirectory)/%(InputAssemblies.Identity)" />

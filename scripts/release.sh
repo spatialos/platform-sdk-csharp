@@ -24,7 +24,7 @@ rm -rf "${ARTEFACT_DIR}"
 mkdir -p "${ARTEFACT_DIR}"
 
 echo "--- Preparing artefacts for release"
-msbuild $REPO_ROOT/apis/apis.csproj /t:Restore
+msbuild "${REPO_ROOT}/apis/apis.csproj" /t:Restore
 msbuild "${REPO_ROOT}/apis/apis.csproj" \
   /p:Configuration=Release \
   /p:Version="${SDK_VERSION}" \
