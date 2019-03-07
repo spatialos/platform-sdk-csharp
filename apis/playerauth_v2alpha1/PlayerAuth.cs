@@ -59,72 +59,72 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
             "RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBIyCgxwcm9q",
             "ZWN0X25hbWUYASABKAlCHOLfHxgKFF5bYS16QS1aMC05X117MywzMn0kIAES",
             "GwoLZGVzY3JpcHRpb24YAiABKAlCBuLfHwJYARIrCghsaWZldGltZRgDIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiKiAQosQ3JlYXRlRGV2ZWxv",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiK4AQosQ3JlYXRlRGV2ZWxv",
             "cG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2UScgogZGV2ZWxvcG1l",
             "bnRfYXV0aGVudGljYXRpb25fdG9rZW4YASABKAsySC5pbXByb2JhYmxlLnNw",
             "YXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLkRldmVsb3BtZW50QXV0aGVu",
-            "dGljYXRpb25Ub2tlbiI+CihHZXREZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9u",
-            "VG9rZW5SZXF1ZXN0EhIKAmlkGAEgASgJQgbi3x8CWAEinwEKKUdldERldmVs",
-            "b3BtZW50QXV0aGVudGljYXRpb25Ub2tlblJlc3BvbnNlEnIKIGRldmVsb3Bt",
-            "ZW50X2F1dGhlbnRpY2F0aW9uX3Rva2VuGAEgASgLMkguaW1wcm9iYWJsZS5z",
-            "cGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5EZXZlbG9wbWVudEF1dGhl",
-            "bnRpY2F0aW9uVG9rZW4iswEKKkxpc3REZXZlbG9wbWVudEF1dGhlbnRpY2F0",
-            "aW9uVG9rZW5zUmVxdWVzdBIyCgxwcm9qZWN0X25hbWUYASABKAlCHOLfHxgK",
-            "FF5bYS16QS1aMC05X117MywzMn0kIAESFwoPaW5jbHVkZV9leHBpcmVkGAIg",
-            "ASgIEiQKCXBhZ2Vfc2l6ZRgDIAEoBUIR4t8fDRD///////////8BGDMSEgoK",
-            "cGFnZV90b2tlbhgEIAEoCSK7AQorTGlzdERldmVsb3BtZW50QXV0aGVudGlj",
-            "YXRpb25Ub2tlbnNSZXNwb25zZRJzCiFkZXZlbG9wbWVudF9hdXRoZW50aWNh",
-            "dGlvbl90b2tlbnMYASADKAsySC5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5",
-            "ZXJhdXRoLnYyYWxwaGExLkRldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tl",
-            "bhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiiwEKK1VwZGF0ZURldmVsb3Bt",
-            "ZW50QXV0aGVudGljYXRpb25Ub2tlblJlcXVlc3QSEgoCaWQYASABKAlCBuLf",
-            "HwJYARITCgtkZXNjcmlwdGlvbhgCIAEoCRIzChB1cGRhdGVkX2xpZmV0aW1l",
-            "GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqIBCixVcGRhdGVE",
-            "ZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5SZXNwb25zZRJyCiBkZXZl",
-            "bG9wbWVudF9hdXRoZW50aWNhdGlvbl90b2tlbhgBIAEoCzJILmltcHJvYmFi",
-            "bGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRGV2ZWxvcG1lbnRB",
-            "dXRoZW50aWNhdGlvblRva2VuIkEKK0V4cGlyZURldmVsb3BtZW50QXV0aGVu",
-            "dGljYXRpb25Ub2tlblJlcXVlc3QSEgoCaWQYASABKAlCBuLfHwJYASIuCixF",
-            "eHBpcmVEZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5SZXNwb25zZTLJ",
-            "DAoRUGxheWVyQXV0aFNlcnZpY2USmQEKEENyZWF0ZUxvZ2luVG9rZW4SQS5p",
-            "bXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLkNyZWF0",
-            "ZUxvZ2luVG9rZW5SZXF1ZXN0GkIuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxh",
-            "eWVyYXV0aC52MmFscGhhMS5DcmVhdGVMb2dpblRva2VuUmVzcG9uc2UStAEK",
-            "GUNyZWF0ZVBsYXllcklkZW50aXR5VG9rZW4SSi5pbXByb2JhYmxlLnNwYXRp",
-            "YWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZVBsYXllcklkZW50aXR5",
-            "VG9rZW5SZXF1ZXN0GksuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0",
-            "aC52MmFscGhhMS5DcmVhdGVQbGF5ZXJJZGVudGl0eVRva2VuUmVzcG9uc2US",
-            "tAEKGURlY29kZVBsYXllcklkZW50aXR5VG9rZW4SSi5pbXByb2JhYmxlLnNw",
-            "YXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLkRlY29kZVBsYXllcklkZW50",
-            "aXR5VG9rZW5SZXF1ZXN0GksuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVy",
-            "YXV0aC52MmFscGhhMS5EZWNvZGVQbGF5ZXJJZGVudGl0eVRva2VuUmVzcG9u",
-            "c2US1QEKJENyZWF0ZURldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbhJV",
-            "LmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuQ3Jl",
-            "YXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBpWLmlt",
+            "dGljYXRpb25Ub2tlbhIUCgx0b2tlbl9zZWNyZXQYAiABKAkiPgooR2V0RGV2",
+            "ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBISCgJpZBgBIAEo",
+            "CUIG4t8fAlgBIp8BCilHZXREZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9r",
+            "ZW5SZXNwb25zZRJyCiBkZXZlbG9wbWVudF9hdXRoZW50aWNhdGlvbl90b2tl",
+            "bhgBIAEoCzJILmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJh",
+            "bHBoYTEuRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuIrMBCipMaXN0",
+            "RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2Vuc1JlcXVlc3QSMgoMcHJv",
+            "amVjdF9uYW1lGAEgASgJQhzi3x8YChReW2EtekEtWjAtOV9dezMsMzJ9JCAB",
+            "EhcKD2luY2x1ZGVfZXhwaXJlZBgCIAEoCBIkCglwYWdlX3NpemUYAyABKAVC",
+            "EeLfHw0Q////////////ARgzEhIKCnBhZ2VfdG9rZW4YBCABKAkiuwEKK0xp",
+            "c3REZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5zUmVzcG9uc2UScwoh",
+            "ZGV2ZWxvcG1lbnRfYXV0aGVudGljYXRpb25fdG9rZW5zGAEgAygLMkguaW1w",
+            "cm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5EZXZlbG9w",
+            "bWVudEF1dGhlbnRpY2F0aW9uVG9rZW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
+            "ASgJIosBCitVcGRhdGVEZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5S",
+            "ZXF1ZXN0EhIKAmlkGAEgASgJQgbi3x8CWAESEwoLZGVzY3JpcHRpb24YAiAB",
+            "KAkSMwoQdXBkYXRlZF9saWZldGltZRgDIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbiKiAQosVXBkYXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlv",
+            "blRva2VuUmVzcG9uc2UScgogZGV2ZWxvcG1lbnRfYXV0aGVudGljYXRpb25f",
+            "dG9rZW4YASABKAsySC5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRo",
+            "LnYyYWxwaGExLkRldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbiJBCitF",
+            "eHBpcmVEZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5SZXF1ZXN0EhIK",
+            "AmlkGAEgASgJQgbi3x8CWAEiLgosRXhwaXJlRGV2ZWxvcG1lbnRBdXRoZW50",
+            "aWNhdGlvblRva2VuUmVzcG9uc2UyyQwKEVBsYXllckF1dGhTZXJ2aWNlEpkB",
+            "ChBDcmVhdGVMb2dpblRva2VuEkEuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxh",
+            "eWVyYXV0aC52MmFscGhhMS5DcmVhdGVMb2dpblRva2VuUmVxdWVzdBpCLmlt",
             "cHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuQ3JlYXRl",
-            "RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2USzAEKIUdl",
-            "dERldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbhJSLmltcHJvYmFibGUu",
-            "c3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuR2V0RGV2ZWxvcG1lbnRB",
-            "dXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBpTLmltcHJvYmFibGUuc3BhdGlh",
-            "bG9zLnBsYXllcmF1dGgudjJhbHBoYTEuR2V0RGV2ZWxvcG1lbnRBdXRoZW50",
-            "aWNhdGlvblRva2VuUmVzcG9uc2US0gEKI0xpc3REZXZlbG9wbWVudEF1dGhl",
-            "bnRpY2F0aW9uVG9rZW5zElQuaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVy",
-            "YXV0aC52MmFscGhhMS5MaXN0RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRv",
-            "a2Vuc1JlcXVlc3QaVS5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRo",
-            "LnYyYWxwaGExLkxpc3REZXZlbG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW5z",
-            "UmVzcG9uc2US1QEKJFVwZGF0ZURldmVsb3BtZW50QXV0aGVudGljYXRpb25U",
-            "b2tlbhJVLmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBo",
-            "YTEuVXBkYXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVz",
-            "dBpWLmltcHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEu",
-            "VXBkYXRlRGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2US",
-            "1QEKJEV4cGlyZURldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlbhJVLmlt",
-            "cHJvYmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRXhwaXJl",
-            "RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVxdWVzdBpWLmltcHJv",
-            "YmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRXhwaXJlRGV2",
-            "ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VuUmVzcG9uc2VCYFozaW1wcm9i",
-            "YWJsZS9zcGF0aWFsb3MvcGxheWVyYXV0aC92MmFscGhhMTtwbGF5ZXJhdXRo",
-            "qgIoSW1wcm9iYWJsZS5TcGF0aWFsT1MuUGxheWVyQXV0aC5WMkFscGhhMWIG",
-            "cHJvdG8z"));
+            "TG9naW5Ub2tlblJlc3BvbnNlErQBChlDcmVhdGVQbGF5ZXJJZGVudGl0eVRv",
+            "a2VuEkouaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhh",
+            "MS5DcmVhdGVQbGF5ZXJJZGVudGl0eVRva2VuUmVxdWVzdBpLLmltcHJvYmFi",
+            "bGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuQ3JlYXRlUGxheWVy",
+            "SWRlbnRpdHlUb2tlblJlc3BvbnNlErQBChlEZWNvZGVQbGF5ZXJJZGVudGl0",
+            "eVRva2VuEkouaW1wcm9iYWJsZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFs",
+            "cGhhMS5EZWNvZGVQbGF5ZXJJZGVudGl0eVRva2VuUmVxdWVzdBpLLmltcHJv",
+            "YmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuRGVjb2RlUGxh",
+            "eWVySWRlbnRpdHlUb2tlblJlc3BvbnNlEtUBCiRDcmVhdGVEZXZlbG9wbWVu",
+            "dEF1dGhlbnRpY2F0aW9uVG9rZW4SVS5pbXByb2JhYmxlLnNwYXRpYWxvcy5w",
+            "bGF5ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZURldmVsb3BtZW50QXV0aGVudGlj",
+            "YXRpb25Ub2tlblJlcXVlc3QaVi5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5",
+            "ZXJhdXRoLnYyYWxwaGExLkNyZWF0ZURldmVsb3BtZW50QXV0aGVudGljYXRp",
+            "b25Ub2tlblJlc3BvbnNlEswBCiFHZXREZXZlbG9wbWVudEF1dGhlbnRpY2F0",
+            "aW9uVG9rZW4SUi5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYy",
+            "YWxwaGExLkdldERldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlblJlcXVl",
+            "c3QaUy5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGEx",
+            "LkdldERldmVsb3BtZW50QXV0aGVudGljYXRpb25Ub2tlblJlc3BvbnNlEtIB",
+            "CiNMaXN0RGV2ZWxvcG1lbnRBdXRoZW50aWNhdGlvblRva2VucxJULmltcHJv",
+            "YmFibGUuc3BhdGlhbG9zLnBsYXllcmF1dGgudjJhbHBoYTEuTGlzdERldmVs",
+            "b3BtZW50QXV0aGVudGljYXRpb25Ub2tlbnNSZXF1ZXN0GlUuaW1wcm9iYWJs",
+            "ZS5zcGF0aWFsb3MucGxheWVyYXV0aC52MmFscGhhMS5MaXN0RGV2ZWxvcG1l",
+            "bnRBdXRoZW50aWNhdGlvblRva2Vuc1Jlc3BvbnNlEtUBCiRVcGRhdGVEZXZl",
+            "bG9wbWVudEF1dGhlbnRpY2F0aW9uVG9rZW4SVS5pbXByb2JhYmxlLnNwYXRp",
+            "YWxvcy5wbGF5ZXJhdXRoLnYyYWxwaGExLlVwZGF0ZURldmVsb3BtZW50QXV0",
+            "aGVudGljYXRpb25Ub2tlblJlcXVlc3QaVi5pbXByb2JhYmxlLnNwYXRpYWxv",
+            "cy5wbGF5ZXJhdXRoLnYyYWxwaGExLlVwZGF0ZURldmVsb3BtZW50QXV0aGVu",
+            "dGljYXRpb25Ub2tlblJlc3BvbnNlEtUBCiRFeHBpcmVEZXZlbG9wbWVudEF1",
+            "dGhlbnRpY2F0aW9uVG9rZW4SVS5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5",
+            "ZXJhdXRoLnYyYWxwaGExLkV4cGlyZURldmVsb3BtZW50QXV0aGVudGljYXRp",
+            "b25Ub2tlblJlcXVlc3QaVi5pbXByb2JhYmxlLnNwYXRpYWxvcy5wbGF5ZXJh",
+            "dXRoLnYyYWxwaGExLkV4cGlyZURldmVsb3BtZW50QXV0aGVudGljYXRpb25U",
+            "b2tlblJlc3BvbnNlQmBaM2ltcHJvYmFibGUvc3BhdGlhbG9zL3BsYXllcmF1",
+            "dGgvdjJhbHBoYTE7cGxheWVyYXV0aKoCKEltcHJvYmFibGUuU3BhdGlhbE9T",
+            "LlBsYXllckF1dGguVjJBbHBoYTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -137,7 +137,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.PlayerIdentityToken.Parser, new[]{ "Provider", "PlayerIdentifier", "ProjectName", "DisplayName", "Metadata", "IssuedAtTime", "ExpiryTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken.Parser, new[]{ "Id", "ProjectName", "Description", "CreationTime", "ExpirationTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenRequest.Parser, new[]{ "ProjectName", "Description", "Lifetime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse.Parser, new[]{ "DevelopmentAuthenticationToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.CreateDevelopmentAuthenticationTokenResponse.Parser, new[]{ "DevelopmentAuthenticationToken", "TokenSecret" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.GetDevelopmentAuthenticationTokenRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.GetDevelopmentAuthenticationTokenRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.GetDevelopmentAuthenticationTokenResponse), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.GetDevelopmentAuthenticationTokenResponse.Parser, new[]{ "DevelopmentAuthenticationToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest), global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.ListDevelopmentAuthenticationTokensRequest.Parser, new[]{ "ProjectName", "IncludeExpired", "PageSize", "PageToken" }, null, null, null),
@@ -230,7 +230,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// <summary>
     /// Specifies how long the LT is valid for.
     ///
-    /// This field is optional. If unset, it defaults to 15 minutes. The maximum value is 30 minutes.
+    /// This field is optional. If unset or 0, it defaults to 15 minutes. The maximum value is 30 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration LifetimeDuration {
@@ -1248,6 +1248,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// The system that was used to authenticate the player with, for example Steam or Google.
     ///
     /// This corresponds to the `prvdr` claim in the JWT.
+    /// This field is exposed to workers through the Player Connection Entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Provider {
@@ -1265,6 +1266,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     ///
     /// This should uniquely identify a user in the specified provider.
     /// This corresponds to the `sub` claim in the JWT.
+    /// This field is exposed to workers through the Player Connection Entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerIdentifier {
@@ -1313,6 +1315,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// Additional metadata that is stored within the PIT.
     ///
     /// This corresponds to the `md` claim in the JWT.
+    /// This field is exposed to workers through the Player Connection Entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Metadata {
@@ -2021,6 +2024,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateDevelopmentAuthenticationTokenResponse(CreateDevelopmentAuthenticationTokenResponse other) : this() {
       DevelopmentAuthenticationToken = other.developmentAuthenticationToken_ != null ? other.DevelopmentAuthenticationToken.Clone() : null;
+      tokenSecret_ = other.tokenSecret_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2032,13 +2036,27 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public const int DevelopmentAuthenticationTokenFieldNumber = 1;
     private global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken developmentAuthenticationToken_;
     /// <summary>
-    /// The newly created DAT.
+    /// The newly created DAT metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken DevelopmentAuthenticationToken {
       get { return developmentAuthenticationToken_; }
       set {
         developmentAuthenticationToken_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "token_secret" field.</summary>
+    public const int TokenSecretFieldNumber = 2;
+    private string tokenSecret_ = "";
+    /// <summary>
+    /// The secret value of the DAT. This cannot be retrieved again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TokenSecret {
+      get { return tokenSecret_; }
+      set {
+        tokenSecret_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2056,6 +2074,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         return true;
       }
       if (!object.Equals(DevelopmentAuthenticationToken, other.DevelopmentAuthenticationToken)) return false;
+      if (TokenSecret != other.TokenSecret) return false;
       return true;
     }
 
@@ -2063,6 +2082,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (developmentAuthenticationToken_ != null) hash ^= DevelopmentAuthenticationToken.GetHashCode();
+      if (TokenSecret.Length != 0) hash ^= TokenSecret.GetHashCode();
       return hash;
     }
 
@@ -2077,6 +2097,10 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
         output.WriteRawTag(10);
         output.WriteMessage(DevelopmentAuthenticationToken);
       }
+      if (TokenSecret.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TokenSecret);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2084,6 +2108,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
       int size = 0;
       if (developmentAuthenticationToken_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DevelopmentAuthenticationToken);
+      }
+      if (TokenSecret.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TokenSecret);
       }
       return size;
     }
@@ -2098,6 +2125,9 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
           developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
         }
         DevelopmentAuthenticationToken.MergeFrom(other.DevelopmentAuthenticationToken);
+      }
+      if (other.TokenSecret.Length != 0) {
+        TokenSecret = other.TokenSecret;
       }
     }
 
@@ -2114,6 +2144,10 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
               developmentAuthenticationToken_ = new global::Improbable.SpatialOS.PlayerAuth.V2Alpha1.DevelopmentAuthenticationToken();
             }
             input.ReadMessage(developmentAuthenticationToken_);
+            break;
+          }
+          case 18: {
+            TokenSecret = input.ReadString();
             break;
           }
         }
