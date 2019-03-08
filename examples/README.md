@@ -20,4 +20,4 @@ dotnet run
 
 ## Installing C# Platform SDK
 
-* Please see the [SpatialOS documentation](https://docs.improbable.io/reference/latest/platform-sdk/csharp/introduction)
+* Please see the [SpatialOS documentation](https://docs.improbable.io/reference/latest/platform-sdk/introduction)
