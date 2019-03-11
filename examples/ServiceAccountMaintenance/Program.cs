@@ -111,7 +111,7 @@ namespace ServiceAccountMaintenance
         private static void Setup()
         {
             ServiceAccountIds = new List<long>();
-            var perm = new Permission
+            var permProject = new Permission
             {
                 Parts = {new RepeatedField<string> {"prj", ProjectName, "*"}},
                 Verbs =
@@ -123,6 +123,18 @@ namespace ServiceAccountMaintenance
                     }
                 }
             };
+            
+            var permMetrics = new Permission
+            {
+                Parts = {new RepeatedField<string> {"srv", "*"}},
+                Verbs =
+                {
+                    new RepeatedField<Permission.Types.Verb>
+                    {
+                        Permission.Types.Verb.Read
+                    }
+                }
+            };
 
             Console.WriteLine("Setting up for the scenario by creating new service accounts...");
             for (var i = 0; i < NumberOfServiceAccountsToCreate; i++)
@@ -131,7 +143,7 @@ namespace ServiceAccountMaintenance
                 {
                     Name = ServiceAccountName,
                     ProjectName = ProjectName,
-                    Permissions = {new RepeatedField<Permission> {perm}},
+                    Permissions = {new RepeatedField<Permission> {permProject, permMetrics}},
                     Lifetime = Duration.FromTimeSpan(new TimeSpan(1, 0, 0, 0)) // Let this service account live for one day
                 });
                 ServiceAccountIds.Add(resp.Id);
