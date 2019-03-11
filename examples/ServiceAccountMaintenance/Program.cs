@@ -124,7 +124,7 @@ namespace ServiceAccountMaintenance
                 }
             };
             
-            var permMetrics = new Permission
+            var permServices = new Permission
             {
                 Parts = {new RepeatedField<string> {"srv", "*"}},
                 Verbs =
@@ -143,7 +143,7 @@ namespace ServiceAccountMaintenance
                 {
                     Name = ServiceAccountName,
                     ProjectName = ProjectName,
-                    Permissions = {new RepeatedField<Permission> {permProject, permMetrics}},
+                    Permissions = {new RepeatedField<Permission> {permProject, permServices}},
                     Lifetime = Duration.FromTimeSpan(new TimeSpan(1, 0, 0, 0)) // Let this service account live for one day
                 });
                 ServiceAccountIds.Add(resp.Id);
