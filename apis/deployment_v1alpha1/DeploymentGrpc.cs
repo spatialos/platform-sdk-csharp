@@ -75,7 +75,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public abstract partial class DeploymentServiceBase
     {
       /// <summary>
-      /// Returns information about each running deployment for a given project.
+      /// Lists deployments under a given project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -87,9 +87,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
       /// <summary>
       /// Gets a deployment as identified by `id`.
-      ///
-      /// For the `player_info` and `worker_flags` fields:
-      /// - Stopped deployments return default zero values in the client's programming language.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -102,27 +99,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <summary>
       /// Creates a deployment.
       ///
-      /// These fields are mandatory:
-      /// `name`
-      /// `project_name`
-      /// `assembly_id`
-      /// `starting_snapshot_id`
-      /// `launch_config`
-      ///
-      /// In addition, these fields are optional:
-      /// `region_code`
-      /// `cluster_code`
-      /// `tag`
-      ///
-      /// These fields are ignored:
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
-      /// set their values in the launch configuration JSON file instead.
-      ///
-      /// The returned operation result is of type `deployment`.
+      /// The returned operation result is of type `deployment` upon successful creation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -133,32 +110,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
 
       /// <summary>
-      /// Updates a deployment, running or stopped, as specified by the deployment's `id`.
-      ///
-      /// Only these fields are mutable:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// The request ignores any immutable fields that you've changed.
-      ///
-      /// In addition, these fields are mandatory:
-      /// `id` field in `deployment`
-      ///
-      /// Use `update_mask` to provide partial updates
-      ///
-      /// We only support these paths, as in the proto serialised way:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// This RPC adopts two FieldMask specifics:
-      /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
-      /// - It ignores valid (mappable) paths to immutable fields.
-      /// - Invalid (unmappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
-      /// For example, an empty path `` is invalid as it doesn't map to any field.
+      /// Updates a deployment as identified by the deployment's `id`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -205,7 +157,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
 
       /// <summary>
-      /// Returns information about each running deployment for a given project.
+      /// Lists deployments under a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -217,7 +169,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return ListDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about each running deployment for a given project.
+      /// Lists deployments under a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -227,7 +179,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeployments, null, options, request);
       }
       /// <summary>
-      /// Returns information about each running deployment for a given project.
+      /// Lists deployments under a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -239,7 +191,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return ListDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about each running deployment for a given project.
+      /// Lists deployments under a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -250,9 +202,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       /// <summary>
       /// Gets a deployment as identified by `id`.
-      ///
-      /// For the `player_info` and `worker_flags` fields:
-      /// - Stopped deployments return default zero values in the client's programming language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -265,9 +214,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       /// <summary>
       /// Gets a deployment as identified by `id`.
-      ///
-      /// For the `player_info` and `worker_flags` fields:
-      /// - Stopped deployments return default zero values in the client's programming language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -278,9 +224,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       /// <summary>
       /// Gets a deployment as identified by `id`.
-      ///
-      /// For the `player_info` and `worker_flags` fields:
-      /// - Stopped deployments return default zero values in the client's programming language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -293,9 +236,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       /// <summary>
       /// Gets a deployment as identified by `id`.
-      ///
-      /// For the `player_info` and `worker_flags` fields:
-      /// - Stopped deployments return default zero values in the client's programming language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -307,27 +247,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <summary>
       /// Creates a deployment.
       ///
-      /// These fields are mandatory:
-      /// `name`
-      /// `project_name`
-      /// `assembly_id`
-      /// `starting_snapshot_id`
-      /// `launch_config`
-      ///
-      /// In addition, these fields are optional:
-      /// `region_code`
-      /// `cluster_code`
-      /// `tag`
-      ///
-      /// These fields are ignored:
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
-      /// set their values in the launch configuration JSON file instead.
-      ///
-      /// The returned operation result is of type `deployment`.
+      /// The returned operation result is of type `deployment` upon successful creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -341,27 +261,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <summary>
       /// Creates a deployment.
       ///
-      /// These fields are mandatory:
-      /// `name`
-      /// `project_name`
-      /// `assembly_id`
-      /// `starting_snapshot_id`
-      /// `launch_config`
-      ///
-      /// In addition, these fields are optional:
-      /// `region_code`
-      /// `cluster_code`
-      /// `tag`
-      ///
-      /// These fields are ignored:
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
-      /// set their values in the launch configuration JSON file instead.
-      ///
-      /// The returned operation result is of type `deployment`.
+      /// The returned operation result is of type `deployment` upon successful creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -373,27 +273,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <summary>
       /// Creates a deployment.
       ///
-      /// These fields are mandatory:
-      /// `name`
-      /// `project_name`
-      /// `assembly_id`
-      /// `starting_snapshot_id`
-      /// `launch_config`
-      ///
-      /// In addition, these fields are optional:
-      /// `region_code`
-      /// `cluster_code`
-      /// `tag`
-      ///
-      /// These fields are ignored:
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
-      /// set their values in the launch configuration JSON file instead.
-      ///
-      /// The returned operation result is of type `deployment`.
+      /// The returned operation result is of type `deployment` upon successful creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -407,27 +287,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <summary>
       /// Creates a deployment.
       ///
-      /// These fields are mandatory:
-      /// `name`
-      /// `project_name`
-      /// `assembly_id`
-      /// `starting_snapshot_id`
-      /// `launch_config`
-      ///
-      /// In addition, these fields are optional:
-      /// `region_code`
-      /// `cluster_code`
-      /// `tag`
-      ///
-      /// These fields are ignored:
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
-      /// set their values in the launch configuration JSON file instead.
-      ///
-      /// The returned operation result is of type `deployment`.
+      /// The returned operation result is of type `deployment` upon successful creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -437,32 +297,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDeployment, null, options, request);
       }
       /// <summary>
-      /// Updates a deployment, running or stopped, as specified by the deployment's `id`.
-      ///
-      /// Only these fields are mutable:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// The request ignores any immutable fields that you've changed.
-      ///
-      /// In addition, these fields are mandatory:
-      /// `id` field in `deployment`
-      ///
-      /// Use `update_mask` to provide partial updates
-      ///
-      /// We only support these paths, as in the proto serialised way:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// This RPC adopts two FieldMask specifics:
-      /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
-      /// - It ignores valid (mappable) paths to immutable fields.
-      /// - Invalid (unmappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
-      /// For example, an empty path `` is invalid as it doesn't map to any field.
+      /// Updates a deployment as identified by the deployment's `id`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -474,32 +309,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return UpdateDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a deployment, running or stopped, as specified by the deployment's `id`.
-      ///
-      /// Only these fields are mutable:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// The request ignores any immutable fields that you've changed.
-      ///
-      /// In addition, these fields are mandatory:
-      /// `id` field in `deployment`
-      ///
-      /// Use `update_mask` to provide partial updates
-      ///
-      /// We only support these paths, as in the proto serialised way:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// This RPC adopts two FieldMask specifics:
-      /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
-      /// - It ignores valid (mappable) paths to immutable fields.
-      /// - Invalid (unmappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
-      /// For example, an empty path `` is invalid as it doesn't map to any field.
+      /// Updates a deployment as identified by the deployment's `id`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -509,32 +319,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDeployment, null, options, request);
       }
       /// <summary>
-      /// Updates a deployment, running or stopped, as specified by the deployment's `id`.
-      ///
-      /// Only these fields are mutable:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// The request ignores any immutable fields that you've changed.
-      ///
-      /// In addition, these fields are mandatory:
-      /// `id` field in `deployment`
-      ///
-      /// Use `update_mask` to provide partial updates
-      ///
-      /// We only support these paths, as in the proto serialised way:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// This RPC adopts two FieldMask specifics:
-      /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
-      /// - It ignores valid (mappable) paths to immutable fields.
-      /// - Invalid (unmappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
-      /// For example, an empty path `` is invalid as it doesn't map to any field.
+      /// Updates a deployment as identified by the deployment's `id`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,32 +331,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return UpdateDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a deployment, running or stopped, as specified by the deployment's `id`.
-      ///
-      /// Only these fields are mutable:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// The request ignores any immutable fields that you've changed.
-      ///
-      /// In addition, these fields are mandatory:
-      /// `id` field in `deployment`
-      ///
-      /// Use `update_mask` to provide partial updates
-      ///
-      /// We only support these paths, as in the proto serialised way:
-      /// `tag`
-      /// `worker_flags`
-      /// `worker_connection_capacities`
-      /// `worker_connection_rate_limits`
-      ///
-      /// This RPC adopts two FieldMask specifics:
-      /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
-      /// - It ignores valid (mappable) paths to immutable fields.
-      /// - Invalid (unmappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
-      /// For example, an empty path `` is invalid as it doesn't map to any field.
+      /// Updates a deployment as identified by the deployment's `id`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
