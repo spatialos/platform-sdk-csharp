@@ -514,7 +514,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// The number of snapshots to provide in each page of the paginated results.
+    /// Optional. The number of snapshots to fetch in each page of the paginated results.
+    /// If provided, the `page_size` must be a positive integer. If omitted,
+    /// the default value of 20 is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -528,8 +530,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// A token, previously provided by the service as a `next_page_token`, for retrieving additional
-    /// pages of paginated results.
+    /// Optional. An opaque token to identify the start of the paginated results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -699,6 +700,9 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     private static readonly pb::FieldCodec<global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot> _repeated_snapshot_codec
         = pb::FieldCodec.ForMessage(10, global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot.Parser);
     private readonly pbc::RepeatedField<global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot> snapshot_ = new pbc::RepeatedField<global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot>();
+    /// <summary>
+    /// By default, snapshots are sorted by creation time (descending).
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot> Snapshot {
       get { return snapshot_; }
@@ -872,7 +876,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     public const int IdFieldNumber = 3;
     private string id_ = "";
     /// <summary>
-    /// The identifier for the desired snapshot.
+    /// The identifier for the snapshot.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -1146,6 +1150,16 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     /// <summary>Field number for the "snapshot" field.</summary>
     public const int SnapshotFieldNumber = 1;
     private global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot snapshot_;
+    /// <summary>
+    /// These fields are mandatory:
+    /// - `project_name`
+    /// - `deployment_name`
+    ///
+    /// These fields are optional:
+    /// - `tags`
+    ///
+    /// Other set values will be ignored.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot Snapshot {
       get { return snapshot_; }
@@ -1358,6 +1372,17 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     /// <summary>Field number for the "snapshot" field.</summary>
     public const int SnapshotFieldNumber = 1;
     private global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot snapshot_;
+    /// <summary>
+    /// These fields are mandatory:
+    /// - `project_name`
+    /// - `deployment_name`
+    /// - `checksum`
+    ///
+    /// These fields are optional:
+    /// - `tags`
+    ///
+    /// Other set values will be ignored.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Snapshot.V1Alpha1.Snapshot Snapshot {
       get { return snapshot_; }

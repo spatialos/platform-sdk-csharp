@@ -28,7 +28,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "b25zLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
             "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
             "YnVmL2R1cmF0aW9uLnByb3RvGjZnaXRodWIuY29tL213aXRrb3cvZ28tcHJv",
-            "dG8tdmFsaWRhdG9ycy92YWxpZGF0b3IucHJvdG8ijQcKCkRlcGxveW1lbnQS",
+            "dG8tdmFsaWRhdG9ycy92YWxpZGF0b3IucHJvdG8iuwcKCkRlcGxveW1lbnQS",
             "CgoCaWQYASABKAkSLQoMcHJvamVjdF9uYW1lGAIgASgJQhfi3x8TChFeW2Et",
             "ejAtOV9dezMsMzJ9JBIlCgRuYW1lGAMgASgJQhfi3x8TChFeW2EtejAtOV9d",
             "ezMsMzJ9JBITCgtyZWdpb25fY29kZRgEIAEoCRIUCgxjbHVzdGVyX2NvZGUY",
@@ -46,72 +46,79 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "bl9jYXBhY2l0aWVzGBAgAygLMjguaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVw",
             "bG95bWVudC52MWFscGhhMS5Xb3JrZXJDYXBhY2l0eRJgCh13b3JrZXJfY29u",
             "bmVjdGlvbl9yYXRlX2xpbWl0cxgRIAMoCzI5LmltcHJvYmFibGUuc3BhdGlh",
-            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuV29ya2VyUmF0ZUxpbWl0IloKBlN0",
-            "YXR1cxILCgdVTktOT1dOEAASDAoIU1RBUlRJTkcQZBIMCgdSVU5OSU5HEMgB",
-            "Eg0KCFNUT1BQSU5HEKwCEgwKB1NUT1BQRUQQkAMSCgoFRVJST1IQ9AMiaAoO",
-            "V29ya2VyQ2FwYWNpdHkSEwoLd29ya2VyX3R5cGUYASABKAkSJQoMbWF4X2Nh",
-            "cGFjaXR5GAIgASgFQg/i3x8LEP///////////wESGgoScmVtYWluaW5nX2Nh",
-            "cGFjaXR5GAMgASgFInEKD1dvcmtlclJhdGVMaW1pdBITCgt3b3JrZXJfdHlw",
-            "ZRgBIAEoCRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbhIcChRyZXF1ZXN0c19pbl9kdXJhdGlvbhgDIAEoDSIjCgxMYXVu",
-            "Y2hDb25maWcSEwoLY29uZmlnX2pzb24YASABKAkiPQoKV29ya2VyRmxhZxIT",
-            "Cgt3b3JrZXJfdHlwZRgBIAEoCRILCgNrZXkYAiABKAkSDQoFdmFsdWUYAyAB",
-            "KAkiTAoKUGxheWVySW5mbxIWCg5hY3RpdmVfcGxheWVycxgBIAEoAxIQCghj",
-            "YXBhY2l0eRgCIAEoAxIUCgxxdWV1ZV9sZW5ndGgYAyABKAMi+AEKFkxpc3RE",
-            "ZXBsb3ltZW50c1JlcXVlc3QSLQoMcHJvamVjdF9uYW1lGAEgASgJQhfi3x8T",
-            "ChFeW2EtejAtOV9dezMsMzJ9JBIkCglwYWdlX3NpemUYAiABKAVCEeLfHw0Q",
-            "////////////ARgzEhIKCnBhZ2VfdG9rZW4YAyABKAkSMwoPZGVwbG95bWVu",
-            "dF9uYW1lGAQgASgJQhri3x8WChReJHxeW2EtejAtOV9dezMsMzJ9JBJACgR2",
-            "aWV3GAUgASgOMjIuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52",
-            "MWFscGhhMS5WaWV3VHlwZSJ9ChdMaXN0RGVwbG95bWVudHNSZXNwb25zZRJJ",
-            "CgtkZXBsb3ltZW50cxgBIAMoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRl",
-            "cGxveW1lbnQudjFhbHBoYTEuRGVwbG95bWVudBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkiUQoUR2V0RGVwbG95bWVudFJlcXVlc3QSLQoMcHJvamVjdF9u",
-            "YW1lGAEgASgJQhfi3x8TChFeW2EtejAtOV9dezMsMzJ9JBIKCgJpZBgCIAEo",
-            "CSJhChVHZXREZXBsb3ltZW50UmVzcG9uc2USSAoKZGVwbG95bWVudBgBIAEo",
-            "CzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEu",
-            "RGVwbG95bWVudCJrChdDcmVhdGVEZXBsb3ltZW50UmVxdWVzdBJQCgpkZXBs",
-            "b3ltZW50GAIgASgLMjQuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVu",
-            "dC52MWFscGhhMS5EZXBsb3ltZW50Qgbi3x8CIAEiGgoYQ3JlYXRlRGVwbG95",
-            "bWVudE1ldGFkYXRhIpwBChdVcGRhdGVEZXBsb3ltZW50UmVxdWVzdBJQCgpk",
-            "ZXBsb3ltZW50GAEgASgLMjQuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95",
-            "bWVudC52MWFscGhhMS5EZXBsb3ltZW50Qgbi3x8CIAESLwoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrImQKGFVwZGF0",
-            "ZURlcGxveW1lbnRSZXNwb25zZRJICgpkZXBsb3ltZW50GAEgASgLMjQuaW1w",
-            "cm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBsb3lt",
-            "ZW50IlIKFVN0b3BEZXBsb3ltZW50UmVxdWVzdBItCgxwcm9qZWN0X25hbWUY",
-            "ASABKAlCF+LfHxMKEV5bYS16MC05X117MywzMn0kEgoKAmlkGAIgASgJIhgK",
-            "FlN0b3BEZXBsb3ltZW50UmVzcG9uc2UqMAoIVmlld1R5cGUSDwoLVU5TUEVD",
-            "SUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAjLnBQoRRGVwbG95bWVudFNl",
-            "cnZpY2USlgEKD0xpc3REZXBsb3ltZW50cxJALmltcHJvYmFibGUuc3BhdGlh",
-            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuTGlzdERlcGxveW1lbnRzUmVxdWVz",
-            "dBpBLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEu",
-            "TGlzdERlcGxveW1lbnRzUmVzcG9uc2USkAEKDUdldERlcGxveW1lbnQSPi5p",
-            "bXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkdldERl",
-            "cGxveW1lbnRSZXF1ZXN0Gj8uaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95",
-            "bWVudC52MWFscGhhMS5HZXREZXBsb3ltZW50UmVzcG9uc2USdAoQQ3JlYXRl",
-            "RGVwbG95bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQu",
-            "djFhbHBoYTEuQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uEpkBChBVcGRhdGVEZXBsb3ltZW50EkEuaW1w",
+            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuV29ya2VyUmF0ZUxpbWl0EhMKC2Rl",
+            "c2NyaXB0aW9uGBIgASgJEhcKD3J1bnRpbWVfdmVyc2lvbhgTIAEoCSJaCgZT",
+            "dGF0dXMSCwoHVU5LTk9XThAAEgwKCFNUQVJUSU5HEGQSDAoHUlVOTklORxDI",
+            "ARINCghTVE9QUElORxCsAhIMCgdTVE9QUEVEEJADEgoKBUVSUk9SEPQDImgK",
+            "DldvcmtlckNhcGFjaXR5EhMKC3dvcmtlcl90eXBlGAEgASgJEiUKDG1heF9j",
+            "YXBhY2l0eRgCIAEoBUIP4t8fCxD///////////8BEhoKEnJlbWFpbmluZ19j",
+            "YXBhY2l0eRgDIAEoBSJxCg9Xb3JrZXJSYXRlTGltaXQSEwoLd29ya2VyX3R5",
+            "cGUYASABKAkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb24SHAoUcmVxdWVzdHNfaW5fZHVyYXRpb24YAyABKA0iIwoMTGF1",
+            "bmNoQ29uZmlnEhMKC2NvbmZpZ19qc29uGAEgASgJIj0KCldvcmtlckZsYWcS",
+            "EwoLd29ya2VyX3R5cGUYASABKAkSCwoDa2V5GAIgASgJEg0KBXZhbHVlGAMg",
+            "ASgJIkwKClBsYXllckluZm8SFgoOYWN0aXZlX3BsYXllcnMYASABKAMSEAoI",
+            "Y2FwYWNpdHkYAiABKAMSFAoMcXVldWVfbGVuZ3RoGAMgASgDIu8DChZMaXN0",
+            "RGVwbG95bWVudHNSZXF1ZXN0Ei0KDHByb2plY3RfbmFtZRgBIAEoCUIX4t8f",
+            "EwoRXlthLXowLTlfXXszLDMyfSQSJAoJcGFnZV9zaXplGAIgASgFQhHi3x8N",
+            "EP///////////wEYMxISCgpwYWdlX3Rva2VuGAMgASgJEjMKD2RlcGxveW1l",
+            "bnRfbmFtZRgEIAEoCUIa4t8fFgoUXiR8XlthLXowLTlfXXszLDMyfSQSQAoE",
+            "dmlldxgFIAEoDjIyLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQu",
+            "djFhbHBoYTEuVmlld1R5cGUSiAEKIGRlcGxveW1lbnRfc3RvcHBlZF9zdGF0",
+            "dXNfZmlsdGVyGAYgASgOMl4uaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95",
+            "bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0LkRlcGxveW1l",
+            "bnRTdG9wcGVkU3RhdHVzRmlsdGVyImoKHURlcGxveW1lbnRTdG9wcGVkU3Rh",
+            "dHVzRmlsdGVyEhMKD0FMTF9ERVBMT1lNRU5UUxAAEhsKF05PVF9TVE9QUEVE",
+            "X0RFUExPWU1FTlRTEAESFwoTU1RPUFBFRF9ERVBMT1lNRU5UUxACIn0KF0xp",
+            "c3REZXBsb3ltZW50c1Jlc3BvbnNlEkkKC2RlcGxveW1lbnRzGAEgAygLMjQu",
+            "aW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBs",
+            "b3ltZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChRHZXREZXBsb3lt",
+            "ZW50UmVxdWVzdBItCgxwcm9qZWN0X25hbWUYASABKAlCF+LfHxMKEV5bYS16",
+            "MC05X117MywzMn0kEgoKAmlkGAIgASgJImEKFUdldERlcGxveW1lbnRSZXNw",
+            "b25zZRJICgpkZXBsb3ltZW50GAEgASgLMjQuaW1wcm9iYWJsZS5zcGF0aWFs",
+            "b3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBsb3ltZW50ImsKF0NyZWF0ZURl",
+            "cGxveW1lbnRSZXF1ZXN0ElAKCmRlcGxveW1lbnQYAiABKAsyNC5pbXByb2Jh",
+            "YmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnRC",
+            "BuLfHwIgASIaChhDcmVhdGVEZXBsb3ltZW50TWV0YWRhdGEinAEKF1VwZGF0",
+            "ZURlcGxveW1lbnRSZXF1ZXN0ElAKCmRlcGxveW1lbnQYASABKAsyNC5pbXBy",
+            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1l",
+            "bnRCBuLfHwIgARIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2siZAoYVXBkYXRlRGVwbG95bWVudFJlc3BvbnNlEkgK",
+            "CmRlcGxveW1lbnQYASABKAsyNC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBs",
+            "b3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnQiUgoVU3RvcERlcGxveW1lbnRS",
+            "ZXF1ZXN0Ei0KDHByb2plY3RfbmFtZRgBIAEoCUIX4t8fEwoRXlthLXowLTlf",
+            "XXszLDMyfSQSCgoCaWQYAiABKAkiGAoWU3RvcERlcGxveW1lbnRSZXNwb25z",
+            "ZSowCghWaWV3VHlwZRIPCgtVTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoE",
+            "RlVMTBACMucFChFEZXBsb3ltZW50U2VydmljZRKWAQoPTGlzdERlcGxveW1l",
+            "bnRzEkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhh",
+            "MS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0GkEuaW1wcm9iYWJsZS5zcGF0aWFs",
+            "b3MuZGVwbG95bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXNwb25z",
+            "ZRKQAQoNR2V0RGVwbG95bWVudBI+LmltcHJvYmFibGUuc3BhdGlhbG9zLmRl",
+            "cGxveW1lbnQudjFhbHBoYTEuR2V0RGVwbG95bWVudFJlcXVlc3QaPy5pbXBy",
+            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkdldERlcGxv",
+            "eW1lbnRSZXNwb25zZRJ0ChBDcmVhdGVEZXBsb3ltZW50EkEuaW1wcm9iYWJs",
+            "ZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5DcmVhdGVEZXBsb3lt",
+            "ZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24SmQEK",
+            "EFVwZGF0ZURlcGxveW1lbnQSQS5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBs",
+            "b3ltZW50LnYxYWxwaGExLlVwZGF0ZURlcGxveW1lbnRSZXF1ZXN0GkIuaW1w",
             "cm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5VcGRhdGVE",
-            "ZXBsb3ltZW50UmVxdWVzdBpCLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxv",
-            "eW1lbnQudjFhbHBoYTEuVXBkYXRlRGVwbG95bWVudFJlc3BvbnNlEpMBCg5T",
-            "dG9wRGVwbG95bWVudBI/LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1l",
-            "bnQudjFhbHBoYTEuU3RvcERlcGxveW1lbnRSZXF1ZXN0GkAuaW1wcm9iYWJs",
-            "ZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5TdG9wRGVwbG95bWVu",
-            "dFJlc3BvbnNlQmBaM2ltcHJvYmFibGUvc3BhdGlhbG9zL2RlcGxveW1lbnQv",
-            "djFhbHBoYTE7ZGVwbG95bWVudKoCKEltcHJvYmFibGUuU3BhdGlhbE9TLkRl",
-            "cGxveW1lbnQuVjFBbHBoYTFiBnByb3RvMw=="));
+            "ZXBsb3ltZW50UmVzcG9uc2USkwEKDlN0b3BEZXBsb3ltZW50Ej8uaW1wcm9i",
+            "YWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5TdG9wRGVwbG95",
+            "bWVudFJlcXVlc3QaQC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50",
+            "LnYxYWxwaGExLlN0b3BEZXBsb3ltZW50UmVzcG9uc2VCYFozaW1wcm9iYWJs",
+            "ZS9zcGF0aWFsb3MvZGVwbG95bWVudC92MWFscGhhMTtkZXBsb3ltZW50qgIo",
+            "SW1wcm9iYWJsZS5TcGF0aWFsT1MuRGVwbG95bWVudC5WMUFscGhhMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment), global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Parser, new[]{ "Id", "ProjectName", "Name", "RegionCode", "ClusterCode", "AssemblyId", "StartingSnapshotId", "Tag", "Status", "LaunchConfig", "WorkerFlags", "PlayerInfo", "StartTime", "StopTime", "WorkerConnectionCapacities", "WorkerConnectionRateLimits" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Types.Status) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment), global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Parser, new[]{ "Id", "ProjectName", "Name", "RegionCode", "ClusterCode", "AssemblyId", "StartingSnapshotId", "Tag", "Status", "LaunchConfig", "WorkerFlags", "PlayerInfo", "StartTime", "StopTime", "WorkerConnectionCapacities", "WorkerConnectionRateLimits", "Description", "RuntimeVersion" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Types.Status) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerCapacity), global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerCapacity.Parser, new[]{ "WorkerType", "MaxCapacity", "RemainingCapacity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerRateLimit), global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerRateLimit.Parser, new[]{ "WorkerType", "Duration", "RequestsInDuration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.LaunchConfig), global::Improbable.SpatialOS.Deployment.V1Alpha1.LaunchConfig.Parser, new[]{ "ConfigJson" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag), global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag.Parser, new[]{ "WorkerType", "Key", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.PlayerInfo), global::Improbable.SpatialOS.Deployment.V1Alpha1.PlayerInfo.Parser, new[]{ "ActivePlayers", "Capacity", "QueueLength" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Parser, new[]{ "ProjectName", "PageSize", "PageToken", "DeploymentName", "View" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Parser, new[]{ "ProjectName", "PageSize", "PageToken", "DeploymentName", "View", "DeploymentStoppedStatusFilter" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse.Parser, new[]{ "Deployments", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest.Parser, new[]{ "ProjectName", "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse.Parser, new[]{ "Deployment" }, null, null, null),
@@ -150,9 +157,6 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
   #endregion
 
   #region Messages
-  /// <summary>
-  ///* A deployment of a game in the cloud. 
-  /// </summary>
   public sealed partial class Deployment : pb::IMessage<Deployment> {
     private static readonly pb::MessageParser<Deployment> _parser = new pb::MessageParser<Deployment>(() => new Deployment());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -193,6 +197,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       StopTime = other.stopTime_ != null ? other.StopTime.Clone() : null;
       workerConnectionCapacities_ = other.workerConnectionCapacities_.Clone();
       workerConnectionRateLimits_ = other.workerConnectionRateLimits_.Clone();
+      description_ = other.description_;
+      runtimeVersion_ = other.runtimeVersion_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -370,7 +376,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The worker flags that the deployment exposes at runtime.
     ///
-    /// Only applicable to running deployments.
+    /// Only applicable to running deployments. It is omitted for deployments of other states.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag> WorkerFlags {
@@ -387,7 +393,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// Information about the players participating in the deployment.
     ///
-    /// Only applicable to running deployments.
+    /// Only applicable to running deployments. It is omitted for deployments
+    /// of other states.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -469,6 +476,38 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       get { return workerConnectionRateLimits_; }
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 18;
+    private string description_ = "";
+    /// <summary>
+    /// Read-only
+    ///
+    /// The description provided when the deployment was started
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "runtime_version" field.</summary>
+    public const int RuntimeVersionFieldNumber = 19;
+    private string runtimeVersion_ = "";
+    /// <summary>
+    /// Read-only
+    ///
+    /// The version of the Runtime used to start this deployment
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RuntimeVersion {
+      get { return runtimeVersion_; }
+      set {
+        runtimeVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Deployment);
@@ -498,6 +537,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (!object.Equals(StopTime, other.StopTime)) return false;
       if(!workerConnectionCapacities_.Equals(other.workerConnectionCapacities_)) return false;
       if(!workerConnectionRateLimits_.Equals(other.workerConnectionRateLimits_)) return false;
+      if (Description != other.Description) return false;
+      if (RuntimeVersion != other.RuntimeVersion) return false;
       return true;
     }
 
@@ -520,6 +561,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (stopTime_ != null) hash ^= StopTime.GetHashCode();
       hash ^= workerConnectionCapacities_.GetHashCode();
       hash ^= workerConnectionRateLimits_.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (RuntimeVersion.Length != 0) hash ^= RuntimeVersion.GetHashCode();
       return hash;
     }
 
@@ -582,6 +625,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       workerConnectionCapacities_.WriteTo(output, _repeated_workerConnectionCapacities_codec);
       workerConnectionRateLimits_.WriteTo(output, _repeated_workerConnectionRateLimits_codec);
+      if (Description.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Description);
+      }
+      if (RuntimeVersion.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(RuntimeVersion);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -627,6 +678,12 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       size += workerConnectionCapacities_.CalculateSize(_repeated_workerConnectionCapacities_codec);
       size += workerConnectionRateLimits_.CalculateSize(_repeated_workerConnectionRateLimits_codec);
+      if (Description.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (RuntimeVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RuntimeVersion);
+      }
       return size;
     }
 
@@ -687,6 +744,12 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       workerConnectionCapacities_.Add(other.workerConnectionCapacities_);
       workerConnectionRateLimits_.Add(other.workerConnectionRateLimits_);
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.RuntimeVersion.Length != 0) {
+        RuntimeVersion = other.RuntimeVersion;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -771,6 +834,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
           }
           case 138: {
             workerConnectionRateLimits_.AddEntriesFrom(input, _repeated_workerConnectionRateLimits_codec);
+            break;
+          }
+          case 146: {
+            Description = input.ReadString();
+            break;
+          }
+          case 154: {
+            RuntimeVersion = input.ReadString();
             break;
           }
         }
@@ -1694,6 +1765,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       pageToken_ = other.pageToken_;
       deploymentName_ = other.deploymentName_;
       view_ = other.view_;
+      deploymentStoppedStatusFilter_ = other.deploymentStoppedStatusFilter_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1781,6 +1853,20 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
     }
 
+    /// <summary>Field number for the "deployment_stopped_status_filter" field.</summary>
+    public const int DeploymentStoppedStatusFilterFieldNumber = 6;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter deploymentStoppedStatusFilter_ = 0;
+    /// <summary>
+    /// Filter for all deployments, deployments that are stopped or deployments that are not stopped.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter DeploymentStoppedStatusFilter {
+      get { return deploymentStoppedStatusFilter_; }
+      set {
+        deploymentStoppedStatusFilter_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListDeploymentsRequest);
@@ -1799,6 +1885,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (PageToken != other.PageToken) return false;
       if (DeploymentName != other.DeploymentName) return false;
       if (View != other.View) return false;
+      if (DeploymentStoppedStatusFilter != other.DeploymentStoppedStatusFilter) return false;
       return true;
     }
 
@@ -1810,6 +1897,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (DeploymentName.Length != 0) hash ^= DeploymentName.GetHashCode();
       if (View != 0) hash ^= View.GetHashCode();
+      if (DeploymentStoppedStatusFilter != 0) hash ^= DeploymentStoppedStatusFilter.GetHashCode();
       return hash;
     }
 
@@ -1840,6 +1928,10 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         output.WriteRawTag(40);
         output.WriteEnum((int) View);
       }
+      if (DeploymentStoppedStatusFilter != 0) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) DeploymentStoppedStatusFilter);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1859,6 +1951,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       if (View != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (DeploymentStoppedStatusFilter != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentStoppedStatusFilter);
       }
       return size;
     }
@@ -1882,6 +1977,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
       if (other.View != 0) {
         View = other.View;
+      }
+      if (other.DeploymentStoppedStatusFilter != 0) {
+        DeploymentStoppedStatusFilter = other.DeploymentStoppedStatusFilter;
       }
     }
 
@@ -1913,9 +2011,26 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             view_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType) input.ReadEnum();
             break;
           }
+          case 48: {
+            deploymentStoppedStatusFilter_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter) input.ReadEnum();
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ListDeploymentsRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum DeploymentStoppedStatusFilter {
+        [pbr::OriginalName("ALL_DEPLOYMENTS")] AllDeployments = 0,
+        [pbr::OriginalName("NOT_STOPPED_DEPLOYMENTS")] NotStoppedDeployments = 1,
+        [pbr::OriginalName("STOPPED_DEPLOYMENTS")] StoppedDeployments = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2374,7 +2489,25 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// The deployment to start.
     ///
-    /// You can only supply fields that are mutable at the point when you start the deployment.
+    /// These fields are mandatory:
+    /// `name`
+    /// `project_name`
+    /// `assembly_id`
+    /// `starting_snapshot_id`
+    /// `launch_config`
+    ///
+    /// In addition, these fields are optional:
+    /// `region_code`
+    /// `cluster_code`
+    /// `tag`
+    ///
+    /// These fields are ignored:
+    /// `worker_flags`
+    /// `worker_connection_capacities`
+    /// `worker_connection_rate_limits`
+    ///
+    /// For `worker_flags`, `worker_connection_capacities`, and `worker_connection_rate_limits`,
+    /// set their values in the launch configuration JSON file instead.
     ///
     /// Non-empty read-only fields passed in will be ignored.
     /// </summary>
@@ -2467,7 +2600,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
   }
 
   /// <summary>
-  /// For internal use only
+  /// Metadata for CreateDeployment operations.
   /// </summary>
   public sealed partial class CreateDeploymentMetadata : pb::IMessage<CreateDeploymentMetadata> {
     private static readonly pb::MessageParser<CreateDeploymentMetadata> _parser = new pb::MessageParser<CreateDeploymentMetadata>(() => new CreateDeploymentMetadata());
@@ -2594,6 +2727,20 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>Field number for the "deployment" field.</summary>
     public const int DeploymentFieldNumber = 1;
     private global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment deployment_;
+    /// <summary>
+    /// The deployment to update.
+    ///
+    /// These fields are mandatory:
+    /// `id`
+    ///
+    /// These fields are mutable:
+    /// `tag`
+    /// `worker_flags`
+    /// `worker_connection_capacities`
+    /// `worker_connection_rate_limits`
+    ///
+    /// The request ignores any immutable fields that you've changed.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment Deployment {
       get { return deployment_; }
@@ -2606,10 +2753,21 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// A mask which you can provide for partial updates of the resource.
-    /// Only the fields specified in the mask are modified on the response.
+    /// Use `update_mask` to provide partial object updates.
     ///
-    /// Further Documentation:
+    /// We only support these fields, as in the proto serialised way:
+    /// `tag`
+    /// `worker_flags`
+    /// `worker_connection_capacities`
+    /// `worker_connection_rate_limits`
+    ///
+    /// This RPC adopts two FieldMask specifics:
+    /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
+    /// - It ignores valid (mappable) paths to immutable fields.
+    /// - Invalid (un-mappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
+    /// For example, an empty path `` is invalid as it doesn't map to any field.
+    ///
+    /// Further Documentation on FieldMask:
     /// https://github.com/google/protobuf/blob/master/src/google/protobuf/field_mask.proto
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

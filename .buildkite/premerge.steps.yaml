@@ -14,7 +14,7 @@ common: &common
     # TODO(EV): Make docs better. (https://github.com/improbable/platform/blob/master/docs/product-groups/dev-workflow/buildkite/how-to-deploy-change-to-agents.md)
     - "capable_of_building=platform"
     - "environment=production"
-    - "queue=v-ccadbedf01b84f29-------1540485662"
+    - "queue=v2-1545678177-378924f50bfed5a0-------z"
   timeout_in_minutes: 60 # TODO(ENG-548): reduce timeout once agent-cold-start is optimised.
   retry:
     automatic:
