@@ -97,7 +97,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Takes a snapshot of a running deployment.
+      /// Takes a snapshot. You can only take snapshots of running deployments.
       ///
       /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
@@ -246,7 +246,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
       }
       /// <summary>
-      /// Takes a snapshot of a running deployment.
+      /// Takes a snapshot. You can only take snapshots of running deployments.
       ///
       /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
@@ -260,7 +260,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return TakeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Takes a snapshot of a running deployment.
+      /// Takes a snapshot. You can only take snapshots of running deployments.
       ///
       /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
@@ -272,7 +272,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_TakeSnapshot, null, options, request);
       }
       /// <summary>
-      /// Takes a snapshot of a running deployment.
+      /// Takes a snapshot. You can only take snapshots of running deployments.
       ///
       /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
@@ -286,7 +286,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return TakeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Takes a snapshot of a running deployment.
+      /// Takes a snapshot. You can only take snapshots of running deployments.
       ///
       /// The returned operation result is of type `snapshot` upon successfully taking a snapshot.
       /// </summary>
