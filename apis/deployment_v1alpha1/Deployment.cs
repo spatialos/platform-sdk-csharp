@@ -28,89 +28,130 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "b25zLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
             "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
             "YnVmL2R1cmF0aW9uLnByb3RvGjZnaXRodWIuY29tL213aXRrb3cvZ28tcHJv",
-            "dG8tdmFsaWRhdG9ycy92YWxpZGF0b3IucHJvdG8iuwcKCkRlcGxveW1lbnQS",
-            "CgoCaWQYASABKAkSLQoMcHJvamVjdF9uYW1lGAIgASgJQhfi3x8TChFeW2Et",
-            "ejAtOV9dezMsMzJ9JBIlCgRuYW1lGAMgASgJQhfi3x8TChFeW2EtejAtOV9d",
-            "ezMsMzJ9JBITCgtyZWdpb25fY29kZRgEIAEoCRIUCgxjbHVzdGVyX2NvZGUY",
-            "BSABKAkSEwoLYXNzZW1ibHlfaWQYByABKAkSHAoUc3RhcnRpbmdfc25hcHNo",
-            "b3RfaWQYCCABKAkSCwoDdGFnGAkgAygJEksKBnN0YXR1cxgKIAEoDjI7Lmlt",
-            "cHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuRGVwbG95",
-            "bWVudC5TdGF0dXMSTQoNbGF1bmNoX2NvbmZpZxgLIAEoCzI2LmltcHJvYmFi",
-            "bGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuTGF1bmNoQ29uZmln",
-            "EkoKDHdvcmtlcl9mbGFncxgMIAMoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9z",
-            "LmRlcGxveW1lbnQudjFhbHBoYTEuV29ya2VyRmxhZxJNCgtwbGF5ZXJfaW5m",
-            "bxgNIAEoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFh",
-            "bHBoYTEuUGxheWVySW5mb0ICGAESLgoKc3RhcnRfdGltZRgOIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLQoJc3RvcF90aW1lGA8gASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJeChx3b3JrZXJfY29ubmVjdGlv",
-            "bl9jYXBhY2l0aWVzGBAgAygLMjguaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVw",
-            "bG95bWVudC52MWFscGhhMS5Xb3JrZXJDYXBhY2l0eRJgCh13b3JrZXJfY29u",
-            "bmVjdGlvbl9yYXRlX2xpbWl0cxgRIAMoCzI5LmltcHJvYmFibGUuc3BhdGlh",
-            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuV29ya2VyUmF0ZUxpbWl0EhMKC2Rl",
-            "c2NyaXB0aW9uGBIgASgJEhcKD3J1bnRpbWVfdmVyc2lvbhgTIAEoCSJaCgZT",
-            "dGF0dXMSCwoHVU5LTk9XThAAEgwKCFNUQVJUSU5HEGQSDAoHUlVOTklORxDI",
-            "ARINCghTVE9QUElORxCsAhIMCgdTVE9QUEVEEJADEgoKBUVSUk9SEPQDImgK",
-            "DldvcmtlckNhcGFjaXR5EhMKC3dvcmtlcl90eXBlGAEgASgJEiUKDG1heF9j",
-            "YXBhY2l0eRgCIAEoBUIP4t8fCxD///////////8BEhoKEnJlbWFpbmluZ19j",
-            "YXBhY2l0eRgDIAEoBSJxCg9Xb3JrZXJSYXRlTGltaXQSEwoLd29ya2VyX3R5",
-            "cGUYASABKAkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb24SHAoUcmVxdWVzdHNfaW5fZHVyYXRpb24YAyABKA0iIwoMTGF1",
-            "bmNoQ29uZmlnEhMKC2NvbmZpZ19qc29uGAEgASgJIj0KCldvcmtlckZsYWcS",
-            "EwoLd29ya2VyX3R5cGUYASABKAkSCwoDa2V5GAIgASgJEg0KBXZhbHVlGAMg",
-            "ASgJIkwKClBsYXllckluZm8SFgoOYWN0aXZlX3BsYXllcnMYASABKAMSEAoI",
-            "Y2FwYWNpdHkYAiABKAMSFAoMcXVldWVfbGVuZ3RoGAMgASgDIu8DChZMaXN0",
-            "RGVwbG95bWVudHNSZXF1ZXN0Ei0KDHByb2plY3RfbmFtZRgBIAEoCUIX4t8f",
-            "EwoRXlthLXowLTlfXXszLDMyfSQSJAoJcGFnZV9zaXplGAIgASgFQhHi3x8N",
-            "EP///////////wEYMxISCgpwYWdlX3Rva2VuGAMgASgJEjMKD2RlcGxveW1l",
-            "bnRfbmFtZRgEIAEoCUIa4t8fFgoUXiR8XlthLXowLTlfXXszLDMyfSQSQAoE",
-            "dmlldxgFIAEoDjIyLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQu",
-            "djFhbHBoYTEuVmlld1R5cGUSiAEKIGRlcGxveW1lbnRfc3RvcHBlZF9zdGF0",
-            "dXNfZmlsdGVyGAYgASgOMl4uaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95",
-            "bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0LkRlcGxveW1l",
-            "bnRTdG9wcGVkU3RhdHVzRmlsdGVyImoKHURlcGxveW1lbnRTdG9wcGVkU3Rh",
-            "dHVzRmlsdGVyEhMKD0FMTF9ERVBMT1lNRU5UUxAAEhsKF05PVF9TVE9QUEVE",
-            "X0RFUExPWU1FTlRTEAESFwoTU1RPUFBFRF9ERVBMT1lNRU5UUxACIn0KF0xp",
-            "c3REZXBsb3ltZW50c1Jlc3BvbnNlEkkKC2RlcGxveW1lbnRzGAEgAygLMjQu",
-            "aW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBs",
-            "b3ltZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChRHZXREZXBsb3lt",
-            "ZW50UmVxdWVzdBItCgxwcm9qZWN0X25hbWUYASABKAlCF+LfHxMKEV5bYS16",
-            "MC05X117MywzMn0kEgoKAmlkGAIgASgJImEKFUdldERlcGxveW1lbnRSZXNw",
-            "b25zZRJICgpkZXBsb3ltZW50GAEgASgLMjQuaW1wcm9iYWJsZS5zcGF0aWFs",
-            "b3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBsb3ltZW50ImsKF0NyZWF0ZURl",
-            "cGxveW1lbnRSZXF1ZXN0ElAKCmRlcGxveW1lbnQYAiABKAsyNC5pbXByb2Jh",
-            "YmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnRC",
-            "BuLfHwIgASIaChhDcmVhdGVEZXBsb3ltZW50TWV0YWRhdGEinAEKF1VwZGF0",
-            "ZURlcGxveW1lbnRSZXF1ZXN0ElAKCmRlcGxveW1lbnQYASABKAsyNC5pbXBy",
-            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1l",
-            "bnRCBuLfHwIgARIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5GaWVsZE1hc2siZAoYVXBkYXRlRGVwbG95bWVudFJlc3BvbnNlEkgK",
-            "CmRlcGxveW1lbnQYASABKAsyNC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBs",
-            "b3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnQiUgoVU3RvcERlcGxveW1lbnRS",
-            "ZXF1ZXN0Ei0KDHByb2plY3RfbmFtZRgBIAEoCUIX4t8fEwoRXlthLXowLTlf",
-            "XXszLDMyfSQSCgoCaWQYAiABKAkiGAoWU3RvcERlcGxveW1lbnRSZXNwb25z",
-            "ZSowCghWaWV3VHlwZRIPCgtVTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoE",
-            "RlVMTBACMucFChFEZXBsb3ltZW50U2VydmljZRKWAQoPTGlzdERlcGxveW1l",
-            "bnRzEkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhh",
-            "MS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0GkEuaW1wcm9iYWJsZS5zcGF0aWFs",
-            "b3MuZGVwbG95bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXNwb25z",
-            "ZRKQAQoNR2V0RGVwbG95bWVudBI+LmltcHJvYmFibGUuc3BhdGlhbG9zLmRl",
-            "cGxveW1lbnQudjFhbHBoYTEuR2V0RGVwbG95bWVudFJlcXVlc3QaPy5pbXBy",
-            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkdldERlcGxv",
-            "eW1lbnRSZXNwb25zZRJ0ChBDcmVhdGVEZXBsb3ltZW50EkEuaW1wcm9iYWJs",
-            "ZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5DcmVhdGVEZXBsb3lt",
-            "ZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24SmQEK",
-            "EFVwZGF0ZURlcGxveW1lbnQSQS5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBs",
-            "b3ltZW50LnYxYWxwaGExLlVwZGF0ZURlcGxveW1lbnRSZXF1ZXN0GkIuaW1w",
-            "cm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5VcGRhdGVE",
-            "ZXBsb3ltZW50UmVzcG9uc2USkwEKDlN0b3BEZXBsb3ltZW50Ej8uaW1wcm9i",
-            "YWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5TdG9wRGVwbG95",
-            "bWVudFJlcXVlc3QaQC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50",
-            "LnYxYWxwaGExLlN0b3BEZXBsb3ltZW50UmVzcG9uc2VCYFozaW1wcm9iYWJs",
-            "ZS9zcGF0aWFsb3MvZGVwbG95bWVudC92MWFscGhhMTtkZXBsb3ltZW50qgIo",
-            "SW1wcm9iYWJsZS5TcGF0aWFsT1MuRGVwbG95bWVudC5WMUFscGhhMWIGcHJv",
-            "dG8z"));
+            "dG8tdmFsaWRhdG9ycy92YWxpZGF0b3IucHJvdG8aMGdpdGh1Yi5jb20vaW1w",
+            "cm9iYWJsZS9wcm90b2MtZ2VuLWdvY2xpL2NsaS5wcm90bxo7Z2l0aHViLmNv",
+            "bS9pbXByb2JhYmxlLWlvL2dvLXByb3RvLWxvZ2ZpZWxkcy9sb2dmaWVsZHMu",
+            "cHJvdG8i0g0KCkRlcGxveW1lbnQSCgoCaWQYASABKAkS7wEKDHByb2plY3Rf",
+            "bmFtZRgCIAEoCULYAeLfHxMKEV5bYS16MC05X117MywzMn0kys1/DgoMcHJv",
+            "amVjdF9uYW1l6t8fqgESAXAqogFUaGUgbmFtZSBvZiB0aGUgcHJvamVjdCB0",
+            "aGlzIGRlcGxveW1lbnQgYmVsb25ncyB0by4gUmVhZC1vbmx5IG9uY2UgY3Jl",
+            "YXRlZC4gSXQgbXVzdCBiZSBsb3dlciBjYXNlIGxldHRlcnMgb3IgbnVtYmVy",
+            "cyBvciB1bmRlcnNjb3JlcyBhbmQgMy0zMiBjaGFyYWN0ZXJzIGluIGxlbmd0",
+            "aC4wARL0AQoEbmFtZRgDIAEoCULlAeLfHxMKEV5bYS16MC05X117MywzMn0k",
+            "ys1/EQoPZGVwbG95bWVudF9uYW1l6t8ftAESAW4qrAFUaGUgbmFtZSBvZiB0",
+            "aGUgZGVwbG95bWVudC4gUmVhZC1vbmx5IG9uY2UgY3JlYXRlZC4gWW91IGNo",
+            "b29zZSB0aGUgZGVwbG95bWVudCdzIG5hbWUuIEl0IG11c3QgYmUgbG93ZXIg",
+            "Y2FzZSBsZXR0ZXJzIG9yIG51bWJlcnMgb3IgdW5kZXJzY29yZXMgYW5kIDMt",
+            "MzIgY2hhcmFjdGVycyBpbiBsZW5ndGguMAESEwoLcmVnaW9uX2NvZGUYBCAB",
+            "KAkSFAoMY2x1c3Rlcl9jb2RlGAUgASgJEqsBCgthc3NlbWJseV9pZBgHIAEo",
+            "CUKVAerfH5ABEgFhKooBVGhlIGFzc2VtYmx5IHRvIHVzZSBmb3IgdGhlIGRl",
+            "cGxveW1lbnQuIFJlYWQtb25seSBvbmNlIGNyZWF0ZWQuIFRoaXMgcGFyYW1l",
+            "dGVyIG5lZWRzIHRvIGJlIHNwZWNpZmllZCBmb3IgdGhlIGNsb3VkIGFuZCBs",
+            "ZWZ0IGVtcHR5IGxvY2FsbHkuEv4BChRzdGFydGluZ19zbmFwc2hvdF9pZBgI",
+            "IAEoCULfAerfH9oBEgFzKtQBVGhlIHN0YXJ0aW5nIHNuYXBzaG90IGZvciB0",
+            "aGUgZGVwbG95bWVudC4gUmVhZC1vbmx5IG9uY2UgY3JlYXRlZC4gRm9yIGNs",
+            "b3VkIGRlcGxveW1lbnRzLCB5b3UgbXVzdCBwcm92aWRlIGEgc3RhcnRpbmcg",
+            "c25hcHNob3QuIEZvciBsb2NhbCBkZXBsb3ltZW50cywgaWYgeW91IGRvbid0",
+            "IHByb3ZpZGUgYSBzdGFydGluZyBzbmFwc2hvdCwgaXQgdXNlcyB0aGUgZGVm",
+            "YXVsdC4SCwoDdGFnGAkgAygJEksKBnN0YXR1cxgKIAEoDjI7LmltcHJvYmFi",
+            "bGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuRGVwbG95bWVudC5T",
+            "dGF0dXMSVQoNbGF1bmNoX2NvbmZpZxgLIAEoCzI2LmltcHJvYmFibGUuc3Bh",
+            "dGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuTGF1bmNoQ29uZmlnQgbq3x8C",
+            "OAESSgoMd29ya2VyX2ZsYWdzGAwgAygLMjQuaW1wcm9iYWJsZS5zcGF0aWFs",
+            "b3MuZGVwbG95bWVudC52MWFscGhhMS5Xb3JrZXJGbGFnEk0KC3BsYXllcl9p",
+            "bmZvGA0gASgLMjQuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52",
+            "MWFscGhhMS5QbGF5ZXJJbmZvQgIYARIuCgpzdGFydF90aW1lGA4gASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglzdG9wX3RpbWUYDyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEl4KHHdvcmtlcl9jb25uZWN0",
+            "aW9uX2NhcGFjaXRpZXMYECADKAsyOC5pbXByb2JhYmxlLnNwYXRpYWxvcy5k",
+            "ZXBsb3ltZW50LnYxYWxwaGExLldvcmtlckNhcGFjaXR5EmAKHXdvcmtlcl9j",
+            "b25uZWN0aW9uX3JhdGVfbGltaXRzGBEgAygLMjkuaW1wcm9iYWJsZS5zcGF0",
+            "aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5Xb3JrZXJSYXRlTGltaXQSEwoL",
+            "ZGVzY3JpcHRpb24YEiABKAkSFwoPcnVudGltZV92ZXJzaW9uGBMgASgJIloK",
+            "BlN0YXR1cxILCgdVTktOT1dOEAASDAoIU1RBUlRJTkcQZBIMCgdSVU5OSU5H",
+            "EMgBEg0KCFNUT1BQSU5HEKwCEgwKB1NUT1BQRUQQkAMSCgoFRVJST1IQ9AMi",
+            "aAoOV29ya2VyQ2FwYWNpdHkSEwoLd29ya2VyX3R5cGUYASABKAkSJQoMbWF4",
+            "X2NhcGFjaXR5GAIgASgFQg/i3x8LEP///////////wESGgoScmVtYWluaW5n",
+            "X2NhcGFjaXR5GAMgASgFInEKD1dvcmtlclJhdGVMaW1pdBITCgt3b3JrZXJf",
+            "dHlwZRgBIAEoCRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIcChRyZXF1ZXN0c19pbl9kdXJhdGlvbhgDIAEoDSLKAQoM",
+            "TGF1bmNoQ29uZmlnErkBCgtjb25maWdfanNvbhgBIAEoCUKjAerfH54BCg1s",
+            "YXVuY2hfY29uZmlnEgFjKocBVGhlIGRlcGxveW1lbnQgbGF1bmNoIGNvbmZp",
+            "Z3VyYXRpb24sIHN1cHBsaWVkIGFzIEpTT04uIEZvciBpbmZvcm1hdGlvbiBh",
+            "Ym91dCB0aGUgbGF1bmNoIGNvbmZpZ3VyYXRpb24sIHNlZSB0aGUgU3BhdGlh",
+            "bE9TIGRvY3VtZW50YXRpb24uMAEiPQoKV29ya2VyRmxhZxITCgt3b3JrZXJf",
+            "dHlwZRgBIAEoCRILCgNrZXkYAiABKAkSDQoFdmFsdWUYAyABKAkiTAoKUGxh",
+            "eWVySW5mbxIWCg5hY3RpdmVfcGxheWVycxgBIAEoAxIQCghjYXBhY2l0eRgC",
+            "IAEoAxIUCgxxdWV1ZV9sZW5ndGgYAyABKAMi/wcKFkxpc3REZXBsb3ltZW50",
+            "c1JlcXVlc3QSuQEKDHByb2plY3RfbmFtZRgBIAEoCUKiAeLfHxMKEV5bYS16",
+            "MC05X117MywzMn0k6t8fhgESAXAqf1RoZSBwcm9qZWN0IHRvIGxpc3QgYWxs",
+            "IGRlcGxveW1lbnRzIGZvci4gSXQgbXVzdCBiZSBsb3dlciBjYXNlIGxldHRl",
+            "cnMgb3IgbnVtYmVycyBvciB1bmRlcnNjb3JlcyBhbmQgMy0zMiBjaGFyYWN0",
+            "ZXJzIGluIGxlbmd0aC4wARKaAQoJcGFnZV9zaXplGAIgASgFQoYB4t8fDRD/",
+            "//////////8BGDPq3x9xGgIyMCprVGhlIG1heGltdW0gbnVtYmVyIG9mIGRl",
+            "cGxveW1lbnRzIHRvIHJldHVybiBpbiB0aGUgcmVzcG9uc2UuIEl0IHNob3Vs",
+            "ZCBiZSBub24tbmVnYXRpdmUgYW5kIHNtYWxsZXIgdGhhbiA1MS4SUgoKcGFn",
+            "ZV90b2tlbhgDIAEoCUI+6t8fOio4VGhlIHRva2VuIHRvIGlkZW50aWZ5IHRo",
+            "ZSBzdGFydGluZyBwb2ludCBvZiB0aGUgcmVxdWVzdC4S/gEKD2RlcGxveW1l",
+            "bnRfbmFtZRgEIAEoCULkAeLfHxYKFF4kfF5bYS16MC05X117MywzMn0k6t8f",
+            "xQESAW4qvwFUaGUgbmFtZSBvZiB0aGUgZGVwbG95bWVudC4gTGVhdmUgaXQg",
+            "ZW1wdHkgdG8gbGlzdCBhbGwgZGVwbG95bWVudHMgdW5kZXIgdGhlIGdpdmVu",
+            "IHByb2plY3QuIElmIHByb3ZpZGVkLCBpdCBtdXN0IGJlIGxvd2VyIGNhc2Ug",
+            "bGV0dGVycyBvciBudW1iZXJzIG9yIHVuZGVyc2NvcmVzIGFuZCAzLTMyIGNo",
+            "YXJhY3RlcnMgaW4gbGVuZ3RoLhJACgR2aWV3GAUgASgOMjIuaW1wcm9iYWJs",
+            "ZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5WaWV3VHlwZRKIAQog",
+            "ZGVwbG95bWVudF9zdG9wcGVkX3N0YXR1c19maWx0ZXIYBiABKA4yXi5pbXBy",
+            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkxpc3REZXBs",
+            "b3ltZW50c1JlcXVlc3QuRGVwbG95bWVudFN0b3BwZWRTdGF0dXNGaWx0ZXIi",
+            "agodRGVwbG95bWVudFN0b3BwZWRTdGF0dXNGaWx0ZXISEwoPQUxMX0RFUExP",
+            "WU1FTlRTEAASGwoXTk9UX1NUT1BQRURfREVQTE9ZTUVOVFMQARIXChNTVE9Q",
+            "UEVEX0RFUExPWU1FTlRTEAIifQoXTGlzdERlcGxveW1lbnRzUmVzcG9uc2US",
+            "SQoLZGVwbG95bWVudHMYASADKAsyNC5pbXByb2JhYmxlLnNwYXRpYWxvcy5k",
+            "ZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnQSFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJIlEKFEdldERlcGxveW1lbnRSZXF1ZXN0Ei0KDHByb2plY3Rf",
+            "bmFtZRgBIAEoCUIX4t8fEwoRXlthLXowLTlfXXszLDMyfSQSCgoCaWQYAiAB",
+            "KAkiYQoVR2V0RGVwbG95bWVudFJlc3BvbnNlEkgKCmRlcGxveW1lbnQYASAB",
+            "KAsyNC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGEx",
+            "LkRlcGxveW1lbnQicQoXQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QSVgoKZGVw",
+            "bG95bWVudBgCIAEoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1l",
+            "bnQudjFhbHBoYTEuRGVwbG95bWVudEIM4t8fAiAB6t8fAjgBIhoKGENyZWF0",
+            "ZURlcGxveW1lbnRNZXRhZGF0YSKcAQoXVXBkYXRlRGVwbG95bWVudFJlcXVl",
+            "c3QSUAoKZGVwbG95bWVudBgBIAEoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9z",
+            "LmRlcGxveW1lbnQudjFhbHBoYTEuRGVwbG95bWVudEIG4t8fAiABEi8KC3Vw",
+            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJk",
+            "ChhVcGRhdGVEZXBsb3ltZW50UmVzcG9uc2USSAoKZGVwbG95bWVudBgBIAEo",
+            "CzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEu",
+            "RGVwbG95bWVudCJSChVTdG9wRGVwbG95bWVudFJlcXVlc3QSLQoMcHJvamVj",
+            "dF9uYW1lGAEgASgJQhfi3x8TChFeW2EtejAtOV9dezMsMzJ9JBIKCgJpZBgC",
+            "IAEoCSIYChZTdG9wRGVwbG95bWVudFJlc3BvbnNlIiUKF0RlbGV0ZURlcGxv",
+            "eW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJIhoKGERlbGV0ZURlcGxveW1lbnRN",
+            "ZXRhZGF0YSowCghWaWV3VHlwZRIPCgtVTlNQRUNJRklFRBAAEgkKBUJBU0lD",
+            "EAESCAoERlVMTBACMrcHChFEZXBsb3ltZW50U2VydmljZRLMAQoPTGlzdERl",
+            "cGxveW1lbnRzEkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52",
+            "MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0GkEuaW1wcm9iYWJsZS5z",
+            "cGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNS",
+            "ZXNwb25zZSI06t8fMAoEbGlzdBIoTGlzdHMgZGVwbG95bWVudHMgdW5kZXIg",
+            "YSBnaXZlbiBwcm9qZWN0LhKQAQoNR2V0RGVwbG95bWVudBI+LmltcHJvYmFi",
+            "bGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuR2V0RGVwbG95bWVu",
+            "dFJlcXVlc3QaPy5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYx",
+            "YWxwaGExLkdldERlcGxveW1lbnRSZXNwb25zZRKXAQoQQ3JlYXRlRGVwbG95",
+            "bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBo",
+            "YTEuQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIiHq3x8dCgZjcmVhdGUSE1N0YXJ0IGEgZGVwbG95bWVu",
+            "dC4SdAoQRGVsZXRlRGVwbG95bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9z",
+            "LmRlcGxveW1lbnQudjFhbHBoYTEuRGVsZXRlRGVwbG95bWVudFJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uEpkBChBVcGRhdGVEZXBs",
+            "b3ltZW50EkEuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFs",
+            "cGhhMS5VcGRhdGVEZXBsb3ltZW50UmVxdWVzdBpCLmltcHJvYmFibGUuc3Bh",
+            "dGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuVXBkYXRlRGVwbG95bWVudFJl",
+            "c3BvbnNlEpMBCg5TdG9wRGVwbG95bWVudBI/LmltcHJvYmFibGUuc3BhdGlh",
+            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuU3RvcERlcGxveW1lbnRSZXF1ZXN0",
+            "GkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5T",
+            "dG9wRGVwbG95bWVudFJlc3BvbnNlQmBaM2ltcHJvYmFibGUvc3BhdGlhbG9z",
+            "L2RlcGxveW1lbnQvdjFhbHBoYTE7ZGVwbG95bWVudKoCKEltcHJvYmFibGUu",
+            "U3BhdGlhbE9TLkRlcGxveW1lbnQuVjFBbHBoYTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, global::Cli.CliReflection.Descriptor, global::Improbable.LogfieldsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment), global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Parser, new[]{ "Id", "ProjectName", "Name", "RegionCode", "ClusterCode", "AssemblyId", "StartingSnapshotId", "Tag", "Status", "LaunchConfig", "WorkerFlags", "PlayerInfo", "StartTime", "StopTime", "WorkerConnectionCapacities", "WorkerConnectionRateLimits", "Description", "RuntimeVersion" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Deployment.Types.Status) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerCapacity), global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerCapacity.Parser, new[]{ "WorkerType", "MaxCapacity", "RemainingCapacity" }, null, null, null),
@@ -127,7 +168,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentRequest.Parser, new[]{ "Deployment", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentResponse.Parser, new[]{ "Deployment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest.Parser, new[]{ "ProjectName", "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -210,7 +253,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// A unique identifier for the deployment. Read-only.
+    /// A unique identifier for the deployment. Read-only. The deployment's `id` is assigned automatically and uniquely identifies a particular run of a deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -227,7 +270,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// Read-only once created.
     ///
     /// The name of the project this deployment belongs to.
-    /// It must conform to the regex: ^[a-z0-9_]{3,32}$
+    /// It must be lower case letters or numbers or underscores and 3-32 characters in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -245,7 +288,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The name of the deployment.
     ///
-    /// It must conform to the regex: ^[a-z0-9_]{3,32}$
+    /// You choose the deployment's name. It must be lower case letters or numbers or underscores and 3-32 characters in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -262,7 +305,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// Read-only once created.
     ///
     /// The region that the deployment is running in.
-    /// The supported regions are "EU", "US", and "AP". Leave blank if unknown.
+    /// The supported regions are "EU" and "US" (and "AP" for specific users who have requested access). Leave blank if unknown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RegionCode {
@@ -294,7 +337,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Read-only once created.
     ///
-    /// The assembly to use for the deployment.
+    /// The assembly to use for the deployment. You must supply this for cloud deployments. Local deployments automatically use
+    /// the assembly located in the folder containing the `spatialos.json` file, so any value you supply is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AssemblyId {
@@ -310,7 +354,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Read-only once created.
     ///
-    /// The starting snapshot for the deployment.
+    /// The starting snapshot for the deployment. For cloud deployments, you must provide a starting snapshot.
+    /// For local deployments, if you don't provide a starting snapshot, it uses the default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StartingSnapshotId {
@@ -376,7 +421,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The worker flags that the deployment exposes at runtime.
     ///
-    /// Only applicable to running deployments. It is omitted for deployments of other states.
+    /// Only applicable to running deployments. It is omitted for deployments in other states.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag> WorkerFlags {
@@ -496,9 +541,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public const int RuntimeVersionFieldNumber = 19;
     private string runtimeVersion_ = "";
     /// <summary>
-    /// Read-only
+    /// Read-only once created. Only use this field if you were directed to do so by SpatialOS support
     ///
-    /// The version of the Runtime used to start this deployment
+    /// The version of the Runtime to start the deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RuntimeVersion {
@@ -1287,7 +1332,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// The launch configuration for the deployment, supplied as JSON.
     /// For information about the launch configuration, see the SpatialOS documentation:
-    /// https://docs.improbable.io/reference/latest/shared/reference/file-formats/launch-config
+    /// https://docs.improbable.io/reference/latest/shared/project-layout/launch-config
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ConfigJson {
@@ -1857,7 +1902,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public const int DeploymentStoppedStatusFilterFieldNumber = 6;
     private global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter deploymentStoppedStatusFilter_ = 0;
     /// <summary>
-    /// Filter for all deployments, deployments that are stopped or deployments that are not stopped.
+    /// Filter for all deployments, or filter by whether deployments are stopped or not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter DeploymentStoppedStatusFilter {
@@ -2755,7 +2800,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Use `update_mask` to provide partial object updates.
     ///
-    /// We only support these fields, as in the proto serialised way:
+    /// We support the following fields, which must be passed in protobuf serialized form:
     /// `tag`
     /// `worker_flags`
     /// `worker_connection_capacities`
@@ -3226,6 +3271,215 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(StopDeploymentResponse other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DeleteDeploymentRequest : pb::IMessage<DeleteDeploymentRequest> {
+    private static readonly pb::MessageParser<DeleteDeploymentRequest> _parser = new pb::MessageParser<DeleteDeploymentRequest>(() => new DeleteDeploymentRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteDeploymentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentRequest(DeleteDeploymentRequest other) : this() {
+      id_ = other.id_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentRequest Clone() {
+      return new DeleteDeploymentRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteDeploymentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteDeploymentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteDeploymentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Metadata for DeleteDeployment operations.
+  /// </summary>
+  public sealed partial class DeleteDeploymentMetadata : pb::IMessage<DeleteDeploymentMetadata> {
+    private static readonly pb::MessageParser<DeleteDeploymentMetadata> _parser = new pb::MessageParser<DeleteDeploymentMetadata>(() => new DeleteDeploymentMetadata());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteDeploymentMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentMetadata(DeleteDeploymentMetadata other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteDeploymentMetadata Clone() {
+      return new DeleteDeploymentMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteDeploymentMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteDeploymentMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteDeploymentMetadata other) {
       if (other == null) {
         return;
       }
