@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+TOOLS_DIR="$(dirname "$0")"
+
+source "${TOOLS_DIR}"/../scripts/includes/os.sh
+
+# All information required for the script to select or, if necessary, install bazel is contained
+# in this code block.
+# If a higher version of bazel is required, update `REQUIRED_BAZEL_VERSION` and the
+# `REQUIRED_BAZEL_SHA256` values for each platform.
+REQUIRED_BAZEL_VERSION="0.18.1"
+BAZEL_INSTALLATION_DIR="${HOME}/.bazel_installations/${REQUIRED_BAZEL_VERSION}"
+if isLinux; then
+  REQUIRED_BAZEL_SHA256="68d4bdd3d467030561f0859765252286aae62146e8262d3981335a272b461498"
+  REQUIRED_BAZEL_SHA256CMD="sha256sum"
+  DOWNLOAD_CMD="wget -q --no-clobber -O bazel"
+  BAZEL_EXE="bazel-${REQUIRED_BAZEL_VERSION}-linux-x86_64"
+elif isMacOS; then
+  REQUIRED_BAZEL_SHA256="7502a37f24f41498e0d09b95ec43be1a5a2aadc4398c5313432da8ced8584ee2"
+  REQUIRED_BAZEL_SHA256CMD="shasum -a 256"
+  DOWNLOAD_CMD="wget -q --no-clobber -O bazel"
+  BAZEL_EXE="bazel-${REQUIRED_BAZEL_VERSION}-darwin-x86_64"
+else
+  REQUIRED_BAZEL_SHA256="5c491b74d3d11bedf6e4c62b111cd69a0d97cd1fbe2446a07aa5bb17d14dc7f0"
+  REQUIRED_BAZEL_SHA256CMD="sha256sum"
+  DOWNLOAD_CMD="curl -L -s -o bazel"
+  # Windows does not have an installer but retrieves the executable directly.
+  BAZEL_EXE="bazel-${REQUIRED_BAZEL_VERSION}-windows-x86_64.exe"
+fi
+
+BAZEL_TARGET_PATH="${BAZEL_INSTALLATION_DIR}/bin/bazel"
+
+# Check if correct version is already installed.
+if [ -f "${BAZEL_TARGET_PATH}" ]; then
+  exec -a "$0" "${BAZEL_TARGET_PATH}" "$@"
+fi
+
+cat << EOM
+=================================================
+Bazel version ${REQUIRED_BAZEL_VERSION} is not
+installed under ~/.bazel_installations
+
+Installing bazel ${REQUIRED_BAZEL_VERSION} now...
+=================================================
+EOM
+
+# Create root directory if needed.
+if [ ! -d "${BAZEL_INSTALLATION_DIR}" ]; then
+  echo "Installation directory created."
+  mkdir -p "${BAZEL_INSTALLATION_DIR}"
+fi
+
+function _are_checksums_equal() {
+  CHECKSUM_A=$1
+  CHECKSUM_B=$2
+  # Split apart the checksum from the file name by splitting the returned string by the contained
+  # space; the checksum has the format:
+  # xxxxxx...xxxxx <filename>
+  CHECKSUM_A_PARTS=(${CHECKSUM_A})
+  CHECKSUM_B_PARTS=(${CHECKSUM_B})
+
+  if [[ "${CHECKSUM_A_PARTS[0]}" == "${CHECKSUM_B_PARTS[0]}" ]]; then
+    return 0 # True
+  else
+    return 1 # False
+  fi
+}
+
+# Install correct bazel version.
+# If we don't have a local Bazel install at this point we need to retrieve the right version from GitHub.
+mkdir -p "${BAZEL_INSTALLATION_DIR}/bin/tmp"
+pushd "${BAZEL_INSTALLATION_DIR}/bin/tmp"
+rm bazel 2>/dev/null || true # Remove bazel binary if already present in tmp dir - indicates previous failed download.
+echo "Starting download of bazel ${REQUIRED_BAZEL_VERSION}..."
+${DOWNLOAD_CMD} "https://github.com/bazelbuild/bazel/releases/download/${REQUIRED_BAZEL_VERSION}/${BAZEL_EXE}"
+echo "Download finished."
+echo "Testing download file integrity..."
+CALCULATED_CHECKSUM="$(${REQUIRED_BAZEL_SHA256CMD} bazel)"
+if ! _are_checksums_equal "${CALCULATED_CHECKSUM}" "${REQUIRED_BAZEL_SHA256}"; then
+  cat <<EOM
+  ABORT - Downloaded Bazel failed the SHA-256 hash check.
+  ABORT - Expected: ${REQUIRED_BAZEL_SHA256}  bazel
+  ABORT - Found:    ${CALCULATED_CHECKSUM}
+EOM
+  exit 1
+fi
+# Mark downloaded file executable and move out of tmp directory.
+chmod a+x "bazel"
+mv bazel ..
+popd
+
+echo "Executing downloaded bazel..."
+exec -a "$0" "${BAZEL_TARGET_PATH}" "$@"
