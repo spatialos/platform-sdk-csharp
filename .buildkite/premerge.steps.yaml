@@ -11,10 +11,12 @@ common: &common
   agents:
     # Choose another capable_of_building once/if you have one.
     # If you parasite to platform's, you can be broken if the platform agents change.
-    # TODO(EV): Make docs better. (https://github.com/improbable/platform/blob/master/docs/product-groups/dev-workflow/buildkite/how-to-deploy-change-to-agents.md)
+    # See https://code.i8e.io/github.com/improbable/platform/-/blob/docs/product-groups/dev-workflow/buildkite/how-to-add-a-new-build-capability.md
     - "capable_of_building=platform"
     - "environment=production"
-    - "queue=v2-1545678177-378924f50bfed5a0-------z"
+    - "permission_set=builder"
+    - "platform=linux"
+    - "queue=${CI_BUILDER_QUEUE:-v2-1553093147-c5086c3db10e3761-------z}"
   timeout_in_minutes: 60 # TODO(ENG-548): reduce timeout once agent-cold-start is optimised.
   retry:
     automatic:
