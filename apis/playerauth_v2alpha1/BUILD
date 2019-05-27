@@ -27,7 +27,7 @@ csharp_proto_compile(
         "@com_github_mwitkow_go_proto_validators_proto//:proto",
     ],
     protos = [
-        "@improbable_platform//proto/improbable/spatialos/playerauth:protos",
+        "@improbable_platform//proto/improbable/spatialos/playerauth/v2alpha1:protos",
     ],
     with_grpc = True,
 )
