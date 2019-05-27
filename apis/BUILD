@@ -26,6 +26,8 @@ proto_library(
         ":platform_api_protos",
     ],
     deps = [
+        "@improbable_protoc_gen_gocli//:gocli_proto",
+        "@com_github_improbable_io_go_proto_logfields_proto//:logfields_proto",
         "@com_github_googleapis_googleapis//:important_protos_lib",
         "@com_github_mwitkow_go_proto_validators_proto//:validator_proto",
         "@com_google_protobuf//:field_mask_proto",

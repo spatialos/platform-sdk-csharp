@@ -61,8 +61,8 @@ git_repository(
 git_repository(
     name = "improbable_platform",
     remote = "git@github.com:improbable/platform.git",
-    commit = "777672f36dbc103621ee04dec1786da2cdd48599",
-    shallow_since = "2019-02-01",
+    commit = "e0315520c25f65716ca119d85fc76a967916101c",
+    shallow_since = "2019-04-01",
 )
 
 new_git_repository(
@@ -84,6 +84,22 @@ new_git_repository(
     remote = "https://github.com/improbable-io/go-proto-validators",
     build_file = "@//third_party/proto_validators:BUILD",
     strip_prefix = "src",
+)
+
+new_git_repository(
+    name = "improbable_protoc_gen_gocli",
+    commit = "7d7a36b1ec7123d2af3105fe3a3692f8e56880f2",
+    remote = "git@github.com:improbable/protoc-gen-gocli.git",
+    build_file = "@//third_party/protoc_gen_gocli:BUILD",
+    strip_prefix = "bazel_proto",
+)
+
+new_git_repository(
+   name = "com_github_improbable_io_go_proto_logfields_proto",
+   commit = "6e66e74a1763de7e1372586f671d4a88023297eb",
+   remote = "https://github.com/improbable-io/go-proto-logfields",
+   build_file = "@//third_party/proto_logfields:BUILD",
+   strip_prefix = "src",
 )
 
 maven_jar(
