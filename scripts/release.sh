@@ -2,7 +2,7 @@
 
 set -e -u -o pipefail
 
-REPO_ROOT="$(dirname "$0")/.."
+REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "${REPO_ROOT}"
 
 DOCKER_IMAGE="platform-sdk/csharp"
