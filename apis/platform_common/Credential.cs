@@ -8,13 +8,15 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Auth.OAuth2.Responses;
 
-namespace Improbable.SpatialOS.Platform.Common {
+namespace Improbable.SpatialOS.Platform.Common
+{
     /// <inheritdoc />
     /// <summary>
     ///     This is the abstract base class for SpatialOS platform credentials. Clients should use a concrete credential provider
     ///     such as <see cref="PlatformRefreshTokenCredential" /> instead of trying to instantiate this class directly.
     /// </summary>
-    public abstract class PlatformCredential : UserCredential {
+    public abstract class PlatformCredential : UserCredential
+    {
         /// <inheritdoc />
         /// <summary>
         /// </summary>
@@ -29,17 +31,19 @@ namespace Improbable.SpatialOS.Platform.Common {
     /// <summary>
     ///     This provides support to automatically acquire access tokens from SpatialOS refresh tokens.
     /// </summary>
-    public class PlatformRefreshTokenCredential : PlatformCredential {
+    public class PlatformRefreshTokenCredential : PlatformCredential
+    {
         private const string DefaultTokenFileEnvVar = "SPATIALOS_REFRESH_TOKEN_FILE";
         private const string DummyUserId = "dummy_user_id";
         private const string AuthorizationServerUrl = "https://auth.improbable.io/auth/v1/authcode";
         private const string TokenServerUrl = "https://auth.improbable.io/auth/v1/token";
-        private const string RefreshTokenNotFoundMessage = "Please check if environment variable "+DefaultTokenFileEnvVar+" is set to the correct path or try running `spatial init` to fetch and store a new refresh token locally.";
+        private const string RefreshTokenNotFoundMessage = "Please check if environment variable " + DefaultTokenFileEnvVar + " is set to the correct path or try running `spatial init` to fetch and store a new refresh token locally.";
 
         private static readonly Lazy<PlatformRefreshTokenCredential> AutoDetectedLazy =
             new Lazy<PlatformRefreshTokenCredential>(GetTokenCredentialAutomatically);
 
-        private static readonly ClientSecrets DefaultSecrets = new ClientSecrets {
+        private static readonly ClientSecrets DefaultSecrets = new ClientSecrets
+        {
             // This client ID is purposely chosen to be compatible with the default settings of the spatial CLI tool
             // so that the SDK can reuse the refresh token retrieved and stored via spatial CLI.
             ClientId = "improbable_cli_client_go",
@@ -48,7 +52,7 @@ namespace Improbable.SpatialOS.Platform.Common {
                 "SuperTrouperBeamsAreGonnaBlindMeButIWontFeelBlueLifeIAwaysDoCauseSomewhereInTheCrowdTheresYou"
         };
 
-        private static readonly IEnumerable<string> DefaultScopes = new List<string> {"[*]:*"};
+        private static readonly IEnumerable<string> DefaultScopes = new List<string> { "[*]:*" };
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="PlatformRefreshTokenCredential" /> class that uses the supplied
@@ -58,18 +62,23 @@ namespace Improbable.SpatialOS.Platform.Common {
         /// <param name="tokenServerUrl">The URL of the OAuth token server. Defaults to Improbable's production OAuth token server.</param>
         /// <param name="scopes">The scope to request for the OAuth server. Defaults to "[*]:*".</param>
         /// <param name="authServerUrl">The URL of the OAuth auth server. Defaults to Improbable's production OAuth auth server.</param>
+        /// <param name="clientSecrets">The client secrets for the SpatialOS refresh token.</param>
         public PlatformRefreshTokenCredential(string refreshToken, string authServerUrl = null,
-            string tokenServerUrl = null, IEnumerable<string> scopes = null)
+            string tokenServerUrl = null, IEnumerable<string> scopes = null, ClientSecrets clientSecrets = null)
             : base(
-                new AuthorizationCodeFlow(new AuthorizationCodeFlow.Initializer(
-                    authServerUrl ?? AuthorizationServerUrl,
-                    tokenServerUrl ?? TokenServerUrl) {
-                    Scopes = scopes ?? DefaultScopes,
-                    ClientSecrets = DefaultSecrets
-                }),
+                new AuthorizationCodeFlow(
+                    new AuthorizationCodeFlow.Initializer(
+                        authServerUrl ?? AuthorizationServerUrl,
+                        tokenServerUrl ?? TokenServerUrl
+                    )
+                    {
+                        Scopes = scopes ?? DefaultScopes,
+                        ClientSecrets = clientSecrets ?? DefaultSecrets
+                    }),
                 DummyUserId,
-                new TokenResponse {RefreshToken = refreshToken}
-            ) { }
+                new TokenResponse { RefreshToken = refreshToken }
+            )
+        { }
 
         /// <inheritdoc />
         /// <summary>
@@ -104,19 +113,36 @@ namespace Improbable.SpatialOS.Platform.Common {
             };
 
             var tokenFile = possibleTokenFiles.FirstOrDefault(File.Exists);
-            if (tokenFile == null)
+            if (tokenFile != null)
             {
-                // None of the possible token files exists
-                throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
+                try
+                {
+                    var refreshToken = File.ReadAllText(tokenFile);
+                    return new PlatformRefreshTokenCredential(refreshToken);
+                }
+                catch (IOException)
+                {
+                    throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
+                }
             }
 
-            try {
-                var refreshToken = File.ReadAllText(tokenFile);
-                return new PlatformRefreshTokenCredential(refreshToken);
+            // None of the possible token files exists. Last fallback is the credentials set in the environment of server workers.
+            var serverRefreshToken = Environment.GetEnvironmentVariable("IMPROBABLE_PLATFORM_REFRESH_TOKEN");
+            if (serverRefreshToken != "")
+            {
+                var clientSecrets = new ClientSecrets
+                {
+                    ClientId = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_ID"),
+                    ClientSecret = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_SECRET")
+                };
+                if (clientSecrets.ClientId != "" && clientSecrets.ClientSecret != "")
+                {
+                    var credentials = new PlatformRefreshTokenCredential(serverRefreshToken, null, null, null, clientSecrets);
+                }
             }
-            catch (IOException) {
-                throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
-            }
+
+            // Fail if no form of credentials could be found.
+            throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
         }
     }
 }
