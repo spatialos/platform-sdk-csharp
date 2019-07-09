@@ -66,7 +66,7 @@ git_repository(
     # the following script inside the *platform* repo to determine the value you should put in the
     # "shallow_since" field based on the commit (replace <commit> with the actual commit hash):
     # $ date --date="$(git show --pretty=format:'%cD' <commit> | head --lines=1)-1 day" "+%F"
-    shallow_since = "2019-04-01",
+    shallow_since = "2019-07-08",
 )
 
 new_git_repository(

@@ -31,7 +31,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "dG8tdmFsaWRhdG9ycy92YWxpZGF0b3IucHJvdG8aMGdpdGh1Yi5jb20vaW1w",
             "cm9iYWJsZS9wcm90b2MtZ2VuLWdvY2xpL2NsaS5wcm90bxo7Z2l0aHViLmNv",
             "bS9pbXByb2JhYmxlLWlvL2dvLXByb3RvLWxvZ2ZpZWxkcy9sb2dmaWVsZHMu",
-            "cHJvdG8i0g0KCkRlcGxveW1lbnQSCgoCaWQYASABKAkS7wEKDHByb2plY3Rf",
+            "cHJvdG8i7w4KCkRlcGxveW1lbnQSCgoCaWQYASABKAkS7wEKDHByb2plY3Rf",
             "bmFtZRgCIAEoCULYAeLfHxMKEV5bYS16MC05X117MywzMn0kys1/DgoMcHJv",
             "amVjdF9uYW1l6t8fqgESAXAqogFUaGUgbmFtZSBvZiB0aGUgcHJvamVjdCB0",
             "aGlzIGRlcGxveW1lbnQgYmVsb25ncyB0by4gUmVhZC1vbmx5IG9uY2UgY3Jl",
@@ -67,42 +67,56 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "ZXBsb3ltZW50LnYxYWxwaGExLldvcmtlckNhcGFjaXR5EmAKHXdvcmtlcl9j",
             "b25uZWN0aW9uX3JhdGVfbGltaXRzGBEgAygLMjkuaW1wcm9iYWJsZS5zcGF0",
             "aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5Xb3JrZXJSYXRlTGltaXQSEwoL",
-            "ZGVzY3JpcHRpb24YEiABKAkSFwoPcnVudGltZV92ZXJzaW9uGBMgASgJIloK",
-            "BlN0YXR1cxILCgdVTktOT1dOEAASDAoIU1RBUlRJTkcQZBIMCgdSVU5OSU5H",
-            "EMgBEg0KCFNUT1BQSU5HEKwCEgwKB1NUT1BQRUQQkAMSCgoFRVJST1IQ9AMi",
-            "aAoOV29ya2VyQ2FwYWNpdHkSEwoLd29ya2VyX3R5cGUYASABKAkSJQoMbWF4",
-            "X2NhcGFjaXR5GAIgASgFQg/i3x8LEP///////////wESGgoScmVtYWluaW5n",
-            "X2NhcGFjaXR5GAMgASgFInEKD1dvcmtlclJhdGVMaW1pdBITCgt3b3JrZXJf",
-            "dHlwZRgBIAEoCRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIcChRyZXF1ZXN0c19pbl9kdXJhdGlvbhgDIAEoDSLKAQoM",
-            "TGF1bmNoQ29uZmlnErkBCgtjb25maWdfanNvbhgBIAEoCUKjAerfH54BCg1s",
-            "YXVuY2hfY29uZmlnEgFjKocBVGhlIGRlcGxveW1lbnQgbGF1bmNoIGNvbmZp",
-            "Z3VyYXRpb24sIHN1cHBsaWVkIGFzIEpTT04uIEZvciBpbmZvcm1hdGlvbiBh",
-            "Ym91dCB0aGUgbGF1bmNoIGNvbmZpZ3VyYXRpb24sIHNlZSB0aGUgU3BhdGlh",
-            "bE9TIGRvY3VtZW50YXRpb24uMAEiPQoKV29ya2VyRmxhZxITCgt3b3JrZXJf",
-            "dHlwZRgBIAEoCRILCgNrZXkYAiABKAkSDQoFdmFsdWUYAyABKAkiTAoKUGxh",
-            "eWVySW5mbxIWCg5hY3RpdmVfcGxheWVycxgBIAEoAxIQCghjYXBhY2l0eRgC",
-            "IAEoAxIUCgxxdWV1ZV9sZW5ndGgYAyABKAMi/wcKFkxpc3REZXBsb3ltZW50",
-            "c1JlcXVlc3QSuQEKDHByb2plY3RfbmFtZRgBIAEoCUKiAeLfHxMKEV5bYS16",
-            "MC05X117MywzMn0k6t8fhgESAXAqf1RoZSBwcm9qZWN0IHRvIGxpc3QgYWxs",
-            "IGRlcGxveW1lbnRzIGZvci4gSXQgbXVzdCBiZSBsb3dlciBjYXNlIGxldHRl",
-            "cnMgb3IgbnVtYmVycyBvciB1bmRlcnNjb3JlcyBhbmQgMy0zMiBjaGFyYWN0",
-            "ZXJzIGluIGxlbmd0aC4wARKaAQoJcGFnZV9zaXplGAIgASgFQoYB4t8fDRD/",
-            "//////////8BGDPq3x9xGgIyMCprVGhlIG1heGltdW0gbnVtYmVyIG9mIGRl",
-            "cGxveW1lbnRzIHRvIHJldHVybiBpbiB0aGUgcmVzcG9uc2UuIEl0IHNob3Vs",
-            "ZCBiZSBub24tbmVnYXRpdmUgYW5kIHNtYWxsZXIgdGhhbiA1MS4SUgoKcGFn",
-            "ZV90b2tlbhgDIAEoCUI+6t8fOio4VGhlIHRva2VuIHRvIGlkZW50aWZ5IHRo",
-            "ZSBzdGFydGluZyBwb2ludCBvZiB0aGUgcmVxdWVzdC4S/gEKD2RlcGxveW1l",
-            "bnRfbmFtZRgEIAEoCULkAeLfHxYKFF4kfF5bYS16MC05X117MywzMn0k6t8f",
-            "xQESAW4qvwFUaGUgbmFtZSBvZiB0aGUgZGVwbG95bWVudC4gTGVhdmUgaXQg",
-            "ZW1wdHkgdG8gbGlzdCBhbGwgZGVwbG95bWVudHMgdW5kZXIgdGhlIGdpdmVu",
-            "IHByb2plY3QuIElmIHByb3ZpZGVkLCBpdCBtdXN0IGJlIGxvd2VyIGNhc2Ug",
-            "bGV0dGVycyBvciBudW1iZXJzIG9yIHVuZGVyc2NvcmVzIGFuZCAzLTMyIGNo",
-            "YXJhY3RlcnMgaW4gbGVuZ3RoLhJACgR2aWV3GAUgASgOMjIuaW1wcm9iYWJs",
-            "ZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5WaWV3VHlwZRKIAQog",
-            "ZGVwbG95bWVudF9zdG9wcGVkX3N0YXR1c19maWx0ZXIYBiABKA4yXi5pbXBy",
-            "b2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkxpc3REZXBs",
-            "b3ltZW50c1JlcXVlc3QuRGVwbG95bWVudFN0b3BwZWRTdGF0dXNGaWx0ZXIi",
+            "ZGVzY3JpcHRpb24YEiABKAkSswEKD3J1bnRpbWVfdmVyc2lvbhgTIAEoCUKZ",
+            "AerfH5QBChxleHBlcmltZW50YWwtcnVudGltZS12ZXJzaW9uKnRUaGUgZXhw",
+            "ZXJpbWVudGFsIHZlcnNpb24gb2YgdGhlIFJ1bnRpbWUgdG8gc3RhcnQgdGhl",
+            "IGRlcGxveW1lbnQgd2l0aC4gRGVmYXVsdHMgdG8gdXNpbmcgdGhlIHN0YWJs",
+            "ZSByZWxlYXNlZCB2ZXJzaW9uLiJaCgZTdGF0dXMSCwoHVU5LTk9XThAAEgwK",
+            "CFNUQVJUSU5HEGQSDAoHUlVOTklORxDIARINCghTVE9QUElORxCsAhIMCgdT",
+            "VE9QUEVEEJADEgoKBUVSUk9SEPQDImgKDldvcmtlckNhcGFjaXR5EhMKC3dv",
+            "cmtlcl90eXBlGAEgASgJEiUKDG1heF9jYXBhY2l0eRgCIAEoBUIP4t8fCxD/",
+            "//////////8BEhoKEnJlbWFpbmluZ19jYXBhY2l0eRgDIAEoBSJxCg9Xb3Jr",
+            "ZXJSYXRlTGltaXQSEwoLd29ya2VyX3R5cGUYASABKAkSKwoIZHVyYXRpb24Y",
+            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SHAoUcmVxdWVzdHNf",
+            "aW5fZHVyYXRpb24YAyABKA0iygEKDExhdW5jaENvbmZpZxK5AQoLY29uZmln",
+            "X2pzb24YASABKAlCowHq3x+eAQoNbGF1bmNoLWNvbmZpZxIBYyqHAVRoZSBk",
+            "ZXBsb3ltZW50IGxhdW5jaCBjb25maWd1cmF0aW9uLCBzdXBwbGllZCBhcyBK",
+            "U09OLiBGb3IgaW5mb3JtYXRpb24gYWJvdXQgdGhlIGxhdW5jaCBjb25maWd1",
+            "cmF0aW9uLCBzZWUgdGhlIFNwYXRpYWxPUyBkb2N1bWVudGF0aW9uLjABIj0K",
+            "CldvcmtlckZsYWcSEwoLd29ya2VyX3R5cGUYASABKAkSCwoDa2V5GAIgASgJ",
+            "Eg0KBXZhbHVlGAMgASgJIkwKClBsYXllckluZm8SFgoOYWN0aXZlX3BsYXll",
+            "cnMYASABKAMSEAoIY2FwYWNpdHkYAiABKAMSFAoMcXVldWVfbGVuZ3RoGAMg",
+            "ASgDItgLChZMaXN0RGVwbG95bWVudHNSZXF1ZXN0ErkBCgxwcm9qZWN0X25h",
+            "bWUYASABKAlCogHi3x8TChFeW2EtejAtOV9dezMsMzJ9JOrfH4YBEgFwKn9U",
+            "aGUgcHJvamVjdCB0byBsaXN0IGFsbCBkZXBsb3ltZW50cyBmb3IuIEl0IG11",
+            "c3QgYmUgbG93ZXIgY2FzZSBsZXR0ZXJzIG9yIG51bWJlcnMgb3IgdW5kZXJz",
+            "Y29yZXMgYW5kIDMtMzIgY2hhcmFjdGVycyBpbiBsZW5ndGguMAESmgEKCXBh",
+            "Z2Vfc2l6ZRgCIAEoBUKGAeLfHw0Q////////////ARgz6t8fcRoCMjAqa1Ro",
+            "ZSBtYXhpbXVtIG51bWJlciBvZiBkZXBsb3ltZW50cyB0byByZXR1cm4gaW4g",
+            "dGhlIHJlc3BvbnNlLiBJdCBzaG91bGQgYmUgbm9uLW5lZ2F0aXZlIGFuZCBz",
+            "bWFsbGVyIHRoYW4gNTEuElIKCnBhZ2VfdG9rZW4YAyABKAlCPurfHzoqOFRo",
+            "ZSB0b2tlbiB0byBpZGVudGlmeSB0aGUgc3RhcnRpbmcgcG9pbnQgb2YgdGhl",
+            "IHJlcXVlc3QuEv4BCg9kZXBsb3ltZW50X25hbWUYBCABKAlC5AHi3x8WChRe",
+            "JHxeW2EtejAtOV9dezMsMzJ9JOrfH8UBEgFuKr8BVGhlIG5hbWUgb2YgdGhl",
+            "IGRlcGxveW1lbnQuIExlYXZlIGl0IGVtcHR5IHRvIGxpc3QgYWxsIGRlcGxv",
+            "eW1lbnRzIHVuZGVyIHRoZSBnaXZlbiBwcm9qZWN0LiBJZiBwcm92aWRlZCwg",
+            "aXQgbXVzdCBiZSBsb3dlciBjYXNlIGxldHRlcnMgb3IgbnVtYmVycyBvciB1",
+            "bmRlcnNjb3JlcyBhbmQgMy0zMiBjaGFyYWN0ZXJzIGluIGxlbmd0aC4S1AIK",
+            "BHZpZXcYBSABKA4yMi5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50",
+            "LnYxYWxwaGExLlZpZXdUeXBlQpEC6t8fjAISAXYaBEZVTEwqgAJUaGUgYW1v",
+            "dW50IG9mIGluZm9ybWF0aW9uIHRvIGJlIHJldHJpZXZlZCBmb3IgZWFjaCBk",
+            "ZXBsb3ltZW50LiBVc2Ugb25lIG9mOiBCQVNJQyBvciBGVUxMLiBCQVNJQyBp",
+            "cyBxdWlja2VyIGFzIGl0IGRvZXMgbm90IGluY2x1ZGUgUGxheWVySW5mbywg",
+            "V29ya2VyRmxhZ3MsIFdvcmtlckNvbm5lY3Rpb25DYXBhY2l0aWVzLCBvciBX",
+            "b3JrZXJDb25uZWN0aW9uUmF0ZUxpbWl0cy4gRlVMTCByZXR1cm5zIHRoZSBj",
+            "b21wbGV0ZSBkZXBsb3ltZW50IGRhdGEuEokCCiBkZXBsb3ltZW50X3N0b3Bw",
+            "ZWRfc3RhdHVzX2ZpbHRlchgGIAEoDjJeLmltcHJvYmFibGUuc3BhdGlhbG9z",
+            "LmRlcGxveW1lbnQudjFhbHBoYTEuTGlzdERlcGxveW1lbnRzUmVxdWVzdC5E",
+            "ZXBsb3ltZW50U3RvcHBlZFN0YXR1c0ZpbHRlckJ/6t8fewoNc3RhdHVzLWZp",
+            "bHRlchIBZipnVGhlIHR5cGUgb2YgZmlsdGVyIHRvIGFwcGx5LiBVc2Ugb25l",
+            "IG9mOiBBTExfREVQTE9ZTUVOVFMsIE5PVF9TVE9QUEVEX0RFUExPWU1FTlRT",
+            "LCBTVE9QUEVEX0RFUExPWU1FTlRTLhJBCgdmaWx0ZXJzGAcgAygLMjAuaW1w",
+            "cm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5GaWx0ZXIi",
             "agodRGVwbG95bWVudFN0b3BwZWRTdGF0dXNGaWx0ZXISEwoPQUxMX0RFUExP",
             "WU1FTlRTEAASGwoXTk9UX1NUT1BQRURfREVQTE9ZTUVOVFMQARIXChNTVE9Q",
             "UEVEX0RFUExPWU1FTlRTEAIifQoXTGlzdERlcGxveW1lbnRzUmVzcG9uc2US",
@@ -112,7 +126,10 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "bmFtZRgBIAEoCUIX4t8fEwoRXlthLXowLTlfXXszLDMyfSQSCgoCaWQYAiAB",
             "KAkiYQoVR2V0RGVwbG95bWVudFJlc3BvbnNlEkgKCmRlcGxveW1lbnQYASAB",
             "KAsyNC5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGEx",
-            "LkRlcGxveW1lbnQicQoXQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QSVgoKZGVw",
+            "LkRlcGxveW1lbnQihAEKIUdldFJ1bm5pbmdEZXBsb3ltZW50QnlOYW1lUmVx",
+            "dWVzdBItCgxwcm9qZWN0X25hbWUYASABKAlCF+LfHxMKEV5bYS16MC05X117",
+            "MywzMn0kEjAKD2RlcGxveW1lbnRfbmFtZRgCIAEoCUIX4t8fEwoRXlthLXow",
+            "LTlfXXszLDMyfSQicQoXQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QSVgoKZGVw",
             "bG95bWVudBgCIAEoCzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1l",
             "bnQudjFhbHBoYTEuRGVwbG95bWVudEIM4t8fAiAB6t8fAjgBIhoKGENyZWF0",
             "ZURlcGxveW1lbnRNZXRhZGF0YSKcAQoXVXBkYXRlRGVwbG95bWVudFJlcXVl",
@@ -123,33 +140,80 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             "CzI0LmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEu",
             "RGVwbG95bWVudCJSChVTdG9wRGVwbG95bWVudFJlcXVlc3QSLQoMcHJvamVj",
             "dF9uYW1lGAEgASgJQhfi3x8TChFeW2EtejAtOV9dezMsMzJ9JBIKCgJpZBgC",
-            "IAEoCSIYChZTdG9wRGVwbG95bWVudFJlc3BvbnNlIiUKF0RlbGV0ZURlcGxv",
-            "eW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJIhoKGERlbGV0ZURlcGxveW1lbnRN",
-            "ZXRhZGF0YSowCghWaWV3VHlwZRIPCgtVTlNQRUNJRklFRBAAEgkKBUJBU0lD",
-            "EAESCAoERlVMTBACMrcHChFEZXBsb3ltZW50U2VydmljZRLMAQoPTGlzdERl",
-            "cGxveW1lbnRzEkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52",
-            "MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0GkEuaW1wcm9iYWJsZS5z",
-            "cGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNS",
-            "ZXNwb25zZSI06t8fMAoEbGlzdBIoTGlzdHMgZGVwbG95bWVudHMgdW5kZXIg",
-            "YSBnaXZlbiBwcm9qZWN0LhKQAQoNR2V0RGVwbG95bWVudBI+LmltcHJvYmFi",
-            "bGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuR2V0RGVwbG95bWVu",
-            "dFJlcXVlc3QaPy5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYx",
-            "YWxwaGExLkdldERlcGxveW1lbnRSZXNwb25zZRKXAQoQQ3JlYXRlRGVwbG95",
-            "bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBo",
-            "YTEuQ3JlYXRlRGVwbG95bWVudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIiHq3x8dCgZjcmVhdGUSE1N0YXJ0IGEgZGVwbG95bWVu",
-            "dC4SdAoQRGVsZXRlRGVwbG95bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9z",
-            "LmRlcGxveW1lbnQudjFhbHBoYTEuRGVsZXRlRGVwbG95bWVudFJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uEpkBChBVcGRhdGVEZXBs",
-            "b3ltZW50EkEuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFs",
-            "cGhhMS5VcGRhdGVEZXBsb3ltZW50UmVxdWVzdBpCLmltcHJvYmFibGUuc3Bh",
-            "dGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuVXBkYXRlRGVwbG95bWVudFJl",
-            "c3BvbnNlEpMBCg5TdG9wRGVwbG95bWVudBI/LmltcHJvYmFibGUuc3BhdGlh",
-            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuU3RvcERlcGxveW1lbnRSZXF1ZXN0",
-            "GkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5T",
-            "dG9wRGVwbG95bWVudFJlc3BvbnNlQmBaM2ltcHJvYmFibGUvc3BhdGlhbG9z",
-            "L2RlcGxveW1lbnQvdjFhbHBoYTE7ZGVwbG95bWVudKoCKEltcHJvYmFibGUu",
-            "U3BhdGlhbE9TLkRlcGxveW1lbnQuVjFBbHBoYTFiBnByb3RvMw=="));
+            "IAEoCSIYChZTdG9wRGVwbG95bWVudFJlc3BvbnNlIk8KF0RlbGV0ZURlcGxv",
+            "eW1lbnRSZXF1ZXN0EjQKAmlkGAEgASgJQijq3x8kEgFpKh1JRCBvZiB0aGUg",
+            "ZGVwbG95bWVudCB0byBzdG9wLjABIhoKGERlbGV0ZURlcGxveW1lbnRNZXRh",
+            "ZGF0YSKxBAoGRmlsdGVyEm8KHnN0b3BwZWRfc3RhdHVzX3Byb3BlcnR5X2Zp",
+            "bHRlchgBIAEoCzJFLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQu",
+            "djFhbHBoYTEuU3RvcHBlZFN0YXR1c1Byb3BlcnR5RmlsdGVySAASXAoUdGFn",
+            "c19wcm9wZXJ0eV9maWx0ZXIYAiABKAsyPC5pbXByb2JhYmxlLnNwYXRpYWxv",
+            "cy5kZXBsb3ltZW50LnYxYWxwaGExLlRhZ3NQcm9wZXJ0eUZpbHRlckgAEmkK",
+            "G2NyZWF0ZV90aW1lX3Byb3BlcnR5X2ZpbHRlchgDIAEoCzJCLmltcHJvYmFi",
+            "bGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuQ3JlYXRlVGltZVBy",
+            "b3BlcnR5RmlsdGVySAASawocc3RvcHBlZF90aW1lX3Byb3BlcnR5X2ZpbHRl",
+            "chgEIAEoCzJDLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFh",
+            "bHBoYTEuU3RvcHBlZFRpbWVQcm9wZXJ0eUZpbHRlckgAEnEKH2RlcGxveW1l",
+            "bnRfbmFtZV9wcm9wZXJ0eV9maWx0ZXIYBSABKAsyRi5pbXByb2JhYmxlLnNw",
+            "YXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLkRlcGxveW1lbnROYW1lUHJv",
+            "cGVydHlGaWx0ZXJIAEINCgtmaWx0ZXJfdHlwZSLmAQobU3RvcHBlZFN0YXR1",
+            "c1Byb3BlcnR5RmlsdGVyEmsKDnN0b3BwZWRfc3RhdHVzGAEgASgOMlMuaW1w",
+            "cm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5TdG9wcGVk",
+            "U3RhdHVzUHJvcGVydHlGaWx0ZXIuU3RvcHBlZFN0YXR1cyJaCg1TdG9wcGVk",
+            "U3RhdHVzEhMKD0FMTF9ERVBMT1lNRU5UUxAAEhcKE1NUT1BQRURfREVQTE9Z",
+            "TUVOVFMQARIbChdOT1RfU1RPUFBFRF9ERVBMT1lNRU5UUxACItEBChxEZXBs",
+            "b3ltZW50TmFtZVByb3BlcnR5RmlsdGVyEmEKCG9wZXJhdG9yGAEgASgOMk8u",
+            "aW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5EZXBs",
+            "b3ltZW50TmFtZVByb3BlcnR5RmlsdGVyLk9wZXJhdG9yEhcKD2RlcGxveW1l",
+            "bnRfbmFtZRgCIAEoCSI1CghPcGVyYXRvchIJCgVFUVVBTBAAEgwKCENPTlRB",
+            "SU5TEAESEAoMTk9UX0NPTlRBSU5TEAIisQEKElRhZ3NQcm9wZXJ0eUZpbHRl",
+            "chJXCghvcGVyYXRvchgBIAEoDjJFLmltcHJvYmFibGUuc3BhdGlhbG9zLmRl",
+            "cGxveW1lbnQudjFhbHBoYTEuVGFnc1Byb3BlcnR5RmlsdGVyLk9wZXJhdG9y",
+            "EgsKA3RhZxgCIAEoCSI1CghPcGVyYXRvchIJCgVFUVVBTBAAEgwKCENPTlRB",
+            "SU5TEAESEAoMTk9UX0NPTlRBSU5TEAIilQIKGENyZWF0ZVRpbWVQcm9wZXJ0",
+            "eUZpbHRlchJdCghvcGVyYXRvchgBIAEoDjJLLmltcHJvYmFibGUuc3BhdGlh",
+            "bG9zLmRlcGxveW1lbnQudjFhbHBoYTEuQ3JlYXRlVGltZVByb3BlcnR5Rmls",
+            "dGVyLk9wZXJhdG9yEi8KC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcCJpCghPcGVyYXRvchIJCgVFUVVBTBAAEg0KCUxF",
+            "U1NfVEhBThABEhYKEkxFU1NfVEhBTl9PUl9FUVVBTBACEhAKDEdSRUFURVJf",
+            "VEhBThADEhkKFUdSRUFURVJfVEhBTl9PUl9FUVVBTBAEIpgCChlTdG9wcGVk",
+            "VGltZVByb3BlcnR5RmlsdGVyEl4KCG9wZXJhdG9yGAEgASgOMkwuaW1wcm9i",
+            "YWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5TdG9wcGVkVGlt",
+            "ZVByb3BlcnR5RmlsdGVyLk9wZXJhdG9yEjAKDHN0b3BwZWRfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiaQoIT3BlcmF0b3ISCQoF",
+            "RVFVQUwQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFVQUwQ",
+            "AhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQ",
+            "BCowCghWaWV3VHlwZRIPCgtVTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoE",
+            "RlVMTBACMuIJChFEZXBsb3ltZW50U2VydmljZRLMAQoPTGlzdERlcGxveW1l",
+            "bnRzEkAuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhh",
+            "MS5MaXN0RGVwbG95bWVudHNSZXF1ZXN0GkEuaW1wcm9iYWJsZS5zcGF0aWFs",
+            "b3MuZGVwbG95bWVudC52MWFscGhhMS5MaXN0RGVwbG95bWVudHNSZXNwb25z",
+            "ZSI06t8fMAoEbGlzdBIoTGlzdHMgZGVwbG95bWVudHMgdW5kZXIgYSBnaXZl",
+            "biBwcm9qZWN0LhKQAQoNR2V0RGVwbG95bWVudBI+LmltcHJvYmFibGUuc3Bh",
+            "dGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuR2V0RGVwbG95bWVudFJlcXVl",
+            "c3QaPy5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGEx",
+            "LkdldERlcGxveW1lbnRSZXNwb25zZRKqAQoaR2V0UnVubmluZ0RlcGxveW1l",
+            "bnRCeU5hbWUSSy5pbXByb2JhYmxlLnNwYXRpYWxvcy5kZXBsb3ltZW50LnYx",
+            "YWxwaGExLkdldFJ1bm5pbmdEZXBsb3ltZW50QnlOYW1lUmVxdWVzdBo/Lmlt",
+            "cHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQudjFhbHBoYTEuR2V0RGVw",
+            "bG95bWVudFJlc3BvbnNlEpcBChBDcmVhdGVEZXBsb3ltZW50EkEuaW1wcm9i",
+            "YWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhhMS5DcmVhdGVEZXBs",
+            "b3ltZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "IerfHx0KBmNyZWF0ZRITU3RhcnQgYSBkZXBsb3ltZW50LhLxAQoQRGVsZXRl",
+            "RGVwbG95bWVudBJBLmltcHJvYmFibGUuc3BhdGlhbG9zLmRlcGxveW1lbnQu",
+            "djFhbHBoYTEuRGVsZXRlRGVwbG95bWVudFJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uInvq3x93CgZkZWxldGUSbVN0b3AgYW5kIGRl",
+            "bGV0ZSBhIHJ1bm5pbmcgZGVwbG95bWVudC4gWW91IGNhbiBjYWxsIHRoaXMg",
+            "YXQgYW55IHBvaW50IGFmdGVyIHlvdSd2ZSBjYWxsZWQgJ2RlcGxveW1lbnQg",
+            "Y3JlYXRlJy4SmQEKEFVwZGF0ZURlcGxveW1lbnQSQS5pbXByb2JhYmxlLnNw",
+            "YXRpYWxvcy5kZXBsb3ltZW50LnYxYWxwaGExLlVwZGF0ZURlcGxveW1lbnRS",
+            "ZXF1ZXN0GkIuaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFs",
+            "cGhhMS5VcGRhdGVEZXBsb3ltZW50UmVzcG9uc2USkwEKDlN0b3BEZXBsb3lt",
+            "ZW50Ej8uaW1wcm9iYWJsZS5zcGF0aWFsb3MuZGVwbG95bWVudC52MWFscGhh",
+            "MS5TdG9wRGVwbG95bWVudFJlcXVlc3QaQC5pbXByb2JhYmxlLnNwYXRpYWxv",
+            "cy5kZXBsb3ltZW50LnYxYWxwaGExLlN0b3BEZXBsb3ltZW50UmVzcG9uc2VC",
+            "YFozaW1wcm9iYWJsZS9zcGF0aWFsb3MvZGVwbG95bWVudC92MWFscGhhMTtk",
+            "ZXBsb3ltZW50qgIoSW1wcm9iYWJsZS5TcGF0aWFsT1MuRGVwbG95bWVudC5W",
+            "MUFscGhhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Validator.ValidatorReflection.Descriptor, global::Cli.CliReflection.Descriptor, global::Improbable.LogfieldsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -159,10 +223,11 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.LaunchConfig), global::Improbable.SpatialOS.Deployment.V1Alpha1.LaunchConfig.Parser, new[]{ "ConfigJson" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag), global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerFlag.Parser, new[]{ "WorkerType", "Key", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.PlayerInfo), global::Improbable.SpatialOS.Deployment.V1Alpha1.PlayerInfo.Parser, new[]{ "ActivePlayers", "Capacity", "QueueLength" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Parser, new[]{ "ProjectName", "PageSize", "PageToken", "DeploymentName", "View", "DeploymentStoppedStatusFilter" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Parser, new[]{ "ProjectName", "PageSize", "PageToken", "DeploymentName", "View", "DeploymentStoppedStatusFilter", "Filters" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse.Parser, new[]{ "Deployments", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest.Parser, new[]{ "ProjectName", "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse.Parser, new[]{ "Deployment" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest.Parser, new[]{ "ProjectName", "DeploymentName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest.Parser, new[]{ "Deployment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentMetadata), global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentMetadata.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentRequest.Parser, new[]{ "Deployment", "UpdateMask" }, null, null, null),
@@ -170,7 +235,13 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest.Parser, new[]{ "ProjectName", "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest.Parser, new[]{ "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter), global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter.Parser, new[]{ "StoppedStatusPropertyFilter", "TagsPropertyFilter", "CreateTimePropertyFilter", "StoppedTimePropertyFilter", "DeploymentNamePropertyFilter" }, new[]{ "FilterType" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter), global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter.Parser, new[]{ "StoppedStatus" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter.Types.StoppedStatus) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter.Parser, new[]{ "Operator", "DeploymentName" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter.Types.Operator) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter), global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter.Parser, new[]{ "Operator", "Tag" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter.Types.Operator) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter), global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter.Parser, new[]{ "Operator", "CreateTime" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter.Types.Operator) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter), global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter.Parser, new[]{ "Operator", "StoppedTime" }, null, new[]{ typeof(global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter.Types.Operator) }, null)
           }));
     }
     #endregion
@@ -192,7 +263,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// </summary>
     [pbr::OriginalName("BASIC")] Basic = 1,
     /// <summary>
-    /// Return all fields for each `Deployment` message. Unless you require the additional fields, prefer BASIC as it is significantly less expensive.
+    /// Return all fields for each `Deployment` message. Unless you require the additional fields,
+    /// prefer BASIC as it is significantly less expensive.
     /// </summary>
     [pbr::OriginalName("FULL")] Full = 2,
   }
@@ -253,7 +325,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// A unique identifier for the deployment. Read-only. The deployment's `id` is assigned automatically and uniquely identifies a particular run of a deployment.
+    /// A unique identifier for the deployment. Read-only. The deployment's `id` is assigned
+    /// automatically and uniquely identifies a particular run of a deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -288,7 +361,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The name of the deployment.
     ///
-    /// You choose the deployment's name. It must be lower case letters or numbers or underscores and 3-32 characters in length.
+    /// You choose the deployment's name. It must be lower case letters or numbers or underscores and
+    /// 3-32 characters in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -305,7 +379,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// Read-only once created.
     ///
     /// The region that the deployment is running in.
-    /// The supported regions are "EU" and "US" (and "AP" for specific users who have requested access). Leave blank if unknown.
+    /// The supported regions are "EU" and "US" (and "AP" for specific users who have requested
+    /// access). Leave blank if unknown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RegionCode {
@@ -337,8 +412,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Read-only once created.
     ///
-    /// The assembly to use for the deployment. You must supply this for cloud deployments. Local deployments automatically use
-    /// the assembly located in the folder containing the `spatialos.json` file, so any value you supply is ignored.
+    /// The assembly to use for the deployment. You must supply this for cloud deployments. Local
+    /// deployments automatically use the assembly located in the folder containing the
+    /// `spatialos.json` file, so any value you supply is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AssemblyId {
@@ -354,8 +430,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Read-only once created.
     ///
-    /// The starting snapshot for the deployment. For cloud deployments, you must provide a starting snapshot.
-    /// For local deployments, if you don't provide a starting snapshot, it uses the default.
+    /// The starting snapshot for the deployment. For cloud deployments, you must provide a starting
+    /// snapshot. For local deployments, if you don't provide a starting snapshot, it uses the default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StartingSnapshotId {
@@ -371,8 +447,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         = pb::FieldCodec.ForString(74);
     private readonly pbc::RepeatedField<string> tag_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Tags associated with the deployment. Tags are set of strings you can use to identify deployments.
-    /// A tag must be upper or lower case letters or numbers and 3-32 characters in length.
+    /// Tags associated with the deployment. Tags are set of strings you can use to identify
+    /// deployments. A tag must be upper or lower case letters or numbers and 3-32 characters in
+    /// length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tag {
@@ -496,7 +573,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The current used capacity can always be calculated as `max_capacity` - `remaining_capacity`.
     ///
-    /// Note: if you set the same worker type more than once, we provide no guarantee which overrides which.
+    /// Note: if you set the same worker type more than once, we provide no guarantee which overrides
+    /// which.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerCapacity> WorkerConnectionCapacities {
@@ -511,10 +589,11 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Mutable. Only applicable to running deployments.
     ///
-    /// The rate limits of the deployment, broken down by worker type. If a worker type is absent or has zero'ed value,
-    /// you can assume that worker type is not rate limited.
+    /// The rate limits of the deployment, broken down by worker type. If a worker type is absent or
+    /// has zero'ed value, you can assume that worker type is not rate limited.
     ///
-    /// Note: if you set the same worker type more than once, we provide no guarantee which overrides which.
+    /// Note: if you set the same worker type more than once, we provide no guarantee which overrides
+    /// which.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.WorkerRateLimit> WorkerConnectionRateLimits {
@@ -965,8 +1044,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// <summary>
     /// Mutable.
     ///
-    /// The maximum number of workers of the specified type that are allowed to connect to a SpatialOS deployment.
-    /// Setting it to a lower number than the number of already connected workers does not drop their connections.
+    /// The maximum number of workers of the specified type that are allowed to connect to a SpatialOS
+    /// deployment. Setting it to a lower number than the number of already connected workers does not
+    /// drop their connections.
     ///
     /// It must not be a negative number.
     /// </summary>
@@ -986,7 +1066,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// The available capacity for connection.
     ///
-    /// Note: it can go negative when you set `max_capacity` lower than the connection capacity already used.
+    /// Note: it can go negative when you set `max_capacity` lower than the connection capacity already
+    /// used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RemainingCapacity {
@@ -1811,6 +1892,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       deploymentName_ = other.deploymentName_;
       view_ = other.view_;
       deploymentStoppedStatusFilter_ = other.deploymentStoppedStatusFilter_;
+      filters_ = other.filters_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1874,6 +1956,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     ///
     /// Leave it empty to list all deployments under the given project.
     /// If provided, it must conform to the regex: ^[a-z0-9_]{3,32}$
+    /// TODO(COMP-1834): deprecate this
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DeploymentName {
@@ -1888,7 +1971,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     private global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType view_ = 0;
     /// <summary>
     /// How much data is returned for each deployment in the list. Optional.
-    /// The default is FULL, which returns all fields for each `Deployment` in the response, but is more expensive than requesting a BASIC response.
+    /// The default is FULL, which returns all fields for each `Deployment` in the response, but is
+    /// more expensive than requesting a BASIC response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Deployment.V1Alpha1.ViewType View {
@@ -1903,6 +1987,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     private global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter deploymentStoppedStatusFilter_ = 0;
     /// <summary>
     /// Filter for all deployments, or filter by whether deployments are stopped or not.
+    /// TODO(COMP-1834): deprecate this
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter DeploymentStoppedStatusFilter {
@@ -1910,6 +1995,19 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       set {
         deploymentStoppedStatusFilter_ = value;
       }
+    }
+
+    /// <summary>Field number for the "filters" field.</summary>
+    public const int FiltersFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter> _repeated_filters_codec
+        = pb::FieldCodec.ForMessage(58, global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter.Parser);
+    private readonly pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter> filters_ = new pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter>();
+    /// <summary>
+    /// TODO(1896): add cli annotation here, may require an extension to protoc-gen-gocli
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Improbable.SpatialOS.Deployment.V1Alpha1.Filter> Filters {
+      get { return filters_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1931,6 +2029,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (DeploymentName != other.DeploymentName) return false;
       if (View != other.View) return false;
       if (DeploymentStoppedStatusFilter != other.DeploymentStoppedStatusFilter) return false;
+      if(!filters_.Equals(other.filters_)) return false;
       return true;
     }
 
@@ -1943,6 +2042,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (DeploymentName.Length != 0) hash ^= DeploymentName.GetHashCode();
       if (View != 0) hash ^= View.GetHashCode();
       if (DeploymentStoppedStatusFilter != 0) hash ^= DeploymentStoppedStatusFilter.GetHashCode();
+      hash ^= filters_.GetHashCode();
       return hash;
     }
 
@@ -1977,6 +2077,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         output.WriteRawTag(48);
         output.WriteEnum((int) DeploymentStoppedStatusFilter);
       }
+      filters_.WriteTo(output, _repeated_filters_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2000,6 +2101,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (DeploymentStoppedStatusFilter != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentStoppedStatusFilter);
       }
+      size += filters_.CalculateSize(_repeated_filters_codec);
       return size;
     }
 
@@ -2026,6 +2128,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       if (other.DeploymentStoppedStatusFilter != 0) {
         DeploymentStoppedStatusFilter = other.DeploymentStoppedStatusFilter;
       }
+      filters_.Add(other.filters_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2058,6 +2161,10 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
           }
           case 48: {
             deploymentStoppedStatusFilter_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest.Types.DeploymentStoppedStatusFilter) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            filters_.AddEntriesFrom(input, _repeated_filters_codec);
             break;
           }
         }
@@ -2496,6 +2603,161 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
   }
 
+  public sealed partial class GetRunningDeploymentByNameRequest : pb::IMessage<GetRunningDeploymentByNameRequest> {
+    private static readonly pb::MessageParser<GetRunningDeploymentByNameRequest> _parser = new pb::MessageParser<GetRunningDeploymentByNameRequest>(() => new GetRunningDeploymentByNameRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetRunningDeploymentByNameRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRunningDeploymentByNameRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRunningDeploymentByNameRequest(GetRunningDeploymentByNameRequest other) : this() {
+      projectName_ = other.projectName_;
+      deploymentName_ = other.deploymentName_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRunningDeploymentByNameRequest Clone() {
+      return new GetRunningDeploymentByNameRequest(this);
+    }
+
+    /// <summary>Field number for the "project_name" field.</summary>
+    public const int ProjectNameFieldNumber = 1;
+    private string projectName_ = "";
+    /// <summary>
+    /// The deployment's project.
+    ///
+    /// It must conform to the regex: ^[a-z0-9_]{3,32}$
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectName {
+      get { return projectName_; }
+      set {
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "deployment_name" field.</summary>
+    public const int DeploymentNameFieldNumber = 2;
+    private string deploymentName_ = "";
+    /// <summary>
+    /// The name of the deployment.
+    ///
+    /// It must conform to the regex: ^[a-z0-9_]{3,32}$
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DeploymentName {
+      get { return deploymentName_; }
+      set {
+        deploymentName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetRunningDeploymentByNameRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetRunningDeploymentByNameRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectName != other.ProjectName) return false;
+      if (DeploymentName != other.DeploymentName) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (DeploymentName.Length != 0) hash ^= DeploymentName.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectName);
+      }
+      if (DeploymentName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DeploymentName);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      }
+      if (DeploymentName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeploymentName);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetRunningDeploymentByNameRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectName.Length != 0) {
+        ProjectName = other.ProjectName;
+      }
+      if (other.DeploymentName.Length != 0) {
+        DeploymentName = other.DeploymentName;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            ProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            DeploymentName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class CreateDeploymentRequest : pb::IMessage<CreateDeploymentRequest> {
     private static readonly pb::MessageParser<CreateDeploymentRequest> _parser = new pb::MessageParser<CreateDeploymentRequest>(() => new CreateDeploymentRequest());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2503,7 +2765,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2654,7 +2916,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2743,7 +3005,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2807,7 +3069,8 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// `worker_connection_rate_limits`
     ///
     /// This RPC adopts two FieldMask specifics:
-    /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all mutable fields.
+    /// - Having an empty `update_mask` (not setting an array, or setting an empty array) updates all
+    /// mutable fields.
     /// - It ignores valid (mappable) paths to immutable fields.
     /// - Invalid (un-mappable) or duplicated `update_masks` return an `INVALID_ARGUMENT` error.
     /// For example, an empty path `` is invalid as it doesn't map to any field.
@@ -2932,7 +3195,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3055,7 +3318,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3208,7 +3471,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3297,7 +3560,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3417,7 +3680,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3496,6 +3759,1078 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         }
       }
     }
+
+  }
+
+  public sealed partial class Filter : pb::IMessage<Filter> {
+    private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Filter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Filter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Filter(Filter other) : this() {
+      switch (other.FilterTypeCase) {
+        case FilterTypeOneofCase.StoppedStatusPropertyFilter:
+          StoppedStatusPropertyFilter = other.StoppedStatusPropertyFilter.Clone();
+          break;
+        case FilterTypeOneofCase.TagsPropertyFilter:
+          TagsPropertyFilter = other.TagsPropertyFilter.Clone();
+          break;
+        case FilterTypeOneofCase.CreateTimePropertyFilter:
+          CreateTimePropertyFilter = other.CreateTimePropertyFilter.Clone();
+          break;
+        case FilterTypeOneofCase.StoppedTimePropertyFilter:
+          StoppedTimePropertyFilter = other.StoppedTimePropertyFilter.Clone();
+          break;
+        case FilterTypeOneofCase.DeploymentNamePropertyFilter:
+          DeploymentNamePropertyFilter = other.DeploymentNamePropertyFilter.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Filter Clone() {
+      return new Filter(this);
+    }
+
+    /// <summary>Field number for the "stopped_status_property_filter" field.</summary>
+    public const int StoppedStatusPropertyFilterFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter StoppedStatusPropertyFilter {
+      get { return filterTypeCase_ == FilterTypeOneofCase.StoppedStatusPropertyFilter ? (global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter) filterType_ : null; }
+      set {
+        filterType_ = value;
+        filterTypeCase_ = value == null ? FilterTypeOneofCase.None : FilterTypeOneofCase.StoppedStatusPropertyFilter;
+      }
+    }
+
+    /// <summary>Field number for the "tags_property_filter" field.</summary>
+    public const int TagsPropertyFilterFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter TagsPropertyFilter {
+      get { return filterTypeCase_ == FilterTypeOneofCase.TagsPropertyFilter ? (global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter) filterType_ : null; }
+      set {
+        filterType_ = value;
+        filterTypeCase_ = value == null ? FilterTypeOneofCase.None : FilterTypeOneofCase.TagsPropertyFilter;
+      }
+    }
+
+    /// <summary>Field number for the "create_time_property_filter" field.</summary>
+    public const int CreateTimePropertyFilterFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter CreateTimePropertyFilter {
+      get { return filterTypeCase_ == FilterTypeOneofCase.CreateTimePropertyFilter ? (global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter) filterType_ : null; }
+      set {
+        filterType_ = value;
+        filterTypeCase_ = value == null ? FilterTypeOneofCase.None : FilterTypeOneofCase.CreateTimePropertyFilter;
+      }
+    }
+
+    /// <summary>Field number for the "stopped_time_property_filter" field.</summary>
+    public const int StoppedTimePropertyFilterFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter StoppedTimePropertyFilter {
+      get { return filterTypeCase_ == FilterTypeOneofCase.StoppedTimePropertyFilter ? (global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter) filterType_ : null; }
+      set {
+        filterType_ = value;
+        filterTypeCase_ = value == null ? FilterTypeOneofCase.None : FilterTypeOneofCase.StoppedTimePropertyFilter;
+      }
+    }
+
+    /// <summary>Field number for the "deployment_name_property_filter" field.</summary>
+    public const int DeploymentNamePropertyFilterFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter DeploymentNamePropertyFilter {
+      get { return filterTypeCase_ == FilterTypeOneofCase.DeploymentNamePropertyFilter ? (global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter) filterType_ : null; }
+      set {
+        filterType_ = value;
+        filterTypeCase_ = value == null ? FilterTypeOneofCase.None : FilterTypeOneofCase.DeploymentNamePropertyFilter;
+      }
+    }
+
+    private object filterType_;
+    /// <summary>Enum of possible cases for the "filter_type" oneof.</summary>
+    public enum FilterTypeOneofCase {
+      None = 0,
+      StoppedStatusPropertyFilter = 1,
+      TagsPropertyFilter = 2,
+      CreateTimePropertyFilter = 3,
+      StoppedTimePropertyFilter = 4,
+      DeploymentNamePropertyFilter = 5,
+    }
+    private FilterTypeOneofCase filterTypeCase_ = FilterTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FilterTypeOneofCase FilterTypeCase {
+      get { return filterTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearFilterType() {
+      filterTypeCase_ = FilterTypeOneofCase.None;
+      filterType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Filter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Filter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StoppedStatusPropertyFilter, other.StoppedStatusPropertyFilter)) return false;
+      if (!object.Equals(TagsPropertyFilter, other.TagsPropertyFilter)) return false;
+      if (!object.Equals(CreateTimePropertyFilter, other.CreateTimePropertyFilter)) return false;
+      if (!object.Equals(StoppedTimePropertyFilter, other.StoppedTimePropertyFilter)) return false;
+      if (!object.Equals(DeploymentNamePropertyFilter, other.DeploymentNamePropertyFilter)) return false;
+      if (FilterTypeCase != other.FilterTypeCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedStatusPropertyFilter) hash ^= StoppedStatusPropertyFilter.GetHashCode();
+      if (filterTypeCase_ == FilterTypeOneofCase.TagsPropertyFilter) hash ^= TagsPropertyFilter.GetHashCode();
+      if (filterTypeCase_ == FilterTypeOneofCase.CreateTimePropertyFilter) hash ^= CreateTimePropertyFilter.GetHashCode();
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedTimePropertyFilter) hash ^= StoppedTimePropertyFilter.GetHashCode();
+      if (filterTypeCase_ == FilterTypeOneofCase.DeploymentNamePropertyFilter) hash ^= DeploymentNamePropertyFilter.GetHashCode();
+      hash ^= (int) filterTypeCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedStatusPropertyFilter) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StoppedStatusPropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.TagsPropertyFilter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TagsPropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.CreateTimePropertyFilter) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTimePropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedTimePropertyFilter) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StoppedTimePropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.DeploymentNamePropertyFilter) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DeploymentNamePropertyFilter);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedStatusPropertyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoppedStatusPropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.TagsPropertyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TagsPropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.CreateTimePropertyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTimePropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.StoppedTimePropertyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoppedTimePropertyFilter);
+      }
+      if (filterTypeCase_ == FilterTypeOneofCase.DeploymentNamePropertyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeploymentNamePropertyFilter);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Filter other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.FilterTypeCase) {
+        case FilterTypeOneofCase.StoppedStatusPropertyFilter:
+          StoppedStatusPropertyFilter = other.StoppedStatusPropertyFilter;
+          break;
+        case FilterTypeOneofCase.TagsPropertyFilter:
+          TagsPropertyFilter = other.TagsPropertyFilter;
+          break;
+        case FilterTypeOneofCase.CreateTimePropertyFilter:
+          CreateTimePropertyFilter = other.CreateTimePropertyFilter;
+          break;
+        case FilterTypeOneofCase.StoppedTimePropertyFilter:
+          StoppedTimePropertyFilter = other.StoppedTimePropertyFilter;
+          break;
+        case FilterTypeOneofCase.DeploymentNamePropertyFilter:
+          DeploymentNamePropertyFilter = other.DeploymentNamePropertyFilter;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter subBuilder = new global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter();
+            if (filterTypeCase_ == FilterTypeOneofCase.StoppedStatusPropertyFilter) {
+              subBuilder.MergeFrom(StoppedStatusPropertyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            StoppedStatusPropertyFilter = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter subBuilder = new global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter();
+            if (filterTypeCase_ == FilterTypeOneofCase.TagsPropertyFilter) {
+              subBuilder.MergeFrom(TagsPropertyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            TagsPropertyFilter = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter subBuilder = new global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter();
+            if (filterTypeCase_ == FilterTypeOneofCase.CreateTimePropertyFilter) {
+              subBuilder.MergeFrom(CreateTimePropertyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            CreateTimePropertyFilter = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter subBuilder = new global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter();
+            if (filterTypeCase_ == FilterTypeOneofCase.StoppedTimePropertyFilter) {
+              subBuilder.MergeFrom(StoppedTimePropertyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            StoppedTimePropertyFilter = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter subBuilder = new global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter();
+            if (filterTypeCase_ == FilterTypeOneofCase.DeploymentNamePropertyFilter) {
+              subBuilder.MergeFrom(DeploymentNamePropertyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            DeploymentNamePropertyFilter = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class StoppedStatusPropertyFilter : pb::IMessage<StoppedStatusPropertyFilter> {
+    private static readonly pb::MessageParser<StoppedStatusPropertyFilter> _parser = new pb::MessageParser<StoppedStatusPropertyFilter>(() => new StoppedStatusPropertyFilter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StoppedStatusPropertyFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedStatusPropertyFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedStatusPropertyFilter(StoppedStatusPropertyFilter other) : this() {
+      stoppedStatus_ = other.stoppedStatus_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedStatusPropertyFilter Clone() {
+      return new StoppedStatusPropertyFilter(this);
+    }
+
+    /// <summary>Field number for the "stopped_status" field.</summary>
+    public const int StoppedStatusFieldNumber = 1;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter.Types.StoppedStatus stoppedStatus_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter.Types.StoppedStatus StoppedStatus {
+      get { return stoppedStatus_; }
+      set {
+        stoppedStatus_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StoppedStatusPropertyFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StoppedStatusPropertyFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StoppedStatus != other.StoppedStatus) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StoppedStatus != 0) hash ^= StoppedStatus.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StoppedStatus != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) StoppedStatus);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StoppedStatus != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StoppedStatus);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StoppedStatusPropertyFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StoppedStatus != 0) {
+        StoppedStatus = other.StoppedStatus;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            stoppedStatus_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedStatusPropertyFilter.Types.StoppedStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the StoppedStatusPropertyFilter message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum StoppedStatus {
+        [pbr::OriginalName("ALL_DEPLOYMENTS")] AllDeployments = 0,
+        [pbr::OriginalName("STOPPED_DEPLOYMENTS")] StoppedDeployments = 1,
+        [pbr::OriginalName("NOT_STOPPED_DEPLOYMENTS")] NotStoppedDeployments = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class DeploymentNamePropertyFilter : pb::IMessage<DeploymentNamePropertyFilter> {
+    private static readonly pb::MessageParser<DeploymentNamePropertyFilter> _parser = new pb::MessageParser<DeploymentNamePropertyFilter>(() => new DeploymentNamePropertyFilter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeploymentNamePropertyFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeploymentNamePropertyFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeploymentNamePropertyFilter(DeploymentNamePropertyFilter other) : this() {
+      operator_ = other.operator_;
+      deploymentName_ = other.deploymentName_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeploymentNamePropertyFilter Clone() {
+      return new DeploymentNamePropertyFilter(this);
+    }
+
+    /// <summary>Field number for the "operator" field.</summary>
+    public const int OperatorFieldNumber = 1;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter.Types.Operator operator_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter.Types.Operator Operator {
+      get { return operator_; }
+      set {
+        operator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deployment_name" field.</summary>
+    public const int DeploymentNameFieldNumber = 2;
+    private string deploymentName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DeploymentName {
+      get { return deploymentName_; }
+      set {
+        deploymentName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeploymentNamePropertyFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeploymentNamePropertyFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Operator != other.Operator) return false;
+      if (DeploymentName != other.DeploymentName) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Operator != 0) hash ^= Operator.GetHashCode();
+      if (DeploymentName.Length != 0) hash ^= DeploymentName.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Operator != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operator);
+      }
+      if (DeploymentName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DeploymentName);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Operator != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
+      }
+      if (DeploymentName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeploymentName);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeploymentNamePropertyFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Operator != 0) {
+        Operator = other.Operator;
+      }
+      if (other.DeploymentName.Length != 0) {
+        DeploymentName = other.DeploymentName;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            operator_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentNamePropertyFilter.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            DeploymentName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DeploymentNamePropertyFilter message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Operator {
+        [pbr::OriginalName("EQUAL")] Equal = 0,
+        [pbr::OriginalName("CONTAINS")] Contains = 1,
+        [pbr::OriginalName("NOT_CONTAINS")] NotContains = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class TagsPropertyFilter : pb::IMessage<TagsPropertyFilter> {
+    private static readonly pb::MessageParser<TagsPropertyFilter> _parser = new pb::MessageParser<TagsPropertyFilter>(() => new TagsPropertyFilter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TagsPropertyFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TagsPropertyFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TagsPropertyFilter(TagsPropertyFilter other) : this() {
+      operator_ = other.operator_;
+      tag_ = other.tag_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TagsPropertyFilter Clone() {
+      return new TagsPropertyFilter(this);
+    }
+
+    /// <summary>Field number for the "operator" field.</summary>
+    public const int OperatorFieldNumber = 1;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter.Types.Operator operator_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter.Types.Operator Operator {
+      get { return operator_; }
+      set {
+        operator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tag" field.</summary>
+    public const int TagFieldNumber = 2;
+    private string tag_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Tag {
+      get { return tag_; }
+      set {
+        tag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TagsPropertyFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TagsPropertyFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Operator != other.Operator) return false;
+      if (Tag != other.Tag) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Operator != 0) hash ^= Operator.GetHashCode();
+      if (Tag.Length != 0) hash ^= Tag.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Operator != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operator);
+      }
+      if (Tag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Tag);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Operator != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
+      }
+      if (Tag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TagsPropertyFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Operator != 0) {
+        Operator = other.Operator;
+      }
+      if (other.Tag.Length != 0) {
+        Tag = other.Tag;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            operator_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.TagsPropertyFilter.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Tag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TagsPropertyFilter message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Operator {
+        [pbr::OriginalName("EQUAL")] Equal = 0,
+        [pbr::OriginalName("CONTAINS")] Contains = 1,
+        [pbr::OriginalName("NOT_CONTAINS")] NotContains = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class CreateTimePropertyFilter : pb::IMessage<CreateTimePropertyFilter> {
+    private static readonly pb::MessageParser<CreateTimePropertyFilter> _parser = new pb::MessageParser<CreateTimePropertyFilter>(() => new CreateTimePropertyFilter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateTimePropertyFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimePropertyFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimePropertyFilter(CreateTimePropertyFilter other) : this() {
+      operator_ = other.operator_;
+      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimePropertyFilter Clone() {
+      return new CreateTimePropertyFilter(this);
+    }
+
+    /// <summary>Field number for the "operator" field.</summary>
+    public const int OperatorFieldNumber = 1;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter.Types.Operator operator_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter.Types.Operator Operator {
+      get { return operator_; }
+      set {
+        operator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateTimePropertyFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateTimePropertyFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Operator != other.Operator) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Operator != 0) hash ^= Operator.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Operator != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operator);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Operator != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateTimePropertyFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Operator != 0) {
+        Operator = other.Operator;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            operator_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateTimePropertyFilter.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(createTime_);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CreateTimePropertyFilter message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Operator {
+        [pbr::OriginalName("EQUAL")] Equal = 0,
+        [pbr::OriginalName("LESS_THAN")] LessThan = 1,
+        [pbr::OriginalName("LESS_THAN_OR_EQUAL")] LessThanOrEqual = 2,
+        [pbr::OriginalName("GREATER_THAN")] GreaterThan = 3,
+        [pbr::OriginalName("GREATER_THAN_OR_EQUAL")] GreaterThanOrEqual = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class StoppedTimePropertyFilter : pb::IMessage<StoppedTimePropertyFilter> {
+    private static readonly pb::MessageParser<StoppedTimePropertyFilter> _parser = new pb::MessageParser<StoppedTimePropertyFilter>(() => new StoppedTimePropertyFilter());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StoppedTimePropertyFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Improbable.SpatialOS.Deployment.V1Alpha1.DeploymentReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedTimePropertyFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedTimePropertyFilter(StoppedTimePropertyFilter other) : this() {
+      operator_ = other.operator_;
+      StoppedTime = other.stoppedTime_ != null ? other.StoppedTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StoppedTimePropertyFilter Clone() {
+      return new StoppedTimePropertyFilter(this);
+    }
+
+    /// <summary>Field number for the "operator" field.</summary>
+    public const int OperatorFieldNumber = 1;
+    private global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter.Types.Operator operator_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter.Types.Operator Operator {
+      get { return operator_; }
+      set {
+        operator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stopped_time" field.</summary>
+    public const int StoppedTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp stoppedTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StoppedTime {
+      get { return stoppedTime_; }
+      set {
+        stoppedTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StoppedTimePropertyFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StoppedTimePropertyFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Operator != other.Operator) return false;
+      if (!object.Equals(StoppedTime, other.StoppedTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Operator != 0) hash ^= Operator.GetHashCode();
+      if (stoppedTime_ != null) hash ^= StoppedTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Operator != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operator);
+      }
+      if (stoppedTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StoppedTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Operator != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
+      }
+      if (stoppedTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoppedTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StoppedTimePropertyFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Operator != 0) {
+        Operator = other.Operator;
+      }
+      if (other.stoppedTime_ != null) {
+        if (stoppedTime_ == null) {
+          stoppedTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StoppedTime.MergeFrom(other.StoppedTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            operator_ = (global::Improbable.SpatialOS.Deployment.V1Alpha1.StoppedTimePropertyFilter.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (stoppedTime_ == null) {
+              stoppedTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(stoppedTime_);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the StoppedTimePropertyFilter message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Operator {
+        [pbr::OriginalName("EQUAL")] Equal = 0,
+        [pbr::OriginalName("LESS_THAN")] LessThan = 1,
+        [pbr::OriginalName("LESS_THAN_OR_EQUAL")] LessThanOrEqual = 2,
+        [pbr::OriginalName("GREATER_THAN")] GreaterThan = 3,
+        [pbr::OriginalName("GREATER_THAN_OR_EQUAL")] GreaterThanOrEqual = 4,
+      }
+
+    }
+    #endregion
 
   }
 
