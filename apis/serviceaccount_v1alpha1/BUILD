@@ -22,9 +22,9 @@ csharp_proto_compile(
         "external/com_google_protobuf/src/",
     ],
     inputs = [
-        "@com_google_protobuf//:well_known_protos",
         "@com_github_googleapis_googleapis//:important_protos",
         "@com_github_mwitkow_go_proto_validators_proto//:proto",
+        "@com_google_protobuf//:well_known_protos",
     ],
     protos = [
         "@improbable_platform//proto/improbable/spatialos/serviceaccount:protos",

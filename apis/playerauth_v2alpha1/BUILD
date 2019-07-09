@@ -18,13 +18,15 @@ csharp_proto_compile(
     name = "grpc",
     imports = [
         "external/com_github_googleapis_googleapis/",
+        "external/com_github_improbable_io_go_proto_logfields_proto/",
         "external/com_github_mwitkow_go_proto_validators_proto/",
         "external/com_google_protobuf/src/",
     ],
     inputs = [
-        "@com_google_protobuf//:well_known_protos",
         "@com_github_googleapis_googleapis//:important_protos",
+        "@com_github_improbable_io_go_proto_logfields_proto//:proto",
         "@com_github_mwitkow_go_proto_validators_proto//:proto",
+        "@com_google_protobuf//:well_known_protos",
     ],
     protos = [
         "@improbable_platform//proto/improbable/spatialos/playerauth/v2alpha1:protos",
