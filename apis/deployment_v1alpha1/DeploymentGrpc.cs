@@ -23,6 +23,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse> __Marshaller_ListDeploymentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest> __Marshaller_GetDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> __Marshaller_GetDeploymentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest> __Marshaller_GetRunningDeploymentByNameRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest> __Marshaller_CreateDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest> __Marshaller_DeleteDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.DeleteDeploymentRequest.Parser.ParseFrom);
@@ -43,6 +44,13 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         __ServiceName,
         "GetDeployment",
         __Marshaller_GetDeploymentRequest,
+        __Marshaller_GetDeploymentResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> __Method_GetRunningDeploymentByName = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRunningDeploymentByName",
+        __Marshaller_GetRunningDeploymentByNameRequest,
         __Marshaller_GetDeploymentResponse);
 
     static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest, global::Google.LongRunning.Operation> __Method_CreateDeployment = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.CreateDeploymentRequest, global::Google.LongRunning.Operation>(
@@ -105,6 +113,17 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
 
       /// <summary>
+      /// Gets a deployment as identified by `name`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> GetRunningDeploymentByName(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a deployment.
       ///
       /// The returned operation result is of type `deployment` upon successful creation.
@@ -142,8 +161,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       }
 
       /// <summary>
-      /// Stops a running deployment. You can call this at any point after you've called `CreateDeployment`.
-      /// To restart a stopped deployment, call `CreateDeployment` with the same parameters as you did to start the deployment originally.
+      /// Stops a running deployment. You can call this at any point after you've called
+      /// `CreateDeployment`. To restart a stopped deployment, call `CreateDeployment` with the same
+      /// parameters as you did to start the deployment originally.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -265,6 +285,50 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> GetDeploymentAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Gets a deployment as identified by `name`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse GetRunningDeploymentByName(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetRunningDeploymentByName(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a deployment as identified by `name`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse GetRunningDeploymentByName(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRunningDeploymentByName, null, options, request);
+      }
+      /// <summary>
+      /// Gets a deployment as identified by `name`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> GetRunningDeploymentByNameAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetRunningDeploymentByNameAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a deployment as identified by `name`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.GetDeploymentResponse> GetRunningDeploymentByNameAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.GetRunningDeploymentByNameRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRunningDeploymentByName, null, options, request);
       }
       /// <summary>
       /// Creates a deployment.
@@ -415,8 +479,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDeployment, null, options, request);
       }
       /// <summary>
-      /// Stops a running deployment. You can call this at any point after you've called `CreateDeployment`.
-      /// To restart a stopped deployment, call `CreateDeployment` with the same parameters as you did to start the deployment originally.
+      /// Stops a running deployment. You can call this at any point after you've called
+      /// `CreateDeployment`. To restart a stopped deployment, call `CreateDeployment` with the same
+      /// parameters as you did to start the deployment originally.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -428,8 +493,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return StopDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Stops a running deployment. You can call this at any point after you've called `CreateDeployment`.
-      /// To restart a stopped deployment, call `CreateDeployment` with the same parameters as you did to start the deployment originally.
+      /// Stops a running deployment. You can call this at any point after you've called
+      /// `CreateDeployment`. To restart a stopped deployment, call `CreateDeployment` with the same
+      /// parameters as you did to start the deployment originally.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -439,8 +505,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_StopDeployment, null, options, request);
       }
       /// <summary>
-      /// Stops a running deployment. You can call this at any point after you've called `CreateDeployment`.
-      /// To restart a stopped deployment, call `CreateDeployment` with the same parameters as you did to start the deployment originally.
+      /// Stops a running deployment. You can call this at any point after you've called
+      /// `CreateDeployment`. To restart a stopped deployment, call `CreateDeployment` with the same
+      /// parameters as you did to start the deployment originally.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -452,8 +519,9 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         return StopDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Stops a running deployment. You can call this at any point after you've called `CreateDeployment`.
-      /// To restart a stopped deployment, call `CreateDeployment` with the same parameters as you did to start the deployment originally.
+      /// Stops a running deployment. You can call this at any point after you've called
+      /// `CreateDeployment`. To restart a stopped deployment, call `CreateDeployment` with the same
+      /// parameters as you did to start the deployment originally.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -476,6 +544,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListDeployments, serviceImpl.ListDeployments)
           .AddMethod(__Method_GetDeployment, serviceImpl.GetDeployment)
+          .AddMethod(__Method_GetRunningDeploymentByName, serviceImpl.GetRunningDeploymentByName)
           .AddMethod(__Method_CreateDeployment, serviceImpl.CreateDeployment)
           .AddMethod(__Method_DeleteDeployment, serviceImpl.DeleteDeployment)
           .AddMethod(__Method_UpdateDeployment, serviceImpl.UpdateDeployment)

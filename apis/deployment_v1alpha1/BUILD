@@ -24,10 +24,10 @@ csharp_proto_compile(
         "external/improbable_protoc_gen_gocli/",
     ],
     inputs = [
-        "@com_google_protobuf//:well_known_protos",
         "@com_github_googleapis_googleapis//:important_protos",
         "@com_github_mwitkow_go_proto_validators_proto//:proto",
         "@com_github_improbable_io_go_proto_logfields_proto//:proto",
+        "@com_google_protobuf//:well_known_protos",
         "@improbable_protoc_gen_gocli//:proto",
     ],
     protos = [

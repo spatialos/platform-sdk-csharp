@@ -1,75 +1,79 @@
 http_archive(
-  name = "bazel_skylib",
-  url = "https://github.com/bazelbuild/bazel-skylib/archive/ff23a62c57d2912c3073a69c12f42c3d6e58a957.zip",
-  strip_prefix = "bazel-skylib-ff23a62c57d2912c3073a69c12f42c3d6e58a957",
-  sha256 = "ccf83f162e4a265b3aa09445c84fbc470215e392b250c86f0ce00536c99d5c17",
+    name = "bazel_skylib",
+    sha256 = "ccf83f162e4a265b3aa09445c84fbc470215e392b250c86f0ce00536c99d5c17",
+    strip_prefix = "bazel-skylib-ff23a62c57d2912c3073a69c12f42c3d6e58a957",
+    url = "https://github.com/bazelbuild/bazel-skylib/archive/ff23a62c57d2912c3073a69c12f42c3d6e58a957.zip",
 )
+
 load("@bazel_skylib//:lib.bzl", "versions")
-versions.check(minimum_bazel_version="0.14.0")
+
+versions.check(
+    minimum_bazel_version = "0.18.1",
+    maximum_bazel_version = "0.18.1",
+)
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository", "new_git_repository")
 
 git_repository(
     name = "io_bazel_rules_go",
-    remote = "https://github.com/improbable-io/rules_go.git",
     commit = "d22b20a098718f9156f3152e613554860b399c7a",
+    remote = "https://github.com/improbable-io/rules_go.git",
 )
+
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
+
 go_rules_dependencies()
+
 go_register_toolchains()
 
 git_repository(
-    name = "org_pubref_rules_protobuf",
-    remote = "https://github.com/pubref/rules_protobuf",
-    commit = "5f6195e83e06db2fd110626b0f2dc64e345e6618"
-)
-load("@org_pubref_rules_protobuf//go:rules.bzl", "go_proto_repositories", "proto_repositories")
-go_proto_repositories()
-proto_repositories()
-
-# git_repository(
-#   name = "com_google_grpc",
-#   remote = "https://github.com/grpc/grpc.git",
-#   commit = "1a60e6971f428323245a930031ad267bb3142ba4",
-#   shallow_since = "2018-10-01",
-# #   build_file = "@//third_party/grpc:BUILD",
-# )
-
-git_repository(
     name = "io_bazel_rules_dotnet",
+    commit = "9d3f7951695c95a3ce119c4002c1b67387a2db1e",
     remote = "https://github.com/bazelbuild/rules_dotnet.git",
-    commit = "1a6ca96fe05bca83782464453ac4657fb8ed8379"
 )
 
 load("@io_bazel_rules_dotnet//dotnet:csharp.bzl", "csharp_repositories")
+
 csharp_repositories(use_local_mono = True)
 
 git_repository(
-  name = "org_pubref_rules_protobuf",
-  remote = "https://github.com/pubref/rules_protobuf",
-  commit = "7c8c80b61e3a0bc30fd61302d781a317524b0167"
+    name = "org_pubref_rules_protobuf",
+    commit = "5f6195e83e06db2fd110626b0f2dc64e345e6618",
+    remote = "https://github.com/pubref/rules_protobuf",
 )
-load("@org_pubref_rules_protobuf//csharp:rules.bzl", "csharp_proto_repositories", "new_nuget_package")
+
+load("@org_pubref_rules_protobuf//go:rules.bzl", "go_proto_repositories", "proto_repositories")
+load("@org_pubref_rules_protobuf//csharp:rules.bzl", "csharp_proto_repositories")
+
 csharp_proto_repositories()
 
+go_proto_repositories()
+
+proto_repositories()
+
 git_repository(
-  name = "gapic_generator",
-  commit = "3a84ca02fca9617e76ed9d59d53aadc3db3826ed",
-  remote = "git@github.com:improbable/sdk-platform-toolkit.git",
+    name = "gapic_generator",
+    commit = "3a84ca02fca9617e76ed9d59d53aadc3db3826ed",
+    remote = "git@github.com:improbable/sdk-platform-toolkit.git",
 )
 
 git_repository(
     name = "improbable_platform",
+    commit = "296b7bd9194204b0a0044555c7d1418416643831",
     remote = "git@github.com:improbable/platform.git",
-    commit = "e0315520c25f65716ca119d85fc76a967916101c",
-    shallow_since = "2019-04-01",
+    # Hello! Are you updating the commit of the platform repo dependency? This comment is for you!
+    # The "shallow_since" field must be set to the day *before* the day of the commit. You can run
+    # the following script inside the *platform* repo to determine the value you should put in the
+    # "shallow_since" field based on the commit (replace <commit> with the actual commit hash):
+    # $ date --date="$(git show --pretty=format:'%cD' <commit> | head --lines=1)-1 day" "+%F"
+    shallow_since = "2019-07-08",
 )
 
 new_git_repository(
     name = "com_github_googleapis_googleapis",
-    remote = "https://github.com/googleapis/googleapis.git",
-    commit = "672f0d39cadef1b08b36271a9359e2d169ea0a60",
     build_file = "@//third_party/googleapis:BUILD",
+    commit = "672f0d39cadef1b08b36271a9359e2d169ea0a60",
+    remote = "https://github.com/googleapis/googleapis.git",
 )
 
 git_repository(
@@ -80,26 +84,26 @@ git_repository(
 
 new_git_repository(
     name = "com_github_mwitkow_go_proto_validators_proto",
+    build_file = "@//third_party/proto_validators:BUILD",
     commit = "61ea39b6438ad463fc5cc6dbf2ebad1286ce7813",
     remote = "https://github.com/improbable-io/go-proto-validators",
-    build_file = "@//third_party/proto_validators:BUILD",
     strip_prefix = "src",
 )
 
 new_git_repository(
     name = "improbable_protoc_gen_gocli",
+    build_file = "@//third_party/protoc_gen_gocli:BUILD",
     commit = "7d7a36b1ec7123d2af3105fe3a3692f8e56880f2",
     remote = "git@github.com:improbable/protoc-gen-gocli.git",
-    build_file = "@//third_party/protoc_gen_gocli:BUILD",
     strip_prefix = "bazel_proto",
 )
 
 new_git_repository(
-   name = "com_github_improbable_io_go_proto_logfields_proto",
-   commit = "6e66e74a1763de7e1372586f671d4a88023297eb",
-   remote = "https://github.com/improbable-io/go-proto-logfields",
-   build_file = "@//third_party/proto_logfields:BUILD",
-   strip_prefix = "src",
+    name = "com_github_improbable_io_go_proto_logfields_proto",
+    build_file = "@//third_party/proto_logfields:BUILD",
+    commit = "6e66e74a1763de7e1372586f671d4a88023297eb",
+    remote = "https://github.com/improbable-io/go-proto-logfields",
+    strip_prefix = "src",
 )
 
 maven_jar(

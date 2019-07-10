@@ -12,11 +12,13 @@ generate_api() {
     VERSION="$2"
     PACKAGE="apis/${NAME}_${VERSION}"
 
+    find "${REPO_ROOT}/${PACKAGE}" -type f -name "*.cs" -exec rm -f {} \+
+
     runBazel build "//${PACKAGE}:gapic"
     runBazel build "//${PACKAGE}:grpc"
-    rm -rf ${PACKAGE}/*.cs
-    copyBazelOutput "bazel-genfiles/${PACKAGE}/${NAME}_gapicout/*/*/*.cs" "${REPO_ROOT}/${PACKAGE}"
-    copyBazelOutput "bazel-genfiles/${PACKAGE}/*.cs" "${REPO_ROOT}/${PACKAGE}"
+
+    find "bazel-genfiles/${PACKAGE}" -type f -name "*.cs"  -exec cp {} "${REPO_ROOT}/${PACKAGE}" \;
+    find "${REPO_ROOT}/${PACKAGE}" -type f -name "*.cs" -exec chmod +w {} \+
 }
 
 generate_api "deployment" "v1alpha1"
