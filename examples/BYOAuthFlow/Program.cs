@@ -103,6 +103,17 @@ namespace BYOAuthFlow
                     ProjectName = ProjectName
                 });
 
+            Console.WriteLine("Verifying PlayerIdentityToken");
+            var decodePlayerIdentityTokenResponse = _playerAuthServiceClient.DecodePlayerIdentityToken(
+                new DecodePlayerIdentityTokenRequest
+                {
+                    PlayerIdentityToken = playerIdentityTokenResponse.PlayerIdentityToken
+                });
+            var playerIdentityToken = decodePlayerIdentityTokenResponse.PlayerIdentityToken;
+            if (playerIdentityToken.Provider != "provider") throw new Exception("Provider not recognised.");
+            if (playerIdentityToken.ProjectName != ProjectName) throw new Exception("Project not recognised.");
+            if (DateTime.Now.CompareTo(playerIdentityToken.ExpiryTime.ToDateTime()) > 0) throw new Exception("PlayerIdentityToken expired.");
+            
             Console.WriteLine("Choosing a deployment");
             var suitableDeployment = _deploymentServiceClient.ListDeployments(new ListDeploymentsRequest
             {
