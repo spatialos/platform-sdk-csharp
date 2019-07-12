@@ -106,6 +106,20 @@ namespace Improbable.SpatialOS.Platform.Common
 
         private static PlatformRefreshTokenCredential GetTokenCredentialAutomatically()
         {
+            var serverRefreshToken = Environment.GetEnvironmentVariable("IMPROBABLE_PLATFORM_REFRESH_TOKEN");
+            if (serverRefreshToken != "")
+            {
+                var clientSecrets = new ClientSecrets
+                {
+                    ClientId = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_ID"),
+                    ClientSecret = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_SECRET")
+                };
+                if (clientSecrets.ClientId != "" && clientSecrets.ClientSecret != "")
+                {
+                    return new PlatformRefreshTokenCredential(serverRefreshToken, null, null, null, clientSecrets);
+                }
+            }
+
             var possibleTokenFiles = new[]
             {
                 Path.Combine(Environment.GetEnvironmentVariable("HOME") ?? "", ".improbable/oauth2/oauth2_refresh_token"),
@@ -123,21 +137,6 @@ namespace Improbable.SpatialOS.Platform.Common
                 catch (IOException)
                 {
                     throw new NoRefreshTokenFoundException(RefreshTokenNotFoundMessage);
-                }
-            }
-
-            // None of the possible token files exists. Last fallback is the credentials set in the environment of server workers.
-            var serverRefreshToken = Environment.GetEnvironmentVariable("IMPROBABLE_PLATFORM_REFRESH_TOKEN");
-            if (serverRefreshToken != "")
-            {
-                var clientSecrets = new ClientSecrets
-                {
-                    ClientId = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_ID"),
-                    ClientSecret = Environment.GetEnvironmentVariable("IMPROBABLE_CLIENT_SECRET")
-                };
-                if (clientSecrets.ClientId != "" && clientSecrets.ClientSecret != "")
-                {
-                    var credentials = new PlatformRefreshTokenCredential(serverRefreshToken, null, null, null, clientSecrets);
                 }
             }
 
