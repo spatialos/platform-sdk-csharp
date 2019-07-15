@@ -7,5 +7,5 @@ github:
 teams:
 - name: Everyone
   permission: BUILD_AND_READ
-- name: spatialos-eng/workflows
+- name: spatialos-eng/worker
   permission: MANAGE_BUILD_AND_READ
