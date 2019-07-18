@@ -18,9 +18,10 @@ namespace BYOAuthFlow
     ///     This contains the implementation of the "Player authentication" scenario.
     ///     1. Start a cloud deployment.
     ///     2. Create a PlayerIdentityToken.
-    ///     3. Choose a deployment that is ready for login.
-    ///     4. Create a LoginToken for a selected deployment.
-    ///     5. Connect to the deployment using the PlayerIdentityToken and the LoginToken.
+    ///     3. Verify the PlayerIdentityToken.
+    ///     4. Choose a deployment that is ready for login.
+    ///     5. Create a LoginToken for a selected deployment.
+    ///     6. Connect to the deployment using the PlayerIdentityToken and the LoginToken.
     /// </summary>
     internal class BYOAuthScenario : ScenarioBase
     {
