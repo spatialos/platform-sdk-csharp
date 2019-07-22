@@ -38,4 +38,3 @@ docker run \
   --workdir="/workspace/examples/CapacityLimit" \
   "${DOCKER_IMAGE}" \
   /bin/bash -c "dotnet run --no-build --configuration Release"
-

@@ -5,7 +5,6 @@ set -e -u -o pipefail
 REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "${REPO_ROOT}"
 
-DOCKER_IMAGE="platform-sdk/csharp"
 ARTEFACT_DIR="${REPO_ROOT}/artefacts"
 OUTPUT_DIR="${REPO_ROOT}/apis/bin/Release"
 
@@ -32,7 +31,7 @@ msbuild "${REPO_ROOT}/apis/apis.csproj" \
   -verbosity:minimal
 
 pushd "${OUTPUT_DIR}/net451"
-  zip -r "${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip" *
+zip -r "${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip" ./*
 popd
 
 cp "${OUTPUT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" "${ARTEFACT_DIR}"
@@ -43,4 +42,3 @@ nuget push "${ARTEFACT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" 
 
 echo "--- Publishing to SpatialOS Package service"
 package_client publish platform_sdk csharp "${SDK_VERSION}" "${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip"
-
