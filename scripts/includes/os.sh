@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 function isLinux() {
-  [[ "$(uname -s)" == "Linux" ]];
+  [[ "$(uname -s)" == "Linux" ]]
 }
 
 function isMacOS() {
-  [[ "$(uname -s)" == "Darwin" ]];
+  [[ "$(uname -s)" == "Darwin" ]]
 }
 
 function isWindows() {
-  ! ( isLinux || isMacOS );
+  ! (isLinux || isMacOS)
 }
 
 # Return the target platform used by worker package names built for this OS.

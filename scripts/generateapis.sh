@@ -17,7 +17,7 @@ generate_api() {
     runBazel build "//${PACKAGE}:gapic"
     runBazel build "//${PACKAGE}:grpc"
 
-    find "bazel-genfiles/${PACKAGE}" -type f -name "*.cs"  -exec cp {} "${REPO_ROOT}/${PACKAGE}" \;
+    find "bazel-genfiles/${PACKAGE}" -type f -name "*.cs" -exec cp {} "${REPO_ROOT}/${PACKAGE}" \;
     find "${REPO_ROOT}/${PACKAGE}" -type f -name "*.cs" -exec chmod +w {} \+
 }
 
