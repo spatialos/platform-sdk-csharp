@@ -7,7 +7,7 @@ cd "${REPO_ROOT}"
 
 source scripts/includes/bazel.sh
 
-generate_api() {
+function generate_api() {
     NAME="$1"
     VERSION="$2"
     PACKAGE="apis/${NAME}_${VERSION}"
