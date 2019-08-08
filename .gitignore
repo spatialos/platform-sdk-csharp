@@ -1,17 +1,6 @@
 bazel-*
+**/obj/
 
 *~
 .idea/
 .vscode
-
-# CSharp Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x86/
-x64/
-bld/
-**/[Bb]in/
-**/[Ll]og/
-**/[Oo]bj/
