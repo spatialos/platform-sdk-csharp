@@ -1,6 +1,10 @@
+# Build artefacts
+artefacts/
 bazel-*
+**/bin/
 **/obj/
 
+# IDE files
 *~
 .idea/
 .vscode

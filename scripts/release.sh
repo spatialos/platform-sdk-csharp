@@ -5,8 +5,9 @@ set -e -u -o pipefail
 REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "${REPO_ROOT}"
 
-ARTEFACT_DIR="${REPO_ROOT}/artefacts"
-OUTPUT_DIR="${REPO_ROOT}/apis/bin/Release"
+PACKAGE_DIR="${REPO_ROOT}/artefacts"
+BIN_DIR="${REPO_ROOT}/apis/bin/Release"
+TARGET_FRAMEWORK="netstandard1.6"
 
 if [[ -z "${SDK_VERSION+x}" ]]; then
   echo "Please set the SDK_VERSION environment variable to the correct version."
@@ -20,25 +21,23 @@ if [[ -z "${NUGET_API_KEY+x}" ]]; then
 fi
 
 echo "--- Clearing artefacts from previous runs"
-rm -rf "${ARTEFACT_DIR}"
-mkdir -p "${ARTEFACT_DIR}"
+rm -rf "${PACKAGE_DIR}"
+mkdir -p "${PACKAGE_DIR}"
 
 echo "--- Preparing artefacts for release"
-msbuild "${REPO_ROOT}/apis/apis.csproj" \
-  /p:Configuration=Release \
-  /p:Version="${SDK_VERSION}" \
-  /t:Clean,Build \
-  -verbosity:minimal
+dotnet build apis/apis.csproj --configuration Release --framework "${TARGET_FRAMEWORK}"
+dotnet pack apis/apis.csproj --no-build --configuration Release -p:"PackageVersion=${SDK_VERSION}"
 
-pushd "${OUTPUT_DIR}/net451"
-zip -r "${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip" ./*
+pushd "${BIN_DIR}/${TARGET_FRAMEWORK}"
+zip -r "${PACKAGE_DIR}/${SDK_VERSION}.zip" ./*
 popd
 
-cp "${OUTPUT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" "${ARTEFACT_DIR}"
+cp "${BIN_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" "${PACKAGE_DIR}"
 
 echo "--- Publishing to NuGet"
-nuget setApiKey "${NUGET_API_KEY}"
-nuget push "${ARTEFACT_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" -Source https://api.nuget.org/v3/index.json
+dotnet nuget push "${PACKAGE_DIR}/Improbable.SpatialOS.Platform.${SDK_VERSION}.nupkg" \
+  --source https://api.nuget.org/v3/index.json \
+  --api-key "${NUGET_API_KEY}"
 
 echo "--- Publishing to SpatialOS Package service"
-package_client publish platform_sdk csharp "${SDK_VERSION}" "${ARTEFACT_DIR}/${SDK_VERSION}-net451.zip"
+package_client publish platform_sdk csharp "${SDK_VERSION}" "${PACKAGE_DIR}/${SDK_VERSION}.zip"
