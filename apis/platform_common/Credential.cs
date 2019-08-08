@@ -107,7 +107,7 @@ namespace Improbable.SpatialOS.Platform.Common
         private static PlatformRefreshTokenCredential GetTokenCredentialAutomatically()
         {
             var serverRefreshToken = Environment.GetEnvironmentVariable("IMPROBABLE_PLATFORM_REFRESH_TOKEN");
-            if (serverRefreshToken != "")
+            if (!string.IsNullOrEmpty(serverRefreshToken))
             {
                 var clientSecrets = new ClientSecrets
                 {
@@ -127,7 +127,7 @@ namespace Improbable.SpatialOS.Platform.Common
             };
 
             var tokenFile = possibleTokenFiles.FirstOrDefault(File.Exists);
-            if (tokenFile != null)
+            if (!string.IsNullOrEmpty(tokenFile))
             {
                 try
                 {
