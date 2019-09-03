@@ -59,14 +59,14 @@ git_repository(
 
 git_repository(
     name = "improbable_platform",
-    commit = "296b7bd9194204b0a0044555c7d1418416643831",
+    commit = "eba19202500d625d033e51070ff55c33ccaef5c2",
     remote = "git@github.com:improbable/platform.git",
     # Hello! Are you updating the commit of the platform repo dependency? This comment is for you!
     # The "shallow_since" field must be set to the day *before* the day of the commit. You can run
     # the following script inside the *platform* repo to determine the value you should put in the
     # "shallow_since" field based on the commit (replace <commit> with the actual commit hash):
     # $ date --date="$(git show --pretty=format:'%cD' <commit> | head --lines=1)-1 day" "+%F"
-    shallow_since = "2019-07-08",
+    shallow_since = "2019-09-02",
 )
 
 new_git_repository(
