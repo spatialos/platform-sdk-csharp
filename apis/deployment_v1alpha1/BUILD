@@ -31,7 +31,7 @@ csharp_proto_compile(
         "@improbable_protoc_gen_gocli//:proto",
     ],
     protos = [
-        "@improbable_platform//proto/improbable/spatialos/deployment:protos",
+        "@improbable_platform//proto/improbable/spatialos/deployment/v1alpha1:protos",
     ],
     with_grpc = True,
 )

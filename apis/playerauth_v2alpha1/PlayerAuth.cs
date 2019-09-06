@@ -1618,7 +1618,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// <summary>
     /// A user-specified description for the DAT.
     ///
-    /// The maximum length is 200 characters.
+    /// It cannot be empty and has a maximum length of 200 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -1865,7 +1865,7 @@ namespace Improbable.SpatialOS.PlayerAuth.V2Alpha1 {
     /// <summary>
     /// A description for the DAT.
     ///
-    /// The maximum length is 200 characters.
+    /// It cannot be empty and has a maximum length of 200 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {

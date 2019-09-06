@@ -53,11 +53,16 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListDeploymentsSettings = existing.ListDeploymentsSettings;
             GetDeploymentSettings = existing.GetDeploymentSettings;
+            GetRunningDeploymentByNameSettings = existing.GetRunningDeploymentByNameSettings;
             CreateDeploymentSettings = existing.CreateDeploymentSettings;
             CreateDeploymentOperationsSettings = existing.CreateDeploymentOperationsSettings?.Clone();
             DeleteDeploymentSettings = existing.DeleteDeploymentSettings;
             DeleteDeploymentOperationsSettings = existing.DeleteDeploymentOperationsSettings?.Clone();
             UpdateDeploymentSettings = existing.UpdateDeploymentSettings;
+            SetDeploymentWorkerFlagsSettings = existing.SetDeploymentWorkerFlagsSettings;
+            SetDeploymentTagsSettings = existing.SetDeploymentTagsSettings;
+            SetDeploymentWorkerCapacitiesSettings = existing.SetDeploymentWorkerCapacitiesSettings;
+            SetDeploymentWorkerRateLimitsSettings = existing.SetDeploymentWorkerRateLimitsSettings;
             StopDeploymentSettings = existing.StopDeploymentSettings;
             OnCopy(existing);
         }
@@ -190,6 +195,36 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.GetRunningDeploymentByName</c> and <c>DeploymentServiceClient.GetRunningDeploymentByNameAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.GetRunningDeploymentByName</c> and
+        /// <c>DeploymentServiceClient.GetRunningDeploymentByNameAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRunningDeploymentByNameSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DeploymentServiceClient.CreateDeployment</c> and <c>DeploymentServiceClient.CreateDeploymentAsync</c>.
         /// </summary>
         /// <remarks>
@@ -310,6 +345,122 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings UpdateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerFlags</c> and <c>DeploymentServiceClient.SetDeploymentWorkerFlagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.SetDeploymentWorkerFlags</c> and
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerFlagsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetDeploymentWorkerFlagsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.SetDeploymentTags</c> and <c>DeploymentServiceClient.SetDeploymentTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.SetDeploymentTags</c> and
+        /// <c>DeploymentServiceClient.SetDeploymentTagsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetDeploymentTagsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerCapacities</c> and <c>DeploymentServiceClient.SetDeploymentWorkerCapacitiesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.SetDeploymentWorkerCapacities</c> and
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerCapacitiesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetDeploymentWorkerCapacitiesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerRateLimits</c> and <c>DeploymentServiceClient.SetDeploymentWorkerRateLimitsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.SetDeploymentWorkerRateLimits</c> and
+        /// <c>DeploymentServiceClient.SetDeploymentWorkerRateLimitsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetDeploymentWorkerRateLimitsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -490,6 +641,62 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         /// </returns>
         public virtual GetDeploymentResponse GetDeployment(
             GetDeploymentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDeploymentResponse> GetRunningDeploymentByNameAsync(
+            GetRunningDeploymentByNameRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDeploymentResponse> GetRunningDeploymentByNameAsync(
+            GetRunningDeploymentByNameRequest request,
+            st::CancellationToken cancellationToken) => GetRunningDeploymentByNameAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetDeploymentResponse GetRunningDeploymentByName(
+            GetRunningDeploymentByNameRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -707,6 +914,230 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(
+            SetDeploymentWorkerFlagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(
+            SetDeploymentWorkerFlagsRequest request,
+            st::CancellationToken cancellationToken) => SetDeploymentWorkerFlagsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SetDeploymentWorkerFlagsResponse SetDeploymentWorkerFlags(
+            SetDeploymentWorkerFlagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentTagsResponse> SetDeploymentTagsAsync(
+            SetDeploymentTagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentTagsResponse> SetDeploymentTagsAsync(
+            SetDeploymentTagsRequest request,
+            st::CancellationToken cancellationToken) => SetDeploymentTagsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SetDeploymentTagsResponse SetDeploymentTags(
+            SetDeploymentTagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacitiesAsync(
+            SetDeploymentWorkerCapacitiesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacitiesAsync(
+            SetDeploymentWorkerCapacitiesRequest request,
+            st::CancellationToken cancellationToken) => SetDeploymentWorkerCapacitiesAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SetDeploymentWorkerCapacitiesResponse SetDeploymentWorkerCapacities(
+            SetDeploymentWorkerCapacitiesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimitsAsync(
+            SetDeploymentWorkerRateLimitsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimitsAsync(
+            SetDeploymentWorkerRateLimitsRequest request,
+            st::CancellationToken cancellationToken) => SetDeploymentWorkerRateLimitsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SetDeploymentWorkerRateLimitsResponse SetDeploymentWorkerRateLimits(
+            SetDeploymentWorkerRateLimitsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual stt::Task<StopDeploymentResponse> StopDeploymentAsync(
             StopDeploymentRequest request,
             gaxgrpc::CallSettings callSettings = null)
@@ -760,9 +1191,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
     {
         private readonly gaxgrpc::ApiCall<ListDeploymentsRequest, ListDeploymentsResponse> _callListDeployments;
         private readonly gaxgrpc::ApiCall<GetDeploymentRequest, GetDeploymentResponse> _callGetDeployment;
+        private readonly gaxgrpc::ApiCall<GetRunningDeploymentByNameRequest, GetDeploymentResponse> _callGetRunningDeploymentByName;
         private readonly gaxgrpc::ApiCall<CreateDeploymentRequest, lro::Operation> _callCreateDeployment;
         private readonly gaxgrpc::ApiCall<DeleteDeploymentRequest, lro::Operation> _callDeleteDeployment;
         private readonly gaxgrpc::ApiCall<UpdateDeploymentRequest, UpdateDeploymentResponse> _callUpdateDeployment;
+        private readonly gaxgrpc::ApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse> _callSetDeploymentWorkerFlags;
+        private readonly gaxgrpc::ApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse> _callSetDeploymentTags;
+        private readonly gaxgrpc::ApiCall<SetDeploymentWorkerCapacitiesRequest, SetDeploymentWorkerCapacitiesResponse> _callSetDeploymentWorkerCapacities;
+        private readonly gaxgrpc::ApiCall<SetDeploymentWorkerRateLimitsRequest, SetDeploymentWorkerRateLimitsResponse> _callSetDeploymentWorkerRateLimits;
         private readonly gaxgrpc::ApiCall<StopDeploymentRequest, StopDeploymentResponse> _callStopDeployment;
 
         /// <summary>
@@ -783,24 +1219,44 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
                 GrpcClient.ListDeploymentsAsync, GrpcClient.ListDeployments, effectiveSettings.ListDeploymentsSettings);
             _callGetDeployment = clientHelper.BuildApiCall<GetDeploymentRequest, GetDeploymentResponse>(
                 GrpcClient.GetDeploymentAsync, GrpcClient.GetDeployment, effectiveSettings.GetDeploymentSettings);
+            _callGetRunningDeploymentByName = clientHelper.BuildApiCall<GetRunningDeploymentByNameRequest, GetDeploymentResponse>(
+                GrpcClient.GetRunningDeploymentByNameAsync, GrpcClient.GetRunningDeploymentByName, effectiveSettings.GetRunningDeploymentByNameSettings);
             _callCreateDeployment = clientHelper.BuildApiCall<CreateDeploymentRequest, lro::Operation>(
                 GrpcClient.CreateDeploymentAsync, GrpcClient.CreateDeployment, effectiveSettings.CreateDeploymentSettings);
             _callDeleteDeployment = clientHelper.BuildApiCall<DeleteDeploymentRequest, lro::Operation>(
                 GrpcClient.DeleteDeploymentAsync, GrpcClient.DeleteDeployment, effectiveSettings.DeleteDeploymentSettings);
             _callUpdateDeployment = clientHelper.BuildApiCall<UpdateDeploymentRequest, UpdateDeploymentResponse>(
                 GrpcClient.UpdateDeploymentAsync, GrpcClient.UpdateDeployment, effectiveSettings.UpdateDeploymentSettings);
+            _callSetDeploymentWorkerFlags = clientHelper.BuildApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse>(
+                GrpcClient.SetDeploymentWorkerFlagsAsync, GrpcClient.SetDeploymentWorkerFlags, effectiveSettings.SetDeploymentWorkerFlagsSettings);
+            _callSetDeploymentTags = clientHelper.BuildApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse>(
+                GrpcClient.SetDeploymentTagsAsync, GrpcClient.SetDeploymentTags, effectiveSettings.SetDeploymentTagsSettings);
+            _callSetDeploymentWorkerCapacities = clientHelper.BuildApiCall<SetDeploymentWorkerCapacitiesRequest, SetDeploymentWorkerCapacitiesResponse>(
+                GrpcClient.SetDeploymentWorkerCapacitiesAsync, GrpcClient.SetDeploymentWorkerCapacities, effectiveSettings.SetDeploymentWorkerCapacitiesSettings);
+            _callSetDeploymentWorkerRateLimits = clientHelper.BuildApiCall<SetDeploymentWorkerRateLimitsRequest, SetDeploymentWorkerRateLimitsResponse>(
+                GrpcClient.SetDeploymentWorkerRateLimitsAsync, GrpcClient.SetDeploymentWorkerRateLimits, effectiveSettings.SetDeploymentWorkerRateLimitsSettings);
             _callStopDeployment = clientHelper.BuildApiCall<StopDeploymentRequest, StopDeploymentResponse>(
                 GrpcClient.StopDeploymentAsync, GrpcClient.StopDeployment, effectiveSettings.StopDeploymentSettings);
             Modify_ApiCall(ref _callListDeployments);
             Modify_ListDeploymentsApiCall(ref _callListDeployments);
             Modify_ApiCall(ref _callGetDeployment);
             Modify_GetDeploymentApiCall(ref _callGetDeployment);
+            Modify_ApiCall(ref _callGetRunningDeploymentByName);
+            Modify_GetRunningDeploymentByNameApiCall(ref _callGetRunningDeploymentByName);
             Modify_ApiCall(ref _callCreateDeployment);
             Modify_CreateDeploymentApiCall(ref _callCreateDeployment);
             Modify_ApiCall(ref _callDeleteDeployment);
             Modify_DeleteDeploymentApiCall(ref _callDeleteDeployment);
             Modify_ApiCall(ref _callUpdateDeployment);
             Modify_UpdateDeploymentApiCall(ref _callUpdateDeployment);
+            Modify_ApiCall(ref _callSetDeploymentWorkerFlags);
+            Modify_SetDeploymentWorkerFlagsApiCall(ref _callSetDeploymentWorkerFlags);
+            Modify_ApiCall(ref _callSetDeploymentTags);
+            Modify_SetDeploymentTagsApiCall(ref _callSetDeploymentTags);
+            Modify_ApiCall(ref _callSetDeploymentWorkerCapacities);
+            Modify_SetDeploymentWorkerCapacitiesApiCall(ref _callSetDeploymentWorkerCapacities);
+            Modify_ApiCall(ref _callSetDeploymentWorkerRateLimits);
+            Modify_SetDeploymentWorkerRateLimitsApiCall(ref _callSetDeploymentWorkerRateLimits);
             Modify_ApiCall(ref _callStopDeployment);
             Modify_StopDeploymentApiCall(ref _callStopDeployment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -818,9 +1274,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_ListDeploymentsApiCall(ref gaxgrpc::ApiCall<ListDeploymentsRequest, ListDeploymentsResponse> call);
         partial void Modify_GetDeploymentApiCall(ref gaxgrpc::ApiCall<GetDeploymentRequest, GetDeploymentResponse> call);
+        partial void Modify_GetRunningDeploymentByNameApiCall(ref gaxgrpc::ApiCall<GetRunningDeploymentByNameRequest, GetDeploymentResponse> call);
         partial void Modify_CreateDeploymentApiCall(ref gaxgrpc::ApiCall<CreateDeploymentRequest, lro::Operation> call);
         partial void Modify_DeleteDeploymentApiCall(ref gaxgrpc::ApiCall<DeleteDeploymentRequest, lro::Operation> call);
         partial void Modify_UpdateDeploymentApiCall(ref gaxgrpc::ApiCall<UpdateDeploymentRequest, UpdateDeploymentResponse> call);
+        partial void Modify_SetDeploymentWorkerFlagsApiCall(ref gaxgrpc::ApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse> call);
+        partial void Modify_SetDeploymentTagsApiCall(ref gaxgrpc::ApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse> call);
+        partial void Modify_SetDeploymentWorkerCapacitiesApiCall(ref gaxgrpc::ApiCall<SetDeploymentWorkerCapacitiesRequest, SetDeploymentWorkerCapacitiesResponse> call);
+        partial void Modify_SetDeploymentWorkerRateLimitsApiCall(ref gaxgrpc::ApiCall<SetDeploymentWorkerRateLimitsRequest, SetDeploymentWorkerRateLimitsResponse> call);
         partial void Modify_StopDeploymentApiCall(ref gaxgrpc::ApiCall<StopDeploymentRequest, StopDeploymentResponse> call);
         partial void OnConstruction(DeploymentService.DeploymentServiceClient grpcClient, DeploymentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -834,9 +1295,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         // before the underlying RPC is performed.
         partial void Modify_ListDeploymentsRequest(ref ListDeploymentsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetDeploymentRequest(ref GetDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetRunningDeploymentByNameRequest(ref GetRunningDeploymentByNameRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateDeploymentRequest(ref CreateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteDeploymentRequest(ref DeleteDeploymentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateDeploymentRequest(ref UpdateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetDeploymentWorkerFlagsRequest(ref SetDeploymentWorkerFlagsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetDeploymentTagsRequest(ref SetDeploymentTagsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetDeploymentWorkerCapacitiesRequest(ref SetDeploymentWorkerCapacitiesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetDeploymentWorkerRateLimitsRequest(ref SetDeploymentWorkerRateLimitsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_StopDeploymentRequest(ref StopDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
@@ -917,6 +1383,46 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         {
             Modify_GetDeploymentRequest(ref request, ref callSettings);
             return _callGetDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<GetDeploymentResponse> GetRunningDeploymentByNameAsync(
+            GetRunningDeploymentByNameRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRunningDeploymentByNameRequest(ref request, ref callSettings);
+            return _callGetRunningDeploymentByName.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override GetDeploymentResponse GetRunningDeploymentByName(
+            GetRunningDeploymentByNameRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRunningDeploymentByNameRequest(ref request, ref callSettings);
+            return _callGetRunningDeploymentByName.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -1051,6 +1557,166 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1
         {
             Modify_UpdateDeploymentRequest(ref request, ref callSettings);
             return _callUpdateDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(
+            SetDeploymentWorkerFlagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerFlagsRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerFlags.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override SetDeploymentWorkerFlagsResponse SetDeploymentWorkerFlags(
+            SetDeploymentWorkerFlagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerFlagsRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerFlags.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<SetDeploymentTagsResponse> SetDeploymentTagsAsync(
+            SetDeploymentTagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentTagsRequest(ref request, ref callSettings);
+            return _callSetDeploymentTags.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override SetDeploymentTagsResponse SetDeploymentTags(
+            SetDeploymentTagsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentTagsRequest(ref request, ref callSettings);
+            return _callSetDeploymentTags.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacitiesAsync(
+            SetDeploymentWorkerCapacitiesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerCapacitiesRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerCapacities.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override SetDeploymentWorkerCapacitiesResponse SetDeploymentWorkerCapacities(
+            SetDeploymentWorkerCapacitiesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerCapacitiesRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerCapacities.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimitsAsync(
+            SetDeploymentWorkerRateLimitsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerRateLimitsRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerRateLimits.Async(request, callSettings);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override SetDeploymentWorkerRateLimitsResponse SetDeploymentWorkerRateLimits(
+            SetDeploymentWorkerRateLimitsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDeploymentWorkerRateLimitsRequest(ref request, ref callSettings);
+            return _callSetDeploymentWorkerRateLimits.Sync(request, callSettings);
         }
 
         /// <summary>

@@ -31,6 +31,14 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentResponse> __Marshaller_UpdateDeploymentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.UpdateDeploymentResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest> __Marshaller_StopDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse> __Marshaller_StopDeploymentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest> __Marshaller_SetDeploymentWorkerFlagsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse> __Marshaller_SetDeploymentWorkerFlagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest> __Marshaller_SetDeploymentTagsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse> __Marshaller_SetDeploymentTagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest> __Marshaller_SetDeploymentWorkerCapacitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse> __Marshaller_SetDeploymentWorkerCapacitiesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest> __Marshaller_SetDeploymentWorkerRateLimitsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse> __Marshaller_SetDeploymentWorkerRateLimitsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.ListDeploymentsResponse>(
         grpc::MethodType.Unary,
@@ -80,6 +88,34 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
         "StopDeployment",
         __Marshaller_StopDeploymentRequest,
         __Marshaller_StopDeploymentResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse> __Method_SetDeploymentWorkerFlags = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetDeploymentWorkerFlags",
+        __Marshaller_SetDeploymentWorkerFlagsRequest,
+        __Marshaller_SetDeploymentWorkerFlagsResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse> __Method_SetDeploymentTags = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetDeploymentTags",
+        __Marshaller_SetDeploymentTagsRequest,
+        __Marshaller_SetDeploymentTagsResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse> __Method_SetDeploymentWorkerCapacities = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetDeploymentWorkerCapacities",
+        __Marshaller_SetDeploymentWorkerCapacitiesRequest,
+        __Marshaller_SetDeploymentWorkerCapacitiesResponse);
+
+    static readonly grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse> __Method_SetDeploymentWorkerRateLimits = new grpc::Method<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest, global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetDeploymentWorkerRateLimits",
+        __Marshaller_SetDeploymentWorkerRateLimitsRequest,
+        __Marshaller_SetDeploymentWorkerRateLimitsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -169,6 +205,50 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentResponse> StopDeployment(global::Improbable.SpatialOS.Deployment.V1Alpha1.StopDeploymentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// SetDeploymentWorkerFlags sets the worker flags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// SetDeploymentTags sets the tags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse> SetDeploymentTags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// SetDeploymentWorkerCapacities sets the worker capacities on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacities(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// SetDeploymentWorkerRateLimits sets the worker rate limits on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimits(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -530,6 +610,182 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopDeployment, null, options, request);
       }
+      /// <summary>
+      /// SetDeploymentWorkerFlags sets the worker flags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse SetDeploymentWorkerFlags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerFlags(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerFlags sets the worker flags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse SetDeploymentWorkerFlags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetDeploymentWorkerFlags, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentWorkerFlags sets the worker flags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerFlagsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerFlags sets the worker flags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerFlagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetDeploymentWorkerFlags, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentTags sets the tags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse SetDeploymentTags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentTags(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentTags sets the tags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse SetDeploymentTags(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetDeploymentTags, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentTags sets the tags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse> SetDeploymentTagsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentTagsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentTags sets the tags on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsResponse> SetDeploymentTagsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetDeploymentTags, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentWorkerCapacities sets the worker capacities on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse SetDeploymentWorkerCapacities(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerCapacities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerCapacities sets the worker capacities on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse SetDeploymentWorkerCapacities(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetDeploymentWorkerCapacities, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentWorkerCapacities sets the worker capacities on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacitiesAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerCapacitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerCapacities sets the worker capacities on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesResponse> SetDeploymentWorkerCapacitiesAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerCapacitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetDeploymentWorkerCapacities, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentWorkerRateLimits sets the worker rate limits on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse SetDeploymentWorkerRateLimits(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerRateLimits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerRateLimits sets the worker rate limits on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse SetDeploymentWorkerRateLimits(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetDeploymentWorkerRateLimits, null, options, request);
+      }
+      /// <summary>
+      /// SetDeploymentWorkerRateLimits sets the worker rate limits on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimitsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetDeploymentWorkerRateLimitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetDeploymentWorkerRateLimits sets the worker rate limits on a deployment as identified by the `deployment_id`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsResponse> SetDeploymentWorkerRateLimitsAsync(global::Improbable.SpatialOS.Deployment.V1Alpha1.SetDeploymentWorkerRateLimitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetDeploymentWorkerRateLimits, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DeploymentServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -548,7 +804,11 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
           .AddMethod(__Method_CreateDeployment, serviceImpl.CreateDeployment)
           .AddMethod(__Method_DeleteDeployment, serviceImpl.DeleteDeployment)
           .AddMethod(__Method_UpdateDeployment, serviceImpl.UpdateDeployment)
-          .AddMethod(__Method_StopDeployment, serviceImpl.StopDeployment).Build();
+          .AddMethod(__Method_StopDeployment, serviceImpl.StopDeployment)
+          .AddMethod(__Method_SetDeploymentWorkerFlags, serviceImpl.SetDeploymentWorkerFlags)
+          .AddMethod(__Method_SetDeploymentTags, serviceImpl.SetDeploymentTags)
+          .AddMethod(__Method_SetDeploymentWorkerCapacities, serviceImpl.SetDeploymentWorkerCapacities)
+          .AddMethod(__Method_SetDeploymentWorkerRateLimits, serviceImpl.SetDeploymentWorkerRateLimits).Build();
     }
 
   }
