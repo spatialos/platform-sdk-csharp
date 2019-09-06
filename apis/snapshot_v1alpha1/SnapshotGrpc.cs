@@ -75,7 +75,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
     public abstract partial class SnapshotServiceBase
     {
       /// <summary>
-      /// Lists snapshots under a deployment.
+      /// Lists snapshots under a deployment. By default, snapshots are sorted by creation time (descending).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -158,7 +158,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
       }
 
       /// <summary>
-      /// Lists snapshots under a deployment.
+      /// Lists snapshots under a deployment. By default, snapshots are sorted by creation time (descending).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -170,7 +170,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists snapshots under a deployment.
+      /// Lists snapshots under a deployment. By default, snapshots are sorted by creation time (descending).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -180,7 +180,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// Lists snapshots under a deployment.
+      /// Lists snapshots under a deployment. By default, snapshots are sorted by creation time (descending).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -192,7 +192,7 @@ namespace Improbable.SpatialOS.Snapshot.V1Alpha1 {
         return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists snapshots under a deployment.
+      /// Lists snapshots under a deployment. By default, snapshots are sorted by creation time (descending).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
