@@ -41,10 +41,11 @@ filegroup(
     name = "platform_api_protos",
     srcs = [
         "@improbable_platform//proto/improbable/spatialos/deployment:protos",
-        "@improbable_platform//proto/improbable/spatialos/snapshot:protos",
-        "@improbable_platform//proto/improbable/spatialos/serviceaccount:protos",
         "@improbable_platform//proto/improbable/spatialos/playerauth/v1alpha1:protos",
         "@improbable_platform//proto/improbable/spatialos/playerauth/v2alpha1:protos",
+        "@improbable_platform//proto/improbable/spatialos/remoteinteraction/v1alpha1:protos",
+        "@improbable_platform//proto/improbable/spatialos/serviceaccount:protos",
+        "@improbable_platform//proto/improbable/spatialos/snapshot:protos",
     ],
 )
 
