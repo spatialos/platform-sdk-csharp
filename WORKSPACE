@@ -59,14 +59,20 @@ git_repository(
 
 git_repository(
     name = "improbable_platform",
-    commit = "eba19202500d625d033e51070ff55c33ccaef5c2",
+    commit = "6c58483a01ae53c8e515e40906106a473b35411b",
     remote = "git@github.com:improbable/platform.git",
     # Hello! Are you updating the commit of the platform repo dependency? This comment is for you!
     # The "shallow_since" field must be set to the day *before* the day of the commit. You can run
     # the following script inside the *platform* repo to determine the value you should put in the
     # "shallow_since" field based on the commit (replace <commit> with the actual commit hash):
     # $ date --date="$(git show --pretty=format:'%cD' <commit> | head --lines=1)-1 day" "+%F"
-    shallow_since = "2019-09-02",
+    shallow_since = "2019-09-17",
+    # TODO(WRK-944): Due to the use by this repository of an older Bazel version we need to apply a
+    #                patch to the imported version of the Platform repository to maintain
+    #                compatibility.
+    patches = [
+        "//tools/patches:proto_rules_backwards_compatibility.patch",
+    ],
 )
 
 new_git_repository(
