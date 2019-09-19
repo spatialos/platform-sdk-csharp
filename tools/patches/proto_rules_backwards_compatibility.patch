@@ -1,0 +1,167 @@
+From 696b4d8c566a90a191f2b2e3938bb25b354cebf5 Mon Sep 17 00:00:00 2001
+From: Duco van Amstel <duco.vanamstel@gmail.com>
+Date: Wed, 18 Sep 2019 15:28:19 +0100
+Subject: [PATCH] Make rules.bzl backwards compatible
+
+---
+ proto/improbable/spatialos/deployment/v1alpha1/BUILD      | 1 +
+ proto/improbable/spatialos/deployment/v1beta1/BUILD       | 1 +
+ proto/improbable/spatialos/playerauth/v1alpha1/BUILD      | 1 +
+ proto/improbable/spatialos/playerauth/v2/BUILD            | 1 +
+ proto/improbable/spatialos/playerauth/v2/private/BUILD    | 1 +
+ proto/improbable/spatialos/playerauth/v2alpha1/BUILD      | 1 +
+ .../improbable/spatialos/remoteinteraction/v1alpha1/BUILD | 1 +
+ proto/improbable/spatialos/serviceaccount/v1alpha1/BUILD  | 1 +
+ proto/improbable/spatialos/snapshot/v1alpha1/BUILD        | 1 +
+ proto/rules.bzl                                           | 8 +++++++-
+ 10 files changed, 16 insertions(+), 1 deletion(-)
+
+diff --git proto/improbable/spatialos/deployment/v1alpha1/BUILD proto/improbable/spatialos/deployment/v1alpha1/BUILD
+index 794aaf8a54..3e355beb90 100644
+--- proto/improbable/spatialos/deployment/v1alpha1/BUILD
++++ proto/improbable/spatialos/deployment/v1alpha1/BUILD
+@@ -7,6 +7,7 @@ imp_proto_library(
+     name = "v1alpha1",
+     proto_deps = [],
+     protos = [":protos"],
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/deployment/v1beta1/BUILD proto/improbable/spatialos/deployment/v1beta1/BUILD
+index ea52beb3a9..cb5deb064a 100644
+--- proto/improbable/spatialos/deployment/v1beta1/BUILD
++++ proto/improbable/spatialos/deployment/v1beta1/BUILD
+@@ -7,6 +7,7 @@ imp_proto_library(
+     name = "v1beta1",
+     proto_deps = [],
+     protos = [":protos"],
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/playerauth/v1alpha1/BUILD proto/improbable/spatialos/playerauth/v1alpha1/BUILD
+index e48608c319..2844e74f99 100644
+--- proto/improbable/spatialos/playerauth/v1alpha1/BUILD
++++ proto/improbable/spatialos/playerauth/v1alpha1/BUILD
+@@ -6,6 +6,7 @@ imp_proto_library(
+     name = "v1alpha1",
+     proto_deps = [],
+     protos = [":protos"],
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/playerauth/v2/BUILD proto/improbable/spatialos/playerauth/v2/BUILD
+index dd4d2cb9e7..ac2141f1d5 100644
+--- proto/improbable/spatialos/playerauth/v2/BUILD
++++ proto/improbable/spatialos/playerauth/v2/BUILD
+@@ -6,6 +6,7 @@ imp_proto_library(
+     name = "v2",
+     proto_deps = [],
+     protos = glob(["*.proto"]),
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/playerauth/v2/private/BUILD proto/improbable/spatialos/playerauth/v2/private/BUILD
+index 07e9ad2895..5b6394d715 100644
+--- proto/improbable/spatialos/playerauth/v2/private/BUILD
++++ proto/improbable/spatialos/playerauth/v2/private/BUILD
+@@ -8,6 +8,7 @@ imp_proto_library(
+         "//proto/improbable/spatialos/playerauth/v2",
+     ],
+     protos = glob(["*.proto"]),
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/playerauth/v2alpha1/BUILD proto/improbable/spatialos/playerauth/v2alpha1/BUILD
+index fea390337d..ae98009814 100644
+--- proto/improbable/spatialos/playerauth/v2alpha1/BUILD
++++ proto/improbable/spatialos/playerauth/v2alpha1/BUILD
+@@ -6,6 +6,7 @@ imp_proto_library(
+     name = "v2alpha1",
+     proto_deps = [],
+     protos = glob(["*.proto"]),
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/remoteinteraction/v1alpha1/BUILD proto/improbable/spatialos/remoteinteraction/v1alpha1/BUILD
+index deaa771d16..62863a746c 100644
+--- proto/improbable/spatialos/remoteinteraction/v1alpha1/BUILD
++++ proto/improbable/spatialos/remoteinteraction/v1alpha1/BUILD
+@@ -7,6 +7,7 @@ imp_proto_library(
+     name = "v1alpha1",
+     proto_deps = [],
+     protos = glob(["*.proto"]),
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/serviceaccount/v1alpha1/BUILD proto/improbable/spatialos/serviceaccount/v1alpha1/BUILD
+index b44d7eac52..b08aa2a12f 100644
+--- proto/improbable/spatialos/serviceaccount/v1alpha1/BUILD
++++ proto/improbable/spatialos/serviceaccount/v1alpha1/BUILD
+@@ -7,6 +7,7 @@ imp_proto_library(
+     name = "v1alpha1",
+     proto_deps = [],
+     protos = glob(["*.proto"]),
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/improbable/spatialos/snapshot/v1alpha1/BUILD proto/improbable/spatialos/snapshot/v1alpha1/BUILD
+index 8d2d88b514..338ec7f90a 100644
+--- proto/improbable/spatialos/snapshot/v1alpha1/BUILD
++++ proto/improbable/spatialos/snapshot/v1alpha1/BUILD
+@@ -7,6 +7,7 @@ imp_proto_library(
+     name = "v1alpha1",
+     proto_deps = [],
+     protos = [":protos"],
++    with_native_proto = False,
+ )
+ 
+ filegroup(
+diff --git proto/rules.bzl proto/rules.bzl
+index 2aee80ecc9..fb6a6bafbe 100644
+--- proto/rules.bzl
++++ proto/rules.bzl
+@@ -11,11 +11,13 @@ def _append_lang(label, lang):
+ def imp_proto_library(
+     name,
+     with_auth=True,
++    with_native_proto=True,
+     **kwargs):
+ 
+     imp_go_proto_library(
+         name,
+         with_auth=with_auth,
++        with_native_proto=with_native_proto,
+         **kwargs)
+ 
+     _imp_java_proto_library(name + "_java", **kwargs)
+@@ -31,6 +33,7 @@ def imp_go_proto_library(
+     proto_compile_args={},
+     with_grpc=True,
+     with_auth=True,
++    with_native_proto=True,
+     deps=[],
+     go_proto_deps=[],
+     is_dbproto=False,
+@@ -122,7 +125,10 @@ def imp_go_proto_library(
+       ]
+ 
+     # TODO(ENG-2007): dbprotos are going away soon. When they do, remove all relevant code here.
+-    if not is_dbproto:
++    # TODO(WRK-944): Due to the use by Platform SDKs of an older Bazel version we need to apply a
++    #                patch to the imported version of the Platform repository to maintain
++    #                compatibility.
++    if not is_dbproto and with_native_proto:
+       native.proto_library(
+           name = "native_proto_library",
+           srcs = kwargs['protos'],
+-- 
+2.17.1
+
