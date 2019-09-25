@@ -2,13 +2,13 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf.WellKnownTypes;
-using Improbable.SpatialOS.Deployment.V1Alpha1;
+using Improbable.SpatialOS.Deployment.V1Beta1;
 using Improbable.SpatialOS.Platform.Common;
 using Improbable.SpatialOS.PlayerAuth.V2Alpha1;
 using Improbable.Worker;
 using Improbable.Worker.Alpha;
 using Utils;
-using Deployment = Improbable.SpatialOS.Deployment.V1Alpha1.Deployment;
+using Deployment = Improbable.SpatialOS.Deployment.V1Beta1.Deployment;
 using Locator = Improbable.Worker.Alpha.Locator;
 using LocatorParameters = Improbable.Worker.Alpha.LocatorParameters;
 
@@ -79,17 +79,14 @@ namespace BYOAuthFlow
             var launchConfig = File.ReadAllText(LaunchConfigFilePath);
             _deployment = _deploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
             {
-                Deployment = new Deployment
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName,
+                LaunchConfig = new LaunchConfig
                 {
-                    ProjectName = ProjectName,
-                    Name = DeploymentName,
-                    LaunchConfig = new LaunchConfig
-                    {
-                        ConfigJson = launchConfig
-                    },
-                    AssemblyId = AssemblyId,
-                    Tag = {ScenarioDeploymentTag}
-                }
+                    ConfigJson = launchConfig
+                },
+                AssemblyName = AssemblyId,
+                Tags = {ScenarioDeploymentTag}
             }).PollUntilCompleted().GetResultOrNull();
         }
 
@@ -116,18 +113,27 @@ namespace BYOAuthFlow
             if (DateTime.Now.CompareTo(playerIdentityToken.ExpiryTime.ToDateTime()) > 0) throw new Exception("PlayerIdentityToken expired.");
             
             Console.WriteLine("Choosing a deployment");
-            var suitableDeployment = _deploymentServiceClient.ListDeployments(new ListDeploymentsRequest
+            var listDeploymentsRequest = new ListDeploymentsRequest
             {
                 ProjectName = ProjectName,
-                DeploymentName = DeploymentName
-            }).First(d => d.Tag.Contains(ScenarioDeploymentTag));
+                Filters = {new Filter
+                {
+                    TagsPropertyFilter = new TagsPropertyFilter
+                    {
+                        Tag = "player_auth_tag",
+                        Operator = TagsPropertyFilter.Types.Operator.Equal,
+    
+                    },
+                }}
+            };
+            var suitableDeployment = _deploymentServiceClient.ListDeployments(listDeploymentsRequest).First();
 
             Console.WriteLine("Creating a LoginToken for the selected deployment");
             var createLoginTokenResponse = _playerAuthServiceClient.CreateLoginToken(
                 new CreateLoginTokenRequest
                 {
                     PlayerIdentityToken = playerIdentityTokenResponse.PlayerIdentityToken,
-                    DeploymentId = suitableDeployment.Id,
+                    DeploymentId = suitableDeployment.Id.ToString(),
                     LifetimeDuration = Duration.FromTimeSpan(new TimeSpan(0, 0, 30, 0)),
                     WorkerType = ScenarioWorkerType
                 });
@@ -161,11 +167,10 @@ namespace BYOAuthFlow
                 _deployment.Status != Deployment.Types.Status.Starting) return;
 
             Console.WriteLine("Stopping deployment");
-            _deploymentServiceClient.StopDeployment(new StopDeploymentRequest
+            _deploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
             {
                 Id = _deployment.Id,
-                ProjectName = _deployment.ProjectName
-            });
+            }).PollUntilCompleted();
         }
     }
 
