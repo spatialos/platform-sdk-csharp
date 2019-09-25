@@ -112,6 +112,7 @@ namespace GameMaintenance
                     DeploymentName = currentLiveDeployment.Deployment.DeploymentName,
                     ProjectName = currentLiveDeployment.Deployment.ProjectName,
                     StartingSnapshotId = latestSnapshot.Id,
+                    LaunchConfig = currentLiveDeployment.Deployment.LaunchConfig,
                 })
                 .PollUntilCompleted()
                 .GetResultOrNull();
