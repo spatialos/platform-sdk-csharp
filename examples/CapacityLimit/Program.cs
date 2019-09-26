@@ -55,7 +55,7 @@ namespace CapacityLimit
         private readonly PlayerAuthServiceClient _playerAuthServiceClient =
             PlayerAuthServiceClient.Create(credentials: CredentialWithProvidedToken);
 
-        private Deployment suitableDeployment;
+        private Deployment _runningDeployment;
 
         /// <summary>
         ///     PLEASE REPLACE.
@@ -94,17 +94,17 @@ namespace CapacityLimit
         protected override void Run()
         {
             Console.WriteLine("Finding current running deployment");
-            suitableDeployment = _deploymentServiceClient.GetRunningDeploymentByName(new GetRunningDeploymentByNameRequest
+            _runningDeployment = _deploymentServiceClient.GetRunningDeploymentByName(new GetRunningDeploymentByNameRequest
             {
                 ProjectName = ProjectName,
                 DeploymentName = DeploymentName
             }).Deployment;
-            Console.WriteLine($"Found deployment {suitableDeployment.Id}");
+            Console.WriteLine($"Found deployment {_runningDeployment.Id}");
 
             Console.WriteLine("Setting capacity limit to 2");
             var setWorkerCapacitiesRequest = new SetDeploymentWorkerCapacitiesRequest
             {
-                DeploymentId = suitableDeployment.Id,
+                DeploymentId = _runningDeployment.Id,
             };
             setWorkerCapacitiesRequest.WorkerConnectionCapacities.Add(new WorkerCapacity
             {
@@ -128,7 +128,7 @@ namespace CapacityLimit
                 new CreateLoginTokenRequest
                 {
                     PlayerIdentityToken = playerIdentityTokenResponse.PlayerIdentityToken,
-                    DeploymentId = suitableDeployment.Id.ToString(),
+                    DeploymentId = _runningDeployment.Id.ToString(),
                     LifetimeDuration = Duration.FromTimeSpan(new TimeSpan(0, 0, 30, 0)),
                     WorkerType = ScenarioWorkerType
                 });
@@ -154,7 +154,7 @@ namespace CapacityLimit
             Console.WriteLine("Increasing capacity limit to 3");
             setWorkerCapacitiesRequest = new SetDeploymentWorkerCapacitiesRequest
             {
-                DeploymentId = suitableDeployment.Id,
+                DeploymentId = _runningDeployment.Id,
             };
             setWorkerCapacitiesRequest.WorkerConnectionCapacities.Add(new WorkerCapacity
             {
@@ -162,7 +162,7 @@ namespace CapacityLimit
                 MaxCapacity = 3
             });
             _deploymentServiceClient.SetDeploymentWorkerCapacities(setWorkerCapacitiesRequest);
-            
+
             Console.WriteLine("Connecting another worker");
             if (!TryConnectWorker(locator))
                 throw new Exception("Expected worker to be able to connect after capacity increase");
@@ -170,14 +170,14 @@ namespace CapacityLimit
 
         protected override void Cleanup()
         {
-            if (suitableDeployment == null) return;
-            if (suitableDeployment.Status != Deployment.Types.Status.Running &&
-                suitableDeployment.Status != Deployment.Types.Status.Starting) return;
+            if (_runningDeployment == null) return;
+            if (_runningDeployment.Status != Deployment.Types.Status.Running &&
+                _runningDeployment.Status != Deployment.Types.Status.Starting) return;
 
             Console.WriteLine("Stopping deployment");
             _deploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
             {
-                Id = suitableDeployment.Id,
+                Id = _runningDeployment.Id,
             }).PollUntilCompleted();
         }
 
