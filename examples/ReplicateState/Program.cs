@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using Improbable.SpatialOS.Deployment.V1Beta1;
+using Improbable.SpatialOS.Deployment.V1Alpha1;
 using Improbable.SpatialOS.Platform.Common;
 using Improbable.SpatialOS.Snapshot.V1Alpha1;
 using Utils;
@@ -139,16 +139,20 @@ namespace ReplicateState
             });
 
             Console.WriteLine("Starting a new cloud deployment with the new snapshot");
-            _cloudDeployment = CloudDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
+            _cloudDeployment = new Deployment
             {
                 ProjectName = ProjectName,
-                DeploymentName = DeploymentName,
+                Name = DeploymentName,
                 LaunchConfig = new LaunchConfig
                 {
                     ConfigJson = File.ReadAllText(LaunchConfigFilePath)
                 },
-                AssemblyName = AssemblyId,
+                AssemblyId = AssemblyId,
                 StartingSnapshotId = newSnapshot.Id
+            };
+            _cloudDeployment = CloudDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
+            {
+                Deployment = _cloudDeployment
             }).PollUntilCompleted().GetResultOrNull();
 
             Cleanup();
@@ -168,18 +172,21 @@ namespace ReplicateState
             var launchConfig = File.ReadAllText(LaunchConfigFilePath);
             _localDeployment = LocalDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
             {
-                ProjectName = ProjectName,
-                DeploymentName = DeploymentName,
-                LaunchConfig = new LaunchConfig
+                Deployment = new Deployment
                 {
-                    ConfigJson = launchConfig
+                    ProjectName = ProjectName,
+                    Name = DeploymentName,
+                    LaunchConfig = new LaunchConfig
+                    {
+                        ConfigJson = launchConfig
+                    }
                 }
             }).PollUntilCompleted().GetResultOrNull();
             
             if (_localDeployment.Status == Deployment.Types.Status.Error)
             {
                 throw new Exception(
-                    "Failed to create the local deployment; please make sure to build the project by running `spatial build` in the project directory");
+                    "Failed to create the local eployment; please make sure to build the project by running `spatial build` in the project directory");
             }
         }
 
@@ -189,15 +196,17 @@ namespace ReplicateState
         private static void Cleanup()
         {
             Console.WriteLine("Cleaning up");
-            LocalDeploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
+            LocalDeploymentServiceClient.StopDeployment(new StopDeploymentRequest
             {
                 Id = _localDeployment.Id,
-            }).PollUntilCompleted();
-            
-            CloudDeploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
+                ProjectName = _localDeployment.ProjectName
+            });
+
+            CloudDeploymentServiceClient.StopDeployment(new StopDeploymentRequest
             {
                 Id = _cloudDeployment.Id,
-            }).PollUntilCompleted();
+                ProjectName = _cloudDeployment.ProjectName
+            });
         }
     }
 }
