@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
-using Improbable.SpatialOS.Deployment.V1Alpha1;
+using Improbable.SpatialOS.Deployment.V1Beta1;
 using Improbable.SpatialOS.Platform.Common;
 using Improbable.SpatialOS.Snapshot.V1Alpha1;
 using Utils;
@@ -73,55 +72,59 @@ namespace GameMaintenance
         {
             Setup();
 
-            Console.WriteLine("Finding a current running deployment with live tag");
-            var currentLiveDeployment = DeploymentServiceClient
-                .ListDeployments(new ListDeploymentsRequest
-                {
-                    ProjectName = ProjectName,
-                    DeploymentName = DeploymentName
-                })
-                .First(d => d.Status == Deployment.Types.Status.Running && d.Tag.Contains("my_live_tag"));
+            Console.WriteLine("Finding the current running deployment");
+            var currentLiveDeployment = DeploymentServiceClient.GetRunningDeploymentByName(new GetRunningDeploymentByNameRequest
+            {
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName,
+            });
 
             Console.WriteLine("Putting the deployment to maintenance mode");
-            currentLiveDeployment.Tag.Remove("my_live_tag");
-            currentLiveDeployment.WorkerFlags.Add(new WorkerFlag
+            currentLiveDeployment.Deployment.Tags.Remove("my_live_tag");
+            var setTagsRequest = new SetDeploymentTagsRequest
             {
-                Key = "maintenance",
-                Value = "true",
-                WorkerType = "unity"
-            });
-            DeploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = currentLiveDeployment});
+                DeploymentId = currentLiveDeployment.Deployment.Id,
+                Tags = {currentLiveDeployment.Deployment.Tags},
+            };
+            DeploymentServiceClient.SetDeploymentTags(setTagsRequest);
+
 
             Console.WriteLine("Taking a cloud snapshot");
             var latestSnapshot = SnapshotServiceClient.TakeSnapshot(new TakeSnapshotRequest
                 {
                     Snapshot = new Snapshot
                     {
-                        ProjectName = currentLiveDeployment.ProjectName,
-                        DeploymentName = currentLiveDeployment.Name
+                        ProjectName = currentLiveDeployment.Deployment.ProjectName,
+                        DeploymentName = currentLiveDeployment.Deployment.DeploymentName
                     }
                 }).PollUntilCompleted()
                 .GetResultOrNull();
 
             Console.WriteLine("Stopping the deployment");
-            DeploymentServiceClient.StopDeployment(new StopDeploymentRequest
+            DeploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
             {
-                Id = currentLiveDeployment.Id,
-                ProjectName = currentLiveDeployment.ProjectName
-            });
+                Id = currentLiveDeployment.Deployment.Id,
+            }).PollUntilCompleted();
 
             Console.WriteLine("Starting a new deployment with empty tags");
-            var newDeployment = currentLiveDeployment.Clone();
-            newDeployment.StartingSnapshotId = latestSnapshot.Id;
-            newDeployment.Tag.Clear();
-            newDeployment = DeploymentServiceClient
-                .CreateDeployment(new CreateDeploymentRequest {Deployment = newDeployment})
+            var newDeployment = DeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
+                {
+                    DeploymentName = currentLiveDeployment.Deployment.DeploymentName,
+                    ProjectName = currentLiveDeployment.Deployment.ProjectName,
+                    StartingSnapshotId = latestSnapshot.Id,
+                    LaunchConfig = currentLiveDeployment.Deployment.LaunchConfig,
+                    AssemblyName = currentLiveDeployment.Deployment.AssemblyName,
+                })
                 .PollUntilCompleted()
                 .GetResultOrNull();
 
             Console.WriteLine("Putting the new deployment to live");
-            newDeployment.Tag.Add("my_live_tag");
-            DeploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = newDeployment});
+            var setLiveTagsRequest = new SetDeploymentTagsRequest
+            {
+                DeploymentId = newDeployment.Id,
+            };
+            setTagsRequest.Tags.Add("my_live_tag");
+            DeploymentServiceClient.SetDeploymentTags(setLiveTagsRequest);
 
             Cleanup(newDeployment);
         }
@@ -171,17 +174,14 @@ namespace GameMaintenance
             Console.WriteLine("Preparing a live deployment");
             DeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
                 {
-                    Deployment = new Deployment
+                    ProjectName = ProjectName,
+                    DeploymentName = DeploymentName,
+                    LaunchConfig = new LaunchConfig
                     {
-                        ProjectName = ProjectName,
-                        Name = DeploymentName,
-                        LaunchConfig = new LaunchConfig
-                        {
-                            ConfigJson = File.ReadAllText(LaunchConfigFilePath)
-                        },
-                        Tag = {"my_live_tag"},
-                        AssemblyId = AssemblyId
-                    }
+                        ConfigJson = File.ReadAllText(LaunchConfigFilePath)
+                    },
+                    Tags = {"my_live_tag"},
+                    AssemblyName = AssemblyId
                 })
                 .PollUntilCompleted();
         }
@@ -193,11 +193,10 @@ namespace GameMaintenance
         private static void Cleanup(Deployment deployment)
         {
             Console.WriteLine("Cleaning up");
-            DeploymentServiceClient.StopDeployment(new StopDeploymentRequest
+            DeploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
             {
                 Id = deployment.Id,
-                ProjectName = deployment.ProjectName
-            });
+            }).PollUntilCompleted();
         }
     }
 }

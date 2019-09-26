@@ -21,7 +21,7 @@ function generate_api() {
     find "${REPO_ROOT}/${PACKAGE}" -type f -name "*.cs" -exec chmod +w {} \+
 }
 
-generate_api "deployment" "v1alpha1"
+generate_api "deployment" "v1beta1"
 generate_api "snapshot" "v1alpha1"
 generate_api "serviceaccount" "v1alpha1"
 generate_api "playerauth" "v2alpha1"

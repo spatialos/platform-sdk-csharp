@@ -2,14 +2,14 @@
 using System.IO;
 using System.Linq;
 using Google.Protobuf.WellKnownTypes;
-using Improbable.SpatialOS.Deployment.V1Alpha1;
+using Improbable.SpatialOS.Deployment.V1Beta1;
 using Improbable.SpatialOS.Platform.Common;
 using Improbable.SpatialOS.PlayerAuth.V2Alpha1;
 using Improbable.Worker;
 using Improbable.Worker.Alpha;
 using Newtonsoft.Json;
 using Utils;
-using Deployment = Improbable.SpatialOS.Deployment.V1Alpha1.Deployment;
+using Deployment = Improbable.SpatialOS.Deployment.V1Beta1.Deployment;
 using Locator = Improbable.Worker.Alpha.Locator;
 using LocatorParameters = Improbable.Worker.Alpha.LocatorParameters;
 
@@ -55,7 +55,7 @@ namespace CapacityLimit
         private readonly PlayerAuthServiceClient _playerAuthServiceClient =
             PlayerAuthServiceClient.Create(credentials: CredentialWithProvidedToken);
 
-        private Deployment _deployment;
+        private Deployment _runningDeployment;
 
         /// <summary>
         ///     PLEASE REPLACE.
@@ -73,16 +73,13 @@ namespace CapacityLimit
             Console.WriteLine($"Preparing a live deployment with capacity: 2, name: {DeploymentName}");
             _deploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
                 {
-                    Deployment = new Deployment
+                    ProjectName = ProjectName,
+                    DeploymentName = DeploymentName,
+                    LaunchConfig = new LaunchConfig
                     {
-                        ProjectName = ProjectName,
-                        Name = DeploymentName,
-                        LaunchConfig = new LaunchConfig
-                        {
-                            ConfigJson = File.ReadAllText(LaunchConfigFilePath)
-                        },
-                        AssemblyId = AssemblyId
-                    }
+                        ConfigJson = File.ReadAllText(LaunchConfigFilePath)
+                    },
+                    AssemblyName = AssemblyId
                 })
                 .PollUntilCompleted();
         }
@@ -97,23 +94,24 @@ namespace CapacityLimit
         protected override void Run()
         {
             Console.WriteLine("Finding current running deployment");
-            _deployment = _deploymentServiceClient
-                .ListDeployments(new ListDeploymentsRequest
-                {
-                    ProjectName = ProjectName,
-                    DeploymentName = DeploymentName
-                })
-                .First(d => d.Status == Deployment.Types.Status.Running);
-            Console.WriteLine($"Found deployment {_deployment.Id}");
+            _runningDeployment = _deploymentServiceClient.GetRunningDeploymentByName(new GetRunningDeploymentByNameRequest
+            {
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName
+            }).Deployment;
+            Console.WriteLine($"Found deployment {_runningDeployment.Id}");
 
             Console.WriteLine("Setting capacity limit to 2");
-            _deployment.WorkerConnectionCapacities.Clear();
-            _deployment.WorkerConnectionCapacities.Add(new WorkerCapacity
+            var setWorkerCapacitiesRequest = new SetDeploymentWorkerCapacitiesRequest
+            {
+                DeploymentId = _runningDeployment.Id,
+            };
+            setWorkerCapacitiesRequest.WorkerConnectionCapacities.Add(new WorkerCapacity
             {
                 WorkerType = ScenarioWorkerType,
                 MaxCapacity = 2
             });
-            _deploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = _deployment});
+            _deploymentServiceClient.SetDeploymentWorkerCapacities(setWorkerCapacitiesRequest);
 
             Console.WriteLine("Creating a PlayerIdentityToken");
             var playerIdentityTokenResponse = _playerAuthServiceClient.CreatePlayerIdentityToken(
@@ -130,7 +128,7 @@ namespace CapacityLimit
                 new CreateLoginTokenRequest
                 {
                     PlayerIdentityToken = playerIdentityTokenResponse.PlayerIdentityToken,
-                    DeploymentId = _deployment.Id,
+                    DeploymentId = _runningDeployment.Id.ToString(),
                     LifetimeDuration = Duration.FromTimeSpan(new TimeSpan(0, 0, 30, 0)),
                     WorkerType = ScenarioWorkerType
                 });
@@ -154,13 +152,16 @@ namespace CapacityLimit
             }
 
             Console.WriteLine("Increasing capacity limit to 3");
-            _deployment.WorkerConnectionCapacities.Clear();
-            _deployment.WorkerConnectionCapacities.Add(new WorkerCapacity
+            setWorkerCapacitiesRequest = new SetDeploymentWorkerCapacitiesRequest
+            {
+                DeploymentId = _runningDeployment.Id,
+            };
+            setWorkerCapacitiesRequest.WorkerConnectionCapacities.Add(new WorkerCapacity
             {
                 WorkerType = ScenarioWorkerType,
                 MaxCapacity = 3
             });
-            _deploymentServiceClient.UpdateDeployment(new UpdateDeploymentRequest {Deployment = _deployment});
+            _deploymentServiceClient.SetDeploymentWorkerCapacities(setWorkerCapacitiesRequest);
 
             Console.WriteLine("Connecting another worker");
             if (!TryConnectWorker(locator))
@@ -169,16 +170,15 @@ namespace CapacityLimit
 
         protected override void Cleanup()
         {
-            if (_deployment == null) return;
-            if (_deployment.Status != Deployment.Types.Status.Running &&
-                _deployment.Status != Deployment.Types.Status.Starting) return;
+            if (_runningDeployment == null) return;
+            if (_runningDeployment.Status != Deployment.Types.Status.Running &&
+                _runningDeployment.Status != Deployment.Types.Status.Starting) return;
 
             Console.WriteLine("Stopping deployment");
-            _deploymentServiceClient.StopDeployment(new StopDeploymentRequest
+            _deploymentServiceClient.DeleteDeployment(new DeleteDeploymentRequest
             {
-                Id = _deployment.Id,
-                ProjectName = _deployment.ProjectName
-            });
+                Id = _runningDeployment.Id,
+            }).PollUntilCompleted();
         }
 
         private static bool TryConnectWorker(Locator locator)
