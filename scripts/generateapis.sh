@@ -22,6 +22,7 @@ function generate_api() {
 }
 
 generate_api "deployment" "v1beta1"
-generate_api "snapshot" "v1alpha1"
-generate_api "serviceaccount" "v1alpha1"
 generate_api "playerauth" "v2alpha1"
+generate_api "remoteinteraction" "v1alpha1"
+generate_api "serviceaccount" "v1alpha1"
+generate_api "snapshot" "v1alpha1"
