@@ -58,6 +58,8 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
             CreateDeploymentOperationsSettings = existing.CreateDeploymentOperationsSettings?.Clone();
             DeleteDeploymentSettings = existing.DeleteDeploymentSettings;
             DeleteDeploymentOperationsSettings = existing.DeleteDeploymentOperationsSettings?.Clone();
+            RestartDeploymentSettings = existing.RestartDeploymentSettings;
+            RestartDeploymentOperationsSettings = existing.RestartDeploymentOperationsSettings?.Clone();
             SetDeploymentWorkerFlagsSettings = existing.SetDeploymentWorkerFlagsSettings;
             SetDeploymentTagsSettings = existing.SetDeploymentTagsSettings;
             SetDeploymentWorkerCapacitiesSettings = existing.SetDeploymentWorkerCapacitiesSettings;
@@ -313,6 +315,56 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(2000L),
+                1.1,
+                sys::TimeSpan.FromMilliseconds(10000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeploymentServiceClient.RestartDeployment</c> and <c>DeploymentServiceClient.RestartDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DeploymentServiceClient.RestartDeployment</c> and
+        /// <c>DeploymentServiceClient.RestartDeploymentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 50 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings RestartDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeploymentServiceClient.RestartDeployment</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 2000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.1</description></item>
+        /// <item><description>Maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestartDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
                 gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
@@ -798,6 +850,78 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
+        public virtual stt::Task<lro::Operation<Deployment, RestartDeploymentMetadata>> RestartDeploymentAsync(
+            RestartDeploymentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestartDeploymentAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Deployment, RestartDeploymentMetadata>> PollOnceRestartDeploymentAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Deployment, RestartDeploymentMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                RestartDeploymentOperationsClient,
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Deployment, RestartDeploymentMetadata> RestartDeployment(
+            RestartDeploymentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>RestartDeployment</c>.
+        /// </summary>
+        public virtual lro::OperationsClient RestartDeploymentOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestartDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Deployment, RestartDeploymentMetadata> PollOnceRestartDeployment(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Deployment, RestartDeploymentMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                RestartDeploymentOperationsClient,
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual stt::Task<SetDeploymentWorkerFlagsResponse> SetDeploymentWorkerFlagsAsync(
             SetDeploymentWorkerFlagsRequest request,
             gaxgrpc::CallSettings callSettings = null)
@@ -1022,6 +1146,7 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         private readonly gaxgrpc::ApiCall<GetRunningDeploymentByNameRequest, GetDeploymentResponse> _callGetRunningDeploymentByName;
         private readonly gaxgrpc::ApiCall<CreateDeploymentRequest, lro::Operation> _callCreateDeployment;
         private readonly gaxgrpc::ApiCall<DeleteDeploymentRequest, lro::Operation> _callDeleteDeployment;
+        private readonly gaxgrpc::ApiCall<RestartDeploymentRequest, lro::Operation> _callRestartDeployment;
         private readonly gaxgrpc::ApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse> _callSetDeploymentWorkerFlags;
         private readonly gaxgrpc::ApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse> _callSetDeploymentTags;
         private readonly gaxgrpc::ApiCall<SetDeploymentWorkerCapacitiesRequest, SetDeploymentWorkerCapacitiesResponse> _callSetDeploymentWorkerCapacities;
@@ -1041,6 +1166,8 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeploymentOperationsSettings);
             DeleteDeploymentOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeploymentOperationsSettings);
+            RestartDeploymentOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.RestartDeploymentOperationsSettings);
             _callListDeployments = clientHelper.BuildApiCall<ListDeploymentsRequest, ListDeploymentsResponse>(
                 GrpcClient.ListDeploymentsAsync, GrpcClient.ListDeployments, effectiveSettings.ListDeploymentsSettings);
             _callGetDeployment = clientHelper.BuildApiCall<GetDeploymentRequest, GetDeploymentResponse>(
@@ -1051,6 +1178,8 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
                 GrpcClient.CreateDeploymentAsync, GrpcClient.CreateDeployment, effectiveSettings.CreateDeploymentSettings);
             _callDeleteDeployment = clientHelper.BuildApiCall<DeleteDeploymentRequest, lro::Operation>(
                 GrpcClient.DeleteDeploymentAsync, GrpcClient.DeleteDeployment, effectiveSettings.DeleteDeploymentSettings);
+            _callRestartDeployment = clientHelper.BuildApiCall<RestartDeploymentRequest, lro::Operation>(
+                GrpcClient.RestartDeploymentAsync, GrpcClient.RestartDeployment, effectiveSettings.RestartDeploymentSettings);
             _callSetDeploymentWorkerFlags = clientHelper.BuildApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse>(
                 GrpcClient.SetDeploymentWorkerFlagsAsync, GrpcClient.SetDeploymentWorkerFlags, effectiveSettings.SetDeploymentWorkerFlagsSettings);
             _callSetDeploymentTags = clientHelper.BuildApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse>(
@@ -1069,6 +1198,8 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
             Modify_CreateDeploymentApiCall(ref _callCreateDeployment);
             Modify_ApiCall(ref _callDeleteDeployment);
             Modify_DeleteDeploymentApiCall(ref _callDeleteDeployment);
+            Modify_ApiCall(ref _callRestartDeployment);
+            Modify_RestartDeploymentApiCall(ref _callRestartDeployment);
             Modify_ApiCall(ref _callSetDeploymentWorkerFlags);
             Modify_SetDeploymentWorkerFlagsApiCall(ref _callSetDeploymentWorkerFlags);
             Modify_ApiCall(ref _callSetDeploymentTags);
@@ -1095,6 +1226,7 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         partial void Modify_GetRunningDeploymentByNameApiCall(ref gaxgrpc::ApiCall<GetRunningDeploymentByNameRequest, GetDeploymentResponse> call);
         partial void Modify_CreateDeploymentApiCall(ref gaxgrpc::ApiCall<CreateDeploymentRequest, lro::Operation> call);
         partial void Modify_DeleteDeploymentApiCall(ref gaxgrpc::ApiCall<DeleteDeploymentRequest, lro::Operation> call);
+        partial void Modify_RestartDeploymentApiCall(ref gaxgrpc::ApiCall<RestartDeploymentRequest, lro::Operation> call);
         partial void Modify_SetDeploymentWorkerFlagsApiCall(ref gaxgrpc::ApiCall<SetDeploymentWorkerFlagsRequest, SetDeploymentWorkerFlagsResponse> call);
         partial void Modify_SetDeploymentTagsApiCall(ref gaxgrpc::ApiCall<SetDeploymentTagsRequest, SetDeploymentTagsResponse> call);
         partial void Modify_SetDeploymentWorkerCapacitiesApiCall(ref gaxgrpc::ApiCall<SetDeploymentWorkerCapacitiesRequest, SetDeploymentWorkerCapacitiesResponse> call);
@@ -1114,6 +1246,7 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         partial void Modify_GetRunningDeploymentByNameRequest(ref GetRunningDeploymentByNameRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateDeploymentRequest(ref CreateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteDeploymentRequest(ref DeleteDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RestartDeploymentRequest(ref RestartDeploymentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetDeploymentWorkerFlagsRequest(ref SetDeploymentWorkerFlagsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetDeploymentTagsRequest(ref SetDeploymentTagsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetDeploymentWorkerCapacitiesRequest(ref SetDeploymentWorkerCapacitiesRequest request, ref gaxgrpc::CallSettings settings);
@@ -1332,6 +1465,53 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1
         /// The long-running operations client for <c>DeleteDeployment</c>.
         /// </summary>
         public override lro::OperationsClient DeleteDeploymentOperationsClient { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<Deployment, RestartDeploymentMetadata>> RestartDeploymentAsync(
+            RestartDeploymentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestartDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<Deployment, RestartDeploymentMetadata>(
+                await _callRestartDeployment.Async(request, callSettings).ConfigureAwait(false), RestartDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<Deployment, RestartDeploymentMetadata> RestartDeployment(
+            RestartDeploymentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestartDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<Deployment, RestartDeploymentMetadata>(
+                _callRestartDeployment.Sync(request, callSettings), RestartDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>RestartDeployment</c>.
+        /// </summary>
+        public override lro::OperationsClient RestartDeploymentOperationsClient { get; }
 
         /// <summary>
         ///
