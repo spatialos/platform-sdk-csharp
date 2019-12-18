@@ -1,0 +1,50 @@
+<!-- GENERATED FILE - DO NOT MODIFY -->
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+
+  <PropertyGroup>
+    <Authors>Improbable</Authors>
+    <Copyright>Copyright (c) Improbable Worlds Ltd, All Rights Reserved</Copyright>
+    <Description>Platform C# SDK that allows interacting with the SpatialOS Platform.</Description>
+    <PackageTags>Platform SDK;Improbable;SpatialOS Platform</PackageTags>
+    <PackageProjectUrl>https://github.com/spatialos/platform-sdk-csharp</PackageProjectUrl>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyName>Improbable.SpatialOS.Platform</AssemblyName>
+    <RootNamespace>Improbable.SpatialOS</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <Deterministic>true</Deterministic>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetFrameworks>netstandard1.6</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$(Configuration) == Debug">
+    <ProjectReference Include="../apis/deployment/v1alpha1/deployment_v1alpha1.csproj" />
+    <ProjectReference Include="../apis/deployment/v1beta1/deployment_v1beta1.csproj" />
+    <ProjectReference Include="../apis/playerauth/v2alpha1/playerauth_v2alpha1.csproj" />
+    <ProjectReference Include="../apis/serviceaccount/v1alpha1/serviceaccount_v1alpha1.csproj" />
+    <ProjectReference Include="../apis/remoteinteraction/v1alpha1/remoteinteraction_v1alpha1.csproj" />
+    <ProjectReference Include="../apis/snapshot/v1alpha1/snapshot_v1alpha1.csproj" />
+    <ProjectReference Include="../apis/platform/platform.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(Configuration) == Release">
+    <Compile Include="../apis/deployment/v1alpha1/*.cs" />
+    <Compile Include="../apis/deployment/v1beta1/*.cs" />
+    <Compile Include="../apis/playerauth/v2alpha1/*.cs" />
+    <Compile Include="../apis/serviceaccount/v1alpha1/*.cs" />
+    <Compile Include="../apis/remoteinteraction/v1alpha1/*.cs" />
+    <Compile Include="../apis/snapshot/v1alpha1/*.cs" />
+    <Compile Include="../apis/platform/*.cs" />
+    <Compile Include="../apis/platform/generated/*.cs" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="1.6.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.7.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.11.2" />
+    <PackageReference Include="Google.LongRunning" Version="1.1.0" />
+    <PackageReference Include="Grpc.Core" Version="1.22.1" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" Version="1.0.0-preview.2" />
+  </ItemGroup>
+
+</Project>

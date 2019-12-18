@@ -3,77 +3,97 @@ using System.Collections.Generic;
 using System.Linq;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
-using Improbable.SpatialOS.Platform.Common;
 using Improbable.SpatialOS.ServiceAccount.V1Alpha1;
+using Utils;
 
 namespace ServiceAccountMaintenance
 {
-    internal class Program
+    /// <summary>
+    /// This contains the implementation of the "Service account maintenance" scenario.
+    /// 1. Iterate over the service accounts in your project.
+    /// 2. If a service account has expired, or is close to expiry, prolong the expiry time to some point in the
+    /// future.
+    /// </summary>
+    internal class ServiceAccountMaintenanceScenario : ScenarioBase
     {
         /// <summary>
-        ///     PLEASE REPLACE.
-        ///     Your SpatialOS project name.
-        ///     This scenario will create a new service account with read and write access to this project.
-        /// </summary>
-        private const string ProjectName = "platform_sdk_examples";
-
-        /// <summary>
-        ///     The threshold for when a service account's expiry time should be increased, in days relative to
-        ///     the current time. If the service account expires in fewer days than this, its lifetime will be extended
-        ///     by DaysToExpandServiceAccountBy days.
+        /// The threshold for when a service account's expiry time should be increased, in days relative to
+        /// the current time. If the service account expires in fewer days than this, its lifetime will be extended
+        /// by DaysToExpandServiceAccountBy days.
         /// </summary>
         private const int DaysRemainingAtWhichExpiryShouldBeIncreased = 1;
 
         /// <summary>
-        ///     How many days to expand the service account's lifetime by if it is too close to expiry (as defined by
-        ///     DaysRemainingAtWhichExpiryShouldBeIncreased), relative to the current time.
+        /// How many days to expand the service account's lifetime by if it is too close to expiry (as defined by
+        /// DaysRemainingAtWhichExpiryShouldBeIncreased), relative to the current time.
         /// </summary>
         private const int DaysToExpandServiceAccountBy = 4;
 
         private const int NumberOfServiceAccountsToCreate = 10;
 
         /// <summary>
-        ///     PLEASE REPLACE.
-        ///     The name given to service accounts created during setup.
+        /// PLEASE REPLACE.
+        /// The name given to service accounts created during setup.
         /// </summary>
         private const string ServiceAccountName = "sa_maintenance_scenario";
 
-        private static readonly PlatformRefreshTokenCredential CredentialWithProvidedToken =
-            new PlatformRefreshTokenCredential(RefreshToken);
-
-        private static readonly ServiceAccountServiceClient ServiceAccountServiceClient =
-            ServiceAccountServiceClient.Create(credentials: CredentialWithProvidedToken);
-        
         private static List<long> ServiceAccountIds;
 
         /// <summary>
-        ///     PLEASE REPLACE.
-        ///     The SpatialOS Platform refresh token of a service account or a user account.
+        /// This creates some service accounts with permissions to read and write to a project, which expire
+        /// in one week.
         /// </summary>
-        private static string RefreshToken =>
-            Environment.GetEnvironmentVariable("IMPROBABLE_REFRESH_TOKEN") ?? "PLEASE_REPLACE_ME";
-
-
-        /// <summary>
-        ///     This contains the implementation of the "Service account maintenance" scenario.
-        ///     1. Iterate over the service accounts in your project.
-        ///     2. If a service account has expired, or is close to expiry, prolong the expiry time to some point in the
-        ///     future.
-        /// </summary>
-        /// <param name="args"></param>
-        private static void Main(string[] args)
+        protected override void Setup()
         {
-            // Set up some new service accounts
-            Setup();
+            ServiceAccountIds = new List<long>();
+            var permProject = new Permission
+            {
+                Parts = { new RepeatedField<string> { "prj", ProjectName, "*" } },
+                Verbs =
+                {
+                    new RepeatedField<Permission.Types.Verb>
+                    {
+                        Permission.Types.Verb.Read,
+                        Permission.Types.Verb.Write
+                    }
+                }
+            };
 
+            var permServices = new Permission
+            {
+                Parts = { new RepeatedField<string> { "srv", "*" } },
+                Verbs =
+                {
+                    new RepeatedField<Permission.Types.Verb>
+                    {
+                        Permission.Types.Verb.Read
+                    }
+                }
+            };
+
+            Console.WriteLine("Setting up for the scenario by creating new service accounts...");
+            for (var i = 0; i < NumberOfServiceAccountsToCreate; i++)
+            {
+                var resp = _serviceAccountServiceClient.CreateServiceAccount(
+                    new CreateServiceAccountRequest
+                    {
+                        Name = ServiceAccountName,
+                        ProjectName = ProjectName,
+                        Permissions = { new RepeatedField<Permission> { permProject, permServices } },
+                        Lifetime = Duration.FromTimeSpan(new TimeSpan(1, 0, 0, 0)) // Let this service account live for one day
+                    }
+                );
+                ServiceAccountIds.Add(resp.Id);
+            }
+        }
+
+        protected override void Run()
+        {
             Console.WriteLine("Getting the service accounts that you have permission to view...");
 
-            var serviceAccounts = ServiceAccountServiceClient.ListServiceAccounts(new ListServiceAccountsRequest
-                {
-                    ProjectName = ProjectName
-                })
-                .Where(serviceAccount => (serviceAccount.ExpirationTime.ToDateTime() - DateTime.UtcNow).TotalDays <=
-                                         DaysRemainingAtWhichExpiryShouldBeIncreased);
+            var serviceAccounts = _serviceAccountServiceClient.ListServiceAccounts(ProjectName).Where(
+                serviceAccount => (serviceAccount.ExpirationTime.ToDateTime() - DateTime.UtcNow).TotalDays <= DaysRemainingAtWhichExpiryShouldBeIncreased
+            );
 
             foreach (var serviceAccount in serviceAccounts)
             {
@@ -92,75 +112,32 @@ namespace ServiceAccountMaintenance
                 Console.WriteLine(
                     $"Extending service account '{serviceAccount.Name}' expiry time by {DaysToExpandServiceAccountBy} days from now");
 
-                ServiceAccountServiceClient.UpdateServiceAccount(new UpdateServiceAccountRequest
-                {
-                    Id = serviceAccount.Id,
-                    ExpirationTime = DateTime.UtcNow.AddDays(DaysToExpandServiceAccountBy).ToTimestamp()
-                });
+                _serviceAccountServiceClient.UpdateServiceAccount(serviceAccount.Id, DateTime.UtcNow.AddDays(DaysToExpandServiceAccountBy).ToTimestamp());
             }
 
             Console.WriteLine("No more service accounts found");
-
-            Cleanup();
         }
 
         /// <summary>
-        ///     This creates some service accounts with permissions to read and write to a project, which expire
-        ///     in one week.
+        /// This deletes the service accounts created in the setup phase.
         /// </summary>
-        private static void Setup()
-        {
-            ServiceAccountIds = new List<long>();
-            var permProject = new Permission
-            {
-                Parts = {new RepeatedField<string> {"prj", ProjectName, "*"}},
-                Verbs =
-                {
-                    new RepeatedField<Permission.Types.Verb>
-                    {
-                        Permission.Types.Verb.Read,
-                        Permission.Types.Verb.Write
-                    }
-                }
-            };
-            
-            var permServices = new Permission
-            {
-                Parts = {new RepeatedField<string> {"srv", "*"}},
-                Verbs =
-                {
-                    new RepeatedField<Permission.Types.Verb>
-                    {
-                        Permission.Types.Verb.Read
-                    }
-                }
-            };
-
-            Console.WriteLine("Setting up for the scenario by creating new service accounts...");
-            for (var i = 0; i < NumberOfServiceAccountsToCreate; i++)
-            {
-                var resp = ServiceAccountServiceClient.CreateServiceAccount(new CreateServiceAccountRequest
-                {
-                    Name = ServiceAccountName,
-                    ProjectName = ProjectName,
-                    Permissions = {new RepeatedField<Permission> {permProject, permServices}},
-                    Lifetime = Duration.FromTimeSpan(new TimeSpan(1, 0, 0, 0)) // Let this service account live for one day
-                });
-                ServiceAccountIds.Add(resp.Id);
-            }
-        }
-
-        /// <summary>
-        ///     This deletes the service accounts created in the setup phase.
-        /// </summary>
-        private static void Cleanup()
+        protected override void Cleanup()
         {
             Console.WriteLine("Cleaning up by deleting service accounts created during setup...");
             foreach (var id in ServiceAccountIds)
-                ServiceAccountServiceClient.DeleteServiceAccount(new DeleteServiceAccountRequest
-                {
-                    Id = id
-                });
+            {
+                _serviceAccountServiceClient.DeleteServiceAccount(id);
+            }
+        }
+    }
+
+    internal class Program
+    {
+        private static readonly ScenarioBase Scenario = new ServiceAccountMaintenanceScenario();
+
+        private static void Main(string[] args)
+        {
+            Scenario.Execute();
         }
     }
 }

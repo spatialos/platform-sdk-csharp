@@ -6,7 +6,7 @@ REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "${REPO_ROOT}"
 
 PACKAGE_DIR="${REPO_ROOT}/artefacts"
-BIN_DIR="${REPO_ROOT}/apis/bin/Release"
+BIN_DIR="${REPO_ROOT}/pkg/bin/Release"
 TARGET_FRAMEWORK="netstandard1.6"
 
 if [[ -z "${SDK_VERSION+x}" ]]; then
@@ -25,8 +25,8 @@ rm -rf "${PACKAGE_DIR}"
 mkdir -p "${PACKAGE_DIR}"
 
 echo "--- Preparing artefacts for release"
-dotnet build apis/apis.csproj --configuration Release --framework "${TARGET_FRAMEWORK}"
-dotnet pack apis/apis.csproj --no-build --configuration Release -p:"PackageVersion=${SDK_VERSION}"
+dotnet build pkg/apis.csproj --configuration Release --framework "${TARGET_FRAMEWORK}"
+dotnet pack pkg/apis.csproj --no-build --configuration Release -p:"PackageVersion=${SDK_VERSION}"
 
 pushd "${BIN_DIR}/${TARGET_FRAMEWORK}"
 zip -r "${PACKAGE_DIR}/${SDK_VERSION}.zip" ./*

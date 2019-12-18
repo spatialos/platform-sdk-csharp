@@ -1,11 +1,14 @@
 # Build artefacts
+bazel_build_events.json
+bazel_perf_explain.txt
+bazel_perf_profile.gz
 artefacts/
 bazel-*
 **/bin/
+**/lib/
 **/obj/
 
 # IDE files
 *~
 .idea/
 .vscode
-

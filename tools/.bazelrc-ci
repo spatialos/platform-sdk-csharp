@@ -1,0 +1,7 @@
+# Bazel configuration for Continuous Integration
+
+import %workspace%/.bazelrc
+
+# Set common rules to disable terminal-interactive output for all commands.
+common --curses=no
+common --noshow_progress

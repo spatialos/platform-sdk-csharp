@@ -1,0 +1,32 @@
+# Set defaults for both local and CI invocations of Bazel.
+# For CI invocations the primary source will be tools/.bazelrc-ci
+
+common --color=yes
+
+# Enable extra tracing and logging across the board
+# lib_bazel_copy_to_dest() relies on this path.  Do not change here without updating there.
+build --build_event_json_file=bazel_build_events.json
+build --profile=bazel_perf_profile.gz
+build --experimental_profile_cpu_usage
+build --experimental_generate_json_trace_profile
+build --experimental_json_trace_compression
+
+build --experimental_guard_against_concurrent_changes
+
+# Improve output when things go wrong.
+build --verbose_failures
+test  --verbose_failures
+test  --test_output=errors
+test  --test_verbose_timeout_warnings
+
+# Turn on explanations
+build --explain=bazel_perf_explain.txt
+build --verbose_explanations
+test --explain=bazel_perf_explain.txt
+test --verbose_explanations
+
+# cache & build-output related.
+# These need overriding within CI because of docker volume juggling for reusing caches.
+build --experimental_repository_cache=~/.cache/bazel/repository_cache
+build --disk_cache=~/.cache/bazel/disk_cache
+test  --disk_cache=~/.cache/bazel/disk_cache

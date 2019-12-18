@@ -1,0 +1,40 @@
+83496d5a4 > N 6 minutes ago   Duco van Amstel Patch Bazel targets for gRPC v1.22.1               HEAD -> grpc-1.22...
+diff --git rules_gapic/csharp/csharp_gapic.bzl rules_gapic/csharp/csharp_gapic.bzl
+index 2d1efad38..20c6386ef 100644
+--- rules_gapic/csharp/csharp_gapic.bzl
++++ rules_gapic/csharp/csharp_gapic.bzl
+@@ -35,7 +35,7 @@ def csharp_grpc_library(name, srcs, deps, **kwargs):
+     proto_custom_library(
+         name = srcjar_target_name,
+         deps = srcs,
+-        plugin = Label("@com_github_grpc_grpc//src/compiler:grpc_csharp_plugin"),
++        plugin = Label("@com_github_grpc_grpc//:grpc_csharp_plugin"),
+         output_type = "grpc",
+         output_suffix = ".srcjar",
+         extra_args = [
+diff --git rules_gapic/php/php_gapic.bzl rules_gapic/php/php_gapic.bzl
+index 1c764305d..133335b09 100644
+--- rules_gapic/php/php_gapic.bzl
++++ rules_gapic/php/php_gapic.bzl
+@@ -34,7 +34,7 @@ def php_grpc_library(name, srcs, deps, **kwargs):
+     proto_custom_library(
+         name = srcjar_target_name,
+         deps = srcs,
+-        plugin = Label("@com_github_grpc_grpc//src/compiler:grpc_php_plugin"),
++        plugin = Label("@com_github_grpc_grpc//:grpc_php_plugin"),
+         plugin_args = ["class_suffix=GrpcClient"],
+         output_type = "grpc",
+         output_suffix = ".srcjar",
+diff --git rules_gapic/ruby/ruby_gapic.bzl rules_gapic/ruby/ruby_gapic.bzl
+index 319f69a51..eea0aa7fc 100644
+--- rules_gapic/ruby/ruby_gapic.bzl
++++ rules_gapic/ruby/ruby_gapic.bzl
+@@ -34,7 +34,7 @@ def ruby_grpc_library(name, srcs, deps, **kwargs):
+     proto_custom_library(
+         name = srcjar_target_name,
+         deps = srcs,
+-        plugin = Label("@com_github_grpc_grpc//src/compiler:grpc_ruby_plugin"),
++        plugin = Label("@com_github_grpc_grpc//:grpc_ruby_plugin"),
+         output_type = "grpc",
+         output_suffix = ".srcjar",
+         extra_args = [

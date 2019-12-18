@@ -1,53 +1,63 @@
-def _gapic_generator_codegen_impl(ctx):
-  # @TODO (OP-3782) Remove this dependency on this output naming convention.
-  if "gapicout" not in ctx.outputs.outs[0].path:
-    fail("output directory must contain 'gapicout'")
-
-  start = ctx.outputs.outs[0].path.find("gapicout")
-  output_dir = ctx.outputs.outs[0].path[:start+len("gapicout")]
-
-  args = [
-      "--descriptor_set=" + ctx.file.descriptor_set.path,
-      "--gapic_yaml=" + ctx.file.gapic_yaml.path,
-      "--service_yaml=" + ctx.file.service_yaml.path,
-      "--package_yaml2=" + ctx.file.package_yaml.path,
-      "--output=" + output_dir,
-  ]
-
-  ctx.actions.run(
-      inputs=[ctx.file.descriptor_set, ctx.file.gapic_yaml, ctx.file.service_yaml, ctx.file.package_yaml],
-      outputs=ctx.outputs.outs,
-      arguments=args,
-      executable=ctx.executable._gapic_generator)
-
-gapic_generator_codegen = rule(
-  implementation=_gapic_generator_codegen_impl,
-  attrs={
-      "descriptor_set": attr.label(allow_single_file=True, mandatory=True),
-      "gapic_yaml": attr.label(allow_single_file=True, mandatory=True),
-      "service_yaml": attr.label(allow_single_file=True, mandatory=True),
-      "package_yaml": attr.label(allow_single_file=True, mandatory=True),
-      "outs": attr.output_list(mandatory=True, non_empty=True),
-      "_gapic_generator": attr.label(executable=True, cfg="host", allow_files=True, default=Label("@gapic_generator//:gapic_generator"))
-  },
-  output_to_genfiles = True,
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "csharp_gapic_assembly_pkg",
+    "csharp_gapic_library",
+    "csharp_grpc_library",
+    "csharp_proto_library",
+    "proto_library_with_info",
 )
 
-def paths(files):
-  return [f.path for f in files]
+def platform_sdk_package(name):
+    """
+    'platform_sdk_package' generates a series of inter-dependent targets that
+    result in a 'csharp_gapic_assembly_pkg' target with the specified name. This
+    final target supports the code generation required for the Platform SDK
+    sources that are available to SpatialOS developers as both Nuget packages
+    and via Improbable's package service.
+    """
+    target_service = native.package_name()
+    if not target_service.startswith("apis/"):
+        fail("The 'gapic_csharp_library' macro should only be used within the 'apis' folder of the repository.")
 
-def _impl(ctx):
-  descriptors = ctx.attr.proto_library.proto.transitive_descriptor_sets
-  ctx.actions.run_shell(
-    inputs=descriptors,
-    outputs=[ctx.outputs.out],
-    command='cat %s > %s' % (
-        ' '.join(paths(descriptors)), ctx.outputs.out.path))
+    target_service = target_service[len("apis/"):]
 
-proto_descriptor = rule(
-  implementation=_impl,
-  attrs = {
-    "proto_library": attr.label(),
-    "out": attr.output(mandatory=True),
-  }
-)
+    proto_library_with_info(
+        name = "proto_with_info",
+        deps = ["@improbable_platform//proto/improbable/spatialos/" + target_service + ":native_proto_library"],
+    )
+
+    csharp_proto_library(
+        name = "csharp_proto",
+        visibility = ["//visibility:private"],
+        deps = ["@improbable_platform//proto/improbable/spatialos/" + target_service + ":native_proto_library"],
+    )
+
+    csharp_grpc_library(
+        name = "csharp_grpc",
+        srcs = ["@improbable_platform//proto/improbable/spatialos/" + target_service + ":native_proto_library"],
+        visibility = ["//visibility:private"],
+        deps = [":csharp_proto"],
+    )
+
+    csharp_gapic_library(
+        name = "csharp_gapic",
+        src = ":proto_with_info",
+        gapic_yaml = "@improbable_platform//proto/improbable/spatialos/" + target_service + ":gapic_api.yaml",
+        service_yaml = "@improbable_platform//proto/improbable/spatialos/" + target_service + ":gapic_service.yaml",
+        visibility = ["//visibility:private"],
+        deps = [
+            ":csharp_grpc",
+            ":csharp_proto",
+            "//apis:platform_common",
+        ],
+    )
+
+    csharp_gapic_assembly_pkg(
+        name = name,
+        visibility = ["//visibility:public"],
+        deps = [
+            ":csharp_gapic",
+            ":csharp_grpc",
+            ":csharp_proto",
+        ],
+    )
