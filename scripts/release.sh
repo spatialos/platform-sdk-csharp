@@ -7,7 +7,7 @@ cd "${REPO_ROOT}"
 
 PACKAGE_DIR="${REPO_ROOT}/artefacts"
 BIN_DIR="${REPO_ROOT}/apis/bin/Release"
-TARGET_FRAMEWORK="netstandard1.6"
+TARGET_FRAMEWORK="netstandard2.1"
 
 if [[ -z "${SDK_VERSION+x}" ]]; then
   echo "Please set the SDK_VERSION environment variable to the correct version."

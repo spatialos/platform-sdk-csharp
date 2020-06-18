@@ -92,13 +92,13 @@ namespace ReplicateState
 
             Console.WriteLine("Taking a local snapshot");
             var localSnapshot = LocalSnapshotServiceClient.TakeSnapshot(new TakeSnapshotRequest
+            {
+                Snapshot = new Snapshot
                 {
-                    Snapshot = new Snapshot
-                    {
-                        ProjectName = ProjectName,
-                        DeploymentName = DeploymentName
-                    }
-                })
+                    ProjectName = ProjectName,
+                    DeploymentName = DeploymentName
+                }
+            })
                 .PollUntilCompleted()
                 .GetResultOrNull();
 
@@ -114,7 +114,7 @@ namespace ReplicateState
             localSnapshot.ProjectName = ProjectName;
             localSnapshot.DeploymentName = DeploymentName;
             var uploadSnapshotResponse =
-                CloudSnapshotServiceClient.UploadSnapshot(new UploadSnapshotRequest {Snapshot = localSnapshot});
+                CloudSnapshotServiceClient.UploadSnapshot(new UploadSnapshotRequest { Snapshot = localSnapshot });
 
             Console.WriteLine("Uploading to the acquired URL");
             var newSnapshot = uploadSnapshotResponse.Snapshot;
@@ -148,11 +148,12 @@ namespace ReplicateState
                     ConfigJson = File.ReadAllText(LaunchConfigFilePath)
                 },
                 AssemblyId = AssemblyId,
-                StartingSnapshotId = newSnapshot.Id
+                StartingSnapshotId = newSnapshot.Id,
+                RuntimeVersion = "14.5.4",
             };
             _cloudDeployment = CloudDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
             {
-                Deployment = _cloudDeployment
+                Deployment = _cloudDeployment,
             }).PollUntilCompleted().GetResultOrNull();
 
             Cleanup();
@@ -179,10 +180,11 @@ namespace ReplicateState
                     LaunchConfig = new LaunchConfig
                     {
                         ConfigJson = launchConfig
-                    }
+                    },
+                    RuntimeVersion = "14.5.4",
                 }
             }).PollUntilCompleted().GetResultOrNull();
-            
+
             if (_localDeployment.Status == Deployment.Types.Status.Error)
             {
                 throw new Exception(

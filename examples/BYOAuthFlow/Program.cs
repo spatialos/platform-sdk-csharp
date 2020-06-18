@@ -86,7 +86,8 @@ namespace BYOAuthFlow
                     ConfigJson = launchConfig
                 },
                 AssemblyName = AssemblyId,
-                Tags = {ScenarioDeploymentTag}
+                Tags = { ScenarioDeploymentTag },
+                RuntimeVersion = "14.5.4",
             }).PollUntilCompleted().GetResultOrNull();
         }
 
@@ -111,7 +112,7 @@ namespace BYOAuthFlow
             if (playerIdentityToken.Provider != "provider") throw new Exception("Provider not recognised.");
             if (playerIdentityToken.ProjectName != ProjectName) throw new Exception("Project not recognised.");
             if (DateTime.Now.CompareTo(playerIdentityToken.ExpiryTime.ToDateTime()) > 0) throw new Exception("PlayerIdentityToken expired.");
-            
+
             Console.WriteLine("Choosing a deployment");
             var listDeploymentsRequest = new ListDeploymentsRequest
             {
@@ -122,7 +123,7 @@ namespace BYOAuthFlow
                     {
                         Tag = "player_auth_tag",
                         Operator = TagsPropertyFilter.Types.Operator.Equal,
-    
+
                     },
                 }}
             };
@@ -151,7 +152,7 @@ namespace BYOAuthFlow
             using (var connectionFuture = locator.ConnectAsync(new ConnectionParameters
             {
                 WorkerType = ScenarioWorkerType,
-                Network = {ConnectionType = NetworkConnectionType.Tcp, UseExternalIp = true}
+                Network = { ConnectionType = NetworkConnectionType.Tcp, UseExternalIp = true }
             }))
             {
                 var connFuture = connectionFuture.Get(Convert.ToUInt32(Defaults.ConnectionTimeoutMillis));

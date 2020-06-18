@@ -72,16 +72,16 @@ namespace CapacityLimit
             Console.WriteLine("Setting up for the scenario");
             Console.WriteLine($"Preparing a live deployment with capacity: 2, name: {DeploymentName}");
             _deploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
+            {
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName,
+                LaunchConfig = new LaunchConfig
                 {
-                    ProjectName = ProjectName,
-                    DeploymentName = DeploymentName,
-                    LaunchConfig = new LaunchConfig
-                    {
-                        ConfigJson = File.ReadAllText(LaunchConfigFilePath)
-                    },
-                    AssemblyName = AssemblyId
-                })
-                .PollUntilCompleted();
+                    ConfigJson = File.ReadAllText(LaunchConfigFilePath)
+                },
+                AssemblyName = AssemblyId,
+                RuntimeVersion = "14.5.4",
+            }).PollUntilCompleted();
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace CapacityLimit
             using (var connectionFuture = locator.ConnectAsync(new ConnectionParameters
             {
                 WorkerType = ScenarioWorkerType,
-                Network = {ConnectionType = NetworkConnectionType.Tcp, UseExternalIp = true}
+                Network = { ConnectionType = NetworkConnectionType.Tcp, UseExternalIp = true }
             }))
             {
                 var connFuture = connectionFuture.Get(Convert.ToUInt32(Defaults.ConnectionTimeoutMillis));

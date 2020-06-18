@@ -34,7 +34,7 @@ namespace GameMaintenance
         ///     PLEASE REPLACE.
         ///     The path to a valid snapshot for the target assembly.
         /// </summary>
-        private const string SnapshotFilePath =  "../blank_project/snapshots/default.snapshot" ;
+        private const string SnapshotFilePath = "../blank_project/snapshots/default.snapshot";
 
         /// <summary>
         ///     PLEASE REPLACE.
@@ -84,20 +84,20 @@ namespace GameMaintenance
             var setTagsRequest = new SetDeploymentTagsRequest
             {
                 DeploymentId = currentLiveDeployment.Deployment.Id,
-                Tags = {currentLiveDeployment.Deployment.Tags},
+                Tags = { currentLiveDeployment.Deployment.Tags },
             };
             DeploymentServiceClient.SetDeploymentTags(setTagsRequest);
 
 
             Console.WriteLine("Taking a cloud snapshot");
             var latestSnapshot = SnapshotServiceClient.TakeSnapshot(new TakeSnapshotRequest
+            {
+                Snapshot = new Snapshot
                 {
-                    Snapshot = new Snapshot
-                    {
-                        ProjectName = currentLiveDeployment.Deployment.ProjectName,
-                        DeploymentName = currentLiveDeployment.Deployment.DeploymentName
-                    }
-                }).PollUntilCompleted()
+                    ProjectName = currentLiveDeployment.Deployment.ProjectName,
+                    DeploymentName = currentLiveDeployment.Deployment.DeploymentName
+                }
+            }).PollUntilCompleted()
                 .GetResultOrNull();
 
             Console.WriteLine("Stopping the deployment");
@@ -108,15 +108,14 @@ namespace GameMaintenance
 
             Console.WriteLine("Starting a new deployment with empty tags");
             var newDeployment = DeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
-                {
-                    DeploymentName = currentLiveDeployment.Deployment.DeploymentName,
-                    ProjectName = currentLiveDeployment.Deployment.ProjectName,
-                    StartingSnapshotId = latestSnapshot.Id,
-                    LaunchConfig = currentLiveDeployment.Deployment.LaunchConfig,
-                    AssemblyName = currentLiveDeployment.Deployment.AssemblyName,
-                })
-                .PollUntilCompleted()
-                .GetResultOrNull();
+            {
+                DeploymentName = currentLiveDeployment.Deployment.DeploymentName,
+                ProjectName = currentLiveDeployment.Deployment.ProjectName,
+                StartingSnapshotId = latestSnapshot.Id,
+                LaunchConfig = currentLiveDeployment.Deployment.LaunchConfig,
+                AssemblyName = currentLiveDeployment.Deployment.AssemblyName,
+                RuntimeVersion = "14.5.4",
+            }).PollUntilCompleted().GetResultOrNull();
 
             Console.WriteLine("Putting the new deployment to live");
             var setLiveTagsRequest = new SetDeploymentTagsRequest
@@ -150,7 +149,7 @@ namespace GameMaintenance
             }
 
             var uploadSnapshotResponse =
-                SnapshotServiceClient.UploadSnapshot(new UploadSnapshotRequest {Snapshot = snapshotToUpload});
+                SnapshotServiceClient.UploadSnapshot(new UploadSnapshotRequest { Snapshot = snapshotToUpload });
             snapshotToUpload = uploadSnapshotResponse.Snapshot;
 
             var httpRequest = WebRequest.Create(uploadSnapshotResponse.UploadUrl) as HttpWebRequest;
@@ -173,16 +172,17 @@ namespace GameMaintenance
 
             Console.WriteLine("Preparing a live deployment");
             DeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
+            {
+                ProjectName = ProjectName,
+                DeploymentName = DeploymentName,
+                LaunchConfig = new LaunchConfig
                 {
-                    ProjectName = ProjectName,
-                    DeploymentName = DeploymentName,
-                    LaunchConfig = new LaunchConfig
-                    {
-                        ConfigJson = File.ReadAllText(LaunchConfigFilePath)
-                    },
-                    Tags = {"my_live_tag"},
-                    AssemblyName = AssemblyId
-                })
+                    ConfigJson = File.ReadAllText(LaunchConfigFilePath)
+                },
+                Tags = { "my_live_tag" },
+                AssemblyName = AssemblyId,
+                RuntimeVersion = "14.5.4",
+            })
                 .PollUntilCompleted();
         }
 
