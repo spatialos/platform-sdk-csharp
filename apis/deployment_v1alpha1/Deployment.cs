@@ -3830,6 +3830,7 @@ namespace Improbable.SpatialOS.Deployment.V1Alpha1 {
     /// `assembly_id`
     /// `starting_snapshot_id`
     /// `launch_config`
+    /// `runtime_version`
     ///
     /// In addition, these fields are optional:
     /// `region_code`
