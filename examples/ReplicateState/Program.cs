@@ -34,7 +34,13 @@ namespace ReplicateState
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
-
+                
+        /// <summary>
+        ///     PLEASE REPLACE.
+        ///     The runtime version you want the cloud deployment to use.
+        /// </summary>
+        private const string RuntimeVersion = "14.5.4";
+        
         /// <summary>
         ///     PLEASE REPLACE.
         ///     The port that the local API service is running on.
@@ -148,6 +154,7 @@ namespace ReplicateState
                     ConfigJson = File.ReadAllText(LaunchConfigFilePath)
                 },
                 AssemblyId = AssemblyId,
+                RuntimeVersion = RuntimeVersion,
                 StartingSnapshotId = newSnapshot.Id
             };
             _cloudDeployment = CloudDeploymentServiceClient.CreateDeployment(new CreateDeploymentRequest
@@ -179,7 +186,8 @@ namespace ReplicateState
                     LaunchConfig = new LaunchConfig
                     {
                         ConfigJson = launchConfig
-                    }
+                    },
+                    RuntimeVersion = RuntimeVersion
                 }
             }).PollUntilCompleted().GetResultOrNull();
             

@@ -43,6 +43,12 @@ namespace BYOAuthFlow
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
+        
+        /// <summary>
+        ///     PLEASE REPLACE.
+        ///     The runtime version you want the cloud deployment to use.
+        /// </summary>
+        private const string RuntimeVersion = "14.5.4";
 
         private const string LocatorServerAddress = "locator.improbable.io";
         private const int LocatorServerPort = 443;
@@ -86,7 +92,8 @@ namespace BYOAuthFlow
                     ConfigJson = launchConfig
                 },
                 AssemblyName = AssemblyId,
-                Tags = {ScenarioDeploymentTag}
+                Tags = {ScenarioDeploymentTag},
+                RuntimeVersion = RuntimeVersion
             }).PollUntilCompleted().GetResultOrNull();
         }
 
