@@ -29,7 +29,13 @@ namespace GameMaintenance
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
-
+                
+        /// <summary>
+        ///     PLEASE REPLACE.
+        ///     The runtime version you want the cloud deployment to use.
+        /// </summary>
+        private const string RuntimeVersion = "14.5.4";
+        
         /// <summary>
         ///     PLEASE REPLACE.
         ///     The path to a valid snapshot for the target assembly.
@@ -114,6 +120,7 @@ namespace GameMaintenance
                     StartingSnapshotId = latestSnapshot.Id,
                     LaunchConfig = currentLiveDeployment.Deployment.LaunchConfig,
                     AssemblyName = currentLiveDeployment.Deployment.AssemblyName,
+                    RuntimeVersion = currentLiveDeployment.Deployment.RuntimeVersion,
                 })
                 .PollUntilCompleted()
                 .GetResultOrNull();
@@ -181,7 +188,8 @@ namespace GameMaintenance
                         ConfigJson = File.ReadAllText(LaunchConfigFilePath)
                     },
                     Tags = {"my_live_tag"},
-                    AssemblyName = AssemblyId
+                    AssemblyName = AssemblyId,
+                    RuntimeVersion = RuntimeVersion
                 })
                 .PollUntilCompleted();
         }

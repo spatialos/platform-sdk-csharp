@@ -599,7 +599,7 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1 {
     public const int RuntimeVersionFieldNumber = 18;
     private string runtimeVersion_ = "";
     /// <summary>
-    /// Only use this field if you were directed to do so by SpatialOS support
+    /// This field is required.
     ///
     /// The version of the Runtime to start the deployment.
     /// </summary>
@@ -3573,7 +3573,7 @@ namespace Improbable.SpatialOS.Deployment.V1Beta1 {
     public const int RuntimeVersionFieldNumber = 9;
     private string runtimeVersion_ = "";
     /// <summary>
-    /// Only use this field if you were directed to do so by SpatialOS support
+    /// This field is required.
     ///
     /// The version of the Runtime to start the deployment.
     /// </summary>

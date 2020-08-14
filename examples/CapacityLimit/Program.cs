@@ -29,7 +29,13 @@ namespace CapacityLimit
         ///     The assembly you want the cloud deployment to use.
         /// </summary>
         private const string AssemblyId = "blank_project";
-
+        
+        /// <summary>
+        ///     PLEASE REPLACE.
+        ///     The runtime version you want the cloud deployment to use.
+        /// </summary>
+        private const string RuntimeVersion = "14.5.4";
+        
         /// <summary>
         ///     PLEASE REPLACE.
         ///     The path to a valid launch configuration JSON file.
@@ -79,7 +85,8 @@ namespace CapacityLimit
                     {
                         ConfigJson = File.ReadAllText(LaunchConfigFilePath)
                     },
-                    AssemblyName = AssemblyId
+                    AssemblyName = AssemblyId,
+                    RuntimeVersion = RuntimeVersion
                 })
                 .PollUntilCompleted();
         }
