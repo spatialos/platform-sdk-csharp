@@ -18,7 +18,7 @@ common: &common
     - "platform=linux"
     - "scaler_version=2"
     - "machine_type=quarter"
-    - "queue=${CI_BUILDER_QUEUE:-v3-1564411674-9c5746811d9f2beb-------z}"
+    - "queue=${CI_BUILDER_QUEUE:-virtual-latest}"
   timeout_in_minutes: 60 # TODO(ENG-548): reduce timeout once agent-cold-start is optimised.
   retry:
     automatic:
